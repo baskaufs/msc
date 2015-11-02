@@ -26,6 +26,9 @@ For more on the Darwin Core RDF Guide, see this in-press Semantic Web Journal ar
 [http://www.semantic-web-journal.net/content/lessons-learned-adapting-darwin-core-vocabulary-standard-use-rdf](http://www.semantic-web-journal.net/content/lessons-learned-adapting-darwin-core-vocabulary-standard-use-rdf)
 
 ##Linking across the graph: challenge questions
+
+[Go to the Heard Library SPARQL endpoint (rdf.library.vanderbilt.edu)](http://rdf.library.vanderbilt.edu/sparql?view)
+
 1. Find things that occur at Vanderbilt University (click on the resulting URIs to see what they are).
 
 2. Limit the things to Living Specimens (rdf:type dwc:LivingSpecimen; this will be trees in the Arboretum)

@@ -27,6 +27,8 @@ For more on the Darwin Core RDF Guide, see this in-press Semantic Web Journal ar
 
 ##Linking across the graph: challenge questions
 
+[Go to the Heard Library SPARQL endpoint (rdf.library.vanderbilt.edu)](http://rdf.library.vanderbilt.edu/sparql?view)
+
 ###1. Find things that occur at Vanderbilt University (click on the resulting URIs to see what they are).
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
