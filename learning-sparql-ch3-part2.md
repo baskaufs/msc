@@ -110,8 +110,9 @@ FILTER(?date >= "2000-01-01"^^xsd:date)
 ```
 Examine the actual creation date value given for
 [http://bioimages.vanderbilt.edu/specimen/ncu592804.rdf](http://bioimages.vanderbilt.edu/specimen/ncu592804.rdf)
-
+```
 <http://bioimages.vanderbilt.edu/specimen/ncu592804> dcterms:created "2010-10-19".
+```
 
 Recall that the resource denoted by the plain literal "2010-10-19" (a text string) is not the same as the datatyped literal "2010-10-19"^^xsd:date which denotes an actual date as an abstract thing.
 
