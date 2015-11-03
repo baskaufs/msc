@@ -64,8 +64,7 @@ Example in Section 3.3.2:
 
 Expressed explicitly in RDF:
 ```
-<http://herbarium.unc.edu/image/089765> dsw:derivedFrom <http://bioimages.vanderbilt.edu/specimen/ncu
-592804>.
+<http://herbarium.unc.edu/image/089765> dsw:derivedFrom <http://bioimages.vanderbilt.edu/specimen/ncu592804>.
 
 <http://bioimages.vanderbilt.edu/specimen/ncu
 592804> dsw:derivedFrom <http://bioimages.vanderbilt.edu/uncg/39>.
@@ -80,8 +79,7 @@ Query using property paths to find all derived resources:
 ```
 SELECT DISTINCT ?resource
 WHERE {
- ?resource dsw:derivedFrom+
-<http://bioimages.vanderbilt.edu/uncg/39>.
+ ?resource dsw:derivedFrom+ <http://bioimages.vanderbilt.edu/uncg/39>.
  }
 ```
 

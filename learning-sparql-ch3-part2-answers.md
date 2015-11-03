@@ -18,6 +18,7 @@ Traverse the graph to Feature by:
 ![lodlive graph](https://raw.githubusercontent.com/baskaufs/msc/master/lodlive-graph.png)
 
 ### Why is this graph more complicated than it seems like it needs to be?
+Different RDF data providers may have differing degrees of normalization in their underlying databases. Some may track many events at a location, with each event recording many occurrences.  Others may not care about events and simply link many occurrences to a location.  Darwin-SW assumes the most normalized model that providers are likely to need.  
 
 For more on the Darwin-SW model that underlies this graph, see:
 [http://www.semantic-web-journal.net/content/darwin-sw-darwin-core-based-terms-expressing-biodiversity-data-rdf-1](http://www.semantic-web-journal.net/content/darwin-sw-darwin-core-based-terms-expressing-biodiversity-data-rdf-1)
@@ -27,7 +28,7 @@ For more on the Darwin Core RDF Guide, see this in-press Semantic Web Journal ar
 
 ##Linking across the graph: challenge questions
 
-[Go to the Heard Library SPARQL endpoint (rdf.library.vanderbilt.edu)](http://rdf.library.vanderbilt.edu/sparql?view)
+[Go to the Heard Library SPARQL endpoint (rdf.library.vanderbilt.edu)](http://rdf.library.vanderbilt.edu/sparql?view) and paste in the following query.
 
 ###1. Find things that occur at Vanderbilt University (click on the resulting URIs to see what they are).
 ```
@@ -165,7 +166,7 @@ WHERE {
       }
 ```
 
-###7. Find pictures of bears and say what state they are in (note: states are 1st level administrative jurisdictions and coded as 
+###7. Find pictures of bears and say what state they are in (note: states are 1st level administrative jurisdictions and coded as gn:featureCode gn:A.ADM1
 ```
 SELECT DISTINCT ?placeName ?taglessName ?picture
 WHERE {
@@ -266,7 +267,7 @@ SERVICE <http://DBpedia.org/sparql>
 LIMIT 30
 ```
  
-###11. (#FAIL) Conduct a federated query to find pictures of bears that were photographed in parks, give the name of the species of bear, find the homepage of the park, and the Spanish abstract about the park.  [Times out - asks too much across endpoints, I guess]
+###11. (#FAIL) Conduct a federated query to find pictures of bears that were photographed in parks, give the name of the species of bear, find the homepage of the park, and the Spanish abstract about the park.  [Times out - asks too much across endpoints, I guess.  Many URIs will be bound to ?dbp and have to be transmitted across the Internet to complete the query on the Heard Library side.  In the previous query, only a few URIs were bound to ?dbp.]
 ```
 SELECT DISTINCT ?taglessName ?picture ?page ?abstract
 WHERE {
@@ -307,8 +308,7 @@ Example in Section 3.3.2:
 
 Expressed explicitly in RDF:
 ```
-<http://herbarium.unc.edu/image/089765> dsw:derivedFrom <http://bioimages.vanderbilt.edu/specimen/ncu
-592804>.
+<http://herbarium.unc.edu/image/089765> dsw:derivedFrom <http://bioimages.vanderbilt.edu/specimen/ncu592804>.
 
 <http://bioimages.vanderbilt.edu/specimen/ncu
 592804> dsw:derivedFrom <http://bioimages.vanderbilt.edu/uncg/39>.
@@ -319,12 +319,11 @@ Entailed from transitivity of dsw:derivedFrom:
 <http://herbarium.unc.edu/image/089765> dsw:derivedFrom <http://bioimages.vanderbilt.edu/uncg/39>.
 ```
 
-Query using property paths to find all derived resources:
+Query using property paths to find all derived resources, even though the image isn't linked directly to the tree:
 ```
 SELECT DISTINCT ?resource
 WHERE {
- ?resource dsw:derivedFrom+
-<http://bioimages.vanderbilt.edu/uncg/39>.
+ ?resource dsw:derivedFrom+ <http://bioimages.vanderbilt.edu/uncg/39>.
  }
 ```
 
