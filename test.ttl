@@ -1,0 +1,4 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+<http://example.org/junk> a rdfs:Resource;
+     rdfs:label "junk"@en;
+     rdfs:comment "A useless thing."@en.
