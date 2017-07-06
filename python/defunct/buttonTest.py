@@ -11,9 +11,10 @@ def main():
 	responseBody = ttk.Label(root, text = "hello")    
 	#frame = ttk.Frame(root)
 	#goButton = ttk.Button(frame, text = "Send GET", width = 8)
-	def buttonClick(words):
+	def buttonClick():
+		words=uriBox.get()
 		responseBody.config(text = words)
-	goButton = ttk.Button(root, text = "Send GET", width = 8, command = lambda i=uriBox.get(): buttonClick(i) )
+	goButton = ttk.Button(root, text = "Send GET", width = 8, command = lambda: buttonClick() )
 	uriBox.pack()
 	statusCode.pack()
 	responseBody.pack()

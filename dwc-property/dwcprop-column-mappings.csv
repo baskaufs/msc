@@ -1,0 +1,16 @@
+header,predicate,type,value,attribute,subject_id
+rdf_about,dcterms:hasVersion,iri,,,$root
+dcterms_issued,dcterms:issued,datatype,xsd:date,,$root
+dcterms_modified,dcterms:modified,datatype,xsd:date,,$root
+rdfs_comment,rdfs:comment,language,,en,$root
+dcterms_description,dcterms:description,language,,en,$root
+skos_prefLabel,rdfs:label,language,,en,$root
+rdfs_isDefinedBy,rdfs:isDefinedBy,iri,,,$root
+rdfs_subPropertyOf,rdfs:subPropertyOf,iri,,,$root
+dwcattributes_status,dwcattributes:status,plain,,,$root
+dwcattributes_abcdEquivalence,dwcattributes:abcdEquivalence,plain,,,$root
+dwcattributes_organizedInClass,dwcattributes:organizedInClass,iri,,,$root
+dwcattributes_decision,dwcattributes:decision,iri,,,$root
+dcterms_replaces,dcterms:replaces,iri,,,$root
+dcterms_replaces1,dcterms:replaces,iri,,,$root
+dcterms_replaces2,dcterms:replaces,iri,,,$root

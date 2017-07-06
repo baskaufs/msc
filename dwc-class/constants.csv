@@ -1,0 +1,2 @@
+domainRoot,coreClassFile,documentClass,creator,outputDirectory,outFileNameAfter,separator,baseIriColumn,modifiedColumn
+http://rs.tdwg.org/dwc/,dwcclass.csv,foaf:Document,Biodiversity Information Standards (TDWG),c:\test\output\,,",",localName,dcterms_modified
