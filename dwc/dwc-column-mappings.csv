@@ -1,11 +1,12 @@
 header,predicate,type,value,attribute,subject_id
 rdf_about,dcterms:hasVersion,iri,,,$root
-dcterms_issued,dcterms:issued,datatype,xsd:date,,$root
-dcterms_modified,dcterms:modified,datatype,xsd:date,,$root
+dcterms_issued,dcterms:issued,datatype,,xsd:date,$root
+dcterms_modified,dcterms:modified,datatype,,xsd:date,$root
 rdfs_comment,rdfs:comment,language,,en,$root
 dcterms_description,dcterms:description,language,,en,$root
 skos_prefLabel,rdfs:label,language,,en,$root
 rdfs_isDefinedBy,rdfs:isDefinedBy,iri,,,$root
+rdf_type,rdf:type,iri,,,$root
 rdfs_subPropertyOf,rdfs:subPropertyOf,iri,,,$root
 dwcattributes_status,dwcattributes:status,plain,,,$root
 dwcattributes_abcdEquivalence,dwcattributes:abcdEquivalence,plain,,,$root
