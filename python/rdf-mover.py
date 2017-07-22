@@ -26,7 +26,7 @@ ttk.Label(mainframe, textvariable=repoText).grid(column=3, row=3, sticky=(W, E))
 repoText.set('Github repo path')
 githubRepoBox = ttk.Entry(mainframe, width = 25, textvariable = StringVar())
 githubRepoBox.grid(column=4, row=3, sticky=W)
-githubRepoBox.insert(END, 'VandyVRC/tcadrt/')
+githubRepoBox.insert(END, 'baskaufs/msc/')
 
 subpathText = StringVar()
 ttk.Label(mainframe, textvariable=subpathText).grid(column=3, row=4, sticky=(W, E))
@@ -48,7 +48,7 @@ ttk.Label(mainframe, textvariable=databaseText).grid(column=3, row=6, sticky=(W,
 databaseText.set('Database name')
 databaseBox = ttk.Entry(mainframe, width = 20, textvariable = StringVar())
 databaseBox.grid(column=4, row=6, sticky=W)
-databaseBox.insert(END, 'building')
+databaseBox.insert(END, 'dwc')
 
 passwordText = StringVar()
 ttk.Label(mainframe, textvariable=passwordText).grid(column=3, row=7, sticky=(W, E))
@@ -92,7 +92,7 @@ ttk.Label(mainframe, textvariable=graphNameText).grid(column=3, row=13, sticky=(
 graphNameText.set('Graph name')
 graphNameBox = ttk.Entry(mainframe, width = 50, textvariable = StringVar())
 graphNameBox.grid(column=4, row=13, sticky=W)
-graphNameBox.insert(END, 'http://example.org/building')
+graphNameBox.insert(END, 'http://rs.tdwg.org/dwc/terms')
 
 def baseToTripleButtonClick():
 	dataToTriplestore(dumpUriBox.get(), databaseBox.get(), endpointUriBox.get(), graphNameBox.get(), passwordBox2.get())
