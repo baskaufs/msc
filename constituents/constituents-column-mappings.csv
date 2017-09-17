@@ -1,0 +1,4 @@
+header,predicate,type,value,attribute,subject_id
+DisplayName,foaf:name,plain,,,$root
+DisplayDate,dcterms:description,plain,,,$root
+TextEntry,rdfs:comment,plain,,,$root
