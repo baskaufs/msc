@@ -1,5 +1,11 @@
 header,predicate,type,value,attribute,subject_id
 label,rdfs:label,language,,en,$root
-label,skos:prefLabel,language,,en,$root
-rdfs_comment,rdfs:comment,language,,en,$root
-dcterms_description,dcterms:description,language,,en,$root
+label,dcterms:title,language,,en,$root
+description,rdfs:comment,language,,en,$root
+description,dcterms:description,language,,en,$root
+$constant,dcterms:publisher,language,Biodiversity Information Standards (TDWG),en,$root
+version_modified,dcterms:modified,datatype,,xsd:date,$root
+version_modified,owl:versionInfo,plain,,,$root
+list_created,dcterms:created,datatype,,xsd:date,$root
+vann_preferredNamespacePrefix,vann:preferredNamespacePrefix,plain,,,$root
+vann_preferredNamespaceUri,vann:preferredNamespaceUri,plain,,,$root

@@ -10,3 +10,4 @@ skos,http://www.w3.org/2004/02/skos/core#
 tdwgutility,http://rs.tdwg.org/dwc/dwcattributes/
 foaf,http://xmlns.com/foaf/0.1/
 dwciri,http://rs.tdwg.org/dwc/iri/
+vann,http://purl.org/vocab/vann/
