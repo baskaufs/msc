@@ -1,0 +1,2 @@
+rdf_type,replacing_term,replacing_term_localName,replacing_term_namespace,replaced_term,replaced_term_namespace,replaced_term_localName
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property,http://rs.tdwg.org/dwc/terms/acceptedNameUsage,acceptedNameUsage,http://rs.tdwg.org/dwc/terms/,http://rs.tdwg.org/dwc/terms/acceptedScientificName,http://rs.tdwg.org/dwc/terms/,acceptedScientificName
