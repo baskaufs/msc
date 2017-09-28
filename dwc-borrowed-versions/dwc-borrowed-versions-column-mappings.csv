@@ -1,6 +1,5 @@
 header,predicate,type,value,attribute,subject_id
 version_isDefinedBy,rdfs:isDefinedBy,iri,,,$root
-$constant,dcterms:isPartOf,iri,http://rs.tdwg.org/dwc/version/borrowed/2017-09-23,,$root
 version_issued,dcterms:issued,datatype,,xsd:date,$root
 version_status,tdwgutility:status,datatype,,xsd:string,$root
 replaces_version,dcterms:replaces,iri,,,$root
