@@ -1,4 +1,4 @@
-# Steve Baskauf 2017-10-07 Freely available under a GNU GPLv3 license. 
+# Steve Baskauf 2017-10-08 Freely available under a GNU GPLv3 license. 
 # Script to convert downloaded grade files from TopHat into CSV files suitable for upload to Brightspace 
 
 #libraries for GUI interface

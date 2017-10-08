@@ -3,6 +3,8 @@
 # Grade Mover
 A Python script to convert TopHat grade exports into a form that can be uploaded to Brightspace
 
+Steve Baskauf 2017-10-08 Freely available under a GNU GPLv3 license.
+
 ## Getting started
 1. To use this software, you need to have Python3 installed on your computer.  You can download it from the [Python downloads page](https://www.python.org/downloads/).
 
@@ -90,4 +92,4 @@ You will then see the Create New Grade Items screen.  Click the Continue button.
 
 The next dialog screen is where you can assign the new grade item to a category.  In our case, it's the Quiz category.  Since the points that we downloaded from TopHat are percents, set the Maximum Points to 100.  
 
-The final screen lists any errors or warnings.  If everything worked OK, click Continue here and for the following Preview Imports screen.  The grades should then appear in your Brightspace gradebook.
+The next screen lists any errors or warnings.  If everything worked OK, click Continue here and for the following Preview Imports screen.  The grades should then appear in your Brightspace gradebook.
