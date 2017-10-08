@@ -2,6 +2,7 @@
 A Python script to convert TopHat grade exports into a form that can be uploaded to Brightspace
 
 Steve Baskauf - Vanderbilt University - 2017-10-08
+
 Freely available under a GNU GPLv3 license.
 
 ## Getting started
@@ -13,7 +14,7 @@ pip install CSV
 ```
 (pip is included by default in Python versions later than 3.4.)
 
-3. You need to have the program grade-mover.py on you computer.  You can get it directly from this directory by saving [this link](grade-mover.py), or you can clone this whole repo and get it and its associated test files that way.
+3. You need to have the program grade-mover.py on you computer.  You can get it directly from this directory by saving [this link](https://raw.githubusercontent.com/baskaufs/msc/master/python/grade-mover/grade-mover.py), or you can clone this whole repo and get it and its associated test files that way.
 
 ## What Grade Mover does
 
