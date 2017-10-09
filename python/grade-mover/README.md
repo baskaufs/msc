@@ -8,13 +8,7 @@ Freely available under a GNU GPLv3 license.
 ## Getting started
 1. To use this software, you need to have Python3 installed on your computer.  You can download it from the [Python downloads page](https://www.python.org/downloads/).
 
-2. The script requires the CSV package.  If you don't already have it, you can install it after you have installed Python3.  Go to the command prompt and enter:
-```
-pip install CSV
-```
-(pip is included by default in Python versions later than 3.4.)
-
-3. You need to have the program grade-mover.py on you computer.  You can get it directly from this directory by saving [this link](https://raw.githubusercontent.com/baskaufs/msc/master/python/grade-mover/grade-mover.py), or you can clone this whole repo and get it and its associated test files that way.
+2. You need to have the program grade-mover.py on you computer.  You can get it directly from this directory by saving [this link](https://raw.githubusercontent.com/baskaufs/msc/master/python/grade-mover/grade-mover.py), or you can clone this whole repo and get it and its associated test files that way.
 
 ## What Grade Mover does
 
