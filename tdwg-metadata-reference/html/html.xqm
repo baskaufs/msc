@@ -80,3 +80,23 @@ return
   </body>
 </html>
 };
+
+(: Generates web page for "iri" namespace terms :)
+declare function html:iri($lookup-string)
+{
+let $constants := fn:collection("iri")//constants/record
+let $baseIriColumn := $constants//baseIriColumn/text()
+
+let $metadata := fn:collection("iri")/metadata/record
+  
+return 
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>iri versions web page</title>
+  </head>
+  <body>
+    <p>{$lookup-string}</p>
+  </body>
+</html>
+};
