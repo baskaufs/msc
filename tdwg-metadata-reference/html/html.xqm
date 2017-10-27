@@ -4,6 +4,7 @@ module namespace html = 'http://rs.tdwg.com/html';
 
 (:--------------------------------------------------------------------------------------------------:)
 
+(: This is the test template web page for the /home URI pattern :)
 declare function html:generate-list($db)
 {
 let $constants := fn:collection($db)//constants/record
@@ -11,8 +12,6 @@ let $baseIriColumn := $constants//baseIriColumn/text()
 
 let $metadata := fn:collection($db)/metadata/record
   
-
-let $message := "here is some text"
 return 
 <html>
   <head>
@@ -40,4 +39,25 @@ return
      </table>
   </body>
 </html>
+};
+
+(: Generates web page for term lists :)
+declare function html:term-list($lookup-string)
+{
+let $constants := fn:collection("term-lists")//constants/record
+let $baseIriColumn := $constants//baseIriColumn/text()
+
+let $metadata := fn:collection("term-lists")/metadata/record
+  
+return 
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>term list web page</title>
+  </head>
+  <body>
+    <p>{$lookup-string}</p>
+  </body>
+</html>
+
 };
