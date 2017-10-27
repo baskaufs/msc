@@ -62,7 +62,7 @@ return
 };
 
 (: Generates web page for term lists versions :)
-declare function html:term-list-versions($lookup-string)
+declare function html:term-lists-versions($lookup-string)
 {
 let $constants := fn:collection("term-lists-versions")//constants/record
 let $baseIriColumn := $constants//baseIriColumn/text()
