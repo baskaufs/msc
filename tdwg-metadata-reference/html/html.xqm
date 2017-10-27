@@ -95,8 +95,11 @@ return
     <meta charset="utf-8"/>
     <title>iri versions web page</title>
   </head>
-  <body>
-    <p>{$lookup-string}</p>
-  </body>
+  <body>{
+    for $record in $metadata
+    where $lookup-string = $record/list/text()
+    return
+      <p>{$record/list/text()}<br/>{$record/label/text()}<br/>{$record/description/text()}</p>
+   }</body>
 </html>
 };
