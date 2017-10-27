@@ -229,7 +229,12 @@ declare function page:handle-html($db,$response-media-type,$lookup-string)
       <http:header name="Content-Type" value="text/html; charset=utf-8"/>
     </http:response>
   </rest:response>,
-  html:term-list($lookup-string)
+  switch ($db) 
+   case "term-lists" return html:term-list($lookup-string)
+   case "term-lists-versions" return html:term-lists-versions($lookup-string)
+   case "iri" return html:iri($lookup-string)
+   default return <p>database handler not yet written</p>
+  
   
   (: Perform a temporary redirect to the SPARQL-based web application that generates the HTML
   <rest:response>
