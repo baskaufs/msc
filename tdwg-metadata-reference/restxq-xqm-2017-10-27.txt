@@ -229,7 +229,7 @@ declare function page:handle-html($db,$response-media-type,$lookup-string)
       <http:header name="Content-Type" value="text/html; charset=utf-8"/>
     </http:response>
   </rest:response>,
-  html:generate-list("terms")
+  html:term-list($lookup-string)
   
   (: Perform a temporary redirect to the SPARQL-based web application that generates the HTML
   <rest:response>

@@ -59,5 +59,24 @@ return
     <p>{$lookup-string}</p>
   </body>
 </html>
+};
 
+(: Generates web page for term lists versions :)
+declare function html:term-list-versions($lookup-string)
+{
+let $constants := fn:collection("term-lists-versions")//constants/record
+let $baseIriColumn := $constants//baseIriColumn/text()
+
+let $metadata := fn:collection("term-lists-versions")/metadata/record
+  
+return 
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>term list versions web page</title>
+  </head>
+  <body>
+    <p>{$lookup-string}</p>
+  </body>
+</html>
 };
