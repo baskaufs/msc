@@ -3,7 +3,7 @@ xquery version "3.1";
 
 import module namespace html = 'http://rs.tdwg.com/html' at './html.xqm';
 
-let $db := "terms"
-return html:generate-list($db)
+let $db := "http://rs.tdwg.org/dwc/terms/"
+return html:generate-term-list-html($db)
 
 

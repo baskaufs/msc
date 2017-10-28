@@ -3,6 +3,104 @@ xquery version "3.1";
 module namespace html = 'http://rs.tdwg.com/html';
 
 (:--------------------------------------------------------------------------------------------------:)
+(: 1st level functions :)
+
+(: Generates web page for a term list :)
+declare function html:generate-term-list-html($term-list-iri as xs:string) as element()
+{
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>iri versions web page</title>
+  </head>
+  <body>{
+    html:generate-list-metadata-html($term-list-iri),
+    html:generate-list-html(html:find-list-dbname($term-list-iri))
+   }</body>
+</html>
+};
+
+(:--------------------------------------------------------------------------------------------------:)
+
+(: Looks up the name of the database that contains the metadata for the terms in a term list :)
+declare function html:find-list-dbname($list_localName as xs:string) as xs:string
+{
+switch ($list_localName) 
+   case "http://rs.tdwg.org/dwc/dwctype/" return "dwctype"
+   case "http://rs.tdwg.org/dwc/curatorial/" return "curatorial"
+   case "http://rs.tdwg.org/dwc/dwcore/" return "dwcore"
+   case "http://rs.tdwg.org/dwc/geospatial/" return "geospatial"
+   case "http://rs.tdwg.org/dwc/terms/" return "terms"
+   case "http://rs.tdwg.org/dwc/terms/attributes/" return "utility"
+   case "http://rs.tdwg.org/dwc/iri/" return "iri"
+   case "http://rs.tdwg.org/ac/terms/" return "audubon"
+   case "http://rs.tdwg.org/dwc/dc/" return "dc-for-dwc"
+   case "http://rs.tdwg.org/dwc/dcterms/" return "dcterms-for-dwc"
+   case "http://rs.tdwg.org/ac/borrowed/" return "ac-borrowed"
+   case "http://rs.tdwg.org/decisions/" return "decisions"
+   default return "database name not found"
+};
+
+(: Generates metadata for a particular list pattern; usually http://rs.tdwg.org/{vocab}/{list}/ :)
+declare function html:generate-list-metadata-html($list-iri as xs:string) as element()
+{
+let $config := fn:collection("term-lists")/constants/record (: get the term lists configuration data :)
+let $key := $config//baseIriColumn/text() (: determine which column in the source table contains the primary key for the record :)
+let $metadata := fn:collection("term-lists")/metadata/record
+
+for $record in $metadata
+where $record/*[local-name()=$key]/text()=$list-iri (: the primary key of the record row must match the requested list :)
+return 
+<div>{
+  <strong>Title: </strong>,<span>{$record/label/text()}</span>,<br/>,
+  <strong>Date version issued: </strong>,<span>{$record/list_modified/text()}</span>,<br/>,
+  <strong>Date created: </strong>,<span>{$record/list_created/text()}</span>,<br/>,
+  <strong>Latest version: </strong>,<span>{$record/list/text()}</span>,<br/>,
+  <strong>Abstract: </strong>,<span>{$record/description/text()}</span>,<br/>,
+  
+  if ($record/vann_preferredNamespacePrefix/text() != "")
+  then (
+    <strong>Namespace URI: </strong>,<span>{$record/vann_preferredNamespaceUri/text()}</span>,<br/>,
+    <strong>Preferred namespace abbreviation: </strong>,<span>{$record/vann_preferredNamespacePrefix/text()}</span>,<br/>
+    )
+  else (),
+  
+  if ($record/list_deprecated/text() = "true")
+  then (
+    <strong>Status note: </strong>,<span>This term list has been deprecated and is no longer recommended for use.</span>,<br/>
+    )
+  else ()
+  
+}</div>
+};
+
+(:--------------------------------------------------------------------------------------------------:)
+
+(: This is the test template web page for the /home URI pattern :)
+declare function html:generate-list-html($db as xs:string) as element()
+{
+let $metadata := fn:collection($db)/metadata/record
+  
+return 
+     <div>
+       {
+       for $record in $metadata
+       order by $record/term_localName/text()
+       return (
+         <table>
+         <tr><td><a name="{$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$record/term_localName/text()}</td></tr>,
+         <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
+         <tr><td><strong>Term IRI:</strong></td><td>{$record/term_isDefinedBy/text()||$record/term_localName/text()}</td></tr>,
+         <tr><td><strong>Modified:</strong></td><td>{$record/term_modified/text()}</td></tr>,
+         <tr><td><strong>Definition:</strong></td><td>{$record/rdfs_comment/text()}</td></tr>,
+         <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>
+         </table>,<br/>
+         )
+       }
+     </div>
+};
+
+(:--------------------------------------------------------------------------------------------------:)
 
 (: This is the test template web page for the /home URI pattern :)
 declare function html:generate-list($db)
@@ -41,26 +139,6 @@ return
 </html>
 };
 
-(: Generates web page for term lists :)
-declare function html:term-list($lookup-string)
-{
-let $constants := fn:collection("term-lists")//constants/record
-let $baseIriColumn := $constants//baseIriColumn/text()
-
-let $metadata := fn:collection("term-lists")/metadata/record
-  
-return 
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <title>term list web page</title>
-  </head>
-  <body>
-    <p>{$lookup-string}</p>
-  </body>
-</html>
-};
-
 (: Generates web page for term lists versions :)
 declare function html:term-lists-versions($lookup-string)
 {
@@ -81,7 +159,6 @@ return
 </html>
 };
 
-(: Generates web page for "iri" namespace terms :)
 declare function html:iri($lookup-string)
 {
 let $constants := fn:collection("iri")//constants/record
@@ -99,7 +176,12 @@ return
     for $record in $metadata
     where $lookup-string = $record/term_localName/text()
     return
-      <p>{"URI: "||$record/term_isDefinedBy/text()||$record/term_localName/text()}<br/>{"Label: "||$record/label/text()}<br/>{"Definition: "||$record/rdfs_comment/text()}</p>
+      <p>
+      {"IRI: "||$record/term_isDefinedBy/text()||$record/term_localName/text()}<br/>
+      {"Label: "||$record/label/text()}<br/>
+      {"Definition: "||$record/rdfs_comment/text()}
+      </p>
    }</body>
 </html>
 };
+
