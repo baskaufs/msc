@@ -97,9 +97,9 @@ return
   </head>
   <body>{
     for $record in $metadata
-    where $lookup-string = $record/list/text()
+    where $lookup-string = $record/term_localName/text()
     return
-      <p>{$record/list/text()}<br/>{$record/label/text()}<br/>{$record/description/text()}</p>
+      <p>{"URI: "||$record/term_isDefinedBy/text()||$record/list/text()}<br/>{"Label: "||$record/label/text()}<br/>{"Definition: "||$record/rdfs_comment/text()}</p>
    }</body>
 </html>
 };
