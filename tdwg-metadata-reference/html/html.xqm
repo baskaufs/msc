@@ -69,7 +69,7 @@ declare function html:generate-list-metadata-html($record as element()) as eleme
   if ($record/vann_preferredNamespacePrefix/text() != "")
   then (
     <strong>Namespace URI: </strong>,<span>{$record/vann_preferredNamespaceUri/text()}</span>,<br/>,
-    <strong>Preferred namespace abbreviation: </strong>,<span>{$record/vann_preferredNamespacePrefix/text()}</span>,<br/>
+    <strong>Preferred namespace abbreviation: </strong>,<span>{$record/vann_preferredNamespacePrefix/text()||":"}</span>,<br/>
     )
   else (),
   
@@ -92,15 +92,24 @@ return
      <div>
        {
        for $record in $metadata
+       let $version := $record/term_isDefinedBy/text()||"version/"||$record/term_localName/text()||"-"||$record/term_modified/text()
        order by $record/term_localName/text()
        return (
          <table>{
          <tr><td><a name="{$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$record/term_localName/text()}</td></tr>,
          <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
          <tr><td><strong>Term IRI:</strong></td><td>{$record/term_isDefinedBy/text()||$record/term_localName/text()}</td></tr>,
+         <tr><td><strong>Term version IRI:</strong></td><td><a href='{$version}'>{$version}</a></td></tr>,
          <tr><td><strong>Modified:</strong></td><td>{$record/term_modified/text()}</td></tr>,
          <tr><td><strong>Definition:</strong></td><td>{$record/rdfs_comment/text()}</td></tr>,
-         <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>
+         <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>,
+         
+         if ($record/term_deprecated/text() != "")
+         then (
+         <tr><td><strong>Note:</strong></td><td>This term has been deprecated.</td></tr>
+         )
+         else ()
+
          }</table>,<br/>
          )
        }
