@@ -9,6 +9,7 @@ module namespace html = 'http://rs.tdwg.com/html';
 declare function html:generate-term-list-html($termListIri as xs:string) as element()
 {
 let $listMetadata := html:load-list-metadata-record($termListIri)
+let $ns := html:find-list-ns-abbreviation($termListIri)
 return
 <html>
   <head>
@@ -17,7 +18,7 @@ return
   </head>
   <body>{
     html:generate-list-metadata-html($listMetadata),
-    html:generate-list-html(html:find-list-dbname($termListIri))
+    html:generate-list-html(html:find-list-dbname($termListIri),$ns)
    }</body>
 </html>
 };
@@ -56,6 +57,25 @@ switch ($list_localName)
    default return "database name not found"
 };
 
+(: Looks up the abbreviation for the namespace associated with terms in a term list :)
+declare function html:find-list-ns-abbreviation($list_localName as xs:string) as xs:string
+{
+switch ($list_localName) 
+   case "http://rs.tdwg.org/dwc/dwctype/" return "dwctype"
+   case "http://rs.tdwg.org/dwc/curatorial/" return "dwccuratorial"
+   case "http://rs.tdwg.org/dwc/dwcore/" return "dwcore"
+   case "http://rs.tdwg.org/dwc/geospatial/" return "dwcgeospatial"
+   case "http://rs.tdwg.org/dwc/terms/" return "dwc"
+   case "http://rs.tdwg.org/dwc/terms/attributes/" return "tdwgutility"
+   case "http://rs.tdwg.org/dwc/iri/" return "dwciri"
+   case "http://rs.tdwg.org/ac/terms/" return "ac"
+   case "http://rs.tdwg.org/dwc/dc/" return "dc"
+   case "http://rs.tdwg.org/dwc/dcterms/" return "dcterms"
+   case "http://rs.tdwg.org/ac/borrowed/" return ""
+   case "http://rs.tdwg.org/decisions/" return "tdwgdecisions"
+   default return "database name not found"
+};
+
 (: Generates metadata for a particular list :)
 declare function html:generate-list-metadata-html($record as element()) as element()
 {
@@ -84,7 +104,7 @@ declare function html:generate-list-metadata-html($record as element()) as eleme
 };
 
 (: Generate the HTML table of metadata about the terms in the list:)
-declare function html:generate-list-html($db as xs:string) as element()
+declare function html:generate-list-html($db as xs:string,$ns as xs:string) as element()
 {
 let $metadata := fn:collection($db)/metadata/record
   
@@ -96,7 +116,7 @@ return
        order by $record/term_localName/text()
        return (
          <table>{
-         <tr><td><a name="{$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$record/term_localName/text()}</td></tr>,
+         <tr><td><a name="{$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$ns||":"||$record/term_localName/text()}</td></tr>,
          <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
          <tr><td><strong>Term IRI:</strong></td><td>{$record/term_isDefinedBy/text()||$record/term_localName/text()}</td></tr>,
 
