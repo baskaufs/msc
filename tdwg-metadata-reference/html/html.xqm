@@ -11,6 +11,7 @@ declare function html:generate-term-list-html($termListIri as xs:string) as elem
 let $listMetadata := html:load-list-metadata-record($termListIri)
 let $ns := html:find-list-ns-abbreviation($termListIri)
 let $std := html:find-standard-for-list($termListIri)
+let $version := html:find-version-for-list($termListIri)
 return
 <html>
   <head>
@@ -18,7 +19,7 @@ return
     <title>{$listMetadata/label/text()}</title>
   </head>
   <body>{
-    html:generate-list-metadata-html($listMetadata,$std),
+    html:generate-list-metadata-html($listMetadata,$std,$version),
     html:generate-list-html(html:find-list-dbname($termListIri),$ns)
    }</body>
 </html>
@@ -96,9 +97,30 @@ switch ($list_localName)
    default return "database name not found"
 };
 
-(: Generates metadata for a particular list :)
-declare function html:generate-list-metadata-html($record as element(),$std as xs:string) as element()
+(: Looks up the abbreviation for the namespace associated with terms in a term list :)
+declare function html:find-version-for-list($list_localName as xs:string) as xs:string
 {
+switch ($list_localName) 
+   case "http://rs.tdwg.org/dwc/dwctype/" return "http://rs.tdwg.org/dwc/version/dwctype/"
+   case "http://rs.tdwg.org/dwc/curatorial/" return "http://rs.tdwg.org/dwc/version/curatorial/"
+   case "http://rs.tdwg.org/dwc/dwcore/" return "http://rs.tdwg.org/dwc/version/dwcore/"
+   case "http://rs.tdwg.org/dwc/geospatial/" return "http://rs.tdwg.org/dwc/version/geospatial/"
+   case "http://rs.tdwg.org/dwc/terms/" return "http://rs.tdwg.org/dwc/version/terms/"
+   case "http://rs.tdwg.org/dwc/terms/attributes/" return "http://rs.tdwg.org/dwc/terms/version/attributes/"
+   case "http://rs.tdwg.org/dwc/iri/" return "http://rs.tdwg.org/dwc/version/iri/"
+   case "http://rs.tdwg.org/ac/terms/" return "http://rs.tdwg.org/ac/version/terms/"
+   case "http://rs.tdwg.org/dwc/dc/" return "http://rs.tdwg.org/dwc/version/dc/"
+   case "http://rs.tdwg.org/dwc/dcterms/" return "http://rs.tdwg.org/dwc/version/dcterms/"
+   case "http://rs.tdwg.org/ac/borrowed/" return "http://rs.tdwg.org/ac/version/borrowed/"
+   case "http://rs.tdwg.org/decisions/" return "http://rs.tdwg.org/version/decisions/"
+   default return "database name not found"
+};
+
+(: Generates metadata for a particular list :)
+declare function html:generate-list-metadata-html($record as element(),$std as xs:string,$version as xs:string) as element()
+{
+let $thisVersion := $version||$record/list_modified/text()
+return  
 <div>{
   <strong>Title: </strong>,<span>{$record/label/text()}</span>,<br/>,
   <strong>Date version issued: </strong>,<span>{$record/list_modified/text()}</span>,<br/>,
@@ -112,7 +134,8 @@ declare function html:generate-list-metadata-html($record as element(),$std as x
     <span>Not part of any TDWG Standard</span>,<br/>
     ),
   
-  <strong>Latest version: </strong>,<span>{$record/list/text()}</span>,<br/>,
+  <strong>This version: </strong>,<a href='{$thisVersion}'>{$thisVersion}</a>,<br/>,
+  <strong>Latest version: </strong>,<a href='{$record/list/text()}'>{$record/list/text()}</a>,<br/>,
   <strong>Abstract: </strong>,<span>{$record/description/text()}</span>,<br/>,
   
   if ($record/vann_preferredNamespacePrefix/text() != "")
@@ -232,29 +255,4 @@ return
 </html>
 };
 
-declare function html:iri($lookup-string)
-{
-let $constants := fn:collection("iri")//constants/record
-let $baseIriColumn := $constants//baseIriColumn/text()
-
-let $metadata := fn:collection("iri")/metadata/record
-  
-return 
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <title>iri versions web page</title>
-  </head>
-  <body>{
-    for $record in $metadata
-    where $lookup-string = $record/term_localName/text()
-    return
-      <p>
-      {"IRI: "||$record/term_isDefinedBy/text()||$record/term_localName/text()}<br/>
-      {"Label: "||$record/label/text()}<br/>
-      {"Definition: "||$record/rdfs_comment/text()}
-      </p>
-   }</body>
-</html>
-};
 
