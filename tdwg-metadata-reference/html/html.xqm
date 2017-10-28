@@ -99,7 +99,14 @@ return
          <tr><td><a name="{$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$record/term_localName/text()}</td></tr>,
          <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
          <tr><td><strong>Term IRI:</strong></td><td>{$record/term_isDefinedBy/text()||$record/term_localName/text()}</td></tr>,
-         <tr><td><strong>Term version IRI:</strong></td><td><a href='{$version}'>{$version}</a></td></tr>,
+
+         (: terms not defined by TDWG may have different version patterns, or may not have versions :)
+         if (contains($record/term_isDefinedBy/text(),"rs.tdwg.org"))
+         then (
+         <tr><td><strong>Term version IRI:</strong></td><td><a href='{$version}'>{$version}</a></td></tr>
+         )
+         else (),
+
          <tr><td><strong>Modified:</strong></td><td>{$record/term_modified/text()}</td></tr>,
          <tr><td><strong>Definition:</strong></td><td>{$record/rdfs_comment/text()}</td></tr>,
          <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>,
