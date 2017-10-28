@@ -10,6 +10,7 @@ declare function html:generate-term-list-html($termListIri as xs:string) as elem
 {
 let $listMetadata := html:load-list-metadata-record($termListIri)
 let $ns := html:find-list-ns-abbreviation($termListIri)
+let $std := html:find-standard-for-list($termListIri)
 return
 <html>
   <head>
@@ -17,7 +18,7 @@ return
     <title>{$listMetadata/label/text()}</title>
   </head>
   <body>{
-    html:generate-list-metadata-html($listMetadata),
+    html:generate-list-metadata-html($listMetadata,$std),
     html:generate-list-html(html:find-list-dbname($termListIri),$ns)
    }</body>
 </html>
@@ -76,19 +77,47 @@ switch ($list_localName)
    default return "database name not found"
 };
 
+(: Looks up the abbreviation for the namespace associated with terms in a term list :)
+declare function html:find-standard-for-list($list_localName as xs:string) as xs:string
+{
+switch ($list_localName) 
+   case "http://rs.tdwg.org/dwc/dwctype/" return "http://www.tdwg.org/standards/450"
+   case "http://rs.tdwg.org/dwc/curatorial/" return ""
+   case "http://rs.tdwg.org/dwc/dwcore/" return ""
+   case "http://rs.tdwg.org/dwc/geospatial/" return ""
+   case "http://rs.tdwg.org/dwc/terms/" return "http://www.tdwg.org/standards/450"
+   case "http://rs.tdwg.org/dwc/terms/attributes/" return ""
+   case "http://rs.tdwg.org/dwc/iri/" return "http://www.tdwg.org/standards/450"
+   case "http://rs.tdwg.org/ac/terms/" return "http://www.tdwg.org/standards/638"
+   case "http://rs.tdwg.org/dwc/dc/" return "http://www.tdwg.org/standards/450"
+   case "http://rs.tdwg.org/dwc/dcterms/" return "http://www.tdwg.org/standards/450"
+   case "http://rs.tdwg.org/ac/borrowed/" return "http://www.tdwg.org/standards/638"
+   case "http://rs.tdwg.org/decisions/" return ""
+   default return "database name not found"
+};
+
 (: Generates metadata for a particular list :)
-declare function html:generate-list-metadata-html($record as element()) as element()
+declare function html:generate-list-metadata-html($record as element(),$std as xs:string) as element()
 {
 <div>{
   <strong>Title: </strong>,<span>{$record/label/text()}</span>,<br/>,
   <strong>Date version issued: </strong>,<span>{$record/list_modified/text()}</span>,<br/>,
   <strong>Date created: </strong>,<span>{$record/list_created/text()}</span>,<br/>,
+
+  if ($std != "")
+  then (
+    <strong>Part of TDWG Standard: </strong>,<a href='{$std}'>{$std}</a>,<br/>
+    )
+  else (
+    <span>Not part of any TDWG Standard</span>,<br/>
+    ),
+  
   <strong>Latest version: </strong>,<span>{$record/list/text()}</span>,<br/>,
   <strong>Abstract: </strong>,<span>{$record/description/text()}</span>,<br/>,
   
   if ($record/vann_preferredNamespacePrefix/text() != "")
   then (
-    <strong>Namespace URI: </strong>,<span>{$record/vann_preferredNamespaceUri/text()}</span>,<br/>,
+    <strong>Namespace IRI: </strong>,<span>{$record/vann_preferredNamespaceUri/text()}</span>,<br/>,
     <strong>Preferred namespace abbreviation: </strong>,<span>{$record/vann_preferredNamespacePrefix/text()||":"}</span>,<br/>
     )
   else (),
@@ -133,7 +162,7 @@ return
          
          if ($record/term_deprecated/text() != "")
          then (
-         <tr><td><strong>Note:</strong></td><td>This term has been deprecated.</td></tr>
+         <tr><td><strong>Note:</strong></td><td>This term is no longer recommended for use.</td></tr>
          )
          else ()
 
