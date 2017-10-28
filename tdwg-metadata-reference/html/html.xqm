@@ -5,22 +5,37 @@ module namespace html = 'http://rs.tdwg.com/html';
 (:--------------------------------------------------------------------------------------------------:)
 (: 1st level functions :)
 
-(: Generates web page for a term list :)
-declare function html:generate-term-list-html($term-list-iri as xs:string) as element()
+(: Generates web page for a term list; ; usually following the pattern http://rs.tdwg.org/{vocab}/{list}/ :)
+declare function html:generate-term-list-html($termListIri as xs:string) as element()
 {
+let $listMetadata := html:load-list-metadata-record($termListIri)
+return
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title>iri versions web page</title>
+    <title>{$listMetadata/label/text()}</title>
   </head>
   <body>{
-    html:generate-list-metadata-html($term-list-iri),
-    html:generate-list-html(html:find-list-dbname($term-list-iri))
+    html:generate-list-metadata-html($listMetadata),
+    html:generate-list-html(html:find-list-dbname($termListIri))
    }</body>
 </html>
 };
 
 (:--------------------------------------------------------------------------------------------------:)
+(: 2nd level functions :)
+
+(: go through the term list records and pull the metadata for the particular list. There should be exactly one record element returned :)
+declare function html:load-list-metadata-record($list-iri as xs:string) as element()
+{
+let $config := fn:collection("term-lists")/constants/record (: get the term lists configuration data :)
+let $key := $config//baseIriColumn/text() (: determine which column in the source table contains the primary key for the record :)
+let $metadata := fn:collection("term-lists")/metadata/record
+
+for $record in $metadata
+where $record/*[local-name()=$key]/text()=$list-iri (: the primary key of the record row must match the requested list :)
+return $record
+};
 
 (: Looks up the name of the database that contains the metadata for the terms in a term list :)
 declare function html:find-list-dbname($list_localName as xs:string) as xs:string
@@ -41,16 +56,9 @@ switch ($list_localName)
    default return "database name not found"
 };
 
-(: Generates metadata for a particular list pattern; usually http://rs.tdwg.org/{vocab}/{list}/ :)
-declare function html:generate-list-metadata-html($list-iri as xs:string) as element()
+(: Generates metadata for a particular list :)
+declare function html:generate-list-metadata-html($record as element()) as element()
 {
-let $config := fn:collection("term-lists")/constants/record (: get the term lists configuration data :)
-let $key := $config//baseIriColumn/text() (: determine which column in the source table contains the primary key for the record :)
-let $metadata := fn:collection("term-lists")/metadata/record
-
-for $record in $metadata
-where $record/*[local-name()=$key]/text()=$list-iri (: the primary key of the record row must match the requested list :)
-return 
 <div>{
   <strong>Title: </strong>,<span>{$record/label/text()}</span>,<br/>,
   <strong>Date version issued: </strong>,<span>{$record/list_modified/text()}</span>,<br/>,
@@ -69,14 +77,13 @@ return
   then (
     <strong>Status note: </strong>,<span>This term list has been deprecated and is no longer recommended for use.</span>,<br/>
     )
-  else ()
+  else (),
+  <br/>
   
 }</div>
 };
 
-(:--------------------------------------------------------------------------------------------------:)
-
-(: This is the test template web page for the /home URI pattern :)
+(: Generate the HTML table of metadata about the terms in the list:)
 declare function html:generate-list-html($db as xs:string) as element()
 {
 let $metadata := fn:collection($db)/metadata/record
@@ -87,20 +94,21 @@ return
        for $record in $metadata
        order by $record/term_localName/text()
        return (
-         <table>
+         <table>{
          <tr><td><a name="{$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$record/term_localName/text()}</td></tr>,
          <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
          <tr><td><strong>Term IRI:</strong></td><td>{$record/term_isDefinedBy/text()||$record/term_localName/text()}</td></tr>,
          <tr><td><strong>Modified:</strong></td><td>{$record/term_modified/text()}</td></tr>,
          <tr><td><strong>Definition:</strong></td><td>{$record/rdfs_comment/text()}</td></tr>,
          <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>
-         </table>,<br/>
+         }</table>,<br/>
          )
        }
      </div>
 };
 
 (:--------------------------------------------------------------------------------------------------:)
+(: defunct test functions :)
 
 (: This is the test template web page for the /home URI pattern :)
 declare function html:generate-list($db)
