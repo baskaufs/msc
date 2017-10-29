@@ -278,7 +278,7 @@ return
 
          for $replacement in $replacements
          where $replacement/replaced_term_localName/text() = $record/term_localName/text()
-         return <tr><td><strong>Is replaced by:</strong></td><td><a href='{$replacement/replacing_term/text()}'>{$replacement/replacing_version/text()}</a></td></tr>
+         return <tr><td><strong>Is replaced by:</strong></td><td><a href='{$replacement/replacing_term/text()}'>{$replacement/replacing_term/text()}</a></td></tr>
 
          }</table>,<br/>
          )
