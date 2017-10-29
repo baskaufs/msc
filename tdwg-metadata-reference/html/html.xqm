@@ -225,10 +225,11 @@ return
 }</div>
 };
 
-(: Generate the HTML table of metadata about the terms in the list:)
+(: Generate the HTML tables of metadata about the terms in the list and returns them as a div element :)
 declare function html:generate-list-html($db as xs:string,$ns as xs:string) as element()
 {
 let $metadata := fn:collection($db)/metadata/record
+let $replacements := fn:collection($db)/linked-metadata/file/metadata/record
   
 return 
      <div>
@@ -257,7 +258,27 @@ return
          then (
          <tr><td><strong>Note:</strong></td><td>This term is no longer recommended for use.</td></tr>
          )
-         else ()
+         else (),
+         
+         if ($record/replaces_term/text() != "")
+         then (
+           <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces_term/text()}'>{$record/replaces_term/text()}</a></td></tr>
+           )
+         else (),
+         if ($record/replaces1_term/text() != "")
+         then (
+           <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces1_term/text()}'>{$record/replaces1_term/text()}</a></td></tr>
+           )
+         else (),
+         if ($record/replaces2_term/text() != "")
+         then (
+           <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces2_term/text()}'>{$record/replaces2_term/text()}</a></td></tr>
+           )
+         else (),
+
+         for $replacement in $replacements
+         where $replacement/replaced_term_localName/text() = $record/term_localName/text()
+         return <tr><td><strong>Is replaced by:</strong></td><td><a href='{$replacement/replacing_term/text()}'>{$replacement/replacing_version/text()}</a></td></tr>
 
          }</table>,<br/>
          )
@@ -265,7 +286,7 @@ return
      </div>
 };
 
-(: Generates metadata for a list version :)
+(: Generates metadata for a list version and returns it as an HTML div element :)
 declare function html:generate-list-versions-metadata-html($record as element(),$std as xs:string,$termListIri as xs:string) as element()
 {
 
@@ -283,7 +304,7 @@ declare function html:generate-list-versions-metadata-html($record as element(),
   
   <strong>This version: </strong>,<a href='{$record/version/text()}'>{$record/version/text()}</a>,<br/>,
   <strong>Version of: </strong>,<a href='{$termListIri}'>{$termListIri}</a>,<br/>,
-  <strong>Abstract: </strong>,<span>This version shows the state of the term list on the date that it was issued.</span>,<br/>,
+  <strong>Abstract: </strong>,<span>This version lists the member terms on the date that the list was issued.  The status shown for the term version is its current status.</span>,<br/>,
   
   if ($record/vann_preferredNamespacePrefix/text() != "")
   then (
