@@ -186,7 +186,7 @@ switch ($list_localName)
    default return "database name not found"
 };
 
-(: Generates metadata for a particular list :)
+(: Generates HTML metadata for a particular list and returns them as a div element :)
 declare function html:generate-list-metadata-html($record as element(),$std as xs:string,$version as xs:string) as element()
 {
 let $thisVersion := $version||$record/list_modified/text()
@@ -252,7 +252,10 @@ return
 
          <tr><td><strong>Modified:</strong></td><td>{$record/term_modified/text()}</td></tr>,
          <tr><td><strong>Definition:</strong></td><td>{$record/rdfs_comment/text()}</td></tr>,
-         <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>,
+         
+         if (contains($record/rdf_type/text(),"#"))
+         then <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>
+         else <tr><td><strong>Type:</strong></td><td>{$record/rdf_type/text()}</td></tr>,
          
          if ($record/term_deprecated/text() != "")
          then (
@@ -289,7 +292,8 @@ return
 (: Generates metadata for a list version and returns it as an HTML div element :)
 declare function html:generate-list-versions-metadata-html($record as element(),$std as xs:string,$termListIri as xs:string) as element()
 {
-
+let $replacements := fn:collection("term-lists-versions")/linked-metadata/file/metadata/record
+return
 <div>{
   <strong>Title: </strong>,<span>{$record/label/text()}</span>,<br/>,
   <strong>Issued: </strong>,<span>{$record/version_modified/text()}</span>,<br/>,
@@ -303,6 +307,15 @@ declare function html:generate-list-versions-metadata-html($record as element(),
     ),
   
   <strong>This version: </strong>,<a href='{$record/version/text()}'>{$record/version/text()}</a>,<br/>,
+  
+  for $replacement in $replacements
+  where $replacement/replacing_list/text() = $record/version/text()
+  return (<strong>Previous version:</strong>,<a href='{$replacement/replaced_list/text()}'>{$replacement/replaced_list/text()}</a>,<br/>),
+
+  for $replacement in $replacements
+  where $replacement/replaced_list/text() = $record/version/text()
+  return (<strong>Replaced by:</strong>,<a href='{$replacement/replacing_list/text()}'>{$replacement/replacing_list/text()}</a>,<br/>),
+
   <strong>Version of: </strong>,<a href='{$termListIri}'>{$termListIri}</a>,<br/>,
   <strong>Abstract: </strong>,<span>This version lists the member terms on the date that the list was issued.  The status shown for the term version is its current status.</span>,<br/>,
   
