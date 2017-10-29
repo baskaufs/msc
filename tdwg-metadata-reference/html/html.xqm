@@ -329,23 +329,23 @@ fn:string-length($record/version/text())-11) (: find the part of the version bef
 
          if ($record/replaces_version/text() != "")
          then (
-           <tr><td><strong>Replaces:</strong></td><td>{$record/replaces_version/text()}</td></tr>
+           <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces_version/text()}'>{$record/replaces_version/text()}</a></td></tr>
            )
          else (),
          if ($record/replaces1_version/text() != "")
          then (
-           <tr><td><strong>Replaces:</strong></td><td>{$record/replaces1_version/text()}</td></tr>
+           <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces1_version/text()}'>{$record/replaces1_version/text()}</a></td></tr>
            )
          else (),
          if ($record/replaces2_version/text() != "")
          then (
-           <tr><td><strong>Replaces:</strong></td><td>{$record/replaces2_version/text()}</td></tr>
+           <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces2_version/text()}'>{$record/replaces2_version/text()}</a></td></tr>
            )
          else (),
 
          for $replacement in $replacements
          where $replacement/replaced_version_localName/text() = $record/versionLocalName/text()
-         return <tr><td><strong>Is replaced by:</strong></td><td>{$replacement/replacing_version/text()}</td></tr>
+         return <tr><td><strong>Is replaced by:</strong></td><td><a href='{$replacement/replacing_version/text()}'>{$replacement/replacing_version/text()}</a></td></tr>
 
          }</table>,<br/>
          )
