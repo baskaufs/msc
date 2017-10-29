@@ -3,12 +3,33 @@ xquery version "3.1";
 module namespace html = 'http://rs.tdwg.com/html';
 
 (:--------------------------------------------------------------------------------------------------:)
+(: utility functions from http://www.xqueryfunctions.com/xq/ :)
+
+declare function html:substring-before-last
+  ( $arg as xs:string? ,
+    $delim as xs:string )  as xs:string {
+
+   if (matches($arg, html:escape-for-regex($delim)))
+   then replace($arg,
+            concat('^(.*)', html:escape-for-regex($delim),'.*'),
+            '$1')
+   else ''
+ } ;
+ 
+ declare function html:escape-for-regex
+  ( $arg as xs:string? )  as xs:string {
+
+   replace($arg,
+           '(\.|\[|\]|\\|\||\-|\^|\$|\?|\*|\+|\{|\}|\(|\))','\\$1')
+ } ;
+
+(:--------------------------------------------------------------------------------------------------:)
 (: 1st level functions :)
 
 (: Generates web page for a term list; ; usually following the pattern http://rs.tdwg.org/{vocab}/{list}/ :)
 declare function html:generate-term-list-html($termListIri as xs:string) as element()
 {
-let $listMetadata := html:load-list-metadata-record($termListIri)
+let $listMetadata := html:load-list-metadata-record($termListIri,"term-lists")
 let $ns := html:find-list-ns-abbreviation($termListIri)
 let $std := html:find-standard-for-list($termListIri)
 let $version := html:find-version-for-list($termListIri)
@@ -25,15 +46,36 @@ return
 </html>
 };
 
+(: Generates web page for term lists versions; usually following the pattern http://rs.tdwg.org/{vocab}/version/{term-list}/{iso-date} :)
+declare function html:generate-term-list-version-html($termListVersionIri as xs:string) as element()
+{
+let $listMetadata := html:load-list-metadata-record($termListVersionIri,"term-lists-versions")
+let $versionRoot := html:substring-before-last($termListVersionIri,"/") (: find the part of the version before the ISO 8601 date :)
+let $termListIri := replace($versionRoot,'version/','')||"/"
+let $ns := html:find-list-ns-abbreviation($termListIri)
+let $std := html:find-standard-for-list($termListIri)
+return
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>{$listMetadata/label/text()}</title>
+  </head>
+  <body>{
+    html:generate-list-versions-metadata-html($listMetadata,$std,$termListIri),
+    html:generate-list-versions-html(html:find-list-version-dbname($termListIri),$ns)
+   }</body>
+</html>
+};
+
 (:--------------------------------------------------------------------------------------------------:)
 (: 2nd level functions :)
 
 (: go through the term list records and pull the metadata for the particular list. There should be exactly one record element returned :)
-declare function html:load-list-metadata-record($list-iri as xs:string) as element()
+declare function html:load-list-metadata-record($list-iri as xs:string,$db) as element()
 {
-let $config := fn:collection("term-lists")/constants/record (: get the term lists configuration data :)
-let $key := $config//baseIriColumn/text() (: determine which column in the source table contains the primary key for the record :)
-let $metadata := fn:collection("term-lists")/metadata/record
+let $config := fn:collection($db)/constants/record (: get the term lists configuration data :)
+let $key := $config/baseIriColumn/text() (: determine which column in the source table contains the primary key for the record :)
+let $metadata := fn:collection($db)/metadata/record
 
 for $record in $metadata
 where $record/*[local-name()=$key]/text()=$list-iri (: the primary key of the record row must match the requested list :)
@@ -59,6 +101,23 @@ switch ($list_localName)
    default return "database name not found"
 };
 
+(: Looks up the name of the database that contains the metadata for the terms in a term list :)
+declare function html:find-list-version-dbname($list_localName as xs:string) as xs:string
+{
+switch ($list_localName) 
+   case "http://rs.tdwg.org/dwc/dwctype/" return "dwctype-versions"
+   case "http://rs.tdwg.org/dwc/curatorial/" return "curatorial-versions"
+   case "http://rs.tdwg.org/dwc/dwcore/" return "dwcore-versions"
+   case "http://rs.tdwg.org/dwc/geospatial/" return "geospatial-versions"
+   case "http://rs.tdwg.org/dwc/terms/" return "terms-versions"
+   case "http://rs.tdwg.org/dwc/terms/attributes/" return "utility-versions"
+   case "http://rs.tdwg.org/dwc/iri/" return "iri-versions"
+   case "http://rs.tdwg.org/ac/terms/" return "audubon-versions"
+   case "http://rs.tdwg.org/dwc/dc/" return "dc-for-dwc-versions"
+   case "http://rs.tdwg.org/dwc/dcterms/" return "dcterms-for-dwc-versions"
+   default return "database name not found"
+};
+
 (: Looks up the abbreviation for the namespace associated with terms in a term list :)
 declare function html:find-list-ns-abbreviation($list_localName as xs:string) as xs:string
 {
@@ -75,7 +134,7 @@ switch ($list_localName)
    case "http://rs.tdwg.org/dwc/dcterms/" return "dcterms"
    case "http://rs.tdwg.org/ac/borrowed/" return ""
    case "http://rs.tdwg.org/decisions/" return "tdwgdecisions"
-   default return "database name not found"
+   default return "namespace not found"
 };
 
 (: Looks up the abbreviation for the namespace associated with terms in a term list :)
@@ -94,7 +153,7 @@ switch ($list_localName)
    case "http://rs.tdwg.org/dwc/dcterms/" return "http://www.tdwg.org/standards/450"
    case "http://rs.tdwg.org/ac/borrowed/" return "http://www.tdwg.org/standards/638"
    case "http://rs.tdwg.org/decisions/" return ""
-   default return "database name not found"
+   default return "standard not found"
 };
 
 (: Looks up the abbreviation for the namespace associated with terms in a term list :)
@@ -195,6 +254,72 @@ return
      </div>
 };
 
+(: Generates metadata for a list version :)
+declare function html:generate-list-versions-metadata-html($record as element(),$std as xs:string,$termListIri as xs:string) as element()
+{
+
+<div>{
+  <strong>Title: </strong>,<span>{$record/label/text()}</span>,<br/>,
+  <strong>Issued: </strong>,<span>{$record/version_modified/text()}</span>,<br/>,
+
+  if ($std != "")
+  then (
+    <strong>Part of TDWG Standard: </strong>,<a href='{$std}'>{$std}</a>,<br/>
+    )
+  else (
+    <span>Not part of any TDWG Standard</span>,<br/>
+    ),
+  
+  <strong>This version: </strong>,<a href='{$record/version/text()}'>{$record/version/text()}</a>,<br/>,
+  <strong>Version of: </strong>,<a href='{$termListIri}'>{$termListIri}</a>,<br/>,
+  <strong>Abstract: </strong>,<span>{$record/description/text()}</span>,<br/>,
+  
+  if ($record/vann_preferredNamespacePrefix/text() != "")
+  then (
+    <strong>Namespace IRI: </strong>,<span>{$record/vann_preferredNamespaceUri/text()}</span>,<br/>,
+    <strong>Preferred namespace abbreviation: </strong>,<span>{$record/vann_preferredNamespacePrefix/text()||":"}</span>,<br/>
+    )
+  else (),
+  
+  if ($record/list_deprecated/text() = "true")
+  then (
+    <strong>Status note: </strong>,<span>This term list has been deprecated and is no longer recommended for use.</span>,<br/>
+    )
+  else (),
+  <br/>
+  
+}</div>
+};
+
+(: Generate the HTML table of metadata about the terms in the list:)
+declare function html:generate-list-versions-html($db as xs:string,$ns as xs:string) as element()
+{
+let $metadata := fn:collection($db)/metadata/record
+  
+return 
+     <div>
+       {
+       for $record in $metadata
+       order by $record/term_localName/text()
+       let $versionRoot := substring($record/version/text(),1,
+fn:string-length($record/version/text())-11) (: find the part of the version before the ISO 8601 date :)
+       let $versionOf := replace($versionRoot,'version/','')
+       return (
+         <table>{
+         <tr><td><a name="{$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$ns||":"||$record/term_localName/text()}</td></tr>,
+         <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
+         <tr><td><strong>Term version IRI:</strong></td><td>{$record/version/text()}</td></tr>,
+         <tr><td><strong>Version of:</strong></td><td><a href='{$versionOf}'>{$versionOf}</a></td></tr>,
+         <tr><td><strong>Issued:</strong></td><td>{$record/version_issued/text()}</td></tr>,
+         <tr><td><strong>Definition:</strong></td><td>{$record/rdfs_comment/text()}</td></tr>,
+         <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>,
+         <tr><td><strong>Status:</strong></td><td>{$record/version_status/text()}</td></tr>
+         }</table>,<br/>
+         )
+       }
+     </div>
+};
+
 (:--------------------------------------------------------------------------------------------------:)
 (: defunct test functions :)
 
@@ -235,24 +360,6 @@ return
 </html>
 };
 
-(: Generates web page for term lists versions :)
-declare function html:term-lists-versions($lookup-string)
+declare function html:term-lists-versions($lookup-string as xs:string) as element()
 {
-let $constants := fn:collection("term-lists-versions")//constants/record
-let $baseIriColumn := $constants//baseIriColumn/text()
-
-let $metadata := fn:collection("term-lists-versions")/metadata/record
-  
-return 
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <title>term list versions web page</title>
-  </head>
-  <body>
-    <p>{$lookup-string}</p>
-  </body>
-</html>
 };
-
-
