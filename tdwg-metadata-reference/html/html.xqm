@@ -248,7 +248,7 @@ declare function html:generate-list-toc-etc-html($termListIri as xs:string) as e
     where $version/list/text() = $termListIri
     return <li><a href="{$version/version/text()}">{$version/version/text()}</a></li>
   }</ul>
-  <h1><a id="3">3 List distrubitions</a></h1>
+  <h1><a id="3">3 List distributions</a></h1>
   <p>This term list is available in the formats or distribution methods listed in the table below.  Please note that distribution access URLs may be subject to change over time.  Therefore, it is preferable to request the abstract IRI of the resources and request the desired Content-type through content negotiation.</p>
   <table border="1">{
     let $iri := html:substring-before-last($termListIri,"/")
@@ -391,7 +391,7 @@ fn:string-length($record/version/text())-11) (: find the part of the version bef
        let $versionOf := replace($versionRoot,'version/','')
        return (
          <table>{
-         <tr><td><a name="{$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$ns||":"||$record/term_localName/text()}</td></tr>,
+         <tr><td><a name="{$ns||"_"||$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$ns||":"||$record/term_localName/text()}</td></tr>,
          <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
          <tr><td><strong>Term version IRI:</strong></td><td>{$record/version/text()}</td></tr>,
          <tr><td><strong>Version of:</strong></td><td><a href='{$versionOf}'>{$versionOf}</a></td></tr>,
