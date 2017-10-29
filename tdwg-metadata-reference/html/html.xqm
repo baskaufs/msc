@@ -2,98 +2,7 @@ xquery version "3.1";
 
 module namespace html = 'http://rs.tdwg.com/html';
 
-(:--------------------------------------------------------------------------------------------------:)
-(: utility functions from http://www.xqueryfunctions.com/xq/ :)
-
-declare function html:substring-before-last
-  ( $arg as xs:string? ,
-    $delim as xs:string )  as xs:string {
-
-   if (matches($arg, html:escape-for-regex($delim)))
-   then replace($arg,
-            concat('^(.*)', html:escape-for-regex($delim),'.*'),
-            '$1')
-   else ''
- } ;
- 
- declare function html:escape-for-regex
-  ( $arg as xs:string? )  as xs:string {
-
-   replace($arg,
-           '(\.|\[|\]|\\|\||\-|\^|\$|\?|\*|\+|\{|\}|\(|\))','\\$1')
- } ;
-
-(:--------------------------------------------------------------------------------------------------:)
-(: 1st level functions :)
-
-(: Generates web page for a term list; ; usually following the pattern http://rs.tdwg.org/{vocab}/{list}/ :)
-declare function html:generate-term-list-html($termListIri as xs:string) as element()
-{
-let $listMetadata := html:load-list-metadata-record($termListIri,"term-lists")
-let $ns := html:find-list-ns-abbreviation($termListIri)
-let $std := html:find-standard-for-list($termListIri)
-let $version := html:find-version-for-list($termListIri)
-return
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <title>{$listMetadata/label/text()}</title>
-  </head>
-  <body>{
-    html:generate-list-metadata-html($listMetadata,$std,$version),
-    html:generate-list-toc-etc-html($termListIri),
-    html:generate-list-html(html:find-list-dbname($termListIri),$ns)
-   }</body>
-</html>
-};
-
-(: Generates web page for term lists versions; usually following the pattern http://rs.tdwg.org/{vocab}/version/{term-list}/{iso-date} :)
-declare function html:generate-term-list-version-html($termListVersionIri as xs:string) as element()
-{
-let $listMetadata := html:load-list-metadata-record($termListVersionIri,"term-lists-versions")
-let $versionRoot := html:substring-before-last($termListVersionIri,"/") (: find the part of the version before the ISO 8601 date :)
-let $termListIri := replace($versionRoot,'version/','')||"/"
-let $ns := html:find-list-ns-abbreviation($termListIri)
-let $std := html:find-standard-for-list($termListIri)
-let $members := html:generate-list-version-members($termListVersionIri)
-return
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <title>{$listMetadata/label/text()}</title>
-  </head>
-  <body>{
-    html:generate-list-versions-metadata-html($listMetadata,$std,$termListIri),
-    html:generate-list-versions-toc-etc-html($termListVersionIri),
-    html:generate-list-versions-html(html:find-list-version-dbname($termListIri),$ns,$members)
-   }</body>
-</html>
-};
-
-(:--------------------------------------------------------------------------------------------------:)
-(: 2nd level functions :)
-
-(: go through the term list records and pull the metadata for the particular list. There should be exactly one record element returned :)
-declare function html:load-list-metadata-record($list-iri as xs:string,$db as xs:string) as element()
-{
-let $config := fn:collection($db)/constants/record (: get the term lists configuration data :)
-let $key := $config/baseIriColumn/text() (: determine which column in the source table contains the primary key for the record :)
-let $metadata := fn:collection($db)/metadata/record
-
-for $record in $metadata
-where $record/*[local-name()=$key]/text()=$list-iri (: the primary key of the record row must match the requested list :)
-return $record
-};
-
-(: Generate a sequence of the members of a particular term list version :)
-declare function html:generate-list-version-members($termListVersion as xs:string) as xs:string+
-{
-  let $listsMembers := fn:collection("term-lists-versions")/linked-metadata/file/metadata/record
-  for $member in $listsMembers
-  where $member/termListVersion/text() = $termListVersion
-  order by $member/termVersion/text()
-  return $member/termVersion/text()
-};
+(: lookup functions - need to change the hard-coding when term lists are added or modified :)
 
 (: Looks up the name of the database that contains the metadata for the terms in a term list :)
 declare function html:find-list-dbname($list_localName as xs:string) as xs:string
@@ -187,6 +96,81 @@ switch ($list_localName)
    case "http://rs.tdwg.org/decisions/" return "http://rs.tdwg.org/version/decisions/"
    default return "database name not found"
 };
+
+(:--------------------------------------------------------------------------------------------------:)
+(: utility functions :)
+
+(: from http://www.xqueryfunctions.com/xq/ :)
+declare function html:substring-before-last
+  ( $arg as xs:string? ,
+    $delim as xs:string )  as xs:string {
+
+   if (matches($arg, html:escape-for-regex($delim)))
+   then replace($arg,
+            concat('^(.*)', html:escape-for-regex($delim),'.*'),
+            '$1')
+   else ''
+ } ;
+ 
+ (: from http://www.xqueryfunctions.com/xq/ :)
+ declare function html:escape-for-regex
+  ( $arg as xs:string? )  as xs:string {
+
+   replace($arg,
+           '(\.|\[|\]|\\|\||\-|\^|\$|\?|\*|\+|\{|\}|\(|\))','\\$1')
+ } ;
+
+(: go through the term list or list versions records and pull the metadata for the particular list. There should be exactly one record element returned :)
+declare function html:load-list-metadata-record($list-iri as xs:string,$db as xs:string) as element()
+{
+let $config := fn:collection($db)/constants/record (: get the term lists configuration data :)
+let $key := $config/baseIriColumn/text() (: determine which column in the source table contains the primary key for the record :)
+let $metadata := fn:collection($db)/metadata/record
+
+for $record in $metadata
+where $record/*[local-name()=$key]/text()=$list-iri (: the primary key of the record row must match the requested list :)
+return $record
+};
+
+(: Generate a sequence of the members of a particular term list version :)
+declare function html:generate-list-version-members($termListVersion as xs:string) as xs:string+
+{
+  let $listsMembers := fn:collection("term-lists-versions")/linked-metadata/file/metadata/record
+  for $member in $listsMembers
+  where $member/termListVersion/text() = $termListVersion
+  order by $member/termVersion/text()
+  return $member/termVersion/text()
+};
+
+(:--------------------------------------------------------------------------------------------------:)
+(: Generate term lists web page ////////////////////////////////////////////////////////////////////:)
+(:--------------------------------------------------------------------------------------------------:)
+
+(: 1st level function :)
+
+(: Generates web page for a term list; ; usually following the pattern http://rs.tdwg.org/{vocab}/{list}/ :)
+declare function html:generate-term-list-html($termListIri as xs:string) as element()
+{
+let $listMetadata := html:load-list-metadata-record($termListIri,"term-lists")
+let $ns := html:find-list-ns-abbreviation($termListIri)
+let $std := html:find-standard-for-list($termListIri)
+let $version := html:find-version-for-list($termListIri)
+return
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>{$listMetadata/label/text()}</title>
+  </head>
+  <body>{
+    html:generate-list-metadata-html($listMetadata,$std,$version),
+    html:generate-list-toc-etc-html($termListIri),
+    html:generate-list-html(html:find-list-dbname($termListIri),$ns)
+   }</body>
+</html>
+};
+
+(:--------------------------------------------------------------------------------------------------:)
+(: 2nd level functions :)
 
 (: Generates HTML metadata for a particular list and returns them as a div element :)
 declare function html:generate-list-metadata-html($record as element(),$std as xs:string,$version as xs:string) as element()
@@ -328,6 +312,38 @@ return
        }
      </div>
 };
+
+(:--------------------------------------------------------------------------------------------------:)
+(: Generate term list versions web page ////////////////////////////////////////////////////////////////////:)
+(:--------------------------------------------------------------------------------------------------:)
+
+(: 1st level function :)
+
+(: Generates web page for term lists versions; usually following the pattern http://rs.tdwg.org/{vocab}/version/{term-list}/{iso-date} :)
+declare function html:generate-term-list-version-html($termListVersionIri as xs:string) as element()
+{
+let $listMetadata := html:load-list-metadata-record($termListVersionIri,"term-lists-versions")
+let $versionRoot := html:substring-before-last($termListVersionIri,"/") (: find the part of the version before the ISO 8601 date :)
+let $termListIri := replace($versionRoot,'version/','')||"/"
+let $ns := html:find-list-ns-abbreviation($termListIri)
+let $std := html:find-standard-for-list($termListIri)
+let $members := html:generate-list-version-members($termListVersionIri)
+return
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>{$listMetadata/label/text()}</title>
+  </head>
+  <body>{
+    html:generate-list-versions-metadata-html($listMetadata,$std,$termListIri),
+    html:generate-list-versions-toc-etc-html($termListVersionIri),
+    html:generate-list-versions-html(html:find-list-version-dbname($termListIri),$ns,$members)
+   }</body>
+</html>
+};
+
+(:--------------------------------------------------------------------------------------------------:)
+(: 2nd level functions :)
 
 (: Generates metadata for a list version and returns it as an HTML div element :)
 declare function html:generate-list-versions-metadata-html($record as element(),$std as xs:string,$termListIri as xs:string) as element()
