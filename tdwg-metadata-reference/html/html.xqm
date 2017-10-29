@@ -64,6 +64,7 @@ return
   </head>
   <body>{
     html:generate-list-versions-metadata-html($listMetadata,$std,$termListIri),
+    html:generate-list-versions-toc-etc-html($termListVersionIri),
     html:generate-list-versions-html(html:find-list-version-dbname($termListIri),$ns,$members)
    }</body>
 </html>
@@ -375,6 +376,36 @@ return
 }</div>
 };
 
+(: Generates the HTML for the middle section of the term list versions page and returns it as a div elelment :)
+declare function html:generate-list-versions-toc-etc-html($termListVersionIri as xs:string) as element()
+{
+<div>
+  <h1>Table of Contents</h1>
+  <ul style="list-style: none;">
+    <li><a href="#1">1 Introduction</a></li>
+    <li><a href="#2">2 List distributions</a></li>
+    <li><a href="#3">3 Term versions that were members of this list when it was issued</a></li>
+  </ul>
+  <h1><a id="1">1 Introduction</a></h1>
+  <p>This is a list of term versions that may be part of a TDWG vocabulary.  If the terms whose versions are on this list were defined by TDWG, the list corresponds to term versions in a namespace whose IRI is listed in the header.  In the case where the terms were borrowed from a non-TDWG vocabulary, the list includes term versions that were &quot;borrowed&quot; for inclusion in a TDWG vocabulary.</p>
+  <p>This list includes term versions that were part of the term list at the time this version was issued.  The status of the individual terms may have changed since the version was issued.  The version status indicates its status at the present time, not at the time the list version was issued.</p>
+  <p>For more information about the structure and version model of TDWG vocabularies, see the <a href="http://www.tdwg.org/standards/147">TDWG Standards Documentation Specification</a>.</p>
+  <h1><a id="2">2 List distributions</a></h1>
+  <p>This term versions list is available in the formats or distribution methods listed in the table below.  Please note that distribution access URLs may be subject to change over time.  Therefore, it is preferable to request the abstract IRI of the resources and request the desired Content-type through content negotiation.</p>
+  <table border="1">{
+    let $iri := $termListVersionIri
+    return (
+    <tr><th>Description</th><th>IRI</th><th>Access URL</th></tr>,
+    <tr><td>HTML file (this document)</td><td>{$iri||".htm"}</td><td><a href="{$iri||'.htm'}">{$iri||".htm"}</a></td></tr>,
+    <tr><td>RDF/Turtle</td><td>{$iri||".ttl"}</td><td><a href="{$iri||'.ttl'}">{$iri||".ttl"}</a></td></tr>,
+    <tr><td>RDF/XML</td><td>{$iri||".rdf"}</td><td><a href="{$iri||'.rdf'}">{$iri||".rdf"}</a></td></tr>,
+    <tr><td>JSON-LD</td><td>{$iri||".json"}</td><td><a href="{$iri||'.json'}">{$iri||".json"}</a></td></tr>
+    )
+  }</table>
+  <h1><a id="3">3 Term versions that were members of this list when it was issued</a></h1>
+</div>
+};
+
 (: Generate the HTML table of metadata about the terms in the list:)
 declare function html:generate-list-versions-html($db as xs:string,$ns as xs:string,$members as xs:string+) as element()
 {
@@ -441,9 +472,8 @@ return
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title>Test generated web page</title>
+    <title>Test</title>
       <link href="https://raw.githubusercontent.com/baskaufs/tdwg-standards/master/html/config/default.css" rel="stylesheet" type="text/css"/>
-
   </head>
   <body>
      <table cellspacing="0" class="border">
