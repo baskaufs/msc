@@ -41,6 +41,7 @@ return
   </head>
   <body>{
     html:generate-list-metadata-html($listMetadata,$std,$version),
+    html:generate-list-toc-etc-html($termListIri),
     html:generate-list-html(html:find-list-dbname($termListIri),$ns)
    }</body>
 </html>
@@ -225,6 +226,41 @@ return
 }</div>
 };
 
+(: Generates the HTML for the middle section of the term list page and returns it as a div elelment :)
+declare function html:generate-list-toc-etc-html($termListIri as xs:string) as element()
+{
+<div>
+  <h1>Table of Contents</h1>
+  <ul>
+    <li><a href="#1">1 Introduction</a></li>
+    <li><a href="#2">2 List versions</a></li>
+    <li>3 List distributions</li>
+    <li>4 Terms that are members of this list</li>
+  </ul>
+  <h1><a id="1">1 Introduction</a></h1>
+  <p>This is a list of terms that may be part of a TDWG vocabulary.  If the terms on this list are defined by TDWG, the list corresponds to terms in a namespace whose IRI is listed in the header.  In the case where the terms are borrowed from a non-TDWG vocabulary, the list includes terms that are &quot;borrowed&quot; for inclusion in a TDWG vocabulary.  The list includes all &quot;current&quot; terms on the list, which may or may not be recommended for use.  Terms that are no longer recommended for use may have specified replacements - see the metadata about that specific term.</p>
+  <p>For more information about the structure and version model of TDWG vocabularies, see the <a href="http://www.tdwg.org/standards/147">TDWG Standards Documentation Specification</a>.</p>
+  <h1><a id="2">2 List versions</a></h1>
+  <p>List versions are &quot;snapshots&quot; of the term list at a particular point in time. To examine specific historical versions of this list, click on one of the links below.</p>
+  <ul>{
+    let $versions := fn:collection("term-lists")/linked-metadata/file/metadata/record
+    for $version in $versions
+    where $version/list/text() = $termListIri
+    return <li><a href="{$version/version/text()}">{$version/version/text()}</a></li>
+  }</ul>
+  <h1><a id="3">3 List distrubitions</a></h1>
+  <p>This term list is available in the formats or distribution methods listed in the table below.  Please note that distribution access URLs may be subject to change over time.  Therefore, it is preferable to request the abstract IRI of the resources and request the desired Content-type through content negotiation.</p>
+  <table border="1">
+    <tr><th>Description</th><th>IRI</th><th>Access URL</th></tr>
+    <tr><td>HTML file (this document)</td><td>{$termListIri||".htm"}</td><td>{$termListIri||".htm"}</td></tr>
+    <tr><td>RDF/Turtle</td><td>{$termListIri||".ttl"}</td><td>{$termListIri||".ttl"}</td></tr>
+    <tr><td>RDF/XML</td><td>{$termListIri||".rdf"}</td><td>{$termListIri||".rdf"}</td></tr>
+    <tr><td>JSON-LD</td><td>{$termListIri||".json"}</td><td>{$termListIri||".json"}</td></tr>
+  </table>
+  <h1><a id="4">4 Terms that are members of this list</a></h1>
+</div>
+};
+
 (: Generate the HTML tables of metadata about the terms in the list and returns them as a div element :)
 declare function html:generate-list-html($db as xs:string,$ns as xs:string) as element()
 {
@@ -239,7 +275,7 @@ return
        order by $record/term_localName/text()
        return (
          <table>{
-         <tr><td><a name="{$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$ns||":"||$record/term_localName/text()}</td></tr>,
+         <tr><td><a id="{$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$ns||":"||$record/term_localName/text()}</td></tr>,
          <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
          <tr><td><strong>Term IRI:</strong></td><td>{$record/term_isDefinedBy/text()||$record/term_localName/text()}</td></tr>,
 
@@ -295,7 +331,7 @@ declare function html:generate-list-versions-metadata-html($record as element(),
 let $replacements := fn:collection("term-lists-versions")/linked-metadata/file/metadata/record
 return
 <div>{
-  <strong>Title: </strong>,<span>{$record/label/text()}</span>,<br/>,
+  <strong>Title: </strong>,<span>{$record/label/text()||" (version)"}</span>,<br/>,
   <strong>Issued: </strong>,<span>{$record/version_modified/text()}</span>,<br/>,
 
   if ($std != "")
@@ -307,6 +343,7 @@ return
     ),
   
   <strong>This version: </strong>,<a href='{$record/version/text()}'>{$record/version/text()}</a>,<br/>,
+  <strong>Latest version: </strong>,<a href='{$termListIri}'>{$termListIri}</a>,<br/>,
   
   for $replacement in $replacements
   where $replacement/replacing_list/text() = $record/version/text()
@@ -316,7 +353,6 @@ return
   where $replacement/replaced_list/text() = $record/version/text()
   return (<strong>Replaced by:</strong>,<a href='{$replacement/replacing_list/text()}'>{$replacement/replacing_list/text()}</a>,<br/>),
 
-  <strong>Version of: </strong>,<a href='{$termListIri}'>{$termListIri}</a>,<br/>,
   <strong>Abstract: </strong>,<span>This version lists the member terms on the date that the list was issued.  The status shown for the term version is its current status.</span>,<br/>,
   
   if ($record/vann_preferredNamespacePrefix/text() != "")
