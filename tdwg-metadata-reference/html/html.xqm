@@ -272,7 +272,7 @@ declare function html:generate-list-versions-metadata-html($record as element(),
   
   <strong>This version: </strong>,<a href='{$record/version/text()}'>{$record/version/text()}</a>,<br/>,
   <strong>Version of: </strong>,<a href='{$termListIri}'>{$termListIri}</a>,<br/>,
-  <strong>Abstract: </strong>,<span>{$record/description/text()}</span>,<br/>,
+  <strong>Abstract: </strong>,<span>This version shows the state of the term list on the date that it was issued.</span>,<br/>,
   
   if ($record/vann_preferredNamespacePrefix/text() != "")
   then (
@@ -295,6 +295,7 @@ declare function html:generate-list-versions-metadata-html($record as element(),
 declare function html:generate-list-versions-html($db as xs:string,$ns as xs:string) as element()
 {
 let $metadata := fn:collection($db)/metadata/record
+let $replacements := fn:collection($db)/linked-metadata/file/metadata/record
   
 return 
      <div>
@@ -313,7 +314,12 @@ fn:string-length($record/version/text())-11) (: find the part of the version bef
          <tr><td><strong>Issued:</strong></td><td>{$record/version_issued/text()}</td></tr>,
          <tr><td><strong>Definition:</strong></td><td>{$record/rdfs_comment/text()}</td></tr>,
          <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>,
-         <tr><td><strong>Status:</strong></td><td>{$record/version_status/text()}</td></tr>
+         <tr><td><strong>Status:</strong></td><td>{$record/version_status/text()}</td></tr>,
+         
+         for $replacement in $replacements
+         where $replacement/replaced_version_localName/text() = $record/versionLocalName/text()
+         return <tr><td><strong>Is replaced by:</strong></td><td>{$replacement/replacing_version/text()}</td></tr>
+
          }</table>,<br/>
          )
        }
