@@ -54,6 +54,7 @@ let $versionRoot := html:substring-before-last($termListVersionIri,"/") (: find 
 let $termListIri := replace($versionRoot,'version/','')||"/"
 let $ns := html:find-list-ns-abbreviation($termListIri)
 let $std := html:find-standard-for-list($termListIri)
+let $members := html:generate-list-version-members($termListVersionIri)
 return
 <html>
   <head>
@@ -62,7 +63,7 @@ return
   </head>
   <body>{
     html:generate-list-versions-metadata-html($listMetadata,$std,$termListIri),
-    html:generate-list-versions-html(html:find-list-version-dbname($termListIri),$ns)
+    html:generate-list-versions-html(html:find-list-version-dbname($termListIri),$ns,$members)
    }</body>
 </html>
 };
@@ -71,7 +72,7 @@ return
 (: 2nd level functions :)
 
 (: go through the term list records and pull the metadata for the particular list. There should be exactly one record element returned :)
-declare function html:load-list-metadata-record($list-iri as xs:string,$db) as element()
+declare function html:load-list-metadata-record($list-iri as xs:string,$db as xs:string) as element()
 {
 let $config := fn:collection($db)/constants/record (: get the term lists configuration data :)
 let $key := $config/baseIriColumn/text() (: determine which column in the source table contains the primary key for the record :)
@@ -80,6 +81,16 @@ let $metadata := fn:collection($db)/metadata/record
 for $record in $metadata
 where $record/*[local-name()=$key]/text()=$list-iri (: the primary key of the record row must match the requested list :)
 return $record
+};
+
+(: Generate a sequence of the members of a particular term list version :)
+declare function html:generate-list-version-members($termListVersion as xs:string) as xs:string+
+{
+  let $listsMembers := fn:collection("term-lists-versions")/linked-metadata/file/metadata/record
+  for $member in $listsMembers
+  where $member/termListVersion/text() = $termListVersion
+  order by $member/termVersion/text()
+  return $member/termVersion/text()
 };
 
 (: Looks up the name of the database that contains the metadata for the terms in a term list :)
@@ -292,15 +303,15 @@ declare function html:generate-list-versions-metadata-html($record as element(),
 };
 
 (: Generate the HTML table of metadata about the terms in the list:)
-declare function html:generate-list-versions-html($db as xs:string,$ns as xs:string) as element()
+declare function html:generate-list-versions-html($db as xs:string,$ns as xs:string,$members as xs:string+) as element()
 {
 let $metadata := fn:collection($db)/metadata/record
 let $replacements := fn:collection($db)/linked-metadata/file/metadata/record
-  
 return 
      <div>
        {
-       for $record in $metadata
+       for $record in $metadata, $member in $members
+       where $record/version/text()=$member
        order by $record/term_localName/text()
        let $versionRoot := substring($record/version/text(),1,
 fn:string-length($record/version/text())-11) (: find the part of the version before the ISO 8601 date :)
@@ -315,7 +326,23 @@ fn:string-length($record/version/text())-11) (: find the part of the version bef
          <tr><td><strong>Definition:</strong></td><td>{$record/rdfs_comment/text()}</td></tr>,
          <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>,
          <tr><td><strong>Status:</strong></td><td>{$record/version_status/text()}</td></tr>,
-         
+
+         if ($record/replaces_version/text() != "")
+         then (
+           <tr><td><strong>Replaces:</strong></td><td>{$record/replaces_version/text()}</td></tr>
+           )
+         else (),
+         if ($record/replaces1_version/text() != "")
+         then (
+           <tr><td><strong>Replaces:</strong></td><td>{$record/replaces1_version/text()}</td></tr>
+           )
+         else (),
+         if ($record/replaces2_version/text() != "")
+         then (
+           <tr><td><strong>Replaces:</strong></td><td>{$record/replaces2_version/text()}</td></tr>
+           )
+         else (),
+
          for $replacement in $replacements
          where $replacement/replaced_version_localName/text() = $record/versionLocalName/text()
          return <tr><td><strong>Is replaced by:</strong></td><td>{$replacement/replacing_version/text()}</td></tr>
