@@ -152,9 +152,9 @@ declare function html:find-standard($vocabulary as xs:string) as xs:string
 };
 
 (: Generate a sequence of the term lists that are part of a particular vocabulary :)
-declare function html:generate-vocabulary-term-list-members($vocabulary as xs:string) as xs:string+
+declare function html:generate-vocabulary-term-list-members($vocabulary as xs:string,$db as xs:string) as xs:string+
 {
-  let $termLists := fn:collection("vocabularies")/linked-metadata/file/metadata/record
+  let $termLists := fn:collection($db)/linked-metadata/file/metadata/record
   for $termList in $termLists
   where $termList/vocabulary/text() = $vocabulary
   order by $termList/termList/text()
@@ -181,7 +181,7 @@ return $record
 
 (: 1st level function :)
 
-(: Generates web page for a vocabulary; ; usually following the pattern http://rs.tdwg.org/{vocab}/ :)
+(: Generates web page for a vocabulary; usually following the pattern http://rs.tdwg.org/{vocab}/ :)
 declare function html:generate-vocabulary-html($vocabularyIri as xs:string) as element()
 {
 let $vocabularyMetadata := html:load-metadata-record($vocabularyIri,"vocabularies")
@@ -195,7 +195,7 @@ return
   <body>{
     html:generate-vocabulary-metadata-html($vocabularyMetadata),
     html:generate-vocabulary-toc-etc-html($vocabularyIri),
-    html:generate-vocabulary-html($vocabularyMetadata,$vocabularyIri)
+    html:generate-vocabulary-table-html($vocabularyIri)
    }</body>
 </html>
 };
@@ -227,7 +227,7 @@ return
   <strong>Abstract: </strong>,<span>{$record/description/text()}</span>,<br/>,
   <strong>Creator: </strong>,<span>{$record/dc_creator/text()}</span>,<br/>,
   
-  if ($record/list_deprecated/text() = "true")
+  if ($record/vocabulary_deprecated/text() = "true")
   then (
     <strong>Status note: </strong>,<span>This vocabulary has been deprecated and is no longer recommended for use.</span>,<br/>
     )
@@ -249,7 +249,7 @@ declare function html:generate-vocabulary-toc-etc-html($vocabularyIri as xs:stri
     <li><a href="#4">4 Term lists that are part of this vocabulary</a></li>
   </ul>
   <h1><a id="1">1 Introduction</a></h1>
-  <p>This document provides access to the parts and history of this vocabulary.  A TDWG vocabulary is composed of term lists that have been minted by TDWG as part of this vocabulary, or that may be composed of terms borrowed from other vocabularies within or outisde of TDWG.  The vocabulary changes over time as these lists change, or as new term lists are added to the vocabulary.  These changes are documented by versions of the vocabulary, which are &quot;snapshots&quot; of the vocabulary at the time that the version was issued.</p>
+  <p>This document provides access to the parts and history of this vocabulary.  A TDWG vocabulary is composed of term lists that have been minted by TDWG as part of this vocabulary, or that may be composed of terms borrowed from other vocabularies within or outisde of TDWG.  The vocabulary changes over time as those lists change, or as new term lists are added to the vocabulary.  These changes are documented by versions of the vocabulary, which are &quot;snapshots&quot; of the vocabulary at the time that the version was issued.</p>
   <p>For more information about the structure and version model of TDWG vocabularies, see the <a href="http://www.tdwg.org/standards/147">TDWG Standards Documentation Specification</a>.</p>
   <h1><a id="2">2 Vocabulary versions</a></h1>
   <p>To examine specific historical versions of this vocabulary, click on one of the links below.</p>
@@ -276,9 +276,9 @@ declare function html:generate-vocabulary-toc-etc-html($vocabularyIri as xs:stri
 };
 
 (: Generate the HTML tables of metadata about the term lists in the vocabulary and returns them as a div element :)
-declare function html:generate-vocabulary-html($vocabularyMetadata as element(),$vocabularyIri as xs:string) as element()
+declare function html:generate-vocabulary-table-html($vocabularyIri as xs:string) as element()
 {
-let $termLists := html:generate-vocabulary-term-list-members($vocabularyIri) (: generate sequence of term list IRIs that are in vocabulary:)
+let $termLists := html:generate-vocabulary-term-list-members($vocabularyIri,"vocabularies") (: generate sequence of term list IRIs that are in vocabulary:)
 let $metadata := html:load-list-records($termLists,"term-lists") (: pull the metadata records for term lists in the sequence :)
 (:let $replacements := fn:collection($db)/linked-metadata/file/metadata/record:)
   
@@ -286,15 +286,11 @@ return
      <div>
        {
        for $record in $metadata
-(:       let $version := $vocabularyIri||"version/"||substring-after($record/list_localName/text(),"/")||$record/list_modified/text() :)
        order by $record/list_localName/text()
        return (
          <table>{
          <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
-         <tr><td><strong>list IRI:</strong></td><td><a href='{$record/list/text()}'>{$record/list/text()}</a></td></tr>,
-
-(:         <tr><td><strong>List version IRI:</strong></td><td><a href='{$version}'>{$version}</a></td></tr>, :)
-
+         <tr><td><strong>List IRI:</strong></td><td><a href='{$record/list/text()}'>{$record/list/text()}</a></td></tr>,
          <tr><td><strong>Modified:</strong></td><td>{$record/list_modified/text()}</td></tr>,
          <tr><td><strong>Description:</strong></td><td>{$record/description/text()}</td></tr>,
          
@@ -303,6 +299,128 @@ return
          <tr><td><strong>Note:</strong></td><td>This list is no longer recommended for use.</td></tr>
          )
          else ()
+         }</table>,<br/>
+         )
+       }
+     </div>
+};
+
+(:--------------------------------------------------------------------------------------------------:)
+(: Generate vocabulary version web page ////////////////////////////////////////////////////////////:)
+(:--------------------------------------------------------------------------------------------------:)
+
+(: 1st level function :)
+
+(: Generates web page for a vocabulary version; usually following the pattern http://rs.tdwg.org/version/{vocab}/{iso-date} :)
+declare function html:generate-vocabulary-version-html($vocabularyVersionIri as xs:string) as element()
+{
+let $vocabularyVersionMetadata := html:load-metadata-record($vocabularyVersionIri,"vocabularies-versions")
+
+return
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>{$vocabularyVersionMetadata/label/text()||" "||$vocabularyVersionMetadata/version_issued/text()||" version"}</title>
+  </head>
+  <body>{
+    html:generate-vocabulary-version-metadata-html($vocabularyVersionMetadata),
+    html:generate-vocabulary-version-toc-etc-html($vocabularyVersionIri),
+    html:generate-vocabulary-version-table-html($vocabularyVersionIri)
+   }</body>
+</html>
+};
+
+(:--------------------------------------------------------------------------------------------------:)
+(: 2nd level functions :)
+
+(: Generates HTML metadata for a particular vocabulary version and returns them as a div element :)
+declare function html:generate-vocabulary-version-metadata-html($record as element()) as element()
+{
+let $std := html:find-standard($record/vocabulary/text())
+let $replacements := fn:collection("vocabularies-versions")/linked-metadata/file/metadata/record
+
+return  
+<div>{
+  <strong>Title: </strong>,<span>{$record/label/text()||" (version)"}</span>,<br/>,
+  <strong>Issued: </strong>,<span>{$record/version_issued/text()}</span>,<br/>,
+  <strong>Part of TDWG Standard: </strong>,<a href='{$std}'>{$std}</a>,<br/>,
+  <strong>This version: </strong>,<a href='{$record/version/text()}'>{$record/version/text()}</a>,<br/>,
+  <strong>Version status: </strong>,<span>{$record/vocabulary_status/text()}</span>,<br/>,
+  <strong>Latest version: </strong>,<a href='{$record/vocabulary/text()}'>{$record/vocabulary/text()}</a>,<br/>,
+
+  for $replacement in $replacements
+  where $replacement/replacing_vocabulary/text() = $record/version/text()
+  return (<strong>Previous version:</strong>,<a href='{$replacement/replaced_vocabulary/text()}'>{$replacement/replaced_vocabulary/text()}</a>,<br/>),
+
+  for $replacement in $replacements
+  where $replacement/replaced_vocabulary/text() = $record/version/text()
+  return (<strong>Replaced by:</strong>,<a href='{$replacement/replacing_vocabulary/text()}'>{$replacement/replacing_vocabulary/text()}</a>,<br/>),
+
+  <strong>Abstract: </strong>,<span>{$record/description/text()}</span>,<br/>,
+  <strong>Creator: </strong>,<span>{$record/dc_creator/text()}</span>,<br/>,
+  <br/>
+  
+}</div>
+};
+
+(: Generates the HTML for the middle section of the term list versions page and returns it as a div elelment :)
+declare function html:generate-vocabulary-version-toc-etc-html($vocabularyVersionIri as xs:string) as element()
+{
+<div>
+  <h1>Table of Contents</h1>
+  <ul style="list-style: none;">
+    <li><a href="#1">1 Introduction</a></li>
+    <li><a href="#2">2 Vocabulary version distributions</a></li>
+    <li><a href="#3">3 Term list versions that were part of this vocabulary when this version of it was issued</a></li>
+  </ul>
+  <h1><a id="1">1 Introduction</a></h1>
+  <p>A TDWG vocabulary is composed of term lists that have been minted by TDWG as part of that vocabulary, or that may be composed of terms borrowed from other vocabularies within or outisde of TDWG.  The vocabulary changes over time as those lists change, or as new term lists are added to the vocabulary.</p> 
+  <p>This vocabulary version is a &quot;snapshot&quot; of the vocabulary at a particular moment in time.  The term list versions listed below includes those that were part of the vocabulary at the time this version was issued.  The status of an individual term list may have changed since the time that the vocabulary version was issued.  The version status indicates the status of the list at the present time, not at the time the vocabulary was issued.</p>
+  <p>For more information about the structure and version model of TDWG vocabularies, see the <a href="http://www.tdwg.org/standards/147">TDWG Standards Documentation Specification</a>.</p>
+  <h1><a id="2">2 Vocabulary version distributions</a></h1>
+  <p>This vocabulary versions list is available in the formats or distribution methods listed in the table below.  Please note that distribution access URLs may be subject to change over time.  Therefore, it is preferable to request the abstract IRI of the resources and request the desired Content-type through content negotiation.</p>
+  <table border="1">{
+    let $iri := $vocabularyVersionIri
+    return (
+    <tr><th>Description</th><th>IRI</th><th>Access URL</th></tr>,
+    <tr><td>HTML file (this document)</td><td>{$iri||".htm"}</td><td><a href="{$iri||'.htm'}">{$iri||".htm"}</a></td></tr>,
+    <tr><td>RDF/Turtle</td><td>{$iri||".ttl"}</td><td><a href="{$iri||'.ttl'}">{$iri||".ttl"}</a></td></tr>,
+    <tr><td>RDF/XML</td><td>{$iri||".rdf"}</td><td><a href="{$iri||'.rdf'}">{$iri||".rdf"}</a></td></tr>,
+    <tr><td>JSON-LD</td><td>{$iri||".json"}</td><td><a href="{$iri||'.json'}">{$iri||".json"}</a></td></tr>
+    )
+  }</table>
+  <h1><a id="3">3 Term list versions that were part of this vocabulary when this version of it was issued</a></h1>
+</div>
+};
+
+(: Generate the HTML tables of metadata about the term lists in the vocabulary and returns them as a div element :)
+declare function html:generate-vocabulary-version-table-html($vocabularyVersionIri as xs:string) as element()
+{
+let $termListsVersions := html:generate-vocabulary-term-list-members($vocabularyVersionIri,"vocabularies-versions") (: generate sequence of term list version IRIs that are in vocabulary:)
+let $metadata := html:load-list-records($termListsVersions,"term-lists-versions") (: pull the metadata records for term lists versions in the sequence :)
+let $replacements := fn:collection("term-lists-versions")/linked-metadata/file/metadata/record
+  
+return 
+     <div>
+       {
+       for $record in $metadata
+       order by $record/list_localName/text()
+       return (
+         <table>{
+         <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
+         <tr><td><strong>List version IRI:</strong></td><td><a href='{$record/version/text()}'>{$record/version/text()}</a></td></tr>,
+         <tr><td><strong>Modified:</strong></td><td>{$record/version_modified/text()}</td></tr>,
+         <tr><td><strong>Description:</strong></td><td>{$record/description/text()}</td></tr>,
+         <tr><td><strong>Status:</strong></td><td>{$record/status/text()}</td></tr>,
+
+          for $replacement in $replacements
+          where $replacement/replacing_list/text() = $record/version/text()
+          return (<strong>Previous version:</strong>,<a href='{$replacement/replaced_list/text()}'>{$replacement/replaced_list/text()}</a>,<br/>),
+        
+          for $replacement in $replacements
+          where $replacement/replaced_list/text() = $record/version/text()
+          return (<strong>Replaced by:</strong>,<a href='{$replacement/replacing_list/text()}'>{$replacement/replacing_list/text()}</a>,<br/>)
+
          }</table>,<br/>
          )
        }
@@ -499,7 +617,7 @@ return
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title>{$listMetadata/label/text()}</title>
+    <title>{$listMetadata/label/text()||" "||$listMetadata/version_modified/text()||" version"}</title>
   </head>
   <body>{
     html:generate-list-versions-metadata-html($listMetadata,$std,$termListIri),
@@ -530,6 +648,7 @@ return
     ),
   
   <strong>This version: </strong>,<a href='{$record/version/text()}'>{$record/version/text()}</a>,<br/>,
+  <strong>Version status: </strong>,<span>{$record/status/text()}</span>,<br/>,
   <strong>Latest version: </strong>,<a href='{$termListIri}'>{$termListIri}</a>,<br/>,
   
   for $replacement in $replacements
@@ -566,14 +685,14 @@ declare function html:generate-list-versions-toc-etc-html($termListVersionIri as
   <h1>Table of Contents</h1>
   <ul style="list-style: none;">
     <li><a href="#1">1 Introduction</a></li>
-    <li><a href="#2">2 List distributions</a></li>
-    <li><a href="#3">3 Term versions that were members of this list when it was issued</a></li>
+    <li><a href="#2">2 List version distributions</a></li>
+    <li><a href="#3">3 Term versions that were members of this list when this version of it was issued</a></li>
   </ul>
   <h1><a id="1">1 Introduction</a></h1>
   <p>This is a list of term versions that may be part of a TDWG vocabulary.  If the terms whose versions are on this list were defined by TDWG, the list corresponds to term versions in a namespace whose IRI is listed in the header.  In the case where the terms were borrowed from a non-TDWG vocabulary, the list includes term versions that were &quot;borrowed&quot; for inclusion in a TDWG vocabulary.</p>
   <p>This list includes term versions that were part of the term list at the time this version was issued.  The status of the individual terms may have changed since the version was issued.  The version status indicates its status at the present time, not at the time the list version was issued.</p>
   <p>For more information about the structure and version model of TDWG vocabularies, see the <a href="http://www.tdwg.org/standards/147">TDWG Standards Documentation Specification</a>.</p>
-  <h1><a id="2">2 List distributions</a></h1>
+  <h1><a id="2">2 List version distributions</a></h1>
   <p>This term versions list is available in the formats or distribution methods listed in the table below.  Please note that distribution access URLs may be subject to change over time.  Therefore, it is preferable to request the abstract IRI of the resources and request the desired Content-type through content negotiation.</p>
   <table border="1">{
     let $iri := $termListVersionIri
@@ -585,7 +704,7 @@ declare function html:generate-list-versions-toc-etc-html($termListVersionIri as
     <tr><td>JSON-LD</td><td>{$iri||".json"}</td><td><a href="{$iri||'.json'}">{$iri||".json"}</a></td></tr>
     )
   }</table>
-  <h1><a id="3">3 Term versions that were members of this list when it was issued</a></h1>
+  <h1><a id="3">3 Term versions that were members of this list when this version of it was issued</a></h1>
 </div>
 };
 
