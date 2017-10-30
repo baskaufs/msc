@@ -195,7 +195,8 @@ return
   <body>{
     html:generate-vocabulary-metadata-html($vocabularyMetadata),
     html:generate-vocabulary-toc-etc-html($vocabularyIri),
-    html:generate-vocabulary-table-html($vocabularyIri)
+    html:generate-vocabulary-table-html($vocabularyIri),
+    html:generate-footer()
    }</body>
 </html>
 };
@@ -305,6 +306,16 @@ return
      </div>
 };
 
+(: Generate a footer and return it as a div element :)
+declare function html:generate-footer() as element()
+{
+<div>
+  <hr/>
+  <p>This document is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>. <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="http://creativecommons.org/licenses/by/4.0/" style="max-width:100%;"></img></a>.</p>
+<p>Copyright 2017 - Biodiversity Information Standards - TDWG - <a href="http://www.tdwg.org/about-tdwg/contact-us/">Contact Us</a></p>
+</div>
+};
+
 (:--------------------------------------------------------------------------------------------------:)
 (: Generate vocabulary version web page ////////////////////////////////////////////////////////////:)
 (:--------------------------------------------------------------------------------------------------:)
@@ -325,7 +336,8 @@ return
   <body>{
     html:generate-vocabulary-version-metadata-html($vocabularyVersionMetadata),
     html:generate-vocabulary-version-toc-etc-html($vocabularyVersionIri),
-    html:generate-vocabulary-version-table-html($vocabularyVersionIri)
+    html:generate-vocabulary-version-table-html($vocabularyVersionIri),
+    html:generate-footer()
    }</body>
 </html>
 };
@@ -449,7 +461,8 @@ return
   <body>{
     html:generate-list-metadata-html($listMetadata,$std,$version),
     html:generate-list-toc-etc-html($termListIri),
-    html:generate-list-html(html:find-list-dbname($termListIri),$ns)
+    html:generate-list-html(html:find-list-dbname($termListIri),$ns),
+    html:generate-footer()
    }</body>
 </html>
 };
@@ -622,7 +635,8 @@ return
   <body>{
     html:generate-list-versions-metadata-html($listMetadata,$std,$termListIri),
     html:generate-list-versions-toc-etc-html($termListVersionIri),
-    html:generate-list-versions-html(html:find-list-version-dbname($termListIri),$ns,$members)
+    html:generate-list-versions-html(html:find-list-version-dbname($termListIri),$ns,$members),
+    html:generate-footer()
    }</body>
 </html>
 };
