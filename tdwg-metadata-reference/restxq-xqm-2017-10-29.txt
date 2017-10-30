@@ -64,11 +64,33 @@ declare
       )
   };
 
-(: This is the handler function for URI patterns of "/version/{vocab}/" :)
+(: This is the handler function for URI patterns of "/{vocab}/" :)
 declare
-  %rest:path("/version/{$local-id}")
+  %rest:path("/{$local-id}")
   %rest:header-param("Accept","{$acceptHeader}")
-  function page:content-negotiation-vocabularies-versions($acceptHeader,$local-id)
+  function page:content-negotiation-vocabularies($acceptHeader,$local-id)
+  {
+  let $db := "vocabularies"
+  return
+    if (contains($local-id,"."))
+    then
+      (: has an extension :)
+      let $stripped-local-name := substring-before($local-id,".")
+      let $extension := substring-after($local-id,".")
+      let $lookup-string := "http://rs.tdwg.org/"||$stripped-local-name||"/"
+      return page:handle-repesentation($acceptHeader,$extension,$db,$lookup-string)
+    else 
+      (: no extension :)
+      let $lookup-string := "http://rs.tdwg.org/"||$local-id||"/"
+      let $redirect-id := "/"||$local-id
+      return page:see-also($acceptHeader,$redirect-id,$db,$lookup-string)
+  };
+
+(: This is the handler function for URI patterns where the local name follows the "/version/{vocab}/" subpath :)
+declare
+  %rest:path("/version/{$vocab}/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:content-negotiation-vocabularies-versions($acceptHeader,$vocab,$local-id)
   {
   let $db := "vocabularies-versions"
   return
@@ -77,12 +99,12 @@ declare
       (: has an extension :)
       let $stripped-local-name := substring-before($local-id,".")
       let $extension := substring-after($local-id,".")
-      let $lookup-string := "http://rs.tdwg.org/version/"||$stripped-local-name||"/"
+      let $lookup-string := "http://rs.tdwg.org/version/"||$vocab||"/"||$stripped-local-name
       return page:handle-repesentation($acceptHeader,$extension,$db,$lookup-string)
     else 
       (: no extension :)
-      let $lookup-string := "http://rs.tdwg.org/version/"||$local-id||"/"
-      let $redirect-id := "/version/"||$local-id
+      let $lookup-string := "http://rs.tdwg.org/version/"||$vocab||"/"||$local-id
+      let $redirect-id := "/version/"||$vocab||"/"||$local-id
       return page:see-also($acceptHeader,$redirect-id,$db,$lookup-string)
   };
 
@@ -108,7 +130,7 @@ declare
       return page:see-also($acceptHeader,$redirect-id,$db,$lookup-string)
   };
 
-(: This is the main handler function for URI patterns where the local name follows the "/{vocab}/version/{list}/" :)
+(: This is the main handler function for URI patterns where the local name follows the "/{vocab}/version/{list}/" subpath :)
 declare
   %rest:path("/{$vocab}/version/{$term-list}/{$local-id}")
   %rest:header-param("Accept","{$acceptHeader}")

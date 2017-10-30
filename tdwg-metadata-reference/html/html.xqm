@@ -415,11 +415,11 @@ return
 
           for $replacement in $replacements
           where $replacement/replacing_list/text() = $record/version/text()
-          return (<strong>Previous version:</strong>,<a href='{$replacement/replaced_list/text()}'>{$replacement/replaced_list/text()}</a>,<br/>),
+          return (<tr><td><strong>Previous version:</strong></td><td><a href='{$replacement/replaced_list/text()}'>{$replacement/replaced_list/text()}</a></td></tr>),
         
           for $replacement in $replacements
           where $replacement/replaced_list/text() = $record/version/text()
-          return (<strong>Replaced by:</strong>,<a href='{$replacement/replacing_list/text()}'>{$replacement/replacing_list/text()}</a>,<br/>)
+          return (<tr><td><strong>Replaced by:</strong></td><td><a href='{$replacement/replacing_list/text()}'>{$replacement/replacing_list/text()}</a></td></tr>)
 
          }</table>,<br/>
          )
