@@ -246,6 +246,19 @@ return
   </head>
   <body>{
     html:term-metadata($record,$version,$replacements,$ns),
+    <br/>,
+    <p><strong>Metadata about this term are available in the following formats/serializations:</strong></p>,
+    <table border="1">{
+      let $iri := $record/term_isDefinedBy/text()||$record/term_localName/text()
+      return (
+      <tr><th>Description</th><th>IRI</th></tr>,
+      <tr><td>HTML file (this document)</td><td><a href="{$iri||'.htm'}">{$iri||".htm"}</a></td></tr>,
+      <tr><td>RDF/Turtle</td><td><a href="{$iri||'.ttl'}">{$iri||".ttl"}</a></td></tr>,
+      <tr><td>RDF/XML</td><td><a href="{$iri||'.rdf'}">{$iri||".rdf"}</a></td></tr>,
+      <tr><td>JSON-LD</td><td><a href="{$iri||'.json'}">{$iri||".json"}</a></td></tr>
+      )
+    }</table>,
+
     <p>For complete information about the set of terms that includes this one, see <a href="{$record/term_isDefinedBy/text()}">{$record/term_isDefinedBy/text()}</a></p>,
     html:generate-footer()
     }</body>
