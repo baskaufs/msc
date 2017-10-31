@@ -325,6 +325,7 @@ return
   </head>
   <body>{
      <strong>{"Metadata for the "||$record/version_issued/text()||" version of the term "||$ns||":"||$record/term_localName/text()}</strong>,
+     <br/>,
     html:term-version-metadata($record,$versionOf,$replacements,$ns),
     <br/>,
     <p><strong>Metadata about this term version are available in the following formats/serializations:</strong></p>,
@@ -339,7 +340,7 @@ return
       )
     }</table>,
 
-    <p>For complete information about the set of term versions that includes this one, see ***FIX ME*** <a href="{$record/version_isDefinedBy/text()}">{$record/version_isDefinedBy/text()}</a></p>,
+    <p>***FIX ME*** For complete information about the set of term versions that includes this one, see ***FIX ME*** <a href="{$record/version_isDefinedBy/text()}">{$record/version_isDefinedBy/text()}</a></p>,
     html:generate-footer()
     }</body>
 </html>
