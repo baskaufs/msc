@@ -172,8 +172,87 @@ for $record in $metadata,$termList in $termLists
 where $record/*[local-name()=$key]/text()=$termList (: the primary key of the record row must match a list in the vocabulary :)
 
 return $record
-
 };
+
+(: generate a table with metadata about a single term :)
+declare function html:term-metadata($record as element(),$version as xs:string,$replacements as element()*,$ns as xs:string) as element()
+{
+   <table>{
+   <tr><td><strong>Term Name:</strong></td><td>{$ns||":"||$record/term_localName/text()}</td></tr>,
+   <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
+   <tr><td><strong>Term IRI:</strong></td><td>{$record/term_isDefinedBy/text()||$record/term_localName/text()}</td></tr>,
+  
+   (: terms not defined by TDWG may have different version patterns, or may not have versions :)
+   if (contains($record/term_isDefinedBy/text(),"rs.tdwg.org"))
+   then (
+   <tr><td><strong>Term version IRI:</strong></td><td><a href='{$version}'>{$version}</a></td></tr>
+   )
+   else (),
+  
+   <tr><td><strong>Modified:</strong></td><td>{$record/term_modified/text()}</td></tr>,
+   <tr><td><strong>Definition:</strong></td><td>{$record/rdfs_comment/text()}</td></tr>,
+   
+   if (contains($record/rdf_type/text(),"#"))
+   then <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>
+   else <tr><td><strong>Type:</strong></td><td>{$record/rdf_type/text()}</td></tr>,
+   
+   if ($record/term_deprecated/text() != "")
+   then (
+   <tr><td><strong>Note:</strong></td><td>This term is no longer recommended for use.</td></tr>
+   )
+   else (),
+   
+   if ($record/replaces_term/text() != "")
+   then (
+     <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces_term/text()}'>{$record/replaces_term/text()}</a></td></tr>
+     )
+   else (),
+   if ($record/replaces1_term/text() != "")
+   then (
+     <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces1_term/text()}'>{$record/replaces1_term/text()}</a></td></tr>
+     )
+   else (),
+   if ($record/replaces2_term/text() != "")
+   then (
+     <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces2_term/text()}'>{$record/replaces2_term/text()}</a></td></tr>
+     )
+   else (),
+  
+   for $replacement in $replacements
+   where $replacement/replaced_term_localName/text() = $record/term_localName/text()
+   return <tr><td><strong>Is replaced by:</strong></td><td><a href='{$replacement/replacing_term/text()}'>{$replacement/replacing_term/text()}</a></td></tr>
+  
+   }</table>
+};
+
+(:--------------------------------------------------------------------------------------------------:)
+(: Generate term web page //////////////////////////////////////////////////////////////////////////:)
+(:--------------------------------------------------------------------------------------------------:)
+
+(: Generate the HTML tables of metadata about the terms in the list and returns them as a div element :)
+declare function html:generate-term-html($db as xs:string,$ns as xs:string,$localName as xs:string) as element()
+{
+let $metadata := fn:collection($db)/metadata/record
+let $replacements := fn:collection($db)/linked-metadata/file/metadata/record
+
+for $record in $metadata
+let $version := $record/term_isDefinedBy/text()||"version/"||$record/term_localName/text()||"-"||$record/term_modified/text()
+where $record/term_localName/text() = $localName
+return 
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>{"Term metadata for "||$ns||":"||$record/term_localName/text()}</title>
+  </head>
+  <body>{
+    html:term-metadata($record,$version,$replacements,$ns),
+    <p>For complete information about the set of terms that includes this one, see <a href="{$record/term_isDefinedBy/text()}">{$record/term_isDefinedBy/text()}</a></p>,
+    html:generate-footer()
+    }</body>
+</html>
+};
+
+
 
 (:--------------------------------------------------------------------------------------------------:)
 (: Generate vocabulary web page ////////////////////////////////////////////////////////////////////:)
@@ -311,7 +390,7 @@ declare function html:generate-footer() as element()
 {
 <div>
   <hr/>
-  <p>This document is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>. <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="http://creativecommons.org/licenses/by/4.0/" style="max-width:100%;"></img></a>.</p>
+  <p>This document is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>. <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="http://creativecommons.org/licenses/by/4.0/" style="max-width:100%;"></img></a></p>
 <p>Copyright 2017 - Biodiversity Information Standards - TDWG - <a href="http://www.tdwg.org/about-tdwg/contact-us/">Contact Us</a></p>
 </div>
 };
@@ -560,52 +639,7 @@ return
        let $version := $record/term_isDefinedBy/text()||"version/"||$record/term_localName/text()||"-"||$record/term_modified/text()
        order by $record/term_localName/text()
        return (
-         <table>{
-         <tr><td><a id="{$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$ns||":"||$record/term_localName/text()}</td></tr>,
-         <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
-         <tr><td><strong>Term IRI:</strong></td><td>{$record/term_isDefinedBy/text()||$record/term_localName/text()}</td></tr>,
-
-         (: terms not defined by TDWG may have different version patterns, or may not have versions :)
-         if (contains($record/term_isDefinedBy/text(),"rs.tdwg.org"))
-         then (
-         <tr><td><strong>Term version IRI:</strong></td><td><a href='{$version}'>{$version}</a></td></tr>
-         )
-         else (),
-
-         <tr><td><strong>Modified:</strong></td><td>{$record/term_modified/text()}</td></tr>,
-         <tr><td><strong>Definition:</strong></td><td>{$record/rdfs_comment/text()}</td></tr>,
-         
-         if (contains($record/rdf_type/text(),"#"))
-         then <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>
-         else <tr><td><strong>Type:</strong></td><td>{$record/rdf_type/text()}</td></tr>,
-         
-         if ($record/term_deprecated/text() != "")
-         then (
-         <tr><td><strong>Note:</strong></td><td>This term is no longer recommended for use.</td></tr>
-         )
-         else (),
-         
-         if ($record/replaces_term/text() != "")
-         then (
-           <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces_term/text()}'>{$record/replaces_term/text()}</a></td></tr>
-           )
-         else (),
-         if ($record/replaces1_term/text() != "")
-         then (
-           <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces1_term/text()}'>{$record/replaces1_term/text()}</a></td></tr>
-           )
-         else (),
-         if ($record/replaces2_term/text() != "")
-         then (
-           <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces2_term/text()}'>{$record/replaces2_term/text()}</a></td></tr>
-           )
-         else (),
-
-         for $replacement in $replacements
-         where $replacement/replaced_term_localName/text() = $record/term_localName/text()
-         return <tr><td><strong>Is replaced by:</strong></td><td><a href='{$replacement/replacing_term/text()}'>{$replacement/replacing_term/text()}</a></td></tr>
-
-         }</table>,<br/>
+         html:term-metadata($record,$version,$replacements,$ns),<br/>
          )
        }
      </div>
