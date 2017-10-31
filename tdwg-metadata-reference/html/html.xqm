@@ -316,7 +316,7 @@ for $record in $metadata
 let $versionRoot := substring($record/version/text(),1,
 fn:string-length($record/version/text())-11) (: find the part of the version before the ISO 8601 date :)
 let $versionOf := replace($versionRoot,'version/','')
-where $record/version/text() = $localName
+where $record/versionLocalName/text() = $localName
 return 
 <html>
   <head>
