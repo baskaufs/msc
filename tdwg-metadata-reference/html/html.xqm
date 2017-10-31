@@ -225,6 +225,43 @@ declare function html:term-metadata($record as element(),$version as xs:string,$
    }</table>
 };
 
+(: generate a table with metadata about a single term version :)
+declare function html:term-version-metadata($record as element(),$versionOf as xs:string,$replacements as element()*,$ns as xs:string) as element()
+{
+ <table>{
+   <tr><td><a name="{$ns||"_"||$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$ns||":"||$record/term_localName/text()}</td></tr>,
+   <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
+   <tr><td><strong>Term version IRI:</strong></td><td>{$record/version/text()}</td></tr>,
+   <tr><td><strong>Version of:</strong></td><td><a href='{$versionOf}'>{$versionOf}</a></td></tr>,
+   <tr><td><strong>Issued:</strong></td><td>{$record/version_issued/text()}</td></tr>,
+   <tr><td><strong>Definition:</strong></td><td>{$record/rdfs_comment/text()}</td></tr>,
+   <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>,
+   <tr><td><strong>Status:</strong></td><td>{$record/version_status/text()}</td></tr>,
+
+   if ($record/replaces_version/text() != "")
+   then (
+     <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces_version/text()}'>{$record/replaces_version/text()}</a></td></tr>
+     )
+   else (),
+   if ($record/replaces1_version/text() != "")
+   then (
+     <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces1_version/text()}'>{$record/replaces1_version/text()}</a></td></tr>
+     )
+   else (),
+   if ($record/replaces2_version/text() != "")
+   then (
+     <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces2_version/text()}'>{$record/replaces2_version/text()}</a></td></tr>
+     )
+   else (),
+
+   for $replacement in $replacements
+   where $replacement/replaced_version_localName/text() = $record/versionLocalName/text()
+   return <tr><td><strong>Is replaced by:</strong></td><td><a href='{$replacement/replacing_version/text()}'>{$replacement/replacing_version/text()}</a></td></tr>
+
+   }</table>
+};
+
+
 (:--------------------------------------------------------------------------------------------------:)
 (: Generate term web page //////////////////////////////////////////////////////////////////////////:)
 (:--------------------------------------------------------------------------------------------------:)
@@ -265,7 +302,48 @@ return
 </html>
 };
 
+(:--------------------------------------------------------------------------------------------------:)
+(: Generate term version web page //////////////////////////////////////////////////////////////////:)
+(:--------------------------------------------------------------------------------------------------:)
 
+(: Generate the HTML tables of metadata about the terms in the list and returns them as a div element :)
+declare function html:generate-term-version-html($db as xs:string,$ns as xs:string,$localName as xs:string) as element()
+{
+let $metadata := fn:collection($db)/metadata/record
+let $replacements := fn:collection($db)/linked-metadata/file/metadata/record
+
+for $record in $metadata
+let $versionRoot := substring($record/version/text(),1,
+fn:string-length($record/version/text())-11) (: find the part of the version before the ISO 8601 date :)
+let $versionOf := replace($versionRoot,'version/','')
+where $record/version/text() = $localName
+return 
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>{"Metadata for the "||$record/version_issued/text()||" version of the term "||$ns||":"||$record/term_localName/text()}</title>
+  </head>
+  <body>{
+     <strong>{"Metadata for the "||$record/version_issued/text()||" version of the term "||$ns||":"||$record/term_localName/text()}</strong>,
+    html:term-version-metadata($record,$versionOf,$replacements,$ns),
+    <br/>,
+    <p><strong>Metadata about this term version are available in the following formats/serializations:</strong></p>,
+    <table border="1">{
+      let $iri := $record/version/text()
+      return (
+      <tr><th>Description</th><th>IRI</th></tr>,
+      <tr><td>HTML file (this document)</td><td><a href="{$iri||'.htm'}">{$iri||".htm"}</a></td></tr>,
+      <tr><td>RDF/Turtle</td><td><a href="{$iri||'.ttl'}">{$iri||".ttl"}</a></td></tr>,
+      <tr><td>RDF/XML</td><td><a href="{$iri||'.rdf'}">{$iri||".rdf"}</a></td></tr>,
+      <tr><td>JSON-LD</td><td><a href="{$iri||'.json'}">{$iri||".json"}</a></td></tr>
+      )
+    }</table>,
+
+    <p>For complete information about the set of term versions that includes this one, see ***FIX ME*** <a href="{$record/version_isDefinedBy/text()}">{$record/version_isDefinedBy/text()}</a></p>,
+    html:generate-footer()
+    }</body>
+</html>
+};
 
 (:--------------------------------------------------------------------------------------------------:)
 (: Generate vocabulary web page ////////////////////////////////////////////////////////////////////:)
@@ -784,37 +862,8 @@ return
 fn:string-length($record/version/text())-11) (: find the part of the version before the ISO 8601 date :)
        let $versionOf := replace($versionRoot,'version/','')
        return (
-         <table>{
-         <tr><td><a name="{$ns||"_"||$record/term_localName/text()}"><strong>Term Name:</strong></a></td><td>{$ns||":"||$record/term_localName/text()}</td></tr>,
-         <tr><td><strong>Label:</strong></td><td>{$record/label/text()}</td></tr>,
-         <tr><td><strong>Term version IRI:</strong></td><td>{$record/version/text()}</td></tr>,
-         <tr><td><strong>Version of:</strong></td><td><a href='{$versionOf}'>{$versionOf}</a></td></tr>,
-         <tr><td><strong>Issued:</strong></td><td>{$record/version_issued/text()}</td></tr>,
-         <tr><td><strong>Definition:</strong></td><td>{$record/rdfs_comment/text()}</td></tr>,
-         <tr><td><strong>Type:</strong></td><td>{substring-after($record/rdf_type/text(),"#")}</td></tr>,
-         <tr><td><strong>Status:</strong></td><td>{$record/version_status/text()}</td></tr>,
-
-         if ($record/replaces_version/text() != "")
-         then (
-           <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces_version/text()}'>{$record/replaces_version/text()}</a></td></tr>
-           )
-         else (),
-         if ($record/replaces1_version/text() != "")
-         then (
-           <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces1_version/text()}'>{$record/replaces1_version/text()}</a></td></tr>
-           )
-         else (),
-         if ($record/replaces2_version/text() != "")
-         then (
-           <tr><td><strong>Replaces:</strong></td><td><a href='{$record/replaces2_version/text()}'>{$record/replaces2_version/text()}</a></td></tr>
-           )
-         else (),
-
-         for $replacement in $replacements
-         where $replacement/replaced_version_localName/text() = $record/versionLocalName/text()
-         return <tr><td><strong>Is replaced by:</strong></td><td><a href='{$replacement/replacing_version/text()}'>{$replacement/replacing_version/text()}</a></td></tr>
-
-         }</table>,<br/>
+         html:term-version-metadata($record,$versionOf,$replacements,$ns),
+         <br/>
          )
        }
      </div>
