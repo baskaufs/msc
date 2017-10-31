@@ -86,7 +86,127 @@ declare
       return page:see-also($acceptHeader,$redirect-id,$db,$lookup-string)
   };
 
-(: This is the special handler function for URI patterns where the local name follows the "/dwc/terms/" subpath :)
+(: Handler for URI patterns where the local name follows the "/ac/terms/" subpath (Audubon Core-defined terms) :)
+declare
+  %rest:path("/ac/terms/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:audubon($acceptHeader,$local-id)
+  {
+  let $db := "audubon"
+  return page:generic-simple-id($local-id,$db,$acceptHeader)
+  };
+
+(: Handler for URI patterns where the local name follows the "/ac/terms/version/" subpath (Audubon Core) :)
+declare
+  %rest:path("/ac/terms/version/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:audubon-versions($acceptHeader,$local-id)
+  {
+  let $db := "audubon-versions"
+  return page:generic-simple-id($local-id,$db,$acceptHeader)
+  };
+
+(: Handler for URI patterns where the local name follows the "/dwc/curatorial/" subpath :)
+declare
+  %rest:path("/dwc/curatorial/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:content-negotiation-curatorial($acceptHeader,$local-id)
+  {
+  let $db := "curatorial"
+  return page:generic-simple-id($local-id,$db,$acceptHeader)
+  };
+
+(: Handler for URI patterns where the local name follows the "/dwc/curatorial/version/" subpath :)
+declare
+  %rest:path("/dwc/curatorial/version/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:curatorial-versions($acceptHeader,$local-id)
+  {
+  let $db := "curatorial-versions"
+  return page:generic-simple-id($local-id,$db,$acceptHeader)
+  };
+
+(: Handler for URI patterns where the local name follows the "/dwc/dwcore/" subpath :)
+declare
+  %rest:path("/dwc/dwcore/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:content-negotiation-dwcore($acceptHeader,$local-id)
+  {
+  let $db := "dwcore"
+  return page:generic-simple-id($local-id,$db,$acceptHeader)
+  };
+
+(: Handler for URI patterns where the local name follows the "/dwc/dwcore/version/" subpath :)
+declare
+  %rest:path("/dwc/dwcore/version/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:dwcore-versions($acceptHeader,$local-id)
+  {
+  let $db := "dwcore-versions"
+  return page:generic-simple-id($local-id,$db,$acceptHeader)
+  };
+
+(: Handler for URI patterns where the local name follows the "/dwc/dwctype/" subpath (DwC type vocabulary :)
+declare
+  %rest:path("/dwc/dwctype/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:content-negotiation-dwctype($acceptHeader,$local-id)
+  {
+  let $db := "dwctype"
+  return page:generic-simple-id($local-id,$db,$acceptHeader)
+  };
+
+(: Handler for URI patterns where the local name follows the "/dwc/dwctype/version/" subpath (DwC type vocab) :)
+declare
+  %rest:path("/dwc/dwctype/version/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:dwctype-versions($acceptHeader,$local-id)
+  {
+  let $db := "dwctype-versions"
+  return page:generic-simple-id($local-id,$db,$acceptHeader)
+  };
+
+(: Handler for URI patterns where the local name follows the "/dwc/geospatial/" subpath :)
+declare
+  %rest:path("/dwc/geospatial/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:content-negotiation-geospatial($acceptHeader,$local-id)
+  {
+  let $db := "geospatial"
+  return page:generic-simple-id($local-id,$db,$acceptHeader)
+  };
+
+(: Handler for URI patterns where the local name follows the "/dwc/geospatial/version/" subpath :)
+declare
+  %rest:path("/dwc/geospatial/version/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:geospatial-versions($acceptHeader,$local-id)
+  {
+  let $db := "geospatial-versions"
+  return page:generic-simple-id($local-id,$db,$acceptHeader)
+  };
+
+(: Handler for URI patterns where the local name follows the "/dwc/iri/" subpath (dwciri: terms) :)
+declare
+  %rest:path("/dwc/iri/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:iri($acceptHeader,$local-id)
+  {
+  let $db := "iri"
+  return page:generic-simple-id($local-id,$db,$acceptHeader)
+  };
+
+(: Handler for URI patterns where the local name follows the "/dwc/iri/version/" subpath (dwciri: term versions) :)
+declare
+  %rest:path("/dwc/iri/version/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:iri-versions($acceptHeader,$local-id)
+  {
+  let $db := "iri-versions"
+  return page:generic-simple-id($local-id,$db,$acceptHeader)
+  };
+
+(: Special handler for URI patterns where the local name follows the "/dwc/terms/" subpath (Darwin Core and Utility terms :)
 declare
   %rest:path("/dwc/terms/{$local-id}")
   %rest:header-param("Accept","{$acceptHeader}")
@@ -117,7 +237,17 @@ declare
                page:see-also($acceptHeader,$redirect-id,$db,$lookup-string)
   };
 
-(: This is the handler function for URI patterns where the local name follows the "/version/{vocab}/" subpath :)
+(: Handler for URI patterns where the local name follows the "/dwc/terms/version/" subpath (Darwin Core term versions) :)
+declare
+  %rest:path("/dwc/terms/version/{$local-id}")
+  %rest:header-param("Accept","{$acceptHeader}")
+  function page:terms-versions($acceptHeader,$local-id)
+  {
+  let $db := "terms-versions"
+  return page:generic-simple-id($local-id,$db,$acceptHeader)
+  };
+
+(: Handler for URI patterns where the local name follows the "/version/{vocab}/" subpath (vocabulary versions) :)
 declare
   %rest:path("/version/{$vocab}/{$local-id}")
   %rest:header-param("Accept","{$acceptHeader}")
@@ -139,7 +269,7 @@ declare
       return page:see-also($acceptHeader,$redirect-id,$db,$lookup-string)
   };
 
-(: This is the handler function for URI patterns of "/{vocab}/{list}/" :)
+(: Handler for URI patterns of "/{vocab}/{list}/" (term lists) :)
 declare
   %rest:path("/{$namespace}/{$local-id}")
   %rest:header-param("Accept","{$acceptHeader}")
@@ -161,7 +291,7 @@ declare
       return page:see-also($acceptHeader,$redirect-id,$db,$lookup-string)
   };
 
-(: This is the main handler function for URI patterns where the local name follows the "/{vocab}/version/{list}/" subpath :)
+(: Handler for URI patterns where the local name follows the "/{vocab}/version/{list}/" subpath (term list versions) :)
 declare
   %rest:path("/{$vocab}/version/{$term-list}/{$local-id}")
   %rest:header-param("Accept","{$acceptHeader}")
@@ -181,26 +311,6 @@ declare
       let $lookup-string := "http://rs.tdwg.org/"||$vocab||"/version/"||$term-list||"/"||$local-id
       let $redirect-id := $local-id
       return page:see-also($acceptHeader,$redirect-id,$db,$lookup-string)
-  };
-
-(: This is the main handler function for URI patterns where the local name follows the "/dwc/iri/" subpath :)
-declare
-  %rest:path("/dwc/iri/{$local-id}")
-  %rest:header-param("Accept","{$acceptHeader}")
-  function page:content-negotiation-iri($acceptHeader,$local-id)
-  {
-  let $db := "iri"
-  return page:generic-simple-id($local-id,$db,$acceptHeader)
-  };
-
-(: This is the main handler function for URI patterns where the local name follows the "/dwc/iri/versions/" subpath :)
-declare
-  %rest:path("/dwc/iri/versions/{$local-id}")
-  %rest:header-param("Accept","{$acceptHeader}")
-  function page:content-negotiation-iri-versions($acceptHeader,$local-id)
-  {
-  let $db := "iri-versions"
-  return page:generic-simple-id($local-id,$db,$acceptHeader)
   };
 
 (:----------------------------------------------------------------------------------------------:)
@@ -254,7 +364,20 @@ declare function page:return-representation($response-media-type,$lookup-string,
 declare function page:handle-html($db,$lookup-string)
 {
   switch ($db) 
+   case "audubon" return page:temp-redirect("https://terms.tdwg.org/wiki/Audubon_Core_Term_List#ac:",$lookup-string)
+   case "audubon-versions" return (page:success(),html:generate-term-version-html($db,"ac",$lookup-string))
+   case "curatorial" return (page:success(),html:generate-term-html($db,"dwccuratorial",$lookup-string))
+   case "curatorial-versions" return (page:success(),html:generate-term-version-html($db,"dwccuratorial",$lookup-string))
+   case "dwcore" return (page:success(),html:generate-term-html($db,"dwcore",$lookup-string))
+   case "dwcore-versions" return (page:success(),html:generate-term-version-html($db,"dwcore",$lookup-string))
+   case "dwctype" return (page:success(),html:generate-term-html($db,"dwctype",$lookup-string))
+   case "dwctype-versions" return (page:success(),html:generate-term-version-html($db,"dwctype",$lookup-string))
+   case "geospatial" return (page:success(),html:generate-term-html($db,"dwcgeospatial",$lookup-string))
+   case "geospatial-versions" return (page:success(),html:generate-term-version-html($db,"dwcgeospatial",$lookup-string))
+   case "iri" return (page:success(),html:generate-term-html($db,"dwciri",$lookup-string))
+   case "iri-versions" return (page:success(),html:generate-term-version-html($db,"dwciri",$lookup-string))
    case "terms" return page:temp-redirect("http://rs.tdwg.org/dwc/terms/#",$lookup-string)
+   case "terms-versions" return (page:success(),html:generate-term-version-html($db,"dwc",$lookup-string))
    case "term-lists" return (page:success(),html:generate-term-list-html($lookup-string))
    case "term-lists-versions" return (page:success(),html:generate-term-list-version-html($lookup-string))
    case "vocabularies" return (page:success(),html:generate-vocabulary-html($lookup-string))
