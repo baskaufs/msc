@@ -261,6 +261,14 @@ declare function html:term-version-metadata($record as element(),$versionOf as x
    }</table>
 };
 
+(: Find the most recent version of a term :)
+declare function html:most-recent-version($linkedMetadata as node()+,$localName as xs:string) as xs:string+
+{
+for $record in $linkedMetadata
+where $record/term_localName/text() = $localName
+order by $record/version/text()
+return $record/version/text()
+};
 
 (:--------------------------------------------------------------------------------------------------:)
 (: Generate term web page //////////////////////////////////////////////////////////////////////////:)
@@ -270,11 +278,11 @@ declare function html:term-version-metadata($record as element(),$versionOf as x
 declare function html:generate-term-html($db as xs:string,$ns as xs:string,$localName as xs:string) as element()
 {
 let $metadata := fn:collection($db)/metadata/record
-let $replacements := fn:collection($db)/linked-metadata/file/metadata/record
+let $linkedMetadata := fn:collection($db)/linked-metadata/file/metadata/record
 
 for $record in $metadata
-let $version := $record/term_isDefinedBy/text()||"version/"||$record/term_localName/text()||"-"||$record/term_modified/text()
 where $record/term_localName/text() = $localName
+let $version := html:most-recent-version($linkedMetadata,$localName)[last()]
 return 
 <html>
   <head>
@@ -282,7 +290,7 @@ return
     <title>{"Term metadata for "||$ns||":"||$record/term_localName/text()}</title>
   </head>
   <body>{
-    html:term-metadata($record,$version,$replacements,$ns),
+    html:term-metadata($record,$version,$linkedMetadata,$ns),
     <br/>,
     <p><strong>Metadata about this term are available in the following formats/serializations:</strong></p>,
     <table border="1">{
@@ -727,17 +735,17 @@ declare function html:generate-list-toc-etc-html($termListIri as xs:string) as e
 declare function html:generate-list-html($db as xs:string,$ns as xs:string) as element()
 {
 let $metadata := fn:collection($db)/metadata/record
-let $replacements := fn:collection($db)/linked-metadata/file/metadata/record
+let $linkedMetadata := fn:collection($db)/linked-metadata/file/metadata/record
   
 return 
      <div>
        {
        for $record in $metadata
-       (: FIX ME ******************* This method of inferring the most recent version is bad.  It should be directly determined based on the metadata about versions. See https://github.com/tdwg/rs.tdwg.org/issues/2 *************** :)
-       let $version := $record/term_isDefinedBy/text()||"version/"||$record/term_localName/text()||"-"||$record/term_modified/text()
-       order by $record/term_localName/text()
+       let $localName := $record/term_localName/text()
+       let $version := html:most-recent-version($linkedMetadata,$localName)[last()]
+       order by $localName
        return (
-         html:term-metadata($record,$version,$replacements,$ns),<br/>
+         html:term-metadata($record,$version,$linkedMetadata,$ns),<br/>
          )
        }
      </div>
