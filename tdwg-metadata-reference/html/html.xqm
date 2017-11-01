@@ -311,6 +311,7 @@ declare function html:generate-term-version-html($db as xs:string,$ns as xs:stri
 {
 let $metadata := fn:collection($db)/metadata/record
 let $replacements := fn:collection($db)/linked-metadata/file/metadata/record
+let $listVersionMembers := fn:collection("term-lists-versions")/linked-metadata/file/metadata/record
 
 for $record in $metadata
 let $versionRoot := substring($record/version/text(),1,
@@ -339,8 +340,12 @@ return
       <tr><td>JSON-LD</td><td><a href="{$iri||'.json'}">{$iri||".json"}</a></td></tr>
       )
     }</table>,
-
-    <p>***FIX ME*** For complete information about the set of term versions that includes this one, see ***FIX ME*** <a href="{$record/version_isDefinedBy/text()}">{$record/version_isDefinedBy/text()}</a></p>,
+    <p><span>For more information about this term version in the context of sets of terms that include it, please refer to the following term list versions: </span><br/>
+    {
+    for $listVersion in $listVersionMembers
+    where $listVersion/termVersion/text() = $record/version/text()
+    return (<a href="{$listVersion/termListVersion/text()}">{$listVersion/termListVersion/text()}</a>,<br/>)
+    }</p>,
     html:generate-footer()
     }</body>
 </html>
@@ -728,6 +733,7 @@ return
      <div>
        {
        for $record in $metadata
+       (: FIX ME ******************* This method of inferring the most recent version is bad.  It should be directly determined based on the metadata about versions. See https://github.com/tdwg/rs.tdwg.org/issues/2 *************** :)
        let $version := $record/term_isDefinedBy/text()||"version/"||$record/term_localName/text()||"-"||$record/term_modified/text()
        order by $record/term_localName/text()
        return (
