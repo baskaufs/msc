@@ -10,6 +10,7 @@ import module namespace html = 'http://example.org/html' at 'https://raw.githubu
 
 declare
   %rest:path("/{$string}")
+  %output:method("xhtml")
   function page:home($string)
   {
   html:generate-webpage($string)
