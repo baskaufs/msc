@@ -1,0 +1,39 @@
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Advent of Code - Day 1</title>
+</head>
+
+<body>
+
+Captcha string: <input type="text" id="inputBox"><br>
+
+<input type="button" value="submit" id="searchButton" onclick="test();"/>
+
+<div id="div1"></div>
+
+<script>
+
+function sets(string) {
+	sum = 0;
+	half = string.length/2;
+ 	for (i=0; i<half; i++)
+	    {
+	    if (string.substr(i,1) == string.substr(i+half,1)) {
+			sum += parseInt( string.substr(i,1) );
+			}
+	    }
+	return sum*2;
+	}
+
+function test() {
+	string = document.getElementById('inputBox').value;
+	answer = sets(string);
+	document.getElementById('div1').innerHTML = answer;
+	}
+
+</script>
+ 
+</body>
+</html>

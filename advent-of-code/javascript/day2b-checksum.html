@@ -1,0 +1,60 @@
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Advent of Code - Day 2b</title>
+</head>
+
+<body>
+
+Paste table here: <textarea id="inputBox" style="font-size: 8pt; height: 400px; width:800px;"></textarea><br/>
+
+<input type="button" value="submit" id="searchButton" onclick="test();"/>
+
+<div id="div1"></div>
+
+<script>
+
+function calcRows(string) {
+	sum = 0;
+	row=string.split('\n'); // split the input string by newlines
+ 	for (i=0; i<row.length; i++)
+	    {
+	    field=row[i].split('\t');  // split the line into fields by tab characters.  (examples use spaces, not tabs)
+	    for (j=0; j<field.length; j++)
+	    	{
+			field[j] = parseFloat(field[j]);   // convert all text fields to numbers
+			}
+	    for (j=0; j<field.length; j++)
+	    	{
+	    	sum += calcLine(field[j],field);  // function returns zero except for the evenly divided one
+	    	}
+	    }
+	return sum;
+	}
+	
+function calcLine(number, array){
+	answer = 0;
+	for (k=0; k<array.length; k++)
+		{
+		if (number % array[k] == 0)  // ignore non-whole numbers
+			{
+			if (number / array[k] != 1)  // ignore identity divisions
+				{
+				answer = number / array[k];
+				}
+			}
+		}
+	return answer;
+	}
+
+function test() {
+	string = document.getElementById('inputBox').value;
+	answer = calcRows(string);
+	document.getElementById('div1').innerHTML = answer;
+	}
+
+</script>
+ 
+</body>
+</html>
