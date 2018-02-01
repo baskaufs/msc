@@ -1,0 +1,34 @@
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Advent of Code - Day 3a</title>
+</head>
+
+<body>
+
+Square number: <input type="text" id="inputBox"><br>
+
+<input type="button" value="submit" id="searchButton" onclick="test();"/>
+
+<div id="div1"></div>
+
+<script>
+
+function test() {
+	string = document.getElementById('inputBox').value;
+	squareNumber = parseFloat(string);
+	innerRing = Math.floor((Math.sqrt(squareNumber-1)-1)/2);
+	outerRing = innerRing + 1;
+	positionOnOuterRing = squareNumber - (1+2*innerRing)**2 - 1;
+	positionOnSide = positionOnOuterRing % (outerRing*2);
+	distanceFromCenterOfSide = Math.abs(positionOnSide - innerRing);
+	manhattanDistance = distanceFromCenterOfSide + outerRing;
+	
+	document.getElementById('div1').innerHTML = manhattanDistance;
+	}
+
+</script>
+ 
+</body>
+</html>
