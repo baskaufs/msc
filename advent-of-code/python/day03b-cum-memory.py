@@ -1,37 +1,59 @@
-import math
+def beginRow(position,array):
+	position[0] += 1 # increment position index
+	# the adjacent position does not change because a corner was just turned
+	position[1] = array[position[0]-1] + array[position[0]-2] + array[position[2]] + array[position[2]+1] # add the previous 2 positions, the adjacent position, and the next adjacent position
+	return (position)
 
-def singleton(sum):
-	sum+=1
-	index = 0  # Note: in Python, list indexing begins with 0.  So the index of first item on a single-item list = 0
-	return (index,sum)  # return the two values as a tuple
+def middleOfRow(position,array):
+	position[0] += 1 # increment position index
+	position[2] += 1 # increment adjacent index
+	position[1] = array[position[0]-1] + array[position[2]-1] + array[position[2]] + array[position[2]+1] # add the previous position, the adjacent position, and adjacent position before and after
+	return (position)
 
-#def startRing1(sum):
+def finishRowFlush(position,array):
+	position[0] += 1 # increment position index
+	position[2] += 1 # increment adjacent index
+	position[1] = array[position[0]-1] + array[position[2]-1] + array[position[2]] # add the previous position, the adjacent position, and the previous adjacent position
+	return (position)
+
+def extendRow(position,array):
+	position[0] += 1 # increment position index
+	position[1] = array[position[0]-1] + array[position[2]] # add the previous position and the unchanged adjacent position
+	# the adjacent position does not change because the corner will be turned
+	return (position)
 	
 
-squareNumber = 368078
 
-# find the number of rings to the ring inside the numbered square. Count the center square as ring 0
-innerRing = int((math.sqrt(squareNumber-1)-1)/2)
-outerRing = innerRing + 1 # the outer ring is the one that contains the numbered square
+array = [1,1,2,4,5,10,11] # create a new list variable to hold the set of calculated position sum values
+position = [6,0,0] # create a new list variable for info about the position
+# 0th element is the index of the current position (starting at the central square). It's zero because in Python, list indexing begins with 0. 
+# 1st element is the sum for the current position.
+# 2nd element is the index of the adjacent position (beside the current position towards the center). Meaningless for the first square
 
-# calculate how far the numbered square is from the start of the ring (subtract 1 to count starting from zero)
-positionOnOuterRing = squareNumber - (1+2*innerRing)**2 - 1
-positionOnSide = positionOnOuterRing % (outerRing*2) # remainder of (position divided by quarter of outer ring)
-distanceFromCenterOfSide = abs(positionOnSide - innerRing)
-manhattanDistance = distanceFromCenterOfSide + outerRing # outerRing index is steps from center square to outerRing
 
-sum = 0
-array = [] # create a new list variable
+for i in range(len(array)):
+	print(array[i])
+	
+# at this point the spiral extension pattern begins with two sides having the same number of middle row spaces
+# then the number of middle row spaces increments and repeats twice again...
+for middleNumber in range(6):
+	print("middleNumber "+str(middleNumber))
+	for duplicate in range(2):
+		print("duplicate "+str(duplicate))
+		position = beginRow(position,array)
+		print("begin "+str(position[1]))
+		array.append(position[1])
+		for middle in range(middleNumber):
+			print("middle "+str(middle))
+			position = middleOfRow(position,array)
+			print(position[1])
+			array.append(position[1])
+		position = finishRowFlush(position,array)
+		print("finish "+str(position[1]))
+		array.append(position[1])
+		position = extendRow(position,array)
+		print("extend "+str(position[1]))
+		array.append(position[1])
 
-#ring 0
-tuple = singleton(sum)
-index = tuple[0]
-sum = tuple[1]
-array.append(sum)
 
-#ring 1
-
-print(index)
-print(sum)
-print(array[index])
 
