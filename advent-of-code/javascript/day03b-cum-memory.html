@@ -1,0 +1,95 @@
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Advent of Code - Day 3b</title>
+</head>
+
+<body>
+
+Max ring: <input type="text" id="inputBox" value="4"><br>
+
+<input type="button" value="submit" id="searchButton" onclick="calculate();"/>
+
+<div id="div1"></div>
+
+<script>
+
+function calculate() {
+	array = [0,1,1,2,4,5,10,11,23,25] // algorithm doesn't work for ring=0, so use manual values before that.  
+	// Add a 0th value to the start of the list so that list indexing will correspond to XQuery where sequence indexing starts with 1
+	string = document.getElementById('inputBox').value;
+	maxRing = parseFloat(string);
+	outputString = '';
+	for (ring=1; ring<=maxRing; ring++)
+	    {
+	    adjacencyBaseForRing = (2*(ring-1)+1)**2;
+	    sideLength = 2*(ring+1);
+	    sequenceIndexForStartOfRing = (2*ring+1)**2 + 1;
+	    for (side=0; side<=3; side++)
+	    	{
+	    	adjacencyBaseForSide = adjacencyBaseForRing + side*ring*2;
+	    	sequenceIndexForStartOfSide = sequenceIndexForStartOfRing + sideLength*side;
+	    	
+	    	// handle position zero for the side
+	    	if (side==0)
+	    		{
+	    		sum = array[sequenceIndexForStartOfSide-1]+array[adjacencyBaseForSide+1];
+	    		array.push(sum);
+	    		}
+	    	else
+	    		{
+	    		sum = array[sequenceIndexForStartOfSide-1]+array[sequenceIndexForStartOfSide-2]+array[adjacencyBaseForSide]+array[adjacencyBaseForSide+1];
+	    		array.push(sum);
+	    		}
+	    	// positions 1 through end of regular side positions
+			for (position = 1; position<=(sideLength -3); position++)
+				{
+				if (side==0 & position==1)
+					{
+					sum = array[sequenceIndexForStartOfSide+position-1]+array[sequenceIndexForStartOfSide+position-2]+array[adjacencyBaseForSide+position]+array[adjacencyBaseForSide+position+1];
+					array.push(sum);
+					}
+				else
+					{
+					sum = array[sequenceIndexForStartOfSide+position-1]+array[adjacencyBaseForSide+position-1]+array[adjacencyBaseForSide+position]+array[adjacencyBaseForSide+position+1];
+					array.push(sum);
+	    			}
+	    		}
+	    		
+	    	// handle next to last position on side
+	    	if (side==3)
+	    		{
+	    		sum = array[sequenceIndexForStartOfSide+sideLength-3]+array[adjacencyBaseForSide+2*ring-1]+array[adjacencyBaseForSide+2*ring]+array[adjacencyBaseForSide+2*ring+1];
+	    		array.push(sum);
+	    		}
+	    	else
+	    		{
+	    		sum = array[sequenceIndexForStartOfSide+sideLength-3]+array[adjacencyBaseForSide+2*ring-1]+array[adjacencyBaseForSide+2*ring];
+	    		array.push(sum);
+	    		}
+	    		
+	    	// handle last position on side
+	    	if (side==3)	    	
+	    		{
+	    		sum = array[sequenceIndexForStartOfSide+sideLength-2]+array[adjacencyBaseForSide+2*ring]+array[adjacencyBaseForSide+2*ring+1];
+	    		array.push(sum);
+	    		}
+	    	else
+	    		{
+	    		sum = array[sequenceIndexForStartOfSide+sideLength-2]+array[adjacencyBaseForSide+2*ring];
+	    		array.push(sum);
+	    		}
+	    	}
+	    }
+	displayString='';
+	for (index=0; index<array.length; index++)
+		{
+		displayString += String(array[index])+'<br/>'
+		}
+	document.getElementById('div1').innerHTML = displayString;
+	}
+</script>
+ 
+</body>
+</html>
