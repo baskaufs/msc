@@ -49,7 +49,7 @@ let $response := local:query-endpoint($endpoint,$query)
 let $numberOfResults := number(data($response[2]/rsp/photos/@total))
 let $pages := ($numberOfResults idiv 500) + 1 (: max records allowed per page is 500 :)
 
-return (file:write("c:\test\flickr\chapman.xml",
+return (file:write("c:\test\flickr\chapman-raw.xml",
 
 <photos>{
 for $page in (1 to $pages) 
