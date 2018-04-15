@@ -53,25 +53,29 @@ return
         else if ($photo/method/text()="googleearth")
         then "Location determined from Google Earth."
         else ()
+    let $baseAccessUri := substring($photo/thumbUrl/text(),1,string-length($photo/thumbUrl/text())-6)
     let $format :=
         if ($photo/format/text()="jpg")
         then "image/jpeg"
         else ()
     let $uuid := "U"||random:uuid()
+    let $occurrenceUuid := "U"||random:uuid()
+    let $eventUuid := "U"||random:uuid()
+    (: dc:rights should have a year :)
     return (
-       element rdf:Description { 
-           attribute rdf:about {$photoUri},
-           <rdf:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />,
-           <dc:type>StillImage</dc:type>,
-           <dcterms:identifier>{$photo/id/text()}</dcterms:identifier>, 
-           <xmp:metadatadate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-12T21:17:00-05:00</xmp:metadatadate>,
-           <dc:creator>Arthur Chapman</dc:creator>,
-           <dcterms:creator rdf:resource="http://viaf.org/viaf/93519663" />,
-           <dcterms:created>{$photo/dateTaken/text()}</dcterms:created>,
-           <ac:providerLiteral>Flickr</ac:providerLiteral>,
-           <dc:rights xml:lang="en">(c) Arthur D. Chapman</dc:rights>, (: should have a year here :)
-           <xmpRights:owner>Arthur D. Chapman</xmpRights:owner>,
-           
+
+       <rdf:Description rdf:about="{$photoUri}">
+           <rdf:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+           <dc:type>StillImage</dc:type>
+           <dcterms:identifier>{$photo/id/text()}</dcterms:identifier>
+           <xmp:metadatadate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-12T21:17:00-05:00</xmp:metadatadate>
+           <dc:creator>Arthur Chapman</dc:creator>
+           <dcterms:creator rdf:resource="http://viaf.org/viaf/93519663" />
+           <dcterms:created>{$photo/dateTaken/text()}</dcterms:created>
+           <ac:providerLiteral>Flickr</ac:providerLiteral>
+           <dc:rights xml:lang="en">(c) Arthur D. Chapman</dc:rights>
+           <xmpRights:owner>Arthur D. Chapman</xmpRights:owner>
+           {
            if ($licenseUri!="none")
            then (
            <cc:license rdf:resource="{$licenseUri}"/>,
@@ -81,39 +85,62 @@ return
            <xmpRights:WebStatement>{$licenseUri}</xmpRights:WebStatement>,
            <ac:licenseLogoURL>{$licenseButton}</ac:licenseLogoURL>
            )
-           else (),
-           
-           <dcterms:title>{$photo/title/text()}</dcterms:title>,
-           <dcterms:description>{$photo/description/text()}</dcterms:description>,
-           <blocal:contactURL>http://www.anbg.gov.au/biography/chapman-arthur-david.html</blocal:contactURL>,
-           <geo:lat>{$photo/latitude/text()}</geo:lat>,
-           <geo:long>{$photo/longitude/text()}</geo:long>,
-           <dwc:coordinateUncertaintyInMeters>{substring-before($photo/accuracy[1]/text(),"meters")}</dwc:coordinateUncertaintyInMeters>,
-           <dwc:georeferenceRemarks>{$georeferenceRemarks}</dwc:georeferenceRemarks>,
-           <ac:hasServiceAccessPoint rdf:resource="{$photoUri}#bq"/>,
-           <ac:hasServiceAccessPoint rdf:resource="{$photoUri}#tn"/>,
-           <foaf:depicts rdf:nodeID="{$uuid}"/>,
+           else ()
+           }
+           <dcterms:title>{$photo/title/text()}</dcterms:title>
+           <dcterms:description>{$photo/description/text()}</dcterms:description>
+          {
+          for $tag in $photo/tags/tag
+          return <ac:tag>{$tag/text()}</ac:tag>
+          }
+           <blocal:contactURL>http://www.anbg.gov.au/biography/chapman-arthur-david.html</blocal:contactURL>
+           <geo:lat>{$photo/latitude/text()}</geo:lat>
+           <geo:long>{$photo/longitude/text()}</geo:long>
+           <dwc:coordinateUncertaintyInMeters>{substring-before($photo/accuracy[1]/text(),"meters")}</dwc:coordinateUncertaintyInMeters>
+           <dwc:georeferenceRemarks>{$georeferenceRemarks}</dwc:georeferenceRemarks>
+           <ac:hasServiceAccessPoint rdf:resource="{$photoUri}#bq"/>
+           <ac:hasServiceAccessPoint rdf:resource="{$photoUri}#tn"/>
+           <ac:hasServiceAccessPoint rdf:resource="{$photoUri}#lq"/>
+           <ac:hasServiceAccessPoint rdf:resource="{$photoUri}#gq"/>
+           <foaf:depicts rdf:nodeID="{$uuid}"/>
            <dsw:derivedFrom rdf:nodeID="{$uuid}"/>
-           },
+       </rdf:Description>,
+
        <rdf:Description rdf:nodeID="{$uuid}">
           <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Organism"/>
           <rdf:type rdf:resource="http://purl.org/dc/terms/PhysicalResource"/>
           <foaf:depiction rdf:resource="{$photoUri}"/>
+          {
+           if (exists($photo/validDistribution))
+           then if ($photo/validDistribution[1]/text()="false")
+                 then <dwc:establishmentMeans>managed</dwc:establishmentMeans>
+                 else ()
+           else ()
+         }
+         {
+           if (exists($photo/conservationStatus))
+           then if ($photo/conservationStatus[1]/text()="extinct")
+                 then <dwc:occurrenceStatus>extinct</dwc:occurrenceStatus>
+                 else()
+           else ()
+         }
           <dsw:hasDerivative rdf:resource="{$photoUri}"/>
           <dsw:hasOccurrence>
-            <rdf:Description>
+            <rdf:Description rdf:nodeID="{$occurrenceUuid}">
               <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Occurrence"/>
               <dsw:occurrenceOf rdf:nodeID="{$uuid}"/>
               <dwciri:recordedBy rdf:resource="http://viaf.org/viaf/93519663"/>
               <dwc:recordedBy>Arthur Chapman</dwc:recordedBy>
               <dsw:hasEvidence rdf:resource="{$photoUri}"/>
               <dsw:atEvent>
-                <rdf:Description>
+                <rdf:Description rdf:nodeID="{$eventUuid}">
                   <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Event"/>
                   <dwc:eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">{substring($photo/dateTaken/text(),1,10)}</dwc:eventDate>
+                  <dsw:eventOf rdf:nodeID="{$occurrenceUuid}"/>
                   <dsw:locatedAt>
                     <rdf:Description>
                        <rdf:type rdf:resource="http://purl.org/dc/terms/Location"/>
+                       <dsw:locates rdf:nodeID="{$eventUuid}"/>
                        <geo:lat>{$photo/latitude/text()}</geo:lat>
                        <dwc:decimalLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">{$photo/latitude/text()}</dwc:decimalLatitude>
                        <geo:long>{$photo/longitude/text()}</geo:long>
@@ -146,15 +173,33 @@ return
             </rdf:Description>
           </dsw:hasIdentification>
        </rdf:Description>,
+
        <rdf:Description rdf:about="{$photoUri}#tn">
          <rdf:type rdf:resource="http://rs.tdwg.org/ac/terms/ServiceAccessPoint"/>
          <ac:variantLiteral>Thumbnail</ac:variantLiteral>
          <ac:variant rdf:resource="http://rs.tdwg.org/ac/terms/Thumbnail"/>
-         <ac:accessURI rdf:resource="{$photo/thumbUrl/text()}"/>
+         <ac:accessURI rdf:resource="{$baseAccessUri||"_t.jpg"}"/>
          <exif:PixelXDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#int">{$photo/thumbWidth/text()}</exif:PixelXDimension>
          <exif:PixelYDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#int">{$photo/thumbHeight/text()}</exif:PixelYDimension>
          <dc:format>{$format}</dc:format>
        </rdf:Description>,
+
+       <rdf:Description rdf:about="{$photoUri}#lq">
+         <rdf:type rdf:resource="http://rs.tdwg.org/ac/terms/ServiceAccessPoint"/>
+         <ac:variantLiteral>Lower Quality</ac:variantLiteral>
+         <ac:variant rdf:resource="http://rs.tdwg.org/ac/terms/LowerQuality"/>
+         <ac:accessURI rdf:resource="{$baseAccessUri||".jpg"}"/>
+         <dc:format>{$format}</dc:format>
+       </rdf:Description>,
+
+       <rdf:Description rdf:about="{$photoUri}#gq">
+         <rdf:type rdf:resource="http://rs.tdwg.org/ac/terms/ServiceAccessPoint"/>
+         <ac:variantLiteral>Good Quality</ac:variantLiteral>
+         <ac:variant rdf:resource="http://rs.tdwg.org/ac/terms/GoodQuality"/>
+         <ac:accessURI rdf:resource="{$baseAccessUri||"_b.jpg"}"/>
+         <dc:format>{$format}</dc:format>
+       </rdf:Description>,
+
        <rdf:Description rdf:about="{$photoUri}#bq">
          <rdf:type rdf:resource="http://rs.tdwg.org/ac/terms/ServiceAccessPoint"/>
          <ac:variantLiteral>Best Quality</ac:variantLiteral>
