@@ -19,29 +19,30 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 <https://www.flickr.com/photos/arthur_chapman/24155049587> a <http://purl.org/dc/dcmitype/StillImage>;
+	dc:type "StillImage";
 	ac:hasServiceAccessPoint <https://www.flickr.com/photos/arthur_chapman/24155049587#bq>,
 	                        <https://www.flickr.com/photos/arthur_chapman/24155049587#gq>,
 	                        <https://www.flickr.com/photos/arthur_chapman/24155049587#lq>,
 	                        <https://www.flickr.com/photos/arthur_chapman/24155049587#tn>;
 	dsw:derivedFrom _:1;
 	foaf:depicts _:1;
-	blocal:contactURL "http://www.anbg.gov.au/biography/chapman-arthur-david.html";
-	cc:license <http://creativecommons.org/licenses/by-nc/2.0/>;
 	xmp:metadatadate "2018-04-12T21:17:00-05:00"^^xsd:dateTime;
+	ac:providerLiteral "Flickr";
+	dcterms:identifier "24155049587";
+	dcterms:title "Philesturnus carunculatus carunculatus (South Island Saddleback; Tieke)";
+	dcterms:description "South Island Saddleback or Tieke (Philesturnus carunculatus carunculatus) on Ulva Island, off Stewart Island, south of the South Island of New Zealand. Videotaped on 26 November 2002.";
+	dcterms:created "2002-11-26T10:26:37";
+	dc:creator "Arthur Chapman";
+	dcterms:creator <http://viaf.org/viaf/93519663>;
+	blocal:contactURL "http://www.anbg.gov.au/biography/chapman-arthur-david.html";
+	xmpRights:owner "Arthur D. Chapman";
+	dc:rights "(c) Arthur D. Chapman"@en;
 	xmpRights:UsageTerms "Available under a Creative Commons Attribution-NonCommercial 2.0 Generic license";
 	xmpRights:WebStatement "http://creativecommons.org/licenses/by-nc/2.0/";
-	xmpRights:owner "Arthur D. Chapman";
-	dc:creator "Arthur Chapman";
-	dc:rights "(c) Arthur D. Chapman"@en;
-	dc:type "StillImage";
-	dcterms:created "2002-11-26T10:26:37";
-	dcterms:creator <http://viaf.org/viaf/93519663>;
-	dcterms:description "South Island Saddleback or Tieke (Philesturnus carunculatus carunculatus) on Ulva Island, off Stewart Island, south of the South Island of New Zealand. Videotaped on 26 November 2002.";
-	dcterms:identifier "24155049587";
+	xhv:license <http://creativecommons.org/licenses/by-nc/2.0/>;
+	cc:license <http://creativecommons.org/licenses/by-nc/2.0/>;
 	dcterms:license <http://creativecommons.org/licenses/by-nc/2.0/>;
-	dcterms:title "Philesturnus carunculatus carunculatus (South Island Saddleback; Tieke)";
 	ac:licenseLogoURL "https://licensebuttons.net/l/by-nc/2.0/88x31.png";
-	ac:providerLiteral "Flickr";
 	ac:tag "carunculatus",
 	      "newzealand",
 	      "philesturnus",
@@ -52,11 +53,10 @@
 	      "stewartisland",
 	      "tieke",
 	      "ulvaisland";
-	dwc:coordinateUncertaintyInMeters "200";
-	dwc:georeferenceRemarks "Location determined from Google Earth.";
-	xhv:license <http://creativecommons.org/licenses/by-nc/2.0/>;
 	geo:lat "-46.931100";
-	geo:long "168.122800".
+	geo:long "168.122800";
+	dwc:coordinateUncertaintyInMeters "200";
+	dwc:georeferenceRemarks "Location determined from Google Earth.".
 	
 <https://www.flickr.com/photos/arthur_chapman/24155049587#tn> a ac:ServiceAccessPoint;
 	exif:PixelXDimension "100"^^xsd:int;
@@ -92,10 +92,10 @@
                                                               
 _:1 a dwc:Organism,
 	  dcterms:PhysicalResource;
-    dsw:hasIdentification _:2;
-    dsw:hasOccurrence _:3;
+	dsw:hasIdentification _:2;
+	dsw:hasOccurrence _:3;
 	dsw:hasDerivative <https://www.flickr.com/photos/arthur_chapman/24155049587>;
-    foaf:depiction <https://www.flickr.com/photos/arthur_chapman/24155049587>.
+	foaf:depiction <https://www.flickr.com/photos/arthur_chapman/24155049587>.
                                         
 _:2	a dwc:Identification ; 
 	dsw:identifies _:1 ; 
@@ -113,10 +113,10 @@ _:2	a dwc:Identification ;
                                                                
 _:3 a dwc:Occurrence;
 	dsw:atEvent _:4;
-    dsw:occurrenceOf _:1;
-    dsw:hasEvidence <https://www.flickr.com/photos/arthur_chapman/24155049587>;
-    dwciri:recordedBy <http://viaf.org/viaf/93519663>;
-    dwc:recordedBy "Arthur Chapman".
+	dsw:occurrenceOf _:1;
+	dsw:hasEvidence <https://www.flickr.com/photos/arthur_chapman/24155049587>;
+	dwc:recordedBy "Arthur Chapman";
+	dwciri:recordedBy <http://viaf.org/viaf/93519663>.
                                         
 _:4 a dwc:Event;
 	dsw:eventOf _:3;
@@ -127,9 +127,9 @@ _:5 a dcterms:Location ;
 	dsw:locates _:4 ; 
 	dwc:countryCode "NZ" ; 
 	geo:lat "-46.931100" ; 
-	dwc:decimalLatitude -46.931100 ; 
+	dwc:decimalLatitude "-46.931100"^^xsd:decimal; 
 	geo:long "168.122800" ; 
-	dwc:decimalLongitude 168.122800 ; 
+	dwc:decimalLongitude "168.122800"^^xsd:decimal; 
 	dwc:coordinateUncertaintyInMeters "200" ; 
 	dwc:geodeticDatum "EPSG:4326" ; 
 	dwc:georeferenceRemarks "Location determined from Google Earth.".
