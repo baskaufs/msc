@@ -1,0 +1,136 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix exif: <http://ns.adobe.com/exif/1.0/>.
+@prefix dwciri: <http://rs.tdwg.org/dwc/iri/>.
+@prefix dsw: <http://purl.org/dsw/>.
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix blocal: <http://bioimages.vanderbilt.edu/rdf/local#>.
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix cc: <http://creativecommons.org/ns#>.
+@prefix xmpRights: <http://ns.adobe.com/xap/1.0/rights/>.
+@prefix ac: <http://rs.tdwg.org/ac/terms/>.
+@prefix xmp: <http://ns.adobe.com/xap/1.0/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix schema: <http://schema.org/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+<https://www.flickr.com/photos/arthur_chapman/24155049587> a <http://purl.org/dc/dcmitype/StillImage>;
+	ac:hasServiceAccessPoint <https://www.flickr.com/photos/arthur_chapman/24155049587#bq>,
+	                        <https://www.flickr.com/photos/arthur_chapman/24155049587#gq>,
+	                        <https://www.flickr.com/photos/arthur_chapman/24155049587#lq>,
+	                        <https://www.flickr.com/photos/arthur_chapman/24155049587#tn>;
+	dsw:derivedFrom _:1;
+	foaf:depicts _:1;
+	blocal:contactURL "http://www.anbg.gov.au/biography/chapman-arthur-david.html";
+	cc:license <http://creativecommons.org/licenses/by-nc/2.0/>;
+	xmp:metadatadate "2018-04-12T21:17:00-05:00"^^xsd:dateTime;
+	xmpRights:UsageTerms "Available under a Creative Commons Attribution-NonCommercial 2.0 Generic license";
+	xmpRights:WebStatement "http://creativecommons.org/licenses/by-nc/2.0/";
+	xmpRights:owner "Arthur D. Chapman";
+	dc:creator "Arthur Chapman";
+	dc:rights "(c) Arthur D. Chapman"@en;
+	dc:type "StillImage";
+	dcterms:created "2002-11-26T10:26:37";
+	dcterms:creator <http://viaf.org/viaf/93519663>;
+	dcterms:description "South Island Saddleback or Tieke (Philesturnus carunculatus carunculatus) on Ulva Island, off Stewart Island, south of the South Island of New Zealand. Videotaped on 26 November 2002.";
+	dcterms:identifier "24155049587";
+	dcterms:license <http://creativecommons.org/licenses/by-nc/2.0/>;
+	dcterms:title "Philesturnus carunculatus carunculatus (South Island Saddleback; Tieke)";
+	ac:licenseLogoURL "https://licensebuttons.net/l/by-nc/2.0/88x31.png";
+	ac:providerLiteral "Flickr";
+	ac:tag "carunculatus",
+	      "newzealand",
+	      "philesturnus",
+	      "philesturnuscarunculatus",
+	      "philesturnuscarunculatuscarunculatus",
+	      "rakiuranationalpark",
+	      "southislandsaddleback",
+	      "stewartisland",
+	      "tieke",
+	      "ulvaisland";
+	dwc:coordinateUncertaintyInMeters "200";
+	dwc:georeferenceRemarks "Location determined from Google Earth.";
+	xhv:license <http://creativecommons.org/licenses/by-nc/2.0/>;
+	geo:lat "-46.931100";
+	geo:long "168.122800".
+	
+<https://www.flickr.com/photos/arthur_chapman/24155049587#tn> a ac:ServiceAccessPoint;
+	exif:PixelXDimension "100"^^xsd:int;
+	exif:PixelYDimension "74"^^xsd:int;
+	dc:format "image/jpeg";
+	ac:accessURI <https://farm5.staticflickr.com/4575/24155049587_530e098d26_t.jpg>;
+	ac:variant ac:Thumbnail;
+	ac:variantLiteral "Thumbnail".
+
+<https://www.flickr.com/photos/arthur_chapman/24155049587#lq> a ac:ServiceAccessPoint;
+	exif:PixelXDimension "500"^^xsd:int;
+	exif:PixelYDimension "368"^^xsd:int;
+	dc:format "image/jpeg";
+	ac:accessURI <https://farm5.staticflickr.com/4575/24155049587_530e098d26.jpg>;
+	ac:variant ac:LowerQuality;
+	ac:variantLiteral "Lower Quality".
+                                                              
+<https://www.flickr.com/photos/arthur_chapman/24155049587#gq> a ac:ServiceAccessPoint;
+	exif:PixelXDimension "800"^^xsd:int;
+	exif:PixelYDimension "588"^^xsd:int;
+	dc:format "image/jpeg";
+	ac:accessURI <https://farm5.staticflickr.com/4575/24155049587_530e098d26_b.jpg>;
+	ac:variant ac:GoodQuality;
+	ac:variantLiteral "Good Quality".
+                                                              
+<https://www.flickr.com/photos/arthur_chapman/24155049587#bq> a ac:ServiceAccessPoint;
+	exif:PixelXDimension "800"^^xsd:int;
+	exif:PixelYDimension "588"^^xsd:int;
+	dc:format "image/jpeg";
+	ac:accessURI <https://farm5.staticflickr.com/4575/24155049587_c5e8e1fe0c_o.jpg>;
+	ac:variant ac:BestQuality;
+	ac:variantLiteral "Best Quality".
+                                                              
+_:1 a dwc:Organism,
+	  dcterms:PhysicalResource;
+    dsw:hasIdentification _:2;
+    dsw:hasOccurrence _:3;
+	dsw:hasDerivative <https://www.flickr.com/photos/arthur_chapman/24155049587>;
+    foaf:depiction <https://www.flickr.com/photos/arthur_chapman/24155049587>.
+                                        
+_:2	a dwc:Identification ; 
+	dsw:identifies _:1 ; 
+	dwc:kingdom "Animalia" ; 
+	dwc:phylum "Chordata" ; 
+	dwc:class "Aves" ; 
+	dwc:order "Passeriformes" ; 
+	dwc:family "Callaeidae" ; 
+	dwc:genus "Philesturnus" ; 
+	dwc:specificEpithet "carunculatus" ; 
+	dwc:infraspecificEpithet "carunculatus" ; 
+	dwc:vernacularName "southislandsaddleback" ; 
+	dwc:vernacularName "saddleback" ; 
+	dwc:vernacularName "tieke".
+                                                               
+_:3 a dwc:Occurrence;
+	dsw:atEvent _:4;
+    dsw:occurrenceOf _:1;
+    dsw:hasEvidence <https://www.flickr.com/photos/arthur_chapman/24155049587>;
+    dwciri:recordedBy <http://viaf.org/viaf/93519663>;
+    dwc:recordedBy "Arthur Chapman".
+                                        
+_:4 a dwc:Event;
+	dsw:eventOf _:3;
+	dsw:locatedAt _:5;
+	dwc:eventDate "2002-11-26"^^xsd:date.
+                                        
+_:5 a dcterms:Location ; 
+	dsw:locates _:4 ; 
+	dwc:countryCode "NZ" ; 
+	geo:lat "-46.931100" ; 
+	dwc:decimalLatitude -46.931100 ; 
+	geo:long "168.122800" ; 
+	dwc:decimalLongitude 168.122800 ; 
+	dwc:coordinateUncertaintyInMeters "200" ; 
+	dwc:geodeticDatum "EPSG:4326" ; 
+	dwc:georeferenceRemarks "Location determined from Google Earth.".
+
