@@ -506,7 +506,7 @@ Using multiple identifiers implies that they have a same-as
 relationship, i.e. they all identify the same object (e. g. an object
 may have all of an http-URL, an lsid-URI, and a UUID).
 
-<a name="Type"></a>Term Name: dc:type
+<a id="Type"></a>Term Name: dc:type
 
 Normative URI:
 
