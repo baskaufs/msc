@@ -469,42 +469,18 @@ Height](#Image_Height)
 
 ## <span id="Management_Vocabulary" class="mw-headline">Management Vocabulary</span>
 
-Term Name: dcterms:identifier
-
-</div>
-
-</div>
-
-</div>
-
-Normative URI:
-
-http://purl.org/dc/terms/identifier
-
-Label
-
-Identifier
+| <a id="Identifier"></a>Term Name: | dcterms:identifier |
+| Normative URI: | http://purl.org/dc/terms/identifier |
+| Label | Identifier |
 
  
 
-**Layer:** 1 — **Required:** Yes for media collections, No for media
-resources (but preferred if available). — **Repeatable:** Yes
-
-Definition:
-
-An arbitrary code that is unique for the resource, with the resource
-being either a provider, collection, or media item.
-
-Defined
-by:
-
-[dcterms:identifier](http://dublincore.org/documents/dcmi-terms/#terms-identifier)
-
-Notes:
-
-Using multiple identifiers implies that they have a same-as
-relationship, i.e. they all identify the same object (e. g. an object
-may have all of an http-URL, an lsid-URI, and a UUID).
+| | **Layer:** 1 — **Required:** Yes for media collections, No for media
+resources (but preferred if available). — **Repeatable:** Yes |
+| Definition: | An arbitrary code that is unique for the resource, with the resource
+being either a provider, collection, or media item. |
+| Defined by: | [dcterms:identifier](http://dublincore.org/documents/dcmi-terms/#terms-identifier) |
+| Notes: | Using multiple identifiers implies that they have a same-as relationship, i.e. they all identify the same object (e. g. an object may have all of an http-URL, an lsid-URI, and a UUID). |
 
 <a id="Type"></a>Term Name: dc:type
 
