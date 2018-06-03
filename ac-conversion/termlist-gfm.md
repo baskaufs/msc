@@ -469,12 +469,11 @@ Height](#Image_Height)
 
 ## <span id="Management_Vocabulary" class="mw-headline">Management Vocabulary</span>
 
+| property | value |
+|----------|-------|
 | <a id="Identifier"></a>Term Name: | dcterms:identifier |
 | Normative URI: | http://purl.org/dc/terms/identifier |
 | Label | Identifier |
-
- 
-
 | | **Layer:** 1 — **Required:** Yes for media collections, No for media
 resources (but preferred if available). — **Repeatable:** Yes |
 | Definition: | An arbitrary code that is unique for the resource, with the resource
