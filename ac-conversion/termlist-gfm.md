@@ -480,51 +480,12 @@ Height](#Image_Height)
 | Notes: | Using multiple identifiers implies that they have a same-as relationship, i.e. they all identify the same object (e. g. an object may have all of an http-URL, an lsid-URI, and a UUID). |
 
 <a id="Type"></a>Term Name: dc:type
-
-Normative URI:
-
-http://purl.org/dc/elements/1.1/type
-
-Label
-
-Type
-
- 
-
-**Layer:** 1 — **Required:** Yes — **Repeatable:** No
-
-Definition:
-
-dc:type may take as value any type term from the [DCMI Type
-Vocabulary](http://dublincore.org/documents/dcmi-type-vocabulary/#H7).
-Recommended terms are Collection, StillImage, Sound, MovingImage,
-InteractiveResource, Text. Values may be used either in their literal
-form, or with a full namespace (e. g.
-http://purl.org/dc/dcmitype/StillImage) from a controlled vocabulary,
-but the best practice is to use the literal form when using dc:type and
-use dcterms:type when you can supply the URI from a controlled
-vocabulary and implementers may require this practice. At least one of
-dc:type and dcterms:type must be supplied but, when feasible, supplying
-both may make the metadata more widely useful. The values of each should
-designate the same type, but in case of ambiguity dcterms:type prevails.
-
-Defined by:
-
-[dc:type](http://purl.org/dc/elements/1.1/type)
-
-Notes:
-
-A Collection should be given type "Collection" when using dc:type. If
-the resource is a Collection, this item does *not* identify what types
-of objects it may contain. Following the DC recommendations for [the
-Text type](http://purl.org/dc/dcmitype/Text), images of text should be
-marked given as the string Text when provided as a string. **See also**
-the entry for [**dcterms:type**](#dcterms:type) in this document and see
-the **[DCMI FAQ on DC and DCTERMS
-Namespaces](http://wiki.dublincore.org/index.php/FAQ/DC_and_DCTERMS_Namespaces)**
-for discussion of the rationale for terms in two namespaces. Normal
-practice is to use the same Label if both are provided. Labels have no
-effect on information discovery and are only suggestions.
+Normative URI:  http://purl.org/dc/elements/1.1/type
+Label Type
+  **Layer:** 1 — **Required:** Yes — **Repeatable:** No
+Definition: dc:type may take as value any type term from the [DCMI Type Vocabulary](http://dublincore.org/documents/dcmi-type-vocabulary/#H7). Recommended terms are Collection, StillImage, Sound, MovingImage, InteractiveResource, Text. Values may be used either in their literal form, or with a full namespace (e. g. http://purl.org/dc/dcmitype/StillImage) from a controlled vocabulary, but the best practice is to use the literal form when using dc:type and use dcterms:type when you can supply the URI from a controlled vocabulary and implementers may require this practice. At least one of dc:type and dcterms:type must be supplied but, when feasible, supplying both may make the metadata more widely useful. The values of each should designate the same type, but in case of ambiguity dcterms:type prevails.
+Defined by: [dc:type](http://purl.org/dc/elements/1.1/type)
+Notes:  A Collection should be given type "Collection" when using dc:type. If the resource is a Collection, this item does *not* identify what types of objects it may contain. Following the DC recommendations for [the Text type](http://purl.org/dc/dcmitype/Text), images of text should be marked given as the string Text when provided as a string. **See also** the entry for [**dcterms:type**](#dcterms:type) in this document and see the **[DCMI FAQ on DC and DCTERMS Namespaces](http://wiki.dublincore.org/index.php/FAQ/DC_and_DCTERMS_Namespaces)** for discussion of the rationale for terms in two namespaces. Normal practice is to use the same Label if both are provided. Labels have no effect on information discovery and are only suggestions.
 
 Term Name: dcterms:type
 
