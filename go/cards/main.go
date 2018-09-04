@@ -1,7 +1,6 @@
 package main
 
 func main() {
-	cards := deck{"spade", "heart"}
-
-	cards.print()
+	cards := newDeck()
+	cards.saveDeck("test.txt")
 }
