@@ -221,8 +221,7 @@
       7 /dwc/terms/organismQuantity
       7 /dwc/terms/MachineObservation
       7 /dwc/terms/LivingSpecimen
-      7 /dwc/terms/./history/./index.htm
-      7 /dwc/terms/higherGeography
+       7 /dwc/terms/higherGeography
       7 /dwc/terms/associatedMedia
       6 /tapir/cns/dwc_terms_2009_09_23.xml
       6 /ontology/voc/TaxonConcept.rdf
@@ -231,7 +230,6 @@
       6 /dwc/terms/lithostratigraphicTerms
       6 /dwc/terms/latestAgeOrHighestStage
       6 /dwc/terms/identificationReferences
-      6 /dwc/terms/./history/index.htm
       6 /dwc/terms/highestBiostratigraphicZone
       6 /dwc/terms/genericName
       6 /dwc/terms/bed
@@ -362,9 +360,6 @@
       2 /ontology/voc/Common
       2 /ontology/voc/Collection
       2 /ontology/voc/
-      2 /dwc/./xsd/tdwg_dwcterms.xsd
-      2 /dwc/./xsd/tdwg_dwc_simple.xsd
-      2 /dwc/./xsd/tdwg_dwc_class_terms.xsd
       2 /dwc/xsd/simpledarwincore/
       2 /dwc/trackback/
       2 /dwc/./text/tdwg_dwc_text.xsd
