@@ -1,5 +1,6 @@
 import requests
 import csv #library to read/write/parse CSV files
+import time
 
 baseUrl = 'http://vuswwg-private.jelastic.servint.net/gom'
 header = 'text/html'
@@ -18,8 +19,9 @@ for row in csvData:
             response = ""
         else:
             response = r.text[:20]
-        print(str(r.status_code)+"\t"+row[0]+"\t"+row[1]+"\t"+response)
-        print(str(r.status_code)+"\t"+row[0]+"\t"+row[1]+"\t"+response, file=outObject)
+        t = time.time()
+        print(str(r.status_code)+"\t"+row[0]+"\t"+row[1]+"\t"+str(t))
+        print(str(r.status_code)+"\t"+row[0]+"\t"+row[1]+"\t"+str(t), file=outObject)
     rowNum =+ 1
 csvObject.close()
 outObject.close()
