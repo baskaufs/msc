@@ -1,0 +1,439 @@
+200	16162	/tapir/cs/dwc/1.4/model/dw_core_geo_cur.xml	<?xml version="1.0" encoding="
+200	6086	/dwc/	<html>
+  <head>
+    <meta char
+404	4223	/dwc/DarwinCore_files/default.css	
+404	3995	/dwc/DarwinCore_files/TDWGlogo_Twiki.gif	
+404	3947	/dwc/DarwinCore_files/default.js	
+404	3279	/dwc/terms/index.htm	
+200	2892	/dwc/terms/	<html>
+  <head>
+    <meta char
+200	2603	/dwc/text/tdwg_dwc_text.xsd	<?xml version='1.0' encoding='
+200	1078	/	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+404	838	/dwc/index.htm	
+200	677	/UBIF/2006/Schema/1.1/UBIF_CoreOntology.xsd	<?xml version="1.0" encoding="
+404	677	/dwc/terms/history/index.htm	
+404	478	/dwc/terms/simple/index.htm	
+200	401	/UBIF/2006/Schema/1.1/w3c-schemata/xml.xsd	<?xml version='1.0'?>
+<xs:sche
+200	396	/UBIF/2006/Schema/1.1/UBIF_EnumLib.xsd	<?xml version="1.0" encoding="
+200	395	/UBIF/2006/Schema/1.1/UBIF_CoreExtensions.xsd	<?xml version="1.0" encoding="
+200	394	/UBIF/2006/Schema/1.1/SDD_EnumLib.xsd	<?xml version="1.0" encoding="
+200	393	/UBIF/2006/Schema/1.1/UBIF_LinneanCore.xsd	<?xml version="1.0" encoding="
+200	393	/UBIF/2006/Schema/1.1/SDD_TypeLib.xsd	<?xml version="1.0" encoding="
+200	392	/UBIF/2006/Schema/1.1/UBIF_TypeLib.xsd	<?xml version="1.0" encoding="
+200	392	/UBIF/2006/Schema/1.1/UBIF_BasePattern.xsd	<?xml version="1.0" encoding="
+404	367	/dwc/terms/guides/text/index.htm	
+404	328	/dwc/terms/guides/rdf/index.htm	
+404	324	/dwc/xsd/tdwg_dwc_class_terms.xsd	
+404	295	/dwc/terms/guides/xml/	
+404	235	/dwc/terms/guides/rdf/images/rdf-graphical-example.png	
+404	226	/dwc/terms/guides/text/images/extension.png	
+404	214	/dwc/terms/guides/text/images/usage.png	
+200	211	/UBIF/2006/Schema/1.1/SDD.xsd	<?xml version="1.0" encoding="
+404	175	/dwc/xsd/tdwg_dwc_simple.xsd	
+404	171	/dwc/terms/namespace/index.htm	
+404	163	/dwc/xsd/tdwg_dwcterms.xsd	
+200	158	/dwc/terms/scientificName	<!DOCTYPE html>
+<html lang="en
+200	157	/dwc	<html>
+  <head>
+    <meta char
+404	146	/dwc/terms/guides/xml/index.htm	
+404	140	/dwc/terms/simple/	
+404	133	/dwc/terms/history/dwctoabcd/index.htm	
+404	120	/dwc/xsd/tdwg_basetypes.xsd	
+404	93	/dwc/xsd/tdwg_dwc_extensions.xsd	
+200	93	/dwc/terms	<html>
+  <head>
+    <meta char
+404	92	/dwc/terms/history/versions/index.htm	
+200	74	/dwc/terms/occurrenceID	<!DOCTYPE html>
+<html lang="en
+200	64	/dwc/terms/taxonID	<!DOCTYPE html>
+<html lang="en
+200	61	/dwc/terms/scientificNameAuthorship	<!DOCTYPE html>
+<html lang="en
+404	61	/dwc/rdf/dwctermshistory.rdf	
+404	60	/dwc/terms/history/decisions/index.htm	
+200	59	/dwc/terms/genus	<!DOCTYPE html>
+<html lang="en
+200	56	/dwc/terms/basisOfRecord	<!DOCTYPE html>
+<html lang="en
+200	53	/abcd/2.06/ABCD_2.06.xsd	<?xml version="1.0" encoding="
+404	52	/dwc/terms/guides/text/	
+404	52	/dwc/rdf/dwcterms.rdf	
+200	48	/dwc/terms/kingdom	<!DOCTYPE html>
+<html lang="en
+200	48	/dwc/terms/family	<!DOCTYPE html>
+<html lang="en
+200	48	/dwc/terms/eventID	<!DOCTYPE html>
+<html lang="en
+200	47	/dwc/terms/specificEpithet	<!DOCTYPE html>
+<html lang="en
+200	47	/dwc/terms/datasetName	<!DOCTYPE html>
+<html lang="en
+200	43	/dwc/terms/decimalLatitude	<!DOCTYPE html>
+<html lang="en
+200	42	/dwc/terms/taxonRank	<!DOCTYPE html>
+<html lang="en
+200	42	/dwc/terms/acceptedNameUsageID	<!DOCTYPE html>
+<html lang="en
+200	41	/dwc/terms/taxonomicStatus	<!DOCTYPE html>
+<html lang="en
+404	41	/dwc/terms/guides/rdf/	
+200	40	/dwc/terms/parentNameUsageID	<!DOCTYPE html>
+<html lang="en
+404	40	/dwc/DarwinCore_files/	
+404	39	/dwc/tdwg_dw_geospatial.xsd	
+404	37	/abcd2/terms/gathering-siteimage-license-details	
+200	36	/dwc/terms/locality	<!DOCTYPE html>
+<html lang="en
+200	36	/ac/terms/caption	
+<!DOCTYPE html>
+<html lang="e
+404	35	/dwc/xsd/tdwg_dwc_classes.xsd	
+404	35	/dwc/terms/Location	
+200	35	/dwc/terms/habitat	<!DOCTYPE html>
+<html lang="en
+200	34	/dwc/terms/Occurrence	<!DOCTYPE html>
+<html lang="en
+200	34	/dwc/terms/decimalLongitude	<!DOCTYPE html>
+<html lang="en
+200	34	/dwc/terms/class	<!DOCTYPE html>
+<html lang="en
+200	33	/dwc/terms/verbatimLatitude	<!DOCTYPE html>
+<html lang="en
+200	33	/dwc/terms/institutionCode	<!DOCTYPE html>
+<html lang="en
+200	32	/dwc/terms/recordedBy	<!DOCTYPE html>
+<html lang="en
+200	32	/dwc/terms/namePublishedIn	<!DOCTYPE html>
+<html lang="en
+200	32	/dwc/terms/individualCount	<!DOCTYPE html>
+<html lang="en
+200	31	/dwc/terms/measurementType	<!DOCTYPE html>
+<html lang="en
+200	30	/dwc/terms/Taxon	<!DOCTYPE html>
+<html lang="en
+200	30	/dwc/terms/catalogNumber	<!DOCTYPE html>
+<html lang="en
+404	30	/dwc/tdwg_dw_curatorial.xsd	
+200	29	/dwc/terms/vernacularName	<!DOCTYPE html>
+<html lang="en
+200	29	/dwc/terms/locationID	<!DOCTYPE html>
+<html lang="en
+200	29	/dwc/terms/infraspecificEpithet	<!DOCTYPE html>
+<html lang="en
+200	28	/dwc/terms/order	<!DOCTYPE html>
+<html lang="en
+200	28	/dwc/terms/occurrenceStatus	<!DOCTYPE html>
+<html lang="en
+200	28	/dwc/terms/maximumElevationInMeters	<!DOCTYPE html>
+<html lang="en
+200	28	/dwc/terms/country	<!DOCTYPE html>
+<html lang="en
+200	28	/dwc/terms/coordinateUncertaintyInMeters	<!DOCTYPE html>
+<html lang="en
+200	26	/dwc/terms/verbatimElevation	<!DOCTYPE html>
+<html lang="en
+200	26	/dwc/terms/stateProvince	<!DOCTYPE html>
+<html lang="en
+200	25	/dwc/terms/verbatimDepth	<!DOCTYPE html>
+<html lang="en
+200	25	/dwc/terms/recordNumber	<!DOCTYPE html>
+<html lang="en
+200	25	/dwc/terms/phylum	<!DOCTYPE html>
+<html lang="en
+404	25	/dwc/tdwg_dw_core.xsd	
+200	24	/dwc/terms/originalNameUsage	<!DOCTYPE html>
+<html lang="en
+200	24	/dwc/terms/namePublishedInYear	<!DOCTYPE html>
+<html lang="en
+200	24	/dwc/terms/minimumElevationInMeters	<!DOCTYPE html>
+<html lang="en
+200	24	/dwc/terms/minimumDepthInMeters	<!DOCTYPE html>
+<html lang="en
+200	24	/dwc/terms/identifiedBy	<!DOCTYPE html>
+<html lang="en
+200	24	/dwc/terms/eventDate	<!DOCTYPE html>
+<html lang="en
+200	24	/dwc/terms/countryCode	<!DOCTYPE html>
+<html lang="en
+200	24	/dwc/terms/acceptedNameUsage	<!DOCTYPE html>
+<html lang="en
+200	22	/dwc/terms/lifeStage	<!DOCTYPE html>
+<html lang="en
+404	22	/dwc/terms/history/	
+200	22	/dwc/terms/geodeticDatum	<!DOCTYPE html>
+<html lang="en
+200	22	/dwc/terms/collectionCode	<!DOCTYPE html>
+<html lang="en
+200	22	/abcd/2.06	<html>
+ <head>
+  <META HTTP-EQ
+200	21	/dwc/terms/typeStatus	<!DOCTYPE html>
+<html lang="en
+200	21	/dwc/terms/samplingProtocol	<!DOCTYPE html>
+<html lang="en
+200	21	/dwc/terms/preparations	<!DOCTYPE html>
+<html lang="en
+200	21	/dwc/terms/nomenclaturalCode	<!DOCTYPE html>
+<html lang="en
+200	21	/dwc/terms/municipality	<!DOCTYPE html>
+<html lang="en
+200	21	/dwc/terms/disposition	<!DOCTYPE html>
+<html lang="en
+200	20	/dwc/terms/subgenus	<!DOCTYPE html>
+<html lang="en
+200	20	/dwc/terms/organismScope	<!DOCTYPE html>
+<html lang="en
+404	20	/dwc/terms/history/dwctoabcd/	
+200	20	/dwc/terms/georeferenceProtocol	<!DOCTYPE html>
+<html lang="en
+200	20	/dwc/terms/establishmentMeans	<!DOCTYPE html>
+<html lang="en
+200	20	/dwc/terms/county	<!DOCTYPE html>
+<html lang="en
+200	19	/UBIF/2006/rddl.html	<!-- <!DOCTYPE html PUBLIC "-/
+200	19	/dwc/terms/sex	<!DOCTYPE html>
+<html lang="en
+200	19	/dwc/terms/nomenclaturalStatus	<!DOCTYPE html>
+<html lang="en
+200	19	/dwc/terms/Event	<!DOCTYPE html>
+<html lang="en
+200	18	/dwc/terms/originalNameUsageID	<!DOCTYPE html>
+<html lang="en
+404	18	/dwc/terms/namespace/	
+404	18	/dwc/examples/text/example_text_simpledwc_complete.xml	
+200	17	/tapir/cs/mappings/index.xml	<?xml version="1.0" encoding="
+200	17	/dwc/terms/ownerInstitutionCode	<!DOCTYPE html>
+<html lang="en
+200	17	/dwc/terms/maximumDepthInMeters	<!DOCTYPE html>
+<html lang="en
+200	17	/dwc/terms/fieldNumber	<!DOCTYPE html>
+<html lang="en
+404	17	/dwc/examples/xml/example_simple.xml	
+200	16	/dwc/terms/MeasurementOrFact	<!DOCTYPE html>
+<html lang="en
+200	15	/dwc/terms/verbatimCoordinates	<!DOCTYPE html>
+<html lang="en
+200	15	/dwc/terms/scientificNameID	<!DOCTYPE html>
+<html lang="en
+200	15	/dwc/terms/samplingEffort	<!DOCTYPE html>
+<html lang="en
+200	15	/dwc/terms/georeferenceVerificationStatus	<!DOCTYPE html>
+<html lang="en
+200	15	/dwc/terms/associatedReferences	<!DOCTYPE html>
+<html lang="en
+200	14	/dwc/terms/measurementRemarks	<!DOCTYPE html>
+<html lang="en
+200	14	/dwc/terms/measurementMethod	<!DOCTYPE html>
+<html lang="en
+200	14	/dwc/terms/measurementAccuracy	<!DOCTYPE html>
+<html lang="en
+200	14	/dwc/terms/locationRemarks	<!DOCTYPE html>
+<html lang="en
+200	14	/dwc/terms/islandGroup	<!DOCTYPE html>
+<html lang="en
+200	14	/ac/terms/furtherInformationURL	
+<!DOCTYPE html>
+<html lang="e
+200	13	/dwc/terms/verbatimEventDate	<!DOCTYPE html>
+<html lang="en
+200	13	/dwc/terms/taxonRemarks	<!DOCTYPE html>
+<html lang="en
+200	13	/dwc/terms/reproductiveCondition	<!DOCTYPE html>
+<html lang="en
+200	13	/dwc/terms/measurementValue	<!DOCTYPE html>
+<html lang="en
+200	13	/dwc/terms/georeferenceSources	<!DOCTYPE html>
+<html lang="en
+200	13	/dwc/terms/eventTime	<!DOCTYPE html>
+<html lang="en
+200	13	/dwc/terms/datasetID	<!DOCTYPE html>
+<html lang="en
+200	13	/dwc/terms/associatedSequences	<!DOCTYPE html>
+<html lang="en
+200	12	/dwc/terms/year	<!DOCTYPE html>
+<html lang="en
+200	12	/dwc/terms/verbatimLocality	<!DOCTYPE html>
+<html lang="en
+200	12	/dwc/terms/measurementID	<!DOCTYPE html>
+<html lang="en
+200	12	/dwc/terms/measurementDeterminedBy	<!DOCTYPE html>
+<html lang="en
+200	12	/dwc/terms/informationWithheld	<!DOCTYPE html>
+<html lang="en
+200	12	/dwc/terms/georeferenceRemarks	<!DOCTYPE html>
+<html lang="en
+200	12	/dwc/terms/behavior	<!DOCTYPE html>
+<html lang="en
+200	12	/dwc/terms/attributes/	<html>
+  <head>
+    <meta char
+404	12	/dwc/terms/additionalInformationURL	
+200	12	/abcd2/terms/SpecimenUnit-PreparationAgent-Organisation-Name	<!DOCTYPE html>
+<html lang="en
+200	11	/dwc/terms/nameAccordingTo	<!DOCTYPE html>
+<html lang="en
+200	11	/dwc/terms/materialSampleID	<!DOCTYPE html>
+<html lang="en
+200	11	/dwc/terms/island	<!DOCTYPE html>
+<html lang="en
+200	11	/dwc/terms/institutionID	<!DOCTYPE html>
+<html lang="en
+404	11	/dwc/terms/history/versions/	
+200	11	/dwc/terms/higherClassification	<!DOCTYPE html>
+<html lang="en
+200	11	/dwc/terms/georeferencedBy	<!DOCTYPE html>
+<html lang="en
+200	11	/dwc/terms/footprintWKT	<!DOCTYPE html>
+<html lang="en
+200	11	/dwc/terms/dataGeneralizations	<!DOCTYPE html>
+<html lang="en
+200	11	/?author=1	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	11	/abcd2/terms/Identification-DayNumberEnd	<!DOCTYPE html>
+<html lang="en
+200	10	/dwc/terms/waterBody	<!DOCTYPE html>
+<html lang="en
+200	10	/dwc/terms/sampleSizeUnit	<!DOCTYPE html>
+<html lang="en
+200	10	/dwc/terms/Organism	<!DOCTYPE html>
+<html lang="en
+200	10	/dwc/terms/measurementUnit	<!DOCTYPE html>
+<html lang="en
+200	10	/dwc/terms/measurementDeterminedDate	<!DOCTYPE html>
+<html lang="en
+404	10	/dwc/terms/history/decisions	
+200	10	/dwc/terms/fieldNotes	<!DOCTYPE html>
+<html lang="en
+200	10	/dwc/terms/collectionID	<!DOCTYPE html>
+<html lang="en
+200	10	/?author=9	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	10	/?author=8	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	10	/?author=7	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	10	/?author=6	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	10	/?author=5	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	10	/?author=4	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	10	/?author=3	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	10	/?author=2	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	10	/?author=15	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	10	/?author=14	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	10	/?author=13	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	10	/?author=12	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	10	/?author=11	
+
+
+
+
+
+<!DOCTYPE html>
+<html la
+200	10	/?author=10	
+
+
+
+
+
+<!DOCTYPE html>
+<html la

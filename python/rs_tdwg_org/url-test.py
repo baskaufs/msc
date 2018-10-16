@@ -2,7 +2,7 @@ import requests
 import csv #library to read/write/parse CSV files
 
 baseUrl = 'http://vuswwg-private.jelastic.servint.net/gom'
-header = 'text/turtle'
+header = 'text/html'
 csvObject = open('rs-not-404s.csv', newline='')
 csvData = csv.reader(csvObject)
 outObject = open('output.txt','wt')
