@@ -18,26 +18,32 @@ declare function functx:capitalize-first
 
 let $namespace := "http://fna.org/treatment/"
 
-let $data := doc('V6_1.xml')/bio:treatment
+let $data := doc('V6_5.xml')/bio:treatment
 
 (: metadata :)
 let $author := $data/meta/source/author/text()
 let $sourceDate := $data/meta/source/date/text()
 let $treatmentPage := $data/meta/other_info_on_meta[@type="treatment_page"]/text()
+let $illustrationPage := $data/meta/other_info_on_meta[@type="illustration_page"]/text()
 (: Note: There can be multiple mention pages :)
-let $mentionPage := $data/meta/other_info_on_meta[@type="treatment_page"]/text()
+let $mentionPages := $data/meta/other_info_on_meta[@type="mention_page"]/text()
 let $volume := $data/meta/other_info_on_meta[@type="volume"]/text()
 let $illustrator := $data/meta/other_info_on_meta[@type="illustrator"]/text()
 
 (: taxon information :)
-let $taxonomicStatus := lower-case(string($data/taxon_identification/@status))
-let $taxonRank := string($data/taxon_identification/taxon_name/@rank)
-let $taxonAuthority := string($data/taxon_identification/taxon_name/@authority)
-let $taxonDate := string($data/taxon_identification/taxon_name/@date)
-let $taxonName := functx:capitalize-first(lower-case($data/taxon_identification/taxon_name/text()))
+let $taxa := $data/taxon_identification
+
+(: Create a label by concatenating the accepted name parts :)
+let $label :=
+  for $taxon in $taxa
+  where string($taxon/@status) = "ACCEPTED"
+  return string-join($taxon/taxon_name/text()," ")
 let $number := $data/number/text()
 
 let $morphologyDescription := $data/description[@type="morphology"]/text()
+let $phenologyDescription := $data/description[@type="phenology"]/text()
+let $habitatDescription := $data/description[@type="habitat"]/text()
+let $elevationDescription := $data/description[@type="elevation"]/text()
 let $distributionDescription := $data/description[@type="distribution"]/text()
 
 (: concatenate all of the sentences in the discussion elements into a single string :)
@@ -50,9 +56,9 @@ let $references := $data/references/reference/text()
 let $keyStatements := $data/key/key_statement
 
 return 
-
+(:
 (file:write("Documents/github/msc/fna/output.rdf",
-
+:)
 <rdf:RDF 
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -63,59 +69,68 @@ xmlns:bios="http://www.github.com/biosemantics/"
 >
     <rdf:Description rdf:about = "{$namespace||$number}">{
          <rdf:type rdf:resource="http://www.github.com/biosemantics/Treatment" />,
-         <rdfs:label>{$taxonName}</rdfs:label>,
+         <rdfs:label>{$label}</rdfs:label>,
          <dc:creator>{$author}</dc:creator>,
          if ($sourceDate  != "")
              then <dcterms:created>{$sourceDate}</dcterms:created>
              else (),
          <dcterms:identifier>{$number}</dcterms:identifier>,
-(:         <dcterms:source rdf:nodeID="{$sourceNodeID}" />,:)
-         <dwc:scientificName>{$taxonName}</dwc:scientificName>,
-         <dwc:taxonRank>{$taxonRank}</dwc:taxonRank>,
-         <dwc:scientificNameAuthorship>{$taxonAuthority}</dwc:scientificNameAuthorship>,
-         <dcterms:date>{$taxonDate}</dcterms:date>,
-         <dwc:taxonomicStatus>{$taxonomicStatus}</dwc:taxonomicStatus>,
+         if ($illustrationPage != "")
+         then <bios:illustrationPage>{$illustrationPage}</bios:illustrationPage>
+         else (),
+         <bios:treatmentPage>{$treatmentPage}</bios:treatmentPage>,
+         <bios:volume>{$volume}</bios:volume>,
+         if ($illustrator != "")
+         then <bios:illustrator>{$illustrator}</bios:illustrator>
+         else (),
+         
+         for $mentionPage in $mentionPages
+         return <bios:mentionPage>{$mentionPage}</bios:mentionPage>,
+
+         for $taxon in $taxa
+         return
+             <bios:hasName>
+               <rdf:Description>{
+                 <dwc:taxonomicStatus>{lower-case($taxon/@status)}</dwc:taxonomicStatus>,
+                 <bios:taxonHierarchy>{$taxon/taxon_hierarchy/text()}</bios:taxonHierarchy>,
+                 for $namePart in $taxon/taxon_name
+                 return <bios:hasPart>
+                      <rdf:Description>{
+                        <dwc:taxonRank>{string($namePart/@rank)}</dwc:taxonRank>,
+                        <dwc:scientificNameAuthorship>{string($namePart/@authority)}</dwc:scientificNameAuthorship>,
+                        <dcterms:date>{string($namePart/@date)}</dcterms:date>,
+                        <dwc:scientificName>{
+                        (: for whatever reason, the capitalization of names is inconsistent, so fix them :)
+                        switch (string($namePart/@rank))
+                            case "family" return functx:capitalize-first(lower-case($namePart/text()))
+                            case "genus" return functx:capitalize-first(lower-case($namePart/text()))
+                            default return lower-case($namePart/text())
+                        }</dwc:scientificName>
+                      }</rdf:Description>
+                   </bios:hasPart>
+               }</rdf:Description>
+             </bios:hasName>,
+
+
          <bios:morphology>{$morphologyDescription}</bios:morphology>,
          <bios:distribution>{$distributionDescription}</bios:distribution>,
+         if ($phenologyDescription != "")
+         then <bios:phenology>{$phenologyDescription}</bios:phenology>
+         else (),
+         if ($habitatDescription != "")
+         then <bios:habitat>{$habitatDescription}</bios:habitat>
+         else (),
+         if ($elevationDescription != "")
+         then <bios:elevation>{$elevationDescription}</bios:elevation>
+         else (),
+
          <dcterms:description>{$discussion}</dcterms:description>,
     
          for $reference in $references
-         return <dcterms:references>{$reference}</dcterms:references>,
-         
-         <bios:nextCouplet rdf:resource="{$namespace||$number||'#1'}"/>,
-         
-         let $couplets := 
-             for tumbling window $w in $keyStatements
-               start at $s when true()
-               only end at $e when $e - $s eq 1
-             return <couplet>{$w}</couplet>
-         for $couplet in $couplets
-         let $statements := $couplet/key_statement
-         return 
-             <bios:hasCouplet>{
-               <rdf:Description rdf:about="{$namespace||$number||'#'||$statements[1]/statement_id/text()}">{
-                  <bios:coupletNumber>{$statements[1]/statement_id/text()}</bios:coupletNumber>,
-                  for $statement in $statements
-                  return 
-                      <bios:hasStatement>
-                        <rdf:Description>{
-                            <bios:statementText>{$statement/description/text()}</bios:statementText>,
-                            <rdfs:label>{$statement/description/text()}</rdfs:label>,
-                            
-                             if ($statement/next_statement_id)
-                             then <bios:nextCouplet rdf:resource="{$namespace||$number||'#'||$statement/next_statement_id/text()}"/>
-                             else (),
-                             
-                             if ($statement/determination)
-                             then <bios:determination>{$statement/determination/text()}</bios:determination>
-                             else ()
-                                    
-                         }</rdf:Description>
-                      </bios:hasStatement>
-               }</rdf:Description>
-             }</bios:hasCouplet>
-         
+         return <dcterms:references>{$reference}</dcterms:references>
+
     }</rdf:Description> 
 </rdf:RDF>
-
+(:
 ))
+:)
