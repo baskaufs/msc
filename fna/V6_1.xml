@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<bio:treatment xmlns:bio="http://www.github.com/biosemantics" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.github.com/biosemantics http://www.w3.org/2001/XMLSchema-instance">
+  <meta>
+    <source>
+      <author>Guy L. Nesom</author>
+      <date>unknown</date>
+    </source>
+    <other_info_on_meta type="treatment_page">3</other_info_on_meta>
+    <other_info_on_meta type="mention_page">4</other_info_on_meta>
+    <other_info_on_meta type="mention_page">170</other_info_on_meta>
+    <other_info_on_meta type="volume">6</other_info_on_meta>
+    <other_info_on_meta type="illustrator">Yevonn Wilson-Ramsey</other_info_on_meta>
+  </meta>
+  <taxon_identification status="ACCEPTED">
+    <taxon_name rank="family" authority="Jussieu" date="unknown">CUCURBITACEAE</taxon_name>
+    <taxon_hierarchy>family CUCURBITACEAE</taxon_hierarchy>
+  </taxon_identification>
+  <number>0</number>
+  <description type="morphology">Plants usually vines, sometimes shrublike in Cucurbita, or perennial [annual] herbs (Melothria), usually monoecious or dioecious, rarely andromonoecious (Cucumis). Stems prostrate, procumbent, sprawling, trailing, or climbing; tendrils usually present, unbranched or branched. Leaves simple (also compound in Cyclanthera, Momordica), alternate, estipulate, petiolate (sessile or subsessile in Sicyos); blade unlobed or palmately, pedately, or pinnately lobed. Inflorescences paniculate, racemose, umbellate to subumbellate, fasciculate, corymbose, or solitary flowers. Flowers unisexual [bisexual]; sepals (4–)5(–6), sometimes vestigial (Cyclanthera), connate, calyx rotate, campanulate, saucer-shaped, or tubular, adnate to corolla, producing hypanthium; petals 5(–6), distinct or connate, imbricate or induplicate-valvate, usually yellow, orange, or white, sometimes green, margins entire, rarely fimbriate, corolla rotate, cupulate, campanulate, salverform, or funnelform; stamens (2–)3–5, with 4 mostly connate in pairs, appearing as only (1–)3 stamens; anthers connate or distinct, pepos, rarely capsules, elongate to globose, exocarp usually hard, sometimes fleshy and berrylike, glabrous or hairy, smooth or bristly, echinate, aculeate, muricate, tuberculate, or furrowed, indehiscent or dehiscent. Seeds mostly compressed, sometimes winged, arillate in Coccinia, Ibervillea, Momordica, and Tumamoca, exalbuminous; embryos straight.</description>
+  <description type="distribution">Nearly worldwide; mostly tropical.</description>
+  <discussion>Genera ca. 120, species ca. 825 (23 genera, 56 species in the flora).</discussion>
+  <discussion>Sechium edule (Jacquin) Swartz (chayote) has been attributed to Louisiana in the PLANTS database on the basis of a putative record in R. D. Thomas and C. M. Allen (1993–1998); there appears to be no such record therein. The only specimen from Louisiana in the NLU herbarium was collected from a cultivated plant in Ouachita Parish. Sechium edule is native to Central America and is grown worldwide as a food crop.</discussion>
+  <discussion>Cucurbitaceae, together with Begoniaceae and other families, is currently placed in Cucurbitales (P. F. Stevens, www.mobot.org/MOBOT/research/APweb), in the same clade as Fabales and Rosales.</discussion>
+  <discussion>The familial classification of Cucurbitaceae by C. Jeffrey (1980b, 1990, 2005) is widely used. Recent phylogenetic studies partly support the groupings outlined by Jeffrey but expected from the classification by Jeffrey’s classification (A. Kocyan et al. 2007; H. Schaefer et al. 2008); the studies suggest that tribes recognized by Jeffrey are largely monophyletic and Initial classifications by C. Jeffrey (1980b, 1990) emphasized fusion of stigmas and tendril morphology; his latest revision (2005) incorporated information from studies of seed coat anatomy by D. Singh and A. S. R. Dathan (1998). In Cucurbitoideae Kosteletzky, the main sclerenchymatous layer of the seed coat is conspicuous and distinct; in Nhandiroboideae Kosteletzky, it is inconspicuous and not clearly distinct from adjacent sclerified hypodermal layers.</discussion>
+  <discussion>The largest genera in the family are Trichosanthes (ca. 100 species), Momordica (ca. 80 species), Zehneria (ca. 60 species), Cucumis (ca. 55 species), Sicyos (ca. 50 species), Cayaponia (45–75 species), and Gurania (ca. 40 species). About 40 of the genera are monospecific.</discussion>
+  <discussion>Cucurbitaceae generally is easy to recognize: the fruit is usually a pepo (a hard-shelled berry). Fruits are produced in a wide array of shapes and sizes, especially as the result of millennia of selection. With intense watering, custom fertilization, and selection for size increase, squashes have been grown to 900 pounds; pumpkins can reach 1800 pounds.</discussion>
+  <discussion>Cucurbitaceae were important in early agriculture in the Americas as one of the three main staple food crops––squash, corn, and beans. Squashes are all native to the New World and provide edible flesh and seeds rich in amino acids. Melons are native to Africa and Asia and are used primarily as dessert fruits.</discussion>
+  <discussion>Species domesticated for food include Benincasa hispida (Thunberg) Cogniaux (wax gourd), Citrullus lanatus (watermelon), Coccinia grandis (ivy gourd), Cucumeropsis mannii Naudin (white-seeded melon), Cucumis (three species––bur gherkin, melon, and cucumber), Cucurbita (five species of squash, pumpkin, and gourd), Cyclanthera pedata (slipper gourd), Lagenaria siceraria (bottle gourd), Luffa (two species of loofah), Momordica charantia (bitter melon), Praecitrullus fistulosus (Stocks) Pangalo (tinda), Sechium edule (Jacquin) Swartz (chayote), Sicana odorifera (Vellozo) Naudin (casabanana), Telfairia Hooker (two species of oyster nut), and Trichosanthes Linnaeus (two species of snake gourd).</discussion>
+  <discussion>Species planted as ornamentals include Cucumis dipsaceus Ehrenberg (teasel gourd, for its yellow, densely aculeate fruits), C. metuliferus E. Meyer ex Naudin (African horned cucumber, for its bright yellow, coarsely aculeate fruits), Cucurbita pepo (for its colorful and oddly shaped gourds), Echinocystis lobata (balsam-apple, for its massive displays of small, white flowers), Lagenaria siceraria (for its bottlelike gourds), and Thladiantha dubia (golden creeper, for its large, golden-yellow flowers).</discussion>
+  <discussion>Species employed for other economic uses include Lagenaria siceraria (bottle gourd, for containers, birdhouses, floats, and musical instruments), Luffa cylindrica M. Roemer (loofah, as a sponge, scrubber, and filter), Sicana odorifera (casabanana, as an air freshener, the ripe fruits producing a long-lasting, fruity fragrance), and Siraitia grosvenorii (Swingle) C. Jeffrey ex A. M. Lu &amp; Zhi Y. Zhang (luo han guo, as a sweetener, the fruit flesh 300 times sweeter than sugar and low in calories).</discussion>
+  <references>
+    <reference>Bates, D. M., R. W. Robinson, and C. Jeffrey, eds. 1990. Biology and Utilization of the Cucurbitaceae. Ithaca, N.Y.</reference>
+    <reference>Heiser, C. B. 1979. The Gourd Book. Norman.</reference>
+    <reference>Jeffrey, C. 1962. Notes on Cucurbitaceae, including a proposed new classification of the family. Kew Bull. 15: 337–371.</reference>
+    <reference>Jeffrey, C. 1971. Further notes on Cucurbitaceae: II. Kew Bull. 25: 191–236.</reference>
+    <reference>Jeffrey, C. 1975. Further notes on Cucurbitaceae: IV. Some New World taxa. Kew Bull. 33: 347–380.</reference>
+    <reference>Jeffrey, C. 1980b. A review of the Cucurbitaceae. Bot. J. Linn. Soc. 81: 233–247.</reference>
+    <reference>Jeffrey, C. 1990. An outline classification of the Cucurbitaceae. In: D. M. Bates et al., eds. 1990. Biology and Utilization of the Cucurbitaceae. Ithaca, N.Y. Pp. 449–463.</reference>
+    <reference>Jeffrey, C. 2001. Cucurbitaceae. In: P. Hanelt, ed. 2001. Mansfeld’s Encyclopedia of Agricultural and Horticultural Crops.... 6 vols. Berlin and New York. Vol. 3, pp. 1510–1557.</reference>
+    <reference>Jeffrey, C. 2005. A new system of Cucurbitaceae. Bot. Zhurn. (Moscow &amp; Leningrad) 90: 332–335.</reference>
+    <reference>Jeffrey, C. and W. J. J. O. De Wilde. 2006. A review of the subtribe Thladianthinae (Cucurbitaceae). Bot. Zhurn. (Moscow &amp; Leningrad) 91: 766–776.</reference>
+    <reference>Kocyan, A. et al. 2007. A multi-locus chloroplast phylogeny for the Cucurbitaceae and its implications for character evolution and classification. Molec. Phylogen. Evol. 44: 553–577.</reference>
+    <reference>Lira, R., J. L. Villaseñor, and P. D. Davila. 1997. A cladistic analysis of the subtribe Sicyinae (Cucurbitaceae). Syst. Bot. 22: 415–425.</reference>
+    <reference>Nayar, N. M. and T. A. More, eds. 1998. Cucurbits. Enfield, N. H. Robinson, R. W. and D. S. Decker. 1997. Cucurbits. New York.</reference>
+    <reference>Nesom, G. L. 2011c. Toward consistency of taxonomic rank in wild/domesticated Cucurbitaceae. Phytoneuron 2011-13: 1-33.</reference>
+    <reference>Nesom, G. L. 2012f. Terms for surface vestiture and relief of Cucurbitaceae fruits. Phytoneuron 2012-108: 1–4.</reference>
+    <reference>Schaefer, H., C. Heibl, and S. S. Renner. 2008. Gourds afloat: A dated phylogeny reveals an Asian origin of the gourd family (Cucurbitaceae) and numerous oversea dispersal events. Proc. Roy. Soc. Biol. Sci. B, 276: 843–851.</reference>
+    <reference>Schaefer, H. and S. S. Renner. 2011. Cucurbitaceae. In: K. Kubitzki et al., eds. 1990+. The Families and Genera of Vascular Plants. 10+ vols. Berlin etc. Vol. 10, pp. 112–174.</reference>
+    <reference>Schaefer, H. and S. S. Renner. 2011b. Phylogenetic relationships in the order Cucurbitales and a new classification of the gourd family (Cucurbitaceae). Taxon 60: 122–138.</reference>
+    <reference>Singh, D. and A. S. R. Dathan. 1998. Morphology and embryology. In: N. M. Nayar and T. A. More, eds. 1998. Cucurbits. Enfield, N.H. Pp. 67–84.</reference>
+    <reference>Stocking, K. M. 1955. Some considerations of the genera Echinocystis and Echinopepon in the United States and northern Mexico. Madroño 13: 84–100.</reference>
+    <reference>Teppner, H. 2004. Notes on Lagenaria and Cucurbita (Cucurbitaceae)––Review and new contributions. Phyton (Horn) 44: 245–308.</reference>
+  </references>
+  <key>
+    <key_statement>
+      <statement_id>1</statement_id>
+      <description type="morphology">Inflorescences: pistillate flowers 1–16, (clustered at peduncle apex or in fascicles in distal axils or in racemoid to corymboid panicles)</description>
+      <next_statement_id>2</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>1</statement_id>
+      <description type="morphology">Inflorescences: pistillate flowers 1(–3)</description>
+      <next_statement_id>5</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>2</statement_id>
+      <description type="morphology">Inflorescences: pistillate flowers sessile to subsessile in umbelliform clusters at peduncle apex; seeds 1; plants annual.</description>
+      <determination>11 Sicyos</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>2</statement_id>
+      <description type="morphology">Inflorescences: pistillate flowers in axillary fascicles or in axillary racemoid to corymboid panicles; seeds 2–80; plants perennial</description>
+      <next_statement_id>3</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>3</statement_id>
+      <description type="morphology">Leaf surfaces eglandular; fruiting peduncles 6–9 cm; fruits 6–10 cm.</description>
+      <determination>13 Apodanthera</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>3</statement_id>
+      <description type="morphology">Leaf surfaces eglandular or glandular; fruiting peduncles 0–5 cm; fruits 0.6–2 cm</description>
+      <next_statement_id>4</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>4</statement_id>
+      <description type="morphology">Pistillate flowers 2–6(–10) in corymboid to racemoid panicles; fruits 0.6–1 cm.</description>
+      <determination>4 Bryonia</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>4</statement_id>
+      <description type="morphology">Pistillate flowers 1–5, in axillary fascicles or on racemoid branches proximal to staminate flowers; fruits 1–2 cm.</description>
+      <determination>22 Cayaponia</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>5</statement_id>
+      <description type="morphology">Fruits echinate, muricate to muriculate, subaculeate, or tuberculate</description>
+      <next_statement_id>6</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>5</statement_id>
+      <description type="morphology">Fruits usually smooth, ribbed, warty, or furrowed, rarely tuberculate, not echinate or muricate</description>
+      <next_statement_id>14</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>6</statement_id>
+      <description type="morphology">Plants trailing, tendrils absent; leaf blade margins sinuate-undulate or sinuatecrisped and whitish because of light-colored abaxial surfaces; peduncles recurvednodding in fruit</description>
+      <determination>3 Ecballium</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>6</statement_id>
+      <description type="morphology">Plants climbing or trailing, tendrils present; leaf blade margins not crisped-undulate and whitish; peduncles straight (not recurved-nodding) in fruit</description>
+      <next_statement_id>7</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>7</statement_id>
+      <description type="morphology">Inflorescences: staminate flowers solitary</description>
+      <next_statement_id>8</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>7</statement_id>
+      <description type="morphology">Inflorescences: staminate flowers (1–)2–200 in racemes, racemoid panicles, panicles, or fascicles</description>
+      <next_statement_id>9</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>8</statement_id>
+      <description type="morphology">Seeds red-arillate; filaments inserted near hypanthium rim; anther thecae distinct or initially loosely connate and forming central body, sigmoid-triplicate; fruits tuberculate, muricate, muriculate, or irregularly smooth-ridged.</description>
+      <determination>1 Momordica</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>8</statement_id>
+      <description type="morphology">Seeds not arillate; filaments inserted near hypanthium base; anther thecae replicate (usually 2-folded), distinct; fruits densely echinate or aculeate to muricate.</description>
+      <determination>16 Cucumis</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>9</statement_id>
+      <description type="morphology">Anther thecae distinct; petals yellow.</description>
+      <determination>16 Cucumis</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>9</statement_id>
+      <description type="morphology">Anther thecae connate into head or fused into ring; petals white to cream-yellow, greenish yellow, greenish, or greenish white</description>
+      <next_statement_id>10</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>10</statement_id>
+      <description type="morphology">Leaves 3–7-foliolate; fruits fleshy-capsular; anther thecae connate, fused into ring.</description>
+      <determination>6 Cyclanthera</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>10</statement_id>
+      <description type="morphology">Leaves 3–7-lobed; fruits dry, thin-walled; anther thecae connate, forming a head but not fused into ring</description>
+      <next_statement_id>11</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>11</statement_id>
+      <description type="morphology">Plants perennial, roots tuberous; stamens 3(–4).</description>
+      <determination>10 Marah</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>11</statement_id>
+      <description type="morphology">Plants annual, taprooted or roots slender-fibrous; stamens 3, 3–5, (4–)5, or 5</description>
+      <next_statement_id>12</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>12</statement_id>
+      <description type="morphology">Petals 1–1.5 mm; fruits 0.5–1.2 cm, irregularly dehiscent; seeds 1(–2).</description>
+      <determination>7 Brandegea</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>12</statement_id>
+      <description type="morphology">Petals 3–6 mm; fruits 2–5 cm, apically lacerate-dehiscent or dehiscent through apical pores; seeds 4–10</description>
+      <next_statement_id>13</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>13</statement_id>
+      <description type="morphology">Petals (5–)6, narrowly triangular to linear-lanceolate or oblong-lanceolate; spinules glabrous or slightly scabrous, dehiscence apically lacerate; leaf surfaces glabrous or scabrous; stamens 3.</description>
+      <determination>8 Echinocystis</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>13</statement_id>
+      <description type="morphology">Petals 5, triangular-ovate or oblong to deltate; spinules with stipitate-glandular hairs or pubescent-eglandular, dehiscence through apical pores; leaf surfaces hispid to hispidulous; stamens (4–)5.</description>
+      <determination>9 Echinopepon</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>14</statement_id>
+      <description type="morphology">Leaf lobes each pinnately lobed to shallowly sinuate-lobulate.</description>
+      <determination>19 Citrullus</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>14</statement_id>
+      <description type="morphology">Leaf lobes not pinnately lobed to shallowly sinuate-lobulate (margins lobulate in Ibervillea)</description>
+      <next_statement_id>15</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>15</statement_id>
+      <description type="morphology">Petals usually white to cream or light yellow to pale green, rarely greenish</description>
+      <next_statement_id>16</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>15</statement_id>
+      <description type="morphology">Petals greenish yellow, cream, yellow to orange-yellow, or orange</description>
+      <next_statement_id>20</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>16</statement_id>
+      <description type="morphology">Petals (15–)20–45 mm</description>
+      <next_statement_id>17</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>16</statement_id>
+      <description type="morphology">Petals 1–12 mm</description>
+      <next_statement_id>18</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>17</statement_id>
+      <description type="morphology">Plants perennial, dioecious, roots tuberous; stems glabrous or glabrate; tendrils unbranched; petals 15–20 mm; fruits broadly cylindric to ellipsoid-cylindric, 2.5–6 cm, usually green with white streaks or lines, sometimes red to scarlet.</description>
+      <determination>20 Coccinia</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>17</statement_id>
+      <description type="morphology">Plants annual, monoecious, taprooted; stems densely villous to puberulent; tendrils 2-branched; petals (15–)20–25 mm; fruits subglobose to cylindric, ellipsoid, or lageniform, sometimes 2-ventricose, 10–50 cm (longer in some cultivated forms), green to greenish yellow, maturing yellowish or pale brown, commonly mottled or with light green or white stripes.</description>
+      <determination>21 Lagenaria</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>18</statement_id>
+      <description type="morphology">Individual flowers and fruits loosely enclosed within pair of basally cordate bracts.</description>
+      <determination>12 Sicyosperma</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>18</statement_id>
+      <description type="morphology">Individual flowers and fruits not enclosed within pair of bracts</description>
+      <next_statement_id>19</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>19</statement_id>
+      <description type="morphology">Plants perennial; bracts absent; fruits 2–3.5 cm, green-striped.</description>
+      <determination>10 Marah</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>19</statement_id>
+      <description type="morphology">Plants annual; bracts foliaceous, stipuliform, conduplicate, with stiffly ciliate margins; fruits 1.3–1.5 cm, red.</description>
+      <determination>18 Ctenolepis</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>20</statement_id>
+      <description type="morphology">Seeds arillate</description>
+      <next_statement_id>21</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>20</statement_id>
+      <description type="morphology">Seeds not arillate</description>
+      <next_statement_id>22</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>21</statement_id>
+      <description type="morphology">Plants monoecious and dioecious (developmentally, seasonally); hypanthia narrowly tubular-funnelform; petal apices entire; anther thecae with terminal appendage nearly as long as corolla; fruits 0.8–1 cm.</description>
+      <determination>14 Tumamoca</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>21</statement_id>
+      <description type="morphology">Plants dioecious; hypanthia narrowly campanulate to cylindric; petal apices shallowly 2-lobed; anther thecae without terminal appendage; fruits 1–3.5 cm.</description>
+      <determination>15 Ibervillea</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>22</statement_id>
+      <description type="morphology">Sepals recurving; fruits densely hispid-hirsute to hirsute or hirsute-villous.</description>
+      <determination>2 Thladiantha</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>22</statement_id>
+      <description type="morphology">Sepals straight; fruits glabrous</description>
+      <next_statement_id>23</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>23</statement_id>
+      <description type="morphology">Petals 1.5–2 mm; fruits usually ellipsoid to ovoid, sometimes subglobose to globose, (0.8–)1–2.5 cm.</description>
+      <determination>17 Melothria</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>23</statement_id>
+      <description type="morphology">Petals 2–90 mm; fruits cylindric to narrowly clavate or globose or depressed-globose to cushion-shaped, cylindric, ellipsoid, ovoid, conic, obovoid, spindle-shaped, pyriform, or lageniform, 0.6–50(–120) cm</description>
+      <next_statement_id>24</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>24</statement_id>
+      <description type="morphology">Inflorescences: staminate flowers (5–)15–20 in racemes; fruits cylindric to narrowly clavate, (6–)15–50 cm, with rigid internal network of fibrovascular bundles, dehiscent by apical operculum; tendrils 3–6-branched; stamens (3–)5; petals 20–45 mm.</description>
+      <determination>5 Luffa</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>24</statement_id>
+      <description type="morphology">Inflorescences: staminate flowers solitary; fruits globose or depressed-globose to cushion-shaped, cylindric, ellipsoid, ovoid, conic, obovoid, pyriform, lageniform, or cushion-shaped, 0.6–50(–120) cm, without internal network of fibrovascular bundles, indehiscent; tendrils either unbranched or mostly 2–7-branched, sometimes absent; stamens 3; petals 2–25 or 25–90 mm</description>
+      <next_statement_id>25</next_statement_id>
+    </key_statement>
+    <key_statement>
+      <statement_id>25</statement_id>
+      <description type="morphology">Tendrils usually unbranched, rarely unbranched and 2-branched, sometimes absent; anther thecae replicate (usually 2-folded), distinct; petals 2–25 mm.</description>
+      <determination>16 Cucumis</determination>
+    </key_statement>
+    <key_statement>
+      <statement_id>25</statement_id>
+      <description type="morphology">Tendrils 2–7-branched or absent; anther thecae sigmoid-flexuous, connate; petals 25–90 mm.</description>
+      <determination>23 Cucurbita</determination>
+    </key_statement>
+  </key>
+</bio:treatment>
