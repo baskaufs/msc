@@ -83,19 +83,19 @@
     <bios:elevation>10–200 m</bios:elevation>
     <bios:hasMajorPart>
       <rdf:Description>
-        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
         <bios:majorName>stems</bios:majorName>
         <bios:majorDescription>glabrous or hairy</bios:majorDescription>
       </rdf:Description>
     </bios:hasMajorPart>
     <bios:hasMajorPart>
       <rdf:Description>
-        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
         <bios:majorName>leaves</bios:majorName>
         <bios:majorDescription>petiole 1.5–3.5(–6) cm</bios:majorDescription>
         <bios:hasMinorPart>
           <rdf:Description>
-            <rdf:type resource="http://www.github.com/biosemantics/MinorPart"/>
+            <rdf:type rdf:resource="http://www.github.com/biosemantics/MinorPart"/>
             <bios:minorName>blade</bios:minorName>
             <bios:minorDescription>suborbiculate to orbiculate, deeply palmately 5–7-lobed, 5–10(–12) cm, base cordate, lobes ovate-oblong or ovate-elliptic, sinuses 50–90% to base, margins coarsely and widely dentate to crenate-dentate, leaf lobes and teeth sometimes submucronate, not apiculate, surfaces glabrous or sparsely hairy</bios:minorDescription>
           </rdf:Description>
@@ -104,12 +104,12 @@
     </bios:hasMajorPart>
     <bios:hasMajorPart>
       <rdf:Description>
-        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
         <bios:majorName>inflorescences</bios:majorName>
         <bios:majorDescription>staminate peduncles bracteate at or proximal to middle, bracts sessile, reniform or orbiculate-cordate, margins entire</bios:majorDescription>
         <bios:hasMinorPart>
           <rdf:Description>
-            <rdf:type resource="http://www.github.com/biosemantics/MinorPart"/>
+            <rdf:type rdf:resource="http://www.github.com/biosemantics/MinorPart"/>
             <bios:minorName>pistillate</bios:minorName>
             <bios:minorDescription>peduncles ebracteate</bios:minorDescription>
           </rdf:Description>
@@ -118,28 +118,28 @@
     </bios:hasMajorPart>
     <bios:hasMajorPart>
       <rdf:Description>
-        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
         <bios:majorName>petals</bios:majorName>
         <bios:majorDescription>bright yellow, obovate to oblong-obovate, 7–25 mm</bios:majorDescription>
       </rdf:Description>
     </bios:hasMajorPart>
     <bios:hasMajorPart>
       <rdf:Description>
-        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
         <bios:majorName>fruits</bios:majorName>
         <bios:majorDescription>red or orange to yellow-orange, cylindric or ellipsoidal to oblong-fusiform or ovoid, 7–25 cm, beak becoming less prominent at maturity, surface usually minutely tuberculate to muricate and muriculate, sometimes irregularly smooth-ridged</bios:majorDescription>
       </rdf:Description>
     </bios:hasMajorPart>
     <bios:hasMajorPart>
       <rdf:Description>
-        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
         <bios:majorName>seeds</bios:majorName>
         <bios:majorDescription>oblong, 10–15 mm</bios:majorDescription>
       </rdf:Description>
     </bios:hasMajorPart>
     <bios:hasMajorPart>
       <rdf:Description>
-        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
         <bios:majorName>2n</bios:majorName>
         <bios:majorDescription>= 22.</bios:majorDescription>
       </rdf:Description>

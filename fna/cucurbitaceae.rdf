@@ -28,19 +28,19 @@
     <bios:distribution>Nearly worldwide; mostly tropical.</bios:distribution>
     <bios:hasMajorPart>
       <rdf:Description>
-        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
         <bios:majorName>plants</bios:majorName>
         <bios:majorDescription>usually vines, sometimes shrublike in Cucurbita, or perennial [annual] herbs (Melothria), usually monoecious or dioecious, rarely andromonoecious (Cucumis)</bios:majorDescription>
       </rdf:Description>
     </bios:hasMajorPart>
     <bios:hasMajorPart>
       <rdf:Description>
-        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
         <bios:majorName>stems</bios:majorName>
         <bios:majorDescription>prostrate, procumbent, sprawling, trailing, or climbing</bios:majorDescription>
         <bios:hasMinorPart>
           <rdf:Description>
-            <rdf:type resource="http://www.github.com/biosemantics/MinorPart"/>
+            <rdf:type rdf:resource="http://www.github.com/biosemantics/MinorPart"/>
             <bios:minorName>tendrils</bios:minorName>
             <bios:minorDescription>usually present, unbranched or branched</bios:minorDescription>
           </rdf:Description>
@@ -49,12 +49,12 @@
     </bios:hasMajorPart>
     <bios:hasMajorPart>
       <rdf:Description>
-        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
         <bios:majorName>leaves</bios:majorName>
         <bios:majorDescription>simple (also compound in Cyclanthera, Momordica), alternate, estipulate, petiolate (sessile or subsessile in Sicyos)</bios:majorDescription>
         <bios:hasMinorPart>
           <rdf:Description>
-            <rdf:type resource="http://www.github.com/biosemantics/MinorPart"/>
+            <rdf:type rdf:resource="http://www.github.com/biosemantics/MinorPart"/>
             <bios:minorName>blade</bios:minorName>
             <bios:minorDescription>unlobed or palmately, pedately, or pinnately lobed</bios:minorDescription>
           </rdf:Description>
@@ -63,40 +63,40 @@
     </bios:hasMajorPart>
     <bios:hasMajorPart>
       <rdf:Description>
-        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
         <bios:majorName>inflorescences</bios:majorName>
         <bios:majorDescription>paniculate, racemose, umbellate to subumbellate, fasciculate, corymbose, or solitary flowers</bios:majorDescription>
       </rdf:Description>
     </bios:hasMajorPart>
     <bios:hasMajorPart>
       <rdf:Description>
-        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
         <bios:majorName>flowers</bios:majorName>
         <bios:majorDescription>unisexual [bisexual]</bios:majorDescription>
         <bios:hasMinorPart>
           <rdf:Description>
-            <rdf:type resource="http://www.github.com/biosemantics/MinorPart"/>
+            <rdf:type rdf:resource="http://www.github.com/biosemantics/MinorPart"/>
             <bios:minorName>sepals</bios:minorName>
             <bios:minorDescription>(4–)5(–6), sometimes vestigial (Cyclanthera), connate, calyx rotate, campanulate, saucer-shaped, or tubular, adnate to corolla, producing hypanthium</bios:minorDescription>
           </rdf:Description>
         </bios:hasMinorPart>
         <bios:hasMinorPart>
           <rdf:Description>
-            <rdf:type resource="http://www.github.com/biosemantics/MinorPart"/>
+            <rdf:type rdf:resource="http://www.github.com/biosemantics/MinorPart"/>
             <bios:minorName>petals</bios:minorName>
             <bios:minorDescription>5(–6), distinct or connate, imbricate or induplicate-valvate, usually yellow, orange, or white, sometimes green, margins entire, rarely fimbriate, corolla rotate, cupulate, campanulate, salverform, or funnelform</bios:minorDescription>
           </rdf:Description>
         </bios:hasMinorPart>
         <bios:hasMinorPart>
           <rdf:Description>
-            <rdf:type resource="http://www.github.com/biosemantics/MinorPart"/>
+            <rdf:type rdf:resource="http://www.github.com/biosemantics/MinorPart"/>
             <bios:minorName>stamens</bios:minorName>
             <bios:minorDescription>(2–)3–5, with 4 mostly connate in pairs, appearing as only (1–)3 stamens</bios:minorDescription>
           </rdf:Description>
         </bios:hasMinorPart>
         <bios:hasMinorPart>
           <rdf:Description>
-            <rdf:type resource="http://www.github.com/biosemantics/MinorPart"/>
+            <rdf:type rdf:resource="http://www.github.com/biosemantics/MinorPart"/>
             <bios:minorName>anthers</bios:minorName>
             <bios:minorDescription>connate or distinct, pepos, rarely capsules, elongate to globose, exocarp usually hard, sometimes fleshy and berrylike, glabrous or hairy, smooth or bristly, echinate, aculeate, muricate, tuberculate, or furrowed, indehiscent or dehiscent</bios:minorDescription>
           </rdf:Description>
@@ -105,12 +105,12 @@
     </bios:hasMajorPart>
     <bios:hasMajorPart>
       <rdf:Description>
-        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
         <bios:majorName>seeds</bios:majorName>
         <bios:majorDescription>mostly compressed, sometimes winged, arillate in Coccinia, Ibervillea, Momordica, and Tumamoca, exalbuminous</bios:majorDescription>
         <bios:hasMinorPart>
           <rdf:Description>
-            <rdf:type resource="http://www.github.com/biosemantics/MinorPart"/>
+            <rdf:type rdf:resource="http://www.github.com/biosemantics/MinorPart"/>
             <bios:minorName>embryos</bios:minorName>
             <bios:minorDescription>straight.</bios:minorDescription>
           </rdf:Description>

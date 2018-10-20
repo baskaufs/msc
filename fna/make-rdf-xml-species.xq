@@ -36,7 +36,7 @@ declare function functx:trim
                 return
                 <bios:hasMinorPart>
                     <rdf:Description>
-                        <rdf:type resource="http://www.github.com/biosemantics/MinorPart"/>
+                        <rdf:type rdf:resource="http://www.github.com/biosemantics/MinorPart"/>
                         <bios:minorName>{$minorPartName}</bios:minorName>
                         <bios:minorDescription>{$minorPartDescription}</bios:minorDescription>
                     </rdf:Description>
@@ -44,7 +44,7 @@ declare function functx:trim
       return
       <bios:hasMajorPart>
           <rdf:Description>
-              <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+              <rdf:type rdf:resource="http://www.github.com/biosemantics/MajorPart"/>
               <bios:majorName>{$majorPartName}</bios:majorName>
               <bios:majorDescription>{$majorPartDescription}</bios:majorDescription>
               {if (count($minorPart)!=0)
