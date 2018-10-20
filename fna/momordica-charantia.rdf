@@ -1,0 +1,149 @@
+<rdf:RDF xmlns:bios="http://www.github.com/biosemantics/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="http://fna.org/treatment/2a.">
+    <rdf:type rdf:resource="http://www.github.com/biosemantics/Treatment"/>
+    <rdfs:label>cucurbitaceae momordica charantia charantia</rdfs:label>
+    <dc:creator>unknown</dc:creator>
+    <dcterms:created>unknown</dcterms:created>
+    <dcterms:identifier>2a.</dcterms:identifier>
+    <bios:illustrationPage>9</bios:illustrationPage>
+    <bios:treatmentPage>8</bios:treatmentPage>
+    <bios:volume>6</bios:volume>
+    <bios:hasName>
+      <rdf:Description>
+        <dwc:taxonomicStatus>accepted</dwc:taxonomicStatus>
+        <bios:taxonHierarchy>family cucurbitaceae;genus momordica;species charantia;subspecies charantia</bios:taxonHierarchy>
+        <bios:hasPart>
+          <rdf:Description>
+            <dwc:taxonRank>family</dwc:taxonRank>
+            <dwc:scientificNameAuthorship>Jussieu</dwc:scientificNameAuthorship>
+            <dcterms:date>unknown</dcterms:date>
+            <dwc:scientificName>Cucurbitaceae</dwc:scientificName>
+          </rdf:Description>
+        </bios:hasPart>
+        <bios:hasPart>
+          <rdf:Description>
+            <dwc:taxonRank>genus</dwc:taxonRank>
+            <dwc:scientificNameAuthorship>Linnaeus</dwc:scientificNameAuthorship>
+            <dcterms:date>unknown</dcterms:date>
+            <dwc:scientificName>Momordica</dwc:scientificName>
+          </rdf:Description>
+        </bios:hasPart>
+        <bios:hasPart>
+          <rdf:Description>
+            <dwc:taxonRank>species</dwc:taxonRank>
+            <dwc:scientificNameAuthorship>Linnaeus</dwc:scientificNameAuthorship>
+            <dcterms:date>unknown</dcterms:date>
+            <dwc:scientificName>charantia</dwc:scientificName>
+          </rdf:Description>
+        </bios:hasPart>
+        <bios:hasPart>
+          <rdf:Description>
+            <dwc:taxonRank>subspecies</dwc:taxonRank>
+            <dwc:scientificNameAuthorship>[F I]</dwc:scientificNameAuthorship>
+            <dcterms:date>unknown</dcterms:date>
+            <dwc:scientificName>charantia</dwc:scientificName>
+          </rdf:Description>
+        </bios:hasPart>
+      </rdf:Description>
+    </bios:hasName>
+    <bios:hasName>
+      <rdf:Description>
+        <dwc:taxonomicStatus>synonym</dwc:taxonomicStatus>
+        <bios:taxonHierarchy>genus Momordica;species charantia;variety abbreviata</bios:taxonHierarchy>
+        <bios:hasPart>
+          <rdf:Description>
+            <dwc:taxonRank>genus</dwc:taxonRank>
+            <dwc:scientificNameAuthorship>unknown</dwc:scientificNameAuthorship>
+            <dcterms:date>unknown</dcterms:date>
+            <dwc:scientificName>Momordica</dwc:scientificName>
+          </rdf:Description>
+        </bios:hasPart>
+        <bios:hasPart>
+          <rdf:Description>
+            <dwc:taxonRank>species</dwc:taxonRank>
+            <dwc:scientificNameAuthorship>unknown</dwc:scientificNameAuthorship>
+            <dcterms:date>unknown</dcterms:date>
+            <dwc:scientificName>charantia</dwc:scientificName>
+          </rdf:Description>
+        </bios:hasPart>
+        <bios:hasPart>
+          <rdf:Description>
+            <dwc:taxonRank>variety</dwc:taxonRank>
+            <dwc:scientificNameAuthorship>Seringe</dwc:scientificNameAuthorship>
+            <dcterms:date>unknown</dcterms:date>
+            <dwc:scientificName>abbreviata</dwc:scientificName>
+          </rdf:Description>
+        </bios:hasPart>
+      </rdf:Description>
+    </bios:hasName>
+    <bios:morphology>Stems glabrous or hairy. Leaves: petiole 1.5–3.5(–6) cm; blade suborbiculate to orbiculate, deeply palmately 5–7-lobed, 5–10(–12) cm, base cordate, lobes ovate-oblong or ovate-elliptic, sinuses 50–90% to base, margins coarsely and widely dentate to crenate-dentate, leaf lobes and teeth sometimes submucronate, not apiculate, surfaces glabrous or sparsely hairy. Inflorescences: staminate peduncles bracteate at or proximal to middle, bracts sessile, reniform or orbiculate-cordate, margins entire; pistillate peduncles ebracteate. Petals bright yellow, obovate to oblong-obovate, 7–25 mm. Fruits red or orange to yellow-orange, cylindric or ellipsoidal to oblong-fusiform or ovoid, 7–25 cm, beak becoming less prominent at maturity, surface usually minutely tuberculate to muricate and muriculate, sometimes irregularly smooth-ridged. Seeds oblong, 10–15 mm. 2n = 22.</bios:morphology>
+    <bios:distribution>Introduced; Ala., Conn., Fla., Ga., La., Pa.; Africa; introduced also in Mexico, West Indies, South America, Europe, se Asia, Pacific Islands, Australia.</bios:distribution>
+    <bios:phenology>Flowering Apr–Nov.</bios:phenology>
+    <bios:habitat>Disturbed areas, roadsides, fencerows, thickets, hammock edges, fields, ditches, canal banks, shell mounds, orange groves, sand pine scrub, flatwoods, floodplain woods</bios:habitat>
+    <bios:elevation>10–200 m</bios:elevation>
+    <bios:hasMajorPart>
+      <rdf:Description>
+        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <bios:majorName>stems</bios:majorName>
+        <bios:majorDescription>glabrous or hairy</bios:majorDescription>
+      </rdf:Description>
+    </bios:hasMajorPart>
+    <bios:hasMajorPart>
+      <rdf:Description>
+        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <bios:majorName>leaves</bios:majorName>
+        <bios:majorDescription>petiole 1.5–3.5(–6) cm</bios:majorDescription>
+        <bios:hasMinorPart>
+          <rdf:Description>
+            <rdf:type resource="http://www.github.com/biosemantics/MinorPart"/>
+            <bios:minorName>blade</bios:minorName>
+            <bios:minorDescription>suborbiculate to orbiculate, deeply palmately 5–7-lobed, 5–10(–12) cm, base cordate, lobes ovate-oblong or ovate-elliptic, sinuses 50–90% to base, margins coarsely and widely dentate to crenate-dentate, leaf lobes and teeth sometimes submucronate, not apiculate, surfaces glabrous or sparsely hairy</bios:minorDescription>
+          </rdf:Description>
+        </bios:hasMinorPart>
+      </rdf:Description>
+    </bios:hasMajorPart>
+    <bios:hasMajorPart>
+      <rdf:Description>
+        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <bios:majorName>inflorescences</bios:majorName>
+        <bios:majorDescription>staminate peduncles bracteate at or proximal to middle, bracts sessile, reniform or orbiculate-cordate, margins entire</bios:majorDescription>
+        <bios:hasMinorPart>
+          <rdf:Description>
+            <rdf:type resource="http://www.github.com/biosemantics/MinorPart"/>
+            <bios:minorName>pistillate</bios:minorName>
+            <bios:minorDescription>peduncles ebracteate</bios:minorDescription>
+          </rdf:Description>
+        </bios:hasMinorPart>
+      </rdf:Description>
+    </bios:hasMajorPart>
+    <bios:hasMajorPart>
+      <rdf:Description>
+        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <bios:majorName>petals</bios:majorName>
+        <bios:majorDescription>bright yellow, obovate to oblong-obovate, 7–25 mm</bios:majorDescription>
+      </rdf:Description>
+    </bios:hasMajorPart>
+    <bios:hasMajorPart>
+      <rdf:Description>
+        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <bios:majorName>fruits</bios:majorName>
+        <bios:majorDescription>red or orange to yellow-orange, cylindric or ellipsoidal to oblong-fusiform or ovoid, 7–25 cm, beak becoming less prominent at maturity, surface usually minutely tuberculate to muricate and muriculate, sometimes irregularly smooth-ridged</bios:majorDescription>
+      </rdf:Description>
+    </bios:hasMajorPart>
+    <bios:hasMajorPart>
+      <rdf:Description>
+        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <bios:majorName>seeds</bios:majorName>
+        <bios:majorDescription>oblong, 10–15 mm</bios:majorDescription>
+      </rdf:Description>
+    </bios:hasMajorPart>
+    <bios:hasMajorPart>
+      <rdf:Description>
+        <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+        <bios:majorName>2n</bios:majorName>
+        <bios:majorDescription>= 22.</bios:majorDescription>
+      </rdf:Description>
+    </bios:hasMajorPart>
+    <dcterms:description>No documentation has been found for a report of Momordica charantia in Texas. The species is apparently becoming common in Florida, where it is known to be naturalized in many counties. It is grown as a crop in many countries for the young fruits, which are edible before an extreme bitterness develops in the mature fruits. Two forms of Momordica charantia in the New World can be distinguished: the ubiquitous weed of the humid lowland tropics and subtropics, growing spontaneously and not cultivated or eaten except occasionally and opportunistically for the pulp; and the domesticated forms, which are seen in Asian markets. The cultivated forms do not escape (M. Nee, pers. comm.). Momordica charantia subsp. macroloba Achigan-Dako &amp; Blattner is endemic to the Dahomey Gap and Sudano-Guinean phytoregion of Benin and Togo in west-central Africa.</dcterms:description>
+  </rdf:Description>
+</rdf:RDF>

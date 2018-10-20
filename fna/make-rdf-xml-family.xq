@@ -16,6 +16,44 @@ declare function functx:capitalize-first
              substring($arg,2))
  } ;
 
+declare function functx:trim
+  ( $arg as xs:string? )  as xs:string {
+
+   replace(replace($arg,'\s+$',''),'^\s+','')
+ } ;
+ 
+ declare function local:parse-morphology($text as xs:string) as node()* {
+  let $majorParts := tokenize($text,"\. ")
+  for $majorPart in $majorParts
+      let $majorPartName := lower-case(translate(functx:trim(tokenize($majorPart," ")[1]), ':', ''))
+      let $remainder := functx:trim(string-join(subsequence(tokenize($majorPart," "),2)," "))
+      let $majorPartDescription := functx:trim(tokenize($remainder,";")[1])
+      let $minorRemainder := subsequence(tokenize($remainder,";"),2)
+      let $minorPart := 
+            for $minorPart in $minorRemainder
+                let $minorPartName := functx:trim(tokenize($minorPart," ")[2])
+                let $minorPartDescription := functx:trim(string-join(subsequence(tokenize($minorPart," "),3)," "))
+                return
+                <bios:hasMinorPart>
+                    <rdf:Description>
+                        <rdf:type resource="http://www.github.com/biosemantics/MinorPart"/>
+                        <bios:minorName>{$minorPartName}</bios:minorName>
+                        <bios:minorDescription>{$minorPartDescription}</bios:minorDescription>
+                    </rdf:Description>
+                </bios:hasMinorPart>
+      return
+      <bios:hasMajorPart>
+          <rdf:Description>
+              <rdf:type resource="http://www.github.com/biosemantics/MajorPart"/>
+              <bios:majorName>{$majorPartName}</bios:majorName>
+              <bios:majorDescription>{$majorPartDescription}</bios:majorDescription>
+              {if (count($minorPart)!=0)
+              then $minorPart
+              else ()}
+          </rdf:Description>
+      </bios:hasMajorPart>
+};
+
 let $namespace := "http://fna.org/treatment/"
 
 let $data := doc('V6_1.xml')/bio:treatment
@@ -56,9 +94,9 @@ let $references := $data/references/reference/text()
 let $keyStatements := $data/key/key_statement
 
 return 
-(:
+
 (file:write("Documents/github/msc/fna/output.rdf",
-:)
+
 <rdf:RDF 
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -123,6 +161,7 @@ xmlns:bios="http://www.github.com/biosemantics/"
          if ($elevationDescription != "")
          then <bios:elevation>{$elevationDescription}</bios:elevation>
          else (),
+         local:parse-morphology($morphologyDescription),
 
          <dcterms:description>{$discussion}</dcterms:description>,
     
@@ -164,6 +203,5 @@ xmlns:bios="http://www.github.com/biosemantics/"
          
     }</rdf:Description> 
 </rdf:RDF>
-(:
+
 ))
-:)
