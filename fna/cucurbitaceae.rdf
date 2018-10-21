@@ -139,481 +139,355 @@
     <dcterms:references>Singh, D. and A. S. R. Dathan. 1998. Morphology and embryology. In: N. M. Nayar and T. A. More, eds. 1998. Cucurbits. Enfield, N.H. Pp. 67–84.</dcterms:references>
     <dcterms:references>Stocking, K. M. 1955. Some considerations of the genera Echinocystis and Echinopepon in the United States and northern Mexico. Madroño 13: 84–100.</dcterms:references>
     <dcterms:references>Teppner, H. 2004. Notes on Lagenaria and Cucurbita (Cucurbitaceae)––Review and new contributions. Phyton (Horn) 44: 245–308.</dcterms:references>
-    <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#1"/>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#1">
-        <bios:coupletNumber>1</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Inflorescences: pistillate flowers 1–16, (clustered at peduncle apex or in fascicles in distal axils or in racemoid to corymboid panicles)</bios:statementText>
-            <rdfs:label>Inflorescences: pistillate flowers 1–16, (clustered at peduncle apex or in fascicles in distal axils or in racemoid to corymboid panicles)</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#2"/>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Inflorescences: pistillate flowers 1(–3)</bios:statementText>
-            <rdfs:label>Inflorescences: pistillate flowers 1(–3)</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#5"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#2">
-        <bios:coupletNumber>2</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Inflorescences: pistillate flowers sessile to subsessile in umbelliform clusters at peduncle apex; seeds 1; plants annual.</bios:statementText>
-            <rdfs:label>Inflorescences: pistillate flowers sessile to subsessile in umbelliform clusters at peduncle apex; seeds 1; plants annual.</rdfs:label>
-            <bios:determination>11 Sicyos</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Inflorescences: pistillate flowers in axillary fascicles or in axillary racemoid to corymboid panicles; seeds 2–80; plants perennial</bios:statementText>
-            <rdfs:label>Inflorescences: pistillate flowers in axillary fascicles or in axillary racemoid to corymboid panicles; seeds 2–80; plants perennial</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#3"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#3">
-        <bios:coupletNumber>3</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Leaf surfaces eglandular; fruiting peduncles 6–9 cm; fruits 6–10 cm.</bios:statementText>
-            <rdfs:label>Leaf surfaces eglandular; fruiting peduncles 6–9 cm; fruits 6–10 cm.</rdfs:label>
-            <bios:determination>13 Apodanthera</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Leaf surfaces eglandular or glandular; fruiting peduncles 0–5 cm; fruits 0.6–2 cm</bios:statementText>
-            <rdfs:label>Leaf surfaces eglandular or glandular; fruiting peduncles 0–5 cm; fruits 0.6–2 cm</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#4"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#4">
-        <bios:coupletNumber>4</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Pistillate flowers 2–6(–10) in corymboid to racemoid panicles; fruits 0.6–1 cm.</bios:statementText>
-            <rdfs:label>Pistillate flowers 2–6(–10) in corymboid to racemoid panicles; fruits 0.6–1 cm.</rdfs:label>
-            <bios:determination>4 Bryonia</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Pistillate flowers 1–5, in axillary fascicles or on racemoid branches proximal to staminate flowers; fruits 1–2 cm.</bios:statementText>
-            <rdfs:label>Pistillate flowers 1–5, in axillary fascicles or on racemoid branches proximal to staminate flowers; fruits 1–2 cm.</rdfs:label>
-            <bios:determination>22 Cayaponia</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#5">
-        <bios:coupletNumber>5</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Fruits echinate, muricate to muriculate, subaculeate, or tuberculate</bios:statementText>
-            <rdfs:label>Fruits echinate, muricate to muriculate, subaculeate, or tuberculate</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#6"/>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Fruits usually smooth, ribbed, warty, or furrowed, rarely tuberculate, not echinate or muricate</bios:statementText>
-            <rdfs:label>Fruits usually smooth, ribbed, warty, or furrowed, rarely tuberculate, not echinate or muricate</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#14"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#6">
-        <bios:coupletNumber>6</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Plants trailing, tendrils absent; leaf blade margins sinuate-undulate or sinuatecrisped and whitish because of light-colored abaxial surfaces; peduncles recurvednodding in fruit</bios:statementText>
-            <rdfs:label>Plants trailing, tendrils absent; leaf blade margins sinuate-undulate or sinuatecrisped and whitish because of light-colored abaxial surfaces; peduncles recurvednodding in fruit</rdfs:label>
-            <bios:determination>3 Ecballium</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Plants climbing or trailing, tendrils present; leaf blade margins not crisped-undulate and whitish; peduncles straight (not recurved-nodding) in fruit</bios:statementText>
-            <rdfs:label>Plants climbing or trailing, tendrils present; leaf blade margins not crisped-undulate and whitish; peduncles straight (not recurved-nodding) in fruit</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#7"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#7">
-        <bios:coupletNumber>7</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Inflorescences: staminate flowers solitary</bios:statementText>
-            <rdfs:label>Inflorescences: staminate flowers solitary</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#8"/>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Inflorescences: staminate flowers (1–)2–200 in racemes, racemoid panicles, panicles, or fascicles</bios:statementText>
-            <rdfs:label>Inflorescences: staminate flowers (1–)2–200 in racemes, racemoid panicles, panicles, or fascicles</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#9"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#8">
-        <bios:coupletNumber>8</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Seeds red-arillate; filaments inserted near hypanthium rim; anther thecae distinct or initially loosely connate and forming central body, sigmoid-triplicate; fruits tuberculate, muricate, muriculate, or irregularly smooth-ridged.</bios:statementText>
-            <rdfs:label>Seeds red-arillate; filaments inserted near hypanthium rim; anther thecae distinct or initially loosely connate and forming central body, sigmoid-triplicate; fruits tuberculate, muricate, muriculate, or irregularly smooth-ridged.</rdfs:label>
-            <bios:determination>1 Momordica</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Seeds not arillate; filaments inserted near hypanthium base; anther thecae replicate (usually 2-folded), distinct; fruits densely echinate or aculeate to muricate.</bios:statementText>
-            <rdfs:label>Seeds not arillate; filaments inserted near hypanthium base; anther thecae replicate (usually 2-folded), distinct; fruits densely echinate or aculeate to muricate.</rdfs:label>
-            <bios:determination>16 Cucumis</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#9">
-        <bios:coupletNumber>9</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Anther thecae distinct; petals yellow.</bios:statementText>
-            <rdfs:label>Anther thecae distinct; petals yellow.</rdfs:label>
-            <bios:determination>16 Cucumis</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Anther thecae connate into head or fused into ring; petals white to cream-yellow, greenish yellow, greenish, or greenish white</bios:statementText>
-            <rdfs:label>Anther thecae connate into head or fused into ring; petals white to cream-yellow, greenish yellow, greenish, or greenish white</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#10"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#10">
-        <bios:coupletNumber>10</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Leaves 3–7-foliolate; fruits fleshy-capsular; anther thecae connate, fused into ring.</bios:statementText>
-            <rdfs:label>Leaves 3–7-foliolate; fruits fleshy-capsular; anther thecae connate, fused into ring.</rdfs:label>
-            <bios:determination>6 Cyclanthera</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Leaves 3–7-lobed; fruits dry, thin-walled; anther thecae connate, forming a head but not fused into ring</bios:statementText>
-            <rdfs:label>Leaves 3–7-lobed; fruits dry, thin-walled; anther thecae connate, forming a head but not fused into ring</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#11"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#11">
-        <bios:coupletNumber>11</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Plants perennial, roots tuberous; stamens 3(–4).</bios:statementText>
-            <rdfs:label>Plants perennial, roots tuberous; stamens 3(–4).</rdfs:label>
-            <bios:determination>10 Marah</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Plants annual, taprooted or roots slender-fibrous; stamens 3, 3–5, (4–)5, or 5</bios:statementText>
-            <rdfs:label>Plants annual, taprooted or roots slender-fibrous; stamens 3, 3–5, (4–)5, or 5</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#12"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#12">
-        <bios:coupletNumber>12</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Petals 1–1.5 mm; fruits 0.5–1.2 cm, irregularly dehiscent; seeds 1(–2).</bios:statementText>
-            <rdfs:label>Petals 1–1.5 mm; fruits 0.5–1.2 cm, irregularly dehiscent; seeds 1(–2).</rdfs:label>
-            <bios:determination>7 Brandegea</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Petals 3–6 mm; fruits 2–5 cm, apically lacerate-dehiscent or dehiscent through apical pores; seeds 4–10</bios:statementText>
-            <rdfs:label>Petals 3–6 mm; fruits 2–5 cm, apically lacerate-dehiscent or dehiscent through apical pores; seeds 4–10</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#13"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#13">
-        <bios:coupletNumber>13</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Petals (5–)6, narrowly triangular to linear-lanceolate or oblong-lanceolate; spinules glabrous or slightly scabrous, dehiscence apically lacerate; leaf surfaces glabrous or scabrous; stamens 3.</bios:statementText>
-            <rdfs:label>Petals (5–)6, narrowly triangular to linear-lanceolate or oblong-lanceolate; spinules glabrous or slightly scabrous, dehiscence apically lacerate; leaf surfaces glabrous or scabrous; stamens 3.</rdfs:label>
-            <bios:determination>8 Echinocystis</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Petals 5, triangular-ovate or oblong to deltate; spinules with stipitate-glandular hairs or pubescent-eglandular, dehiscence through apical pores; leaf surfaces hispid to hispidulous; stamens (4–)5.</bios:statementText>
-            <rdfs:label>Petals 5, triangular-ovate or oblong to deltate; spinules with stipitate-glandular hairs or pubescent-eglandular, dehiscence through apical pores; leaf surfaces hispid to hispidulous; stamens (4–)5.</rdfs:label>
-            <bios:determination>9 Echinopepon</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#14">
-        <bios:coupletNumber>14</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Leaf lobes each pinnately lobed to shallowly sinuate-lobulate.</bios:statementText>
-            <rdfs:label>Leaf lobes each pinnately lobed to shallowly sinuate-lobulate.</rdfs:label>
-            <bios:determination>19 Citrullus</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Leaf lobes not pinnately lobed to shallowly sinuate-lobulate (margins lobulate in Ibervillea)</bios:statementText>
-            <rdfs:label>Leaf lobes not pinnately lobed to shallowly sinuate-lobulate (margins lobulate in Ibervillea)</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#15"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#15">
-        <bios:coupletNumber>15</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Petals usually white to cream or light yellow to pale green, rarely greenish</bios:statementText>
-            <rdfs:label>Petals usually white to cream or light yellow to pale green, rarely greenish</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#16"/>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Petals greenish yellow, cream, yellow to orange-yellow, or orange</bios:statementText>
-            <rdfs:label>Petals greenish yellow, cream, yellow to orange-yellow, or orange</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#20"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#16">
-        <bios:coupletNumber>16</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Petals (15–)20–45 mm</bios:statementText>
-            <rdfs:label>Petals (15–)20–45 mm</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#17"/>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Petals 1–12 mm</bios:statementText>
-            <rdfs:label>Petals 1–12 mm</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#18"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#17">
-        <bios:coupletNumber>17</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Plants perennial, dioecious, roots tuberous; stems glabrous or glabrate; tendrils unbranched; petals 15–20 mm; fruits broadly cylindric to ellipsoid-cylindric, 2.5–6 cm, usually green with white streaks or lines, sometimes red to scarlet.</bios:statementText>
-            <rdfs:label>Plants perennial, dioecious, roots tuberous; stems glabrous or glabrate; tendrils unbranched; petals 15–20 mm; fruits broadly cylindric to ellipsoid-cylindric, 2.5–6 cm, usually green with white streaks or lines, sometimes red to scarlet.</rdfs:label>
-            <bios:determination>20 Coccinia</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Plants annual, monoecious, taprooted; stems densely villous to puberulent; tendrils 2-branched; petals (15–)20–25 mm; fruits subglobose to cylindric, ellipsoid, or lageniform, sometimes 2-ventricose, 10–50 cm (longer in some cultivated forms), green to greenish yellow, maturing yellowish or pale brown, commonly mottled or with light green or white stripes.</bios:statementText>
-            <rdfs:label>Plants annual, monoecious, taprooted; stems densely villous to puberulent; tendrils 2-branched; petals (15–)20–25 mm; fruits subglobose to cylindric, ellipsoid, or lageniform, sometimes 2-ventricose, 10–50 cm (longer in some cultivated forms), green to greenish yellow, maturing yellowish or pale brown, commonly mottled or with light green or white stripes.</rdfs:label>
-            <bios:determination>21 Lagenaria</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#18">
-        <bios:coupletNumber>18</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Individual flowers and fruits loosely enclosed within pair of basally cordate bracts.</bios:statementText>
-            <rdfs:label>Individual flowers and fruits loosely enclosed within pair of basally cordate bracts.</rdfs:label>
-            <bios:determination>12 Sicyosperma</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Individual flowers and fruits not enclosed within pair of bracts</bios:statementText>
-            <rdfs:label>Individual flowers and fruits not enclosed within pair of bracts</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#19"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#19">
-        <bios:coupletNumber>19</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Plants perennial; bracts absent; fruits 2–3.5 cm, green-striped.</bios:statementText>
-            <rdfs:label>Plants perennial; bracts absent; fruits 2–3.5 cm, green-striped.</rdfs:label>
-            <bios:determination>10 Marah</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Plants annual; bracts foliaceous, stipuliform, conduplicate, with stiffly ciliate margins; fruits 1.3–1.5 cm, red.</bios:statementText>
-            <rdfs:label>Plants annual; bracts foliaceous, stipuliform, conduplicate, with stiffly ciliate margins; fruits 1.3–1.5 cm, red.</rdfs:label>
-            <bios:determination>18 Ctenolepis</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#20">
-        <bios:coupletNumber>20</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Seeds arillate</bios:statementText>
-            <rdfs:label>Seeds arillate</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#21"/>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Seeds not arillate</bios:statementText>
-            <rdfs:label>Seeds not arillate</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#22"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#21">
-        <bios:coupletNumber>21</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Plants monoecious and dioecious (developmentally, seasonally); hypanthia narrowly tubular-funnelform; petal apices entire; anther thecae with terminal appendage nearly as long as corolla; fruits 0.8–1 cm.</bios:statementText>
-            <rdfs:label>Plants monoecious and dioecious (developmentally, seasonally); hypanthia narrowly tubular-funnelform; petal apices entire; anther thecae with terminal appendage nearly as long as corolla; fruits 0.8–1 cm.</rdfs:label>
-            <bios:determination>14 Tumamoca</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Plants dioecious; hypanthia narrowly campanulate to cylindric; petal apices shallowly 2-lobed; anther thecae without terminal appendage; fruits 1–3.5 cm.</bios:statementText>
-            <rdfs:label>Plants dioecious; hypanthia narrowly campanulate to cylindric; petal apices shallowly 2-lobed; anther thecae without terminal appendage; fruits 1–3.5 cm.</rdfs:label>
-            <bios:determination>15 Ibervillea</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#22">
-        <bios:coupletNumber>22</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Sepals recurving; fruits densely hispid-hirsute to hirsute or hirsute-villous.</bios:statementText>
-            <rdfs:label>Sepals recurving; fruits densely hispid-hirsute to hirsute or hirsute-villous.</rdfs:label>
-            <bios:determination>2 Thladiantha</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Sepals straight; fruits glabrous</bios:statementText>
-            <rdfs:label>Sepals straight; fruits glabrous</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#23"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#23">
-        <bios:coupletNumber>23</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Petals 1.5–2 mm; fruits usually ellipsoid to ovoid, sometimes subglobose to globose, (0.8–)1–2.5 cm.</bios:statementText>
-            <rdfs:label>Petals 1.5–2 mm; fruits usually ellipsoid to ovoid, sometimes subglobose to globose, (0.8–)1–2.5 cm.</rdfs:label>
-            <bios:determination>17 Melothria</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Petals 2–90 mm; fruits cylindric to narrowly clavate or globose or depressed-globose to cushion-shaped, cylindric, ellipsoid, ovoid, conic, obovoid, spindle-shaped, pyriform, or lageniform, 0.6–50(–120) cm</bios:statementText>
-            <rdfs:label>Petals 2–90 mm; fruits cylindric to narrowly clavate or globose or depressed-globose to cushion-shaped, cylindric, ellipsoid, ovoid, conic, obovoid, spindle-shaped, pyriform, or lageniform, 0.6–50(–120) cm</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#24"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#24">
-        <bios:coupletNumber>24</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Inflorescences: staminate flowers (5–)15–20 in racemes; fruits cylindric to narrowly clavate, (6–)15–50 cm, with rigid internal network of fibrovascular bundles, dehiscent by apical operculum; tendrils 3–6-branched; stamens (3–)5; petals 20–45 mm.</bios:statementText>
-            <rdfs:label>Inflorescences: staminate flowers (5–)15–20 in racemes; fruits cylindric to narrowly clavate, (6–)15–50 cm, with rigid internal network of fibrovascular bundles, dehiscent by apical operculum; tendrils 3–6-branched; stamens (3–)5; petals 20–45 mm.</rdfs:label>
-            <bios:determination>5 Luffa</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Inflorescences: staminate flowers solitary; fruits globose or depressed-globose to cushion-shaped, cylindric, ellipsoid, ovoid, conic, obovoid, pyriform, lageniform, or cushion-shaped, 0.6–50(–120) cm, without internal network of fibrovascular bundles, indehiscent; tendrils either unbranched or mostly 2–7-branched, sometimes absent; stamens 3; petals 2–25 or 25–90 mm</bios:statementText>
-            <rdfs:label>Inflorescences: staminate flowers solitary; fruits globose or depressed-globose to cushion-shaped, cylindric, ellipsoid, ovoid, conic, obovoid, pyriform, lageniform, or cushion-shaped, 0.6–50(–120) cm, without internal network of fibrovascular bundles, indehiscent; tendrils either unbranched or mostly 2–7-branched, sometimes absent; stamens 3; petals 2–25 or 25–90 mm</rdfs:label>
-            <bios:nextCouplet rdf:resource="http://fna.org/treatment/0#25"/>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
-    <bios:hasCouplet>
-      <rdf:Description rdf:about="http://fna.org/treatment/0#25">
-        <bios:coupletNumber>25</bios:coupletNumber>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Tendrils usually unbranched, rarely unbranched and 2-branched, sometimes absent; anther thecae replicate (usually 2-folded), distinct; petals 2–25 mm.</bios:statementText>
-            <rdfs:label>Tendrils usually unbranched, rarely unbranched and 2-branched, sometimes absent; anther thecae replicate (usually 2-folded), distinct; petals 2–25 mm.</rdfs:label>
-            <bios:determination>16 Cucumis</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-        <bios:hasStatement>
-          <rdf:Description>
-            <bios:statementText>Tendrils 2–7-branched or absent; anther thecae sigmoid-flexuous, connate; petals 25–90 mm.</bios:statementText>
-            <rdfs:label>Tendrils 2–7-branched or absent; anther thecae sigmoid-flexuous, connate; petals 25–90 mm.</rdfs:label>
-            <bios:determination>23 Cucurbita</bios:determination>
-          </rdf:Description>
-        </bios:hasStatement>
-      </rdf:Description>
-    </bios:hasCouplet>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#2">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Sicyos"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#2">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#3">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Apodanthera"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#3">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#4">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Bryonia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#4">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Cayaponia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#5">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#5">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#6">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Ecballium"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#6">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#7">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#7">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#8">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Momordica"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#8">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Cucumis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#9">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Cucumis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#9">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#10">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Cyclanthera"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#10">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#11">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Marah"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#11">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#12">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Brandegea"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#12">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#13">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Echinocystis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#13">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Echinopepon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#14">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Citrullus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#14">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#15">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#15">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#20"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#16">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#16">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#17">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Coccinia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#17">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Lagenaria"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#18">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Sicyosperma"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#18">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#19">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Marah"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#19">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Ctenolepis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#20">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#21"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#20">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#22"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#21">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Tumamoca"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#21">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Ibervillea"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#22">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Thladiantha"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#22">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#23"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#23">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Melothria"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#23">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#24">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Luffa"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#24">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#25">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Cucumis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#25">
+    <bios:nextNode rdf:resource="http://fna.org/treatment/0#Cucurbita"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#2">
+    <bios:nodeNumber>2</bios:nodeNumber>
+    <rdfs:label>Inflorescences: pistillate flowers 1–16, (clustered at peduncle apex or in fascicles in distal axils or in racemoid to corymboid panicles)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#5">
+    <bios:nodeNumber>5</bios:nodeNumber>
+    <rdfs:label>Inflorescences: pistillate flowers 1(–3)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Sicyos">
+    <bios:childTaxonNumber>11</bios:childTaxonNumber>
+    <rdfs:label>Sicyos</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#3">
+    <bios:nodeNumber>3</bios:nodeNumber>
+    <rdfs:label>Inflorescences: pistillate flowers in axillary fascicles or in axillary racemoid to corymboid panicles; seeds 2–80; plants perennial</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Apodanthera">
+    <bios:childTaxonNumber>13</bios:childTaxonNumber>
+    <rdfs:label>Apodanthera</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#4">
+    <bios:nodeNumber>4</bios:nodeNumber>
+    <rdfs:label>Leaf surfaces eglandular or glandular; fruiting peduncles 0–5 cm; fruits 0.6–2 cm</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Bryonia">
+    <bios:childTaxonNumber>4</bios:childTaxonNumber>
+    <rdfs:label>Bryonia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Cayaponia">
+    <bios:childTaxonNumber>22</bios:childTaxonNumber>
+    <rdfs:label>Cayaponia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#6">
+    <bios:nodeNumber>6</bios:nodeNumber>
+    <rdfs:label>Fruits echinate, muricate to muriculate, subaculeate, or tuberculate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#14">
+    <bios:nodeNumber>14</bios:nodeNumber>
+    <rdfs:label>Fruits usually smooth, ribbed, warty, or furrowed, rarely tuberculate, not echinate or muricate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Ecballium">
+    <bios:childTaxonNumber>3</bios:childTaxonNumber>
+    <rdfs:label>Ecballium</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#7">
+    <bios:nodeNumber>7</bios:nodeNumber>
+    <rdfs:label>Plants climbing or trailing, tendrils present; leaf blade margins not crisped-undulate and whitish; peduncles straight (not recurved-nodding) in fruit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#8">
+    <bios:nodeNumber>8</bios:nodeNumber>
+    <rdfs:label>Inflorescences: staminate flowers solitary</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#9">
+    <bios:nodeNumber>9</bios:nodeNumber>
+    <rdfs:label>Inflorescences: staminate flowers (1–)2–200 in racemes, racemoid panicles, panicles, or fascicles</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Momordica">
+    <bios:childTaxonNumber>1</bios:childTaxonNumber>
+    <rdfs:label>Momordica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Cucumis">
+    <bios:childTaxonNumber>16</bios:childTaxonNumber>
+    <rdfs:label>Cucumis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Cucumis">
+    <bios:childTaxonNumber>16</bios:childTaxonNumber>
+    <rdfs:label>Cucumis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#10">
+    <bios:nodeNumber>10</bios:nodeNumber>
+    <rdfs:label>Anther thecae connate into head or fused into ring; petals white to cream-yellow, greenish yellow, greenish, or greenish white</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Cyclanthera">
+    <bios:childTaxonNumber>6</bios:childTaxonNumber>
+    <rdfs:label>Cyclanthera</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#11">
+    <bios:nodeNumber>11</bios:nodeNumber>
+    <rdfs:label>Leaves 3–7-lobed; fruits dry, thin-walled; anther thecae connate, forming a head but not fused into ring</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Marah">
+    <bios:childTaxonNumber>10</bios:childTaxonNumber>
+    <rdfs:label>Marah</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#12">
+    <bios:nodeNumber>12</bios:nodeNumber>
+    <rdfs:label>Plants annual, taprooted or roots slender-fibrous; stamens 3, 3–5, (4–)5, or 5</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Brandegea">
+    <bios:childTaxonNumber>7</bios:childTaxonNumber>
+    <rdfs:label>Brandegea</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#13">
+    <bios:nodeNumber>13</bios:nodeNumber>
+    <rdfs:label>Petals 3–6 mm; fruits 2–5 cm, apically lacerate-dehiscent or dehiscent through apical pores; seeds 4–10</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Echinocystis">
+    <bios:childTaxonNumber>8</bios:childTaxonNumber>
+    <rdfs:label>Echinocystis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Echinopepon">
+    <bios:childTaxonNumber>9</bios:childTaxonNumber>
+    <rdfs:label>Echinopepon</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Citrullus">
+    <bios:childTaxonNumber>19</bios:childTaxonNumber>
+    <rdfs:label>Citrullus</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#15">
+    <bios:nodeNumber>15</bios:nodeNumber>
+    <rdfs:label>Leaf lobes not pinnately lobed to shallowly sinuate-lobulate (margins lobulate in Ibervillea)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#16">
+    <bios:nodeNumber>16</bios:nodeNumber>
+    <rdfs:label>Petals usually white to cream or light yellow to pale green, rarely greenish</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#20">
+    <bios:nodeNumber>20</bios:nodeNumber>
+    <rdfs:label>Petals greenish yellow, cream, yellow to orange-yellow, or orange</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#17">
+    <bios:nodeNumber>17</bios:nodeNumber>
+    <rdfs:label>Petals (15–)20–45 mm</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#18">
+    <bios:nodeNumber>18</bios:nodeNumber>
+    <rdfs:label>Petals 1–12 mm</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Coccinia">
+    <bios:childTaxonNumber>20</bios:childTaxonNumber>
+    <rdfs:label>Coccinia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Lagenaria">
+    <bios:childTaxonNumber>21</bios:childTaxonNumber>
+    <rdfs:label>Lagenaria</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Sicyosperma">
+    <bios:childTaxonNumber>12</bios:childTaxonNumber>
+    <rdfs:label>Sicyosperma</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#19">
+    <bios:nodeNumber>19</bios:nodeNumber>
+    <rdfs:label>Individual flowers and fruits not enclosed within pair of bracts</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Marah">
+    <bios:childTaxonNumber>10</bios:childTaxonNumber>
+    <rdfs:label>Marah</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Ctenolepis">
+    <bios:childTaxonNumber>18</bios:childTaxonNumber>
+    <rdfs:label>Ctenolepis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#21">
+    <bios:nodeNumber>21</bios:nodeNumber>
+    <rdfs:label>Seeds arillate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#22">
+    <bios:nodeNumber>22</bios:nodeNumber>
+    <rdfs:label>Seeds not arillate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Tumamoca">
+    <bios:childTaxonNumber>14</bios:childTaxonNumber>
+    <rdfs:label>Tumamoca</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Ibervillea">
+    <bios:childTaxonNumber>15</bios:childTaxonNumber>
+    <rdfs:label>Ibervillea</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Thladiantha">
+    <bios:childTaxonNumber>2</bios:childTaxonNumber>
+    <rdfs:label>Thladiantha</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#23">
+    <bios:nodeNumber>23</bios:nodeNumber>
+    <rdfs:label>Sepals straight; fruits glabrous</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Melothria">
+    <bios:childTaxonNumber>17</bios:childTaxonNumber>
+    <rdfs:label>Melothria</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#24">
+    <bios:nodeNumber>24</bios:nodeNumber>
+    <rdfs:label>Petals 2–90 mm; fruits cylindric to narrowly clavate or globose or depressed-globose to cushion-shaped, cylindric, ellipsoid, ovoid, conic, obovoid, spindle-shaped, pyriform, or lageniform, 0.6–50(–120) cm</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Luffa">
+    <bios:childTaxonNumber>5</bios:childTaxonNumber>
+    <rdfs:label>Luffa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#25">
+    <bios:nodeNumber>25</bios:nodeNumber>
+    <rdfs:label>Inflorescences: staminate flowers solitary; fruits globose or depressed-globose to cushion-shaped, cylindric, ellipsoid, ovoid, conic, obovoid, pyriform, lageniform, or cushion-shaped, 0.6–50(–120) cm, without internal network of fibrovascular bundles, indehiscent; tendrils either unbranched or mostly 2–7-branched, sometimes absent; stamens 3; petals 2–25 or 25–90 mm</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Cucumis">
+    <bios:childTaxonNumber>16</bios:childTaxonNumber>
+    <rdfs:label>Cucumis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fna.org/treatment/0#Cucurbita">
+    <bios:childTaxonNumber>23</bios:childTaxonNumber>
+    <rdfs:label>Cucurbita</rdfs:label>
   </rdf:Description>
 </rdf:RDF>

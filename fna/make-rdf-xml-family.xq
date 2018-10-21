@@ -22,7 +22,7 @@ declare function functx:trim
    replace(replace($arg,'\s+$',''),'^\s+','')
  } ;
  
- declare function local:parse-morphology($text as xs:string) as node()* {
+declare function local:parse-morphology($text as xs:string) as node()* {
   let $majorParts := tokenize($text,"\. ")
   for $majorPart in $majorParts
       let $majorPartName := lower-case(translate(functx:trim(tokenize($majorPart," ")[1]), ':', ''))
@@ -54,6 +54,16 @@ declare function functx:trim
       </bios:hasMajorPart>
 };
 
+declare function local:parse-determination($namespace, $number, $text as xs:string? ) {
+  let $childTaxonNumber := functx:trim(tokenize($text," ")[1])
+  let $childTaxonName := functx:trim(subsequence(tokenize($text," "),2))
+  return
+     <rdf:Description rdf:about="{$namespace||$number||'#'||$childTaxonName}">{
+        <bios:childTaxonNumber>{$childTaxonNumber}</bios:childTaxonNumber>,
+        <rdfs:label>{$childTaxonName}</rdfs:label>
+     }</rdf:Description>
+ } ;
+ 
 let $namespace := "http://fna.org/treatment/"
 
 let $data := doc('V6_1.xml')/bio:treatment
@@ -95,7 +105,7 @@ let $keyStatements := $data/key/key_statement
 
 return 
 
-(file:write("Documents/github/msc/fna/output.rdf",
+(file:write("c:/github/msc/fna/output.rdf",
 
 <rdf:RDF 
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -104,7 +114,7 @@ xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
 xmlns:dc="http://purl.org/dc/elements/1.1/"
 xmlns:bios="http://www.github.com/biosemantics/"
->
+>{
     <rdf:Description rdf:about = "{$namespace||$number}">{
          <rdf:type rdf:resource="http://www.github.com/biosemantics/Treatment" />,
          <rdfs:label>{$label}</rdfs:label>,
@@ -166,10 +176,10 @@ xmlns:bios="http://www.github.com/biosemantics/"
          <dcterms:description>{$discussion}</dcterms:description>,
     
          for $reference in $references
-         return <dcterms:references>{$reference}</dcterms:references>,
+         return <dcterms:references>{$reference}</dcterms:references>
          
+(:         
          <bios:nextCouplet rdf:resource="{$namespace||$number||'#1'}"/>,
-         
          let $couplets := 
              for tumbling window $w in $keyStatements
                start at $s when true()
@@ -200,8 +210,44 @@ xmlns:bios="http://www.github.com/biosemantics/"
                       </bios:hasStatement>
                }</rdf:Description>
              }</bios:hasCouplet>
+:)         
+
+    }</rdf:Description>,
+    
+     (: create the links from one key node to the next :)
+     for $keyStatement in $keyStatements
+     return
+         if ($keyStatement/statement_id/text()="1")
+         then
+             (: the first node is the treatment itself :)
+             <rdf:Description rdf:about="{$namespace||$number}">{
+                  <bios:nextNode rdf:resource="{$namespace||$number||'#'||$keyStatement/next_statement_id/text()}"/>
+               }</rdf:Description>
+         else
+             if ($keyStatement/determination)
+             then
+               <rdf:Description rdf:about="{$namespace||$number||'#'||$keyStatement/statement_id/text()}">{
+                 <bios:nextNode rdf:resource="{$namespace||$number||'#'||functx:trim(subsequence(tokenize($keyStatement/determination/text()," "),2))}"/>
+               }</rdf:Description>
+
+             else
+               <rdf:Description rdf:about="{$namespace||$number||'#'||$keyStatement/statement_id/text()}">{
+                  <bios:nextNode rdf:resource="{$namespace||$number||'#'||$keyStatement/next_statement_id/text()}"/>
+               }</rdf:Description>,
+
+               
+         (: link information to the key nodes :)
+         for $keyStatement in $keyStatements
+         return
+               if ($keyStatement/determination)
+               then local:parse-determination($namespace, $number, $keyStatement/determination/text())
+               else
+               <rdf:Description rdf:about="{$namespace||$number||'#'||$keyStatement/next_statement_id/text()}">{
+                  <bios:nodeNumber>{$keyStatement/next_statement_id/text()}</bios:nodeNumber>,
+                  <rdfs:label>{$keyStatement/description/text()}</rdfs:label>
+               }</rdf:Description>
+
          
-    }</rdf:Description> 
-</rdf:RDF>
+}</rdf:RDF>
 
 ))
