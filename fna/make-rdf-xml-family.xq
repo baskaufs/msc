@@ -9,6 +9,7 @@ declare namespace dc = "http://purl.org/dc/elements/1.1/";
 declare namespace dcterms = "http://purl.org/dc/terms/";
 declare namespace dwc = "http://rs.tdwg.org/dwc/terms/";
 
+(: functions borrowed from FunctX (http://www.xqueryfunctions.com/xq/) :)
 declare function functx:capitalize-first
   ( $arg as xs:string? )  as xs:string? {
 
@@ -20,6 +21,13 @@ declare function functx:trim
   ( $arg as xs:string? )  as xs:string {
 
    replace(replace($arg,'\s+$',''),'^\s+','')
+ } ;
+ 
+declare function functx:is-value-in-sequence
+  ( $value as xs:anyAtomicType? ,
+    $seq as xs:anyAtomicType* )  as xs:boolean {
+
+   $value = $seq
  } ;
  
 declare function local:parse-morphology($text as xs:string) as node()* {
@@ -63,6 +71,24 @@ declare function local:parse-determination($namespace, $number, $text as xs:stri
         <rdfs:label>{$childTaxonName}</rdfs:label>
      }</rdf:Description>
  } ;
+
+declare function local:find-lowest-rank($taxon as node()+) as xs:string {
+  let $rankSequence :=
+    for $namePart in $taxon/taxon_name
+    return string($namePart/@rank)
+  return
+    if (functx:is-value-in-sequence("variety",$rankSequence))
+    then "variety"
+    else if (functx:is-value-in-sequence("subspecies",$rankSequence))
+        then "subspecies"
+        else if (functx:is-value-in-sequence("species",$rankSequence))
+            then "species"
+            else if (functx:is-value-in-sequence("genus",$rankSequence))
+                then "genus"
+                else if (functx:is-value-in-sequence("family",$rankSequence))
+                    then "family"
+                    else "rank not found"
+};
  
 let $namespace := "http://fna.org/treatment/"
 
@@ -118,16 +144,16 @@ xmlns:bios="http://www.github.com/biosemantics/"
     <rdf:Description rdf:about = "{$namespace||$number}">{
          <rdf:type rdf:resource="http://www.github.com/biosemantics/Treatment" />,
          <rdfs:label>{$label}</rdfs:label>,
+         <dcterms:identifier>{$number}</dcterms:identifier>,
          <dc:creator>{$author}</dc:creator>,
+         <bios:treatmentPage>{$treatmentPage}</bios:treatmentPage>,
+         <bios:volume>{$volume}</bios:volume>,
          if ($sourceDate  != "")
              then <dcterms:created>{$sourceDate}</dcterms:created>
              else (),
-         <dcterms:identifier>{$number}</dcterms:identifier>,
          if ($illustrationPage != "")
          then <bios:illustrationPage>{$illustrationPage}</bios:illustrationPage>
          else (),
-         <bios:treatmentPage>{$treatmentPage}</bios:treatmentPage>,
-         <bios:volume>{$volume}</bios:volume>,
          if ($illustrator != "")
          then <bios:illustrator>{$illustrator}</bios:illustrator>
          else (),
@@ -141,10 +167,11 @@ xmlns:bios="http://www.github.com/biosemantics/"
                <rdf:Description>{
                  <dwc:taxonomicStatus>{lower-case($taxon/@status)}</dwc:taxonomicStatus>,
                  <bios:taxonHierarchy>{$taxon/taxon_hierarchy/text()}</bios:taxonHierarchy>,
+                 <dwc:taxonRank>{local:find-lowest-rank($taxon)}</dwc:taxonRank>,
                  for $namePart in $taxon/taxon_name
                  return <bios:hasPart>
                       <rdf:Description>{
-                        <dwc:taxonRank>{string($namePart/@rank)}</dwc:taxonRank>,
+                        <bios:namePartRank>{string($namePart/@rank)}</bios:namePartRank>,
                         <dwc:scientificNameAuthorship>{string($namePart/@authority)}</dwc:scientificNameAuthorship>,
                         <dcterms:date>{string($namePart/@date)}</dcterms:date>,
                         <dwc:scientificName>{
@@ -158,7 +185,6 @@ xmlns:bios="http://www.github.com/biosemantics/"
                    </bios:hasPart>
                }</rdf:Description>
              </bios:hasName>,
-
 
          <bios:morphology>{$morphologyDescription}</bios:morphology>,
          <bios:distribution>{$distributionDescription}</bios:distribution>,
@@ -177,41 +203,6 @@ xmlns:bios="http://www.github.com/biosemantics/"
     
          for $reference in $references
          return <dcterms:references>{$reference}</dcterms:references>
-         
-(:         
-         <bios:nextCouplet rdf:resource="{$namespace||$number||'#1'}"/>,
-         let $couplets := 
-             for tumbling window $w in $keyStatements
-               start at $s when true()
-               only end at $e when $e - $s eq 1
-             return <couplet>{$w}</couplet>
-         for $couplet in $couplets
-         let $statements := $couplet/key_statement
-         return 
-             <bios:hasCouplet>{
-               <rdf:Description rdf:about="{$namespace||$number||'#'||$statements[1]/statement_id/text()}">{
-                  <bios:coupletNumber>{$statements[1]/statement_id/text()}</bios:coupletNumber>,
-                  for $statement in $statements
-                  return 
-                      <bios:hasStatement>
-                        <rdf:Description>{
-                            <bios:statementText>{$statement/description/text()}</bios:statementText>,
-                            <rdfs:label>{$statement/description/text()}</rdfs:label>,
-                            
-                             if ($statement/next_statement_id)
-                             then <bios:nextCouplet rdf:resource="{$namespace||$number||'#'||$statement/next_statement_id/text()}"/>
-                             else (),
-                             
-                             if ($statement/determination)
-                             then <bios:determination>{$statement/determination/text()}</bios:determination>
-                             else ()
-                                    
-                         }</rdf:Description>
-                      </bios:hasStatement>
-               }</rdf:Description>
-             }</bios:hasCouplet>
-:)         
-
     }</rdf:Description>,
     
      (: create the links from one key node to the next :)

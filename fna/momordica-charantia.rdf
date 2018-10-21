@@ -12,9 +12,10 @@
       <rdf:Description>
         <dwc:taxonomicStatus>accepted</dwc:taxonomicStatus>
         <bios:taxonHierarchy>family cucurbitaceae;genus momordica;species charantia;subspecies charantia</bios:taxonHierarchy>
+        <dwc:taxonRank>subspecies</dwc:taxonRank>
         <bios:hasPart>
           <rdf:Description>
-            <dwc:taxonRank>family</dwc:taxonRank>
+            <bios:namePartRank>family</bios:namePartRank>
             <dwc:scientificNameAuthorship>Jussieu</dwc:scientificNameAuthorship>
             <dcterms:date>unknown</dcterms:date>
             <dwc:scientificName>Cucurbitaceae</dwc:scientificName>
@@ -22,7 +23,7 @@
         </bios:hasPart>
         <bios:hasPart>
           <rdf:Description>
-            <dwc:taxonRank>genus</dwc:taxonRank>
+            <bios:namePartRank>genus</bios:namePartRank>
             <dwc:scientificNameAuthorship>Linnaeus</dwc:scientificNameAuthorship>
             <dcterms:date>unknown</dcterms:date>
             <dwc:scientificName>Momordica</dwc:scientificName>
@@ -30,7 +31,7 @@
         </bios:hasPart>
         <bios:hasPart>
           <rdf:Description>
-            <dwc:taxonRank>species</dwc:taxonRank>
+            <bios:namePartRank>species</bios:namePartRank>
             <dwc:scientificNameAuthorship>Linnaeus</dwc:scientificNameAuthorship>
             <dcterms:date>unknown</dcterms:date>
             <dwc:scientificName>charantia</dwc:scientificName>
@@ -38,7 +39,7 @@
         </bios:hasPart>
         <bios:hasPart>
           <rdf:Description>
-            <dwc:taxonRank>subspecies</dwc:taxonRank>
+            <bios:namePartRank>subspecies</bios:namePartRank>
             <dwc:scientificNameAuthorship>[F I]</dwc:scientificNameAuthorship>
             <dcterms:date>unknown</dcterms:date>
             <dwc:scientificName>charantia</dwc:scientificName>
@@ -50,9 +51,10 @@
       <rdf:Description>
         <dwc:taxonomicStatus>synonym</dwc:taxonomicStatus>
         <bios:taxonHierarchy>genus Momordica;species charantia;variety abbreviata</bios:taxonHierarchy>
+        <dwc:taxonRank>variety</dwc:taxonRank>
         <bios:hasPart>
           <rdf:Description>
-            <dwc:taxonRank>genus</dwc:taxonRank>
+            <bios:namePartRank>genus</bios:namePartRank>
             <dwc:scientificNameAuthorship>unknown</dwc:scientificNameAuthorship>
             <dcterms:date>unknown</dcterms:date>
             <dwc:scientificName>Momordica</dwc:scientificName>
@@ -60,7 +62,7 @@
         </bios:hasPart>
         <bios:hasPart>
           <rdf:Description>
-            <dwc:taxonRank>species</dwc:taxonRank>
+            <bios:namePartRank>species</bios:namePartRank>
             <dwc:scientificNameAuthorship>unknown</dwc:scientificNameAuthorship>
             <dcterms:date>unknown</dcterms:date>
             <dwc:scientificName>charantia</dwc:scientificName>
@@ -68,7 +70,7 @@
         </bios:hasPart>
         <bios:hasPart>
           <rdf:Description>
-            <dwc:taxonRank>variety</dwc:taxonRank>
+            <bios:namePartRank>variety</bios:namePartRank>
             <dwc:scientificNameAuthorship>Seringe</dwc:scientificNameAuthorship>
             <dcterms:date>unknown</dcterms:date>
             <dwc:scientificName>abbreviata</dwc:scientificName>

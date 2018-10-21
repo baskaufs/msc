@@ -2,11 +2,11 @@
   <rdf:Description rdf:about="http://fna.org/treatment/0">
     <rdf:type rdf:resource="http://www.github.com/biosemantics/Treatment"/>
     <rdfs:label>CUCURBITACEAE</rdfs:label>
-    <dc:creator>Guy L. Nesom</dc:creator>
-    <dcterms:created>unknown</dcterms:created>
     <dcterms:identifier>0</dcterms:identifier>
+    <dc:creator>Guy L. Nesom</dc:creator>
     <bios:treatmentPage>3</bios:treatmentPage>
     <bios:volume>6</bios:volume>
+    <dcterms:created>unknown</dcterms:created>
     <bios:illustrator>Yevonn Wilson-Ramsey</bios:illustrator>
     <bios:mentionPage>4</bios:mentionPage>
     <bios:mentionPage>170</bios:mentionPage>
@@ -14,9 +14,10 @@
       <rdf:Description>
         <dwc:taxonomicStatus>accepted</dwc:taxonomicStatus>
         <bios:taxonHierarchy>family CUCURBITACEAE</bios:taxonHierarchy>
+        <dwc:taxonRank>family</dwc:taxonRank>
         <bios:hasPart>
           <rdf:Description>
-            <dwc:taxonRank>family</dwc:taxonRank>
+            <bios:namePartRank>family</bios:namePartRank>
             <dwc:scientificNameAuthorship>Jussieu</dwc:scientificNameAuthorship>
             <dcterms:date>unknown</dcterms:date>
             <dwc:scientificName>Cucurbitaceae</dwc:scientificName>

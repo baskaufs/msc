@@ -1,10 +1,10 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX bios: <http://www.github.com/biosemantics/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT DISTINCT ?text WHERE {
   ?treatment rdf:type bios:Treatment.
-  ?treatment (bios:nextCouplet/bios:hasStatement)* ?statement.
-  ?statement bios:statementText ?text.
-  ?statement (bios:nextCouplet/bios:hasStatement)* ?finalStatement.
-  ?finalStatement bios:determination "23 Cucurbita".
+  ?treatment (bios:nextNode)+ ?statement.
+  ?statement rdfs:label ?text.
+  ?statement (bios:nextNode)+ ?determination.
+  ?determination rdfs:label "Cucurbita".
 }
-LIMIT 10

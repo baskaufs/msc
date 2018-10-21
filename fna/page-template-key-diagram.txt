@@ -9,15 +9,10 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 prefix dwc: <http://rs.tdwg.org/dwc/terms/>
 CONSTRUCT 
  {
-  ?middle bios:link ?end.
-  ?start bios:link ?middle.
+  ?start bios:nextNode ?end.
 }
   WHERE {
-   ?start bios:hasStatement/bios:nextCouplet ?middle.
-   OPTIONAL {
-   ?middle bios:hasStatement ?end.
-   ?end bios:determination ?taxon.
-    }
+   ?start bios:nextNode ?end.
 } 
 ">
 </semantic-graph>

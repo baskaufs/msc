@@ -22,7 +22,14 @@ declare function functx:trim
    replace(replace($arg,'\s+$',''),'^\s+','')
  } ;
  
- declare function local:parse-morphology($text as xs:string) as node()* {
+declare function functx:is-value-in-sequence
+  ( $value as xs:anyAtomicType? ,
+    $seq as xs:anyAtomicType* )  as xs:boolean {
+
+   $value = $seq
+ } ;
+ 
+declare function local:parse-morphology($text as xs:string) as node()* {
   let $majorParts := tokenize($text,"\. ")
   for $majorPart in $majorParts
       let $majorPartName := lower-case(translate(functx:trim(tokenize($majorPart," ")[1]), ':', ''))
@@ -54,6 +61,24 @@ declare function functx:trim
       </bios:hasMajorPart>
 };
 
+declare function local:find-lowest-rank($taxon as node()+) as xs:string {
+  let $rankSequence :=
+    for $namePart in $taxon/taxon_name
+    return string($namePart/@rank)
+  return
+    if (functx:is-value-in-sequence("variety",$rankSequence))
+    then "variety"
+    else if (functx:is-value-in-sequence("subspecies",$rankSequence))
+        then "subspecies"
+        else if (functx:is-value-in-sequence("species",$rankSequence))
+            then "species"
+            else if (functx:is-value-in-sequence("genus",$rankSequence))
+                then "genus"
+                else if (functx:is-value-in-sequence("family",$rankSequence))
+                    then "family"
+                    else "rank not found"
+};
+ 
 let $namespace := "http://fna.org/treatment/"
 
 let $data := doc('V6_5.xml')/bio:treatment
@@ -95,7 +120,7 @@ let $keyStatements := $data/key/key_statement
 
 return 
 
-(file:write("Documents/github/msc/fna/output.rdf",
+(file:write("c:/github/msc/fna/output.rdf",
 
 <rdf:RDF 
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -131,10 +156,11 @@ xmlns:bios="http://www.github.com/biosemantics/"
                <rdf:Description>{
                  <dwc:taxonomicStatus>{lower-case($taxon/@status)}</dwc:taxonomicStatus>,
                  <bios:taxonHierarchy>{$taxon/taxon_hierarchy/text()}</bios:taxonHierarchy>,
+                 <dwc:taxonRank>{local:find-lowest-rank($taxon)}</dwc:taxonRank>,
                  for $namePart in $taxon/taxon_name
                  return <bios:hasPart>
                       <rdf:Description>{
-                        <dwc:taxonRank>{string($namePart/@rank)}</dwc:taxonRank>,
+                        <bios:namePartRank>{string($namePart/@rank)}</bios:namePartRank>,
                         <dwc:scientificNameAuthorship>{string($namePart/@authority)}</dwc:scientificNameAuthorship>,
                         <dcterms:date>{string($namePart/@date)}</dcterms:date>,
                         <dwc:scientificName>{
