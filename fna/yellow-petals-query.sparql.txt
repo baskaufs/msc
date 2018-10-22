@@ -1,0 +1,16 @@
+PREFIX bios: <http://www.github.com/biosemantics/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?name ?description WHERE {
+  ?treatment rdfs:label ?name.
+  ?treatment bios:hasMajorPart ?major.
+  FILTER(CONTAINS(?description, "yellow"))
+  OPTIONAL {
+    ?major bios:majorDescription ?description.
+    ?major bios:majorName "petals".
+  }
+  OPTIONAL {
+    ?major bios:hasMinorPart ?minor.
+    ?minor bios:minorDescription ?description.
+    ?minor bios:minorName "petals".
+  }
+}
