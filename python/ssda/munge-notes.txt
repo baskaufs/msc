@@ -1,0 +1,12 @@
+Munging notes 2018-10-31
+
+Of the records in hasIdentifier, there are two that are not found in the master volume spreadsheet:
+390550 and 390761
+
+identified.csv includes the records in hasIdentifier, minus these two.
+
+After the identified rows in master-volume.csv are removed, the remaining rows were put into unassociated.csv via the script remove-identifieds.py
+
+The unassociated.csv rows were further screened by removing all of the unidentified records that had been successfully matched to the master volume spreadsheet.  This was done with the script remove-matches.py, which output the remaining records into the file orphaned.csv .
+
+As far as I know, the XML files that I failed to match were in the folders /EAP255/Valle_del_Cauca, EAP640/Archivo_Histórico_de_Mompox, and St_Aug .
