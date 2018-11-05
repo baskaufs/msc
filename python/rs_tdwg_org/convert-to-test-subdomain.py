@@ -5,17 +5,28 @@
 import csv #library to read/write/parse CSV files
 import requests #library to do HTTP communication
 
-def baseToTripleButtonClick():
-    csvData = getCsvObject('https://raw.githubusercontent.com/tdwg/rs.tdwg.org/master/index/', 'index-datasets.csv', ',')
-    loadList = []
-    for row in csvData:
-        loadList.append(row[1])
-    for database in range(1,len(loadList)):  # start range at 1 to avoid header row (0)
-    #for database in range(1,2):  # uncomment this line to test using only one database
+localPath = 'c:\\github\\rs.tdwg.org\\'
+findString = 'rs.tdwg.org'
+replaceString = 'rs-test.tdwg.org'
+
+def loadListIndex():
+	csvData = getCsvObject('https://raw.githubusercontent.com/tdwg/rs.tdwg.org/test/index/', 'index-datasets.csv', ',')
+	loadList = []
+	for row in csvData:
+		loadList.append(row[1])
+	for database in range(1,len(loadList)):  # start range at 1 to avoid header row (0)
+	#for database in range(1,2):  # uncomment this line to test using only one database
 		# for whatever reason, the .ttl serializations of the dumps were loading zero triples.  But the .rdf serializations were fine.
 		# I'm wondering if this is related to the content-type reported by the dump.  I verified that it's "text/turtle", which I thought was a valid type to load
 #        dataToTriplestore(dumpUriBox.get(), loadList[database]+'.rdf', endpointUriBox.get(), graphNameBox.get(), passwordBox2.get())
-        print(loadList[database])
+		print(localPath+loadList[database])
+		configCsv = open(localPath+loadList[database]+'\\constants.csv', newline='')
+		configData = csv.reader(configCsv)
+		for line in configData:
+			for string in line:
+				if findString in string:
+					print(string)
+
 
 def getCsvObject(httpPath, fileName, fieldDelimiter):
 	# retrieve remotely from GitHub
@@ -47,4 +58,4 @@ def dataToTriplestore(dumpUri, database, endpointUri, graphName, pwd):
     updateLog('update SPARQL endpoint into graph ' + graphName)
     performSparqlUpdate(endpointUri, pwd, updateCommand)
 
-baseToTripleButtonClick()
+loadListIndex()
