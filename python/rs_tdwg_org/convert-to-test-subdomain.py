@@ -5,9 +5,10 @@
 import csv #library to read/write/parse CSV files
 import requests #library to do HTTP communication
 
-localPath = 'c:\\github\\rs.tdwg.org\\'
+localPath = 'c:\\temp\\rs.tdwg.org\\'
 findString = 'rs.tdwg.org'
 replaceString = 'rs-test.tdwg.org'
+writePathDir = "c:\\github\\rs.tdwg.org\\"
 
 def loadListIndex():
 	csvData = getCsvObject('https://raw.githubusercontent.com/tdwg/rs.tdwg.org/test/index/', 'index-datasets.csv', ',')
@@ -16,17 +17,77 @@ def loadListIndex():
 		loadList.append(row[1])
 	for database in range(1,len(loadList)):  # start range at 1 to avoid header row (0)
 	#for database in range(1,2):  # uncomment this line to test using only one database
-		# for whatever reason, the .ttl serializations of the dumps were loading zero triples.  But the .rdf serializations were fine.
-		# I'm wondering if this is related to the content-type reported by the dump.  I verified that it's "text/turtle", which I thought was a valid type to load
-#        dataToTriplestore(dumpUriBox.get(), loadList[database]+'.rdf', endpointUriBox.get(), graphNameBox.get(), passwordBox2.get())
-		print(localPath+loadList[database])
-		configCsv = open(localPath+loadList[database]+'\\constants.csv', newline='')
-		configData = csv.reader(configCsv)
-		for line in configData:
-			for string in line:
-				if findString in string:
-					print(string)
+		dbase = loadList[database]  # dbase is the string name of the database
+		print(localPath + dbase)
 
+		localFilePath = localPath + dbase + '\\constants.csv'
+		writePath = writePathDir + dbase + '\\constants.csv'
+		replaceDomainName(localFilePath,writePath)
+
+		if dbase == 'dwc-translations':
+			fname = 'dwcTranslations'
+		else:
+			fname = dbase
+		localFilePath = localPath + dbase + '\\' + fname + '.csv'
+		writePath = writePathDir + dbase + '\\' + fname + '.csv'
+		replaceDomainName(localFilePath,writePath)
+
+		if dbase != 'decisions' and dbase != 'docs' and dbase != 'docs-roles' and dbase != 'dwc-translations' and dbase != 'standards' and dbase != 'term-lists' and dbase != 'vocabularies' and dbase != 'index':
+			localFilePath = localPath + dbase + '\\'+ dbase + '-replacements.csv'		
+			writePath = writePathDir + dbase + '\\' + dbase + '-replacements.csv'
+			replaceDomainName(localFilePath,writePath)
+
+		if '-versions' not in dbase:
+			if dbase != 'decisions' and dbase != 'docs-roles' and dbase != 'dwc-translations' and dbase != 'index':
+				localFilePath = localPath + dbase + '\\'+ dbase + '-versions.csv'		
+				writePath = writePathDir + dbase + '\\' + dbase + '-versions.csv'
+				replaceDomainName(localFilePath,writePath)
+
+		if dbase == 'decisions':
+			localFilePath = localPath + dbase + '\\'+ dbase + '-links.csv'		
+			writePath = writePathDir + dbase + '\\' + dbase + '-links.csv'
+			replaceDomainName(localFilePath,writePath)
+
+		if dbase == 'docs' or dbase == 'docs-versions':
+			localFilePath = localPath + dbase + '\\'+ dbase + '-authors.csv'		
+			writePath = writePathDir + dbase + '\\' + dbase + '-authors.csv'
+			replaceDomainName(localFilePath,writePath)
+
+			localFilePath = localPath + dbase + '\\'+ dbase + '-formats.csv'		
+			writePath = writePathDir + dbase + '\\' + dbase + '-formats.csv'
+			replaceDomainName(localFilePath,writePath)
+
+		if dbase == 'standards' or dbase == 'standards-versions':
+			localFilePath = localPath + dbase + '\\'+ dbase + '-parts.csv'		
+			writePath = writePathDir + dbase + '\\' + dbase + '-parts.csv'
+			replaceDomainName(localFilePath,writePath)
+
+		if dbase == 'term-lists' or dbase == 'term-lists-versions':
+			localFilePath = localPath + dbase + '\\'+ dbase + '-members.csv'		
+			writePath = writePathDir + dbase + '\\' + dbase + '-members.csv'
+			replaceDomainName(localFilePath,writePath)
+
+def replaceDomainName(localFilePath,writePath):
+	configCsv = open(localFilePath, newline='', encoding='utf-8')
+	configData = csv.reader(configCsv)
+	testWriteCsv = open(writePath, 'w', newline='', encoding='utf-8')
+	testWriteData = csv.writer(testWriteCsv)
+	row=0
+	for line in configData:
+		lineList = []
+		for string in line:
+			if row == 0:  # header row
+				newString = string
+			else:        # data rows
+				if findString in string:
+					newString = string.replace(findString,replaceString)
+				else:
+					newString = string
+			lineList.append(newString)
+		testWriteData.writerow(lineList)
+		row += 1
+	testWriteCsv.close()
+	configCsv.close()
 
 def getCsvObject(httpPath, fileName, fieldDelimiter):
 	# retrieve remotely from GitHub
