@@ -3,7 +3,7 @@
 
 ## Sample data
 
-The data in this example comes from the Slave Societies Digital Archive project (https://www.slavesocieties.org/), directed by Jane Landers, Vanderbilt Department of History, and is open data.
+The data in this example come from the Slave Societies Digital Archive project (https://www.slavesocieties.org/), directed by Jane Landers, Vanderbilt Department of History, and are open data.
 
 The data files are at https://github.com/baskaufs/msc/tree/master/ssda-example
 
@@ -27,7 +27,7 @@ declare default element namespace  "http://www.loc.gov/mods/v3";
 
 let $document := fn:doc('https://raw.githubusercontent.com/baskaufs/msc/master/ssda-example/2223MODS.xml')
 for $name in $document/mods/name
-return ( $name/role/roleTerm/text() || ': ' || $name/namePart/text() )
+return $name/role/roleTerm/text() || ': ' || $name/namePart/text()
 ```
 
 fn:doc can be used to retrieve a file on your local drive using the file: URI form:
@@ -52,7 +52,10 @@ Notes:
 
 - The first line loads the file as text
 - The second line turns the CSV text into XML (the file has a header row and fields are separated by commas)
-- The file path is idiosyncratic based on the operating system (PC vs. Mac)
+- The file path is idiosyncratic based on the operating system (PC vs. Mac). On my Mac, the file is located at:
+```
+let $buildingsDoc := file:read-text( 'file:///Users/baskausj/Documents/GitHub/guid-o-matic/buildings.csv')
+```
 
 
 The second example opens the same file through the Internet:
