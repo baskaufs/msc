@@ -2,6 +2,8 @@ import http_library
 import csv # library to read/write/parse CSV files
 from bs4 import BeautifulSoup # web-scraping library
 
+acceptMime = 'text/html'
+
 cikList = []
 cikPath = 'cik.txt'
 cikFileObject = open(cikPath, newline='')
@@ -15,7 +17,6 @@ resultsList = []
 for cik in cikList:
     # this query string selects for 10-K forms, but also retrieves forms whose code start with 10-K
     baseUri = 'https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK='+cik+'&type=10-K&dateb=&owner=exclude&start=0&count=40&output=atom'
-    acceptMime = 'text/html'
     print(baseUri)
     soup = BeautifulSoup(http_library.httpGet(baseUri,acceptMime)[1],features="html5lib")
     # this search string limits results to only category elements with the attribute that's exactly equal to"10-K"
@@ -31,4 +32,19 @@ for cik in cikList:
         if year == "2016" or year == "2014":
             # append the dictionary to the list of results
             resultsList.append(searchResults)
-
+print(resultsList)
+#for hitNumber in range(0,1):  #for do only one hit for testing purposes
+for hitNumber in range(0,len(resultsList)):
+    print(hitNumber)
+    soup = BeautifulSoup(http_library.httpGet(resultsList[hitNumber]['uri'],acceptMime)[1],features="html5lib")
+    for row in soup.select('tr'):
+        is10k = False
+        for cell in row.select('td'):
+            try:
+                testString = cell.contents[0]
+                if cell.contents[0] == "10-K":
+                    is10k = True
+            except:  # handle error caes where the cell doesn't have contents
+                pass
+        if is10k:
+            print('http://www.sec.gov' + row.a.get('href'))
