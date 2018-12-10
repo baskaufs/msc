@@ -14,7 +14,7 @@ import requests #library to do HTTP communication
 root = Tk()
 
 # this sets up the characteristics of the window
-root.title("RDF data mover")
+root.title("Load BaseX database")
 mainframe = ttk.Frame(root, padding="3 3 12 12")
 mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
 mainframe.columnconfigure(0, weight=1)
@@ -26,14 +26,14 @@ ttk.Label(mainframe, textvariable=repoText).grid(column=3, row=3, sticky=(W, E))
 repoText.set('Github repo path')
 githubRepoBox = ttk.Entry(mainframe, width = 25, textvariable = StringVar())
 githubRepoBox.grid(column=4, row=3, sticky=W)
-githubRepoBox.insert(END, 'baskaufs/msc/')
+githubRepoBox.insert(END, 'tdwg/rs.tdwg.org/')
 
 subpathText = StringVar()
 ttk.Label(mainframe, textvariable=subpathText).grid(column=3, row=4, sticky=(W, E))
-subpathText.set('Github repo subpath')
+subpathText.set('branch (master or test)')
 repoSubpathBox = ttk.Entry(mainframe, width = 25, textvariable = StringVar())
 repoSubpathBox.grid(column=4, row=4, sticky=W)
-repoSubpathBox.insert(END, '')
+repoSubpathBox.insert(END, 'test')
 
 basexUriText = StringVar()
 ttk.Label(mainframe, textvariable=basexUriText).grid(column=3, row=5, sticky=(W, E))
@@ -41,14 +41,6 @@ basexUriText.set('BaseX API URI root')
 basexUriBox = ttk.Entry(mainframe, width = 50, textvariable = StringVar())
 basexUriBox.grid(column=4, row=5, sticky=W)
 basexUriBox.insert(END, 'http://vuswwg.jelastic.servint.net/gom/rest/')
-
-
-databaseText = StringVar()
-ttk.Label(mainframe, textvariable=databaseText).grid(column=3, row=6, sticky=(W, E))
-databaseText.set('Database name')
-databaseBox = ttk.Entry(mainframe, width = 20, textvariable = StringVar())
-databaseBox.grid(column=4, row=6, sticky=W)
-databaseBox.insert(END, 'test')
 
 passwordText = StringVar()
 ttk.Label(mainframe, textvariable=passwordText).grid(column=3, row=7, sticky=(W, E))
@@ -58,71 +50,13 @@ passwordBox.grid(column=4, row=7, sticky=W)
 passwordBox.insert(END, '[pwd]')
 
 def gitToBaseButtonClick():
-	dataToBasex(githubRepoBox.get(), repoSubpathBox.get(), databaseBox.get(), basexUriBox.get(), passwordBox.get())
+	dataToBasex(githubRepoBox.get(), repoSubpathBox.get(), "", basexUriBox.get(), passwordBox.get())
 gitToBaseButton = ttk.Button(mainframe, text = "Transfer from Github to BaseX", width = 30, command = lambda: gitToBaseButtonClick() )
 gitToBaseButton.grid(column=4, row=8, sticky=W)
 
 emptyText = StringVar()
 ttk.Label(mainframe, textvariable=emptyText).grid(column=3, row=9, sticky=(W, E))
 emptyText.set(' ')
-
-dumpUriText = StringVar()
-ttk.Label(mainframe, textvariable=dumpUriText).grid(column=3, row=10, sticky=(W, E))
-dumpUriText.set('Graph dump URI root')
-dumpUriBox = ttk.Entry(mainframe, width = 50, textvariable = StringVar())
-dumpUriBox.grid(column=4, row=10, sticky=W)
-dumpUriBox.insert(END, 'http://vuswwg.jelastic.servint.net/gom/dump/')
-
-endpointUriText = StringVar()
-ttk.Label(mainframe, textvariable=endpointUriText).grid(column=3, row=11, sticky=(W, E))
-endpointUriText.set('SPARQL endpoint URI')
-endpointUriBox = ttk.Entry(mainframe, width = 50, textvariable = StringVar())
-endpointUriBox.grid(column=4, row=11, sticky=W)
-endpointUriBox.insert(END, 'https://sparql.vanderbilt.edu/sparql')
-
-pwd2Text = StringVar()
-ttk.Label(mainframe, textvariable=pwd2Text).grid(column=3, row=12, sticky=(W, E))
-pwd2Text.set('Endpoint password')
-passwordBox2 = ttk.Entry(mainframe, width = 15, textvariable = StringVar(), show='*')
-passwordBox2.grid(column=4, row=12, sticky=W)
-passwordBox2.insert(END, '[pwd]')
-
-graphNameText = StringVar()
-ttk.Label(mainframe, textvariable=graphNameText).grid(column=3, row=13, sticky=(W, E))
-graphNameText.set('Graph name')
-graphNameBox = ttk.Entry(mainframe, width = 50, textvariable = StringVar())
-graphNameBox.grid(column=4, row=13, sticky=W)
-graphNameBox.insert(END, 'http://example.org/')
-
-def baseToTripleButtonClick():
-	dataToTriplestore(dumpUriBox.get(), databaseBox.get(), endpointUriBox.get(), graphNameBox.get(), passwordBox2.get())
-baseToTripleButton = ttk.Button(mainframe, text = "Transfer from BaseX to Triplestore", width = 30, command = lambda: baseToTripleButtonClick() )
-baseToTripleButton.grid(column=4, row=14, sticky=W)
-
-ttk.Label(mainframe, textvariable=emptyText).grid(column=3, row=15, sticky=(W, E))
-
-rdfFileMessage = StringVar()
-ttk.Label(mainframe, textvariable=rdfFileMessage).grid(column=4, row=16, sticky=(W, E))
-rdfFileMessage.set('Substitute "https://rawgit.com/" for "https://raw.githubusercontent.com/" to get correct RDF content-type based on file extension. Avoid excessive traffic!')
-
-rdfFileText = StringVar()
-ttk.Label(mainframe, textvariable=rdfFileText).grid(column=3, row=17, sticky=(W, E))
-rdfFileText.set('RDF file URI')
-rdfFileBox = ttk.Entry(mainframe, width = 100, textvariable = StringVar())
-rdfFileBox.grid(column=4, row=17, sticky=W)
-rdfFileBox.insert(END, 'https://rawgit.com/HeardLibrary/semantic-web/master/2016-fall/p0fp7wv.ttl')
-
-def moveFileButtonClick():
-	moveFile(rdfFileBox.get(), endpointUriBox.get(), graphNameBox.get(), passwordBox2.get())
-moveFileButton = ttk.Button(mainframe, text = "Load file into named graph", width = 30, command = lambda: moveFileButtonClick() )
-moveFileButton.grid(column=4, row=18, sticky=W)
-
-ttk.Label(mainframe, textvariable=emptyText).grid(column=3, row=19, sticky=(W, E))
-
-def dropGraphButtonClick():
-	dropGraph(endpointUriBox.get(), graphNameBox.get(), passwordBox2.get())
-dropGraphButton = ttk.Button(mainframe, text = "Drop (delete) graph", width = 30, command = lambda: dropGraphButtonClick() )
-dropGraphButton.grid(column=4, row=20, sticky=W)
 
 ttk.Label(mainframe, textvariable=emptyText).grid(column=3, row=21, sticky=(W, E))
 
@@ -220,7 +154,20 @@ def writeDatabaseFile(databaseWritePath, filename, body, pwd):
 	updateLog(str(r.status_code) + ' ' + uri + '\n')
 	updateLog(r.text + '\n')
 
-def dataToBasex(githubRepo, repoSubpath, database, basexServerUri, pwd):
+def dataToBasex(githubRepo, repoBranch, database, basexServerUri, pwd):
+
+	# Modification of original script to get database names from the TDWG rs.tdwt.org Github repo, then load each one
+
+    csvData = getCsvObject('https://raw.githubusercontent.com/tdwg/rs.tdwg.org/master/index/', 'index-datasets.csv', ',')
+    loadList = []
+    for row in csvData:
+        loadList.append(row[1])
+    for database in range(1,len(loadList)):  # start range at 1 to avoid header row (0)
+    #for database in range(1,2):  # uncomment this line to test using only one database
+        dataToBasexWrite(githubRepo, repoBranch, loadList[database], basexServerUri, pwd)
+
+def dataToBasexWrite(githubRepo, repoBranch, database, basexServerUri, pwd):
+	print(database)
 	databaseWritePath = basexServerUri + database
 
 	# first must do a PUT to the database URI to create it if it doesn't exist
@@ -228,7 +175,7 @@ def dataToBasex(githubRepo, repoSubpath, database, basexServerUri, pwd):
 	updateLog('create XML database')
 	updateLog(str(r.status_code) + ' ' + databaseWritePath + '\n')
 
-	httpReadPath = 'https://raw.githubusercontent.com/' + githubRepo + 'test/' + repoSubpath + database + '/'
+	httpReadPath = 'https://raw.githubusercontent.com/' + githubRepo + repoBranch + '/' + database + '/'
 	# must open the configuration/constants file separately in order to discover the core document and separator character
 	updateLog('read constants')
 	csvData = getCsvObject(httpReadPath, 'constants.csv', ',')
@@ -275,29 +222,6 @@ def dataToBasex(githubRepo, repoSubpath, database, basexServerUri, pwd):
 	updateLog('write linked metadata')
 	writeDatabaseFile(databaseWritePath, 'linked-classes.xml', body, pwd)
 	updateLog('Ready')
-
-def performSparqlUpdate(endpointUri, pwd, updateCommand):
-	# SPARQL Update requires HTTP POST
-	hdr = {'Content-Type' : 'application/sparql-update'}
-	r = requests.post(endpointUri, auth=('admin', pwd), headers=hdr, data = updateCommand)
-	updateLog(str(r.status_code) + ' ' + r.url + '\n')
-	updateLog(r.text + '\n')
-	updateLog('Ready')	
-
-def dataToTriplestore(dumpUri, database, endpointUri, graphName, pwd):
-	updateCommand = 'LOAD <' + dumpUri + database + '> INTO GRAPH <' + graphName + '>'
-	updateLog('update SPARQL endpoint into graph ' + graphName)
-	performSparqlUpdate(endpointUri, pwd, updateCommand)
-
-def moveFile(rdfFileUri, endpointUri, graphName, pwd):
-	updateCommand = 'LOAD <' + rdfFileUri + '> INTO GRAPH <' + graphName + '>'
-	updateLog('move file ' + rdfFileUri + ' into graph ' + graphName)
-	performSparqlUpdate(endpointUri, pwd, updateCommand)
-
-def dropGraph(endpointUri, graphName, pwd):
-	updateCommand = 'DROP GRAPH <' + graphName + '>'
-	updateLog('drop graph ' + graphName)
-	performSparqlUpdate(endpointUri, pwd, updateCommand)
 
 def main():	
 	root.mainloop()
