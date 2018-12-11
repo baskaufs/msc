@@ -29,10 +29,12 @@ for cik in cikList:
         print(year)
         # create a dictionary of an individual result
         searchResults = {'cik':cik,'year':year,'uri':cat.find('filing-href').contents[0]}
-        if year == "2016" or year == "2014":
+        if year <= "2018" and year >= "2015":
             # append the dictionary to the list of results
             resultsList.append(searchResults)
 print(resultsList)
+
+form10kList = []
 #for hitNumber in range(0,1):  #for do only one hit for testing purposes
 for hitNumber in range(0,len(resultsList)):
     print(hitNumber)
@@ -47,4 +49,26 @@ for hitNumber in range(0,len(resultsList)):
             except:  # handle error caes where the cell doesn't have contents
                 pass
         if is10k:
-            print('http://www.sec.gov' + row.a.get('href'))
+            form10kList.append('http://www.sec.gov' + row.a.get('href'))
+
+print(form10kList)
+
+for form10kNumber in range(0,1):
+    soup = BeautifulSoup(http_library.httpGet(form10kList[form10kNumber],acceptMime)[1],features="html5lib")
+    print(soup)
+    for row in soup.select('tr'):
+        hasSlashS = False
+        for cell in row.select('font'):
+            try:
+                testString = cell.contents[0]
+                if "/s/" in cell.contents[0]:
+                    hasSlashS = True
+            except:  # handle error caes where the cell doesn't have contents
+                pass
+        if hasSlashS:
+            tableItems = row.select('font')
+            print(tableItems)
+            print(tableItems[2].contents[0])
+            print(tableItems[4].contents[0])
+
+
