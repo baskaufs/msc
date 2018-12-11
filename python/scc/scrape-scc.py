@@ -53,9 +53,10 @@ for hitNumber in range(0,len(resultsList)):
 
 print(form10kList)
 
-for form10kNumber in range(0,1):
+#for form10kNumber in range(0,1):
+for form10kNumber in range(0,len(form10kList)):
+    print(form10kNumber)
     soup = BeautifulSoup(http_library.httpGet(form10kList[form10kNumber],acceptMime)[1],features="html5lib")
-    print(soup)
     for row in soup.select('tr'):
         hasSlashS = False
         for cell in row.select('font'):
@@ -67,8 +68,10 @@ for form10kNumber in range(0,1):
                 pass
         if hasSlashS:
             tableItems = row.select('font')
-            print(tableItems)
-            print(tableItems[2].contents[0])
-            print(tableItems[4].contents[0])
+            if len(tableItems)>=5:
+                noLeft = tableItems[2].contents[0].replace('(','')
+                cleanName = noLeft.replace(')','')
+                print(cleanName)
+                print(tableItems[4].contents[0])
 
 
