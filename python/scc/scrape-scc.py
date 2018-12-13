@@ -1,4 +1,4 @@
-import http_library
+import requests   # best library to manage HTTP transactions
 import csv # library to read/write/parse CSV files
 from bs4 import BeautifulSoup # web-scraping library
 
@@ -18,7 +18,8 @@ for cik in cikList:
     # this query string selects for 10-K forms, but also retrieves forms whose code start with 10-K
     baseUri = 'https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK='+cik+'&type=10-K&dateb=&owner=exclude&start=0&count=40&output=atom'
     print(baseUri)
-    soup = BeautifulSoup(http_library.httpGet(baseUri,acceptMime)[1],features="html5lib")
+    r = requests.get(baseUri, headers={'Accept' : 'application/xml'})
+    soup = BeautifulSoup(r.text,features="html5lib")
     # this search string limits results to only category elements with the attribute that's exactly equal to"10-K"
     # the select function returns a list of soup objects that can each be searched
     for cat in soup.select('category[term="10-K"]'):
@@ -38,7 +39,8 @@ form10kList = []
 #for hitNumber in range(0,1):  #for do only one hit for testing purposes
 for hitNumber in range(0,len(resultsList)):
     print(hitNumber)
-    soup = BeautifulSoup(http_library.httpGet(resultsList[hitNumber]['uri'],acceptMime)[1],features="html5lib")
+    r = requests.get(resultsList[hitNumber]['uri'], headers={'Accept' : 'text/html'})
+    soup = BeautifulSoup(r.text,features="html5lib")
     for row in soup.select('tr'):
         is10k = False
         for cell in row.select('td'):
@@ -56,7 +58,8 @@ print(form10kList)
 #for form10kNumber in range(0,1):
 for form10kNumber in range(0,len(form10kList)):
     print(form10kNumber)
-    soup = BeautifulSoup(http_library.httpGet(form10kList[form10kNumber],acceptMime)[1],features="html5lib")
+    r = requests.get(form10kList[form10kNumber], headers={'Accept' : 'text/html'})
+    soup = BeautifulSoup(r.text,features="html5lib")
     for row in soup.select('tr'):
         hasSlashS = False
         for cell in row.select('font'):
