@@ -1,0 +1,40 @@
+﻿column header string,XML tag name
+New place/add data,New_place_add_data
+uri,uri
+Possible URI,Possible_URI
+nameHeadword.en,nameHeadword.en
+nameHeadword.syr,nameHeadword.syr
+placeType,placeType
+abstract.en,abstract.en
+sourceURI.abstract.en,sourceURI.abstract.en
+pages.abstract.en,pages.abstract.en
+name1.en,name1.en
+sourceURI.name1,sourceURI.name1
+pages.name1,pages.name1
+name2.en,name2.en
+sourceURI.name2,sourceURI.name2
+pages.name2,pages.name2
+name3.syr,name3.syr
+sourceURI.name3,sourceURI.name3
+pages.name3,pages.name3
+name4.syr,name4.syr
+sourceURI.name4,sourceURI.name4
+pages.name4,pages.name4
+idno,idno
+idno,idno
+idno,idno
+nestedName.settlement,nestedName.settlement
+nestedURI.settlement,nestedURI.settlement
+sourceURI.nested.settlement,sourceURI.nested.settlement
+pages.nested.settlement,pages.nested.settlement
+nestedName.region,nestedName.region
+nestedURI.region,nestedURI.region
+sourceURI.nested.region,sourceURI.nested.region
+pages.nested.region,pages.nested.region
+note.disambiguation,note.disambiguation
+sourceURI.note.disambiguation,sourceURI.note.disambiguation
+pages.note.disambiguation,pages.note.disambiguation
+note.incerta,note.incerta
+sourceURI.note.incerta,sourceURI.note.incerta
+pages.note.incerta,pages.note.incerta
+misc comments,misc_comments
