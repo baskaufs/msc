@@ -190,7 +190,7 @@ let $abstractIndex := local:createAbstractIndex($headerMap) (: find and process 
 (: set up the loop that generates a document for each row in the TSV file :)
 
 for $document at $row in $data
-where $row = 1  (: comment out this row when testing is done :)
+where $row = 2  (: comment out this row when testing is done :)
 return
 
 (: ----------------------------------------- :)
@@ -295,6 +295,25 @@ let $header :=
 
   }</teiHeader>       
 
+(: ----------------------------------------- :)
+(: This part of the script builds the text element from inner parts outward :)
 
+(: create an empty source sequence :)
 
-return $header
+let $redundantSources := ()
+
+(: Find every possible reference in the row and add it to a sequence :)
+
+for $source in $headerMap  (: loop through each item in the header map sequence :)
+  let $sourceUriColumnName := $source/name/text()  (: get the XML element name :)
+  let $sourceUri := local:trim($document/*[name() = $sourceUriColumnName]/text())  (: find the value for that column :)
+  where substring($source/string/text(),1,9) = 'sourceURI' and $sourceUri != '' (: screen for right header string and skip over empty elements :)
+  let $lastPartColString := substring($source/string/text(),10)  (: find the last part of the sourceUri column header label :)
+  let $sourcePgColumnString := 'pages'||$lastPartColString  (: construct the column label for the page source :)
+  let $sourcePgColumnName :=
+      for $sourcePage in $headerMap    (: find the column string that matches the constructed on :)
+      where $sourcePgColumnString = $sourcePage/string/text()
+      return $sourcePage/name/text()     (: return the XML tag name for the matching column string :)
+  let $sourcePage := local:trim($document/*[name() = $sourcePgColumnName]/text())
+  let $redundantSources := insert-before($redundantSources,0,($sourceUri,$sourcePage))
+  return $redundantSources
