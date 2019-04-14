@@ -218,7 +218,7 @@ let $abstractIndex := local:createAbstractIndex($headerMap) (: find and process 
 (: set up the loop that generates a document for each row in the TSV file :)
 
 for $document at $row in $data
-where $row = 5  (: comment out this row when testing is done :)
+where $row = 8  (: comment out this row when testing is done :)
 return
 
 (: ----------------------------------------- :)
@@ -444,7 +444,7 @@ let $incerta :=
             for $src at $srcNumber in $sources  (: step through the source index :)
             where  $incUri = $src/uri/text() and $incPg = $src/pg/text()  (: URI and page from columns must match with iterated item in the source index :)
             return '#bib'||$uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
-        else ()
+        else ''
     return  (: use computed element constructor instead of direct since the source attribute is optional :)
         element note {
           namespace tei {"http://www.tei-c.org/ns/1.0"},
@@ -456,4 +456,43 @@ let $incerta :=
           $text
       }
 
-return $incerta
+(: create nested location element. Since this is a very ideosyncratic element, I'm not going to attempt to generalize it, but rather just hard code the column headers :)
+let $settlementElement := 
+    let $setName := local:trim($document/*[name() = 'nestedName.settlement']/text())  (: this is a hack that just pulls the text from the sourcURI column.  Use the lookup method if it gets more complicated :)
+    return
+        if ($setName != '')
+        then
+            let $setUri := local:trim($document/*[name() = 'nestedURI.settlement']/text())
+            return <settlement ref="{$setUri}">{$setName}</settlement>
+        else()
+let $settlementSourceAttribute :=
+    let $setSrc := local:trim($document/*[name() = 'sourceURI.nested.settlement']/text())    
+    let $setPg := local:trim($document/*[name() = 'pages.nested.settlement']/text())
+    return
+        if ($setSrc != '')
+        then
+            for $src at $srcNumber in $sources  (: step through the source index :)
+            where  $setSrc = $src/uri/text() and $setPg = $src/pg/text()  (: URI and page from columns must match with iterated item in the source index :)
+            return '#bib'||$uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
+        else ''
+
+let $regionElement :=
+    let $regName := local:trim($document/*[name() = 'nestedName.region']/text())  (: this is a hack that just pulls the text from the sourcURI column.  Use the lookup method if it gets more complicated :)
+    return
+        if ($regName != '')
+        then
+            let $regUri := local:trim($document/*[name() = 'nestedURI.region']/text())
+            return <region ref="{$regUri}">{$regName}</region>
+        else()
+let $regionSourceAttribute :=
+    let $regSrc := local:trim($document/*[name() = 'sourceURI.nested.region']/text())    
+    let $regPg := local:trim($document/*[name() = 'pages.nested.region']/text())
+    return
+        if ($regSrc != '')
+        then
+            for $src at $srcNumber in $sources  (: step through the source index :)
+            where  $regSrc = $src/uri/text() and $regPg = $src/pg/text()  (: URI and page from columns must match with iterated item in the source index :)
+            return '#bib'||$uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
+        else ''
+
+return $regionElement
