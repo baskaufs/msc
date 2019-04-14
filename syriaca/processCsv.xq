@@ -12,6 +12,23 @@ declare function local:trim
    replace(replace($arg,'\s+$',''),'^\s+','')
  } ;
  
+(: function from http://www.xqueryfunctions.com/xq/functx_distinct-deep.html :)
+declare function local:distinct-deep
+  ( $nodes as node()* )  as node()* {
+
+    for $seq in (1 to count($nodes))
+    return $nodes[$seq][not(local:is-node-in-sequence-deep-equal(
+                          .,$nodes[position() < $seq]))]
+ } ;
+
+(: function from http://www.xqueryfunctions.com/xq/functx_is-node-in-sequence-deep-equal.html :)
+declare function local:is-node-in-sequence-deep-equal
+  ( $node as node()? ,
+    $seq as node()* )  as xs:boolean {
+
+   some $nodeInSeq in $seq satisfies deep-equal($nodeInSeq,$node)
+ } ;
+
 declare function local:loadCsvInternet($uri as xs:string, $delimiter as xs:string, $header as xs:boolean) as element()*
 {
 (: See https://github.com/HeardLibrary/digital-scholarship/tree/master/code/file for more on this function. :)
@@ -70,7 +87,16 @@ let $langCode := tokenize($columnString,'\.')[2]
 return if (substring(tokenize($columnString,'\.')[1],1,8) = 'abstract') then
   <abstract>{
     <langCode>{$langCode}</langCode>,
-    <labelColumnElementName>{$nameColumn/name/string()}</labelColumnElementName>
+    <labelColumnElementName>{$nameColumn/name/string()}</labelColumnElementName>,
+
+    for $uriColumn in $headerMap   (: find the element name of the sourceURI column :)
+    return if ($uriColumn/string/string() = 'sourceURI.'||$leftOfDot||'.'||$langCode)
+           then <sourceUriElementName>{$uriColumn/name/string()}</sourceUriElementName>
+           else (),
+    for $pagesColumn in $headerMap   (: find the element name of the sourceURI column :)
+    return if ($pagesColumn/string/string() = 'pages.'||$leftOfDot||'.'||$langCode)
+           then <pagesElementName>{$pagesColumn/name/string()}</pagesElementName>
+           else ()
   }</abstract>
 else 
  ()
@@ -180,6 +206,8 @@ $abstractIndex is a sequence looks like this:
 <abstract>
   <langCode>en</langCode>
   <labelColumnElementName>abstract.en</labelColumnElementName>
+  <sourceUriElementName>sourceURI.abstract.en</sourceUriElementName>
+  <pagesElementName>pages.abstract.en</pagesElementName>
 </abstract>
 
 In the current system, there is only one English abstract, but this allows for a different language or multiple abstracts in different languages
@@ -190,7 +218,7 @@ let $abstractIndex := local:createAbstractIndex($headerMap) (: find and process 
 (: set up the loop that generates a document for each row in the TSV file :)
 
 for $document at $row in $data
-where $row = 4  (: comment out this row when testing is done :)
+where $row = 7  (: comment out this row when testing is done :)
 return
 
 (: ----------------------------------------- :)
@@ -298,10 +326,7 @@ let $header :=
 (: ----------------------------------------- :)
 (: This part of the script builds the text element from inner parts outward :)
 
-(: create an empty source sequence :)
-
 (: Find every possible reference in the row and add it to a sequence :)
-
 let $redundantSources :=
     for $source in $headerMap  (: loop through each item in the header map sequence :)
       let $sourceUriColumnName := $source/name/text()  (: get the XML element name :)
@@ -314,6 +339,69 @@ let $redundantSources :=
           where $sourcePgColumnString = $sourcePage/string/text()
           return $sourcePage/name/text()     (: return the XML tag name for the matching column string :)
       let $sourcePage := local:trim($document/*[name() = $sourcePgColumnName]/text())
-      return ($sourceUri,$sourcePage)
+      return (<source><uri>{$sourceUri}</uri>,<pg>{$sourcePage}</pg></source>)
 
-return distinct-values($redundantSources)
+(: remove redunant sources :)
+let $sources := local:distinct-deep($redundantSources)
+
+(: build the bibl elements :)
+let $bibl :=
+    for $source at $number in $sources
+    return
+    <bibl xmlns:tei="http://www.tei-c.org/ns/1.0" xml:id="bib{$uriLocalName}-{$number}">
+        <ptr target="{$source/uri/text()}"/>
+        <citedRange unit="pp">{$source/pg/text()}</citedRange>
+    </bibl>
+
+let $idnos := 
+    for $idno in $document/idno
+    where local:trim($idno/text()) != ''
+    return
+      <idno type="URI">{local:trim($idno/text())}</idno>
+
+(: create the placeName elements for the headwords :)
+let $headwordNames :=
+    for $headword at $number in $headwordIndex
+    let $text := local:trim($document/*[name() = $headword/labelColumnElementName/text()]/text()) (: look up the headword for that language :)
+    where $text != '' (: skip the headword columns that are empty :)
+    return <placeName xml:id="{'name'||$uriLocalName}-{$number}" xml:lang="{local:trim($headword/langCode/text())}" syriaca-tags="#syriaca-headword" resp="http://syriaca.org">{$text}</placeName>
+
+(: create the placeName elements for the names in different languages :)
+let $numberHeadwords := count($headwordNames)  (: need to add this to the name index to generate last number at end of id attribute :)
+let $names :=
+    for $name at $number in $namesIndex     (: loop through each of the names in various languages :)
+    let $text := local:trim($document/*[name() = $name/labelColumnElementName/text()]/text()) (: look up the name for that column :)
+    where $text != ''   (: skip the name columns that are empty :)
+    let $nameUri := local:trim($document/*[name() = $name/sourceUriElementName/text()]/text())  (: look up the URI that goes with the name column :)
+    let $namePg := local:trim($document/*[name() = $name/pagesElementName/text()]/text())  (: look up the page that goes with the name column :)
+    let $sourceFragId := 
+        for $src at $srcNumber in $sources  (: step through the source index :)
+        where  $nameUri = $src/uri/text() and $namePg = $src/pg/text()  (: URI and page from columns must match with iterated item in the source index :)
+        return $uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
+    return <placeName xml:id="name{$uriLocalName}-{$number + $numberHeadwords}" xml:lang="{local:trim($name/langCode/text())}" source="#bib{$sourceFragId}">{$text}</placeName>
+
+(: create the abstract elements.  In the current table model there are only Engilsh ones, but this will still work if abstracts are added in other languages :)
+let $abstracts :=
+    for $abstract at $number in $abstractIndex
+    let $text := local:trim($document/*[name() = $abstract/labelColumnElementName/text()]/text()) (: look up the abstract from that column :)
+    where $text != ''   (: skip the abstract columns that are empty :)
+    let $nameUri := local:trim($document/*[name() = $abstract/sourceUriElementName/text()]/text())  (: look up the URI that goes with the abstract column :)
+    let $namePg := local:trim($document/*[name() = $abstract/pagesElementName/text()]/text())  (: look up the page that goes with the name column :)
+    let $sourceAttribute := 
+        if ($nameUri != '')
+        then
+            for $src at $srcNumber in $sources  (: step through the source index :)
+            where  $nameUri = $src/uri/text() and $namePg = $src/pg/text()  (: URI and page from columns must match with iterated item in the source index :)
+            return '#bib'||$uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
+        else ()
+    (: ---------- fix case where source is empty string -------------------------- :)
+    return <desc type="abstract" xml:id="abstract{$uriLocalName}-{$number}" xml:lang="{$abstract/langCode/text()}" source="{$sourceAttribute}">{$text}</desc>
+
+return ($abstracts,$bibl,
+<abstract>
+  <langCode>en</langCode>
+  <labelColumnElementName>abstract.en</labelColumnElementName>
+  <sourceUriElementName>sourceURI.abstract.en</sourceUriElementName>
+  <pagesElementName>pages.abstract.en</pagesElementName>
+</abstract>
+)
