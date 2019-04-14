@@ -218,7 +218,7 @@ let $abstractIndex := local:createAbstractIndex($headerMap) (: find and process 
 (: set up the loop that generates a document for each row in the TSV file :)
 
 for $document at $row in $data
-where $row = 7  (: comment out this row when testing is done :)
+where $row = 5  (: comment out this row when testing is done :)
 return
 
 (: ----------------------------------------- :)
@@ -394,14 +394,66 @@ let $abstracts :=
             where  $nameUri = $src/uri/text() and $namePg = $src/pg/text()  (: URI and page from columns must match with iterated item in the source index :)
             return '#bib'||$uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
         else ()
-    (: ---------- fix case where source is empty string -------------------------- :)
-    return <desc type="abstract" xml:id="abstract{$uriLocalName}-{$number}" xml:lang="{$abstract/langCode/text()}" source="{$sourceAttribute}">{$text}</desc>
+    return  (: use computed element constructor instead of direct since the source attribute is optional :)
+        element desc {
+          namespace tei {"http://www.tei-c.org/ns/1.0"},
+          attribute { "type" } { "abstract" },
+          attribute { "xml:id" } { "abstract"||$uriLocalName||'-'||$number },
+          attribute { "xml:lang" } { $abstract/langCode/text() },
+          if ($nameUri != '')
+              then attribute { "source" } {$sourceAttribute}
+          else (),
+          $text
+        }
 
-return ($abstracts,$bibl,
-<abstract>
-  <langCode>en</langCode>
-  <labelColumnElementName>abstract.en</labelColumnElementName>
-  <sourceUriElementName>sourceURI.abstract.en</sourceUriElementName>
-  <pagesElementName>pages.abstract.en</pagesElementName>
-</abstract>
-)
+(: create the disambiguation element. It's a bit unclear whether there can be multiple values or multiple languages, or if source is required. :)
+let $disambiguation := 
+    for $dis in $headerMap 
+    let $text := local:trim($document/*[name() = $dis/name/text()]/text()) (: look up the text in that column :)
+    where $dis/string/text() = 'note.disambiguation' and $text != '' (: screen for correct column and skip over empty elements :)
+    let $disUri := local:trim($document/*[name() = 'sourceURI.note.disambiguation']/text())  (: this is a hack that just pulls the text from the sourcURI column.  Use the lookup method if it gets more complicated :)
+    let $disPg := local:trim($document/*[name() = 'pages.note.disambiguation']/text())  (: this is a hack that just pulls the text from the pages column.  Use the lookup method if it gets more complicated :)
+    let $sourceAttribute := 
+        if ($disUri != '')
+        then
+            for $src at $srcNumber in $sources  (: step through the source index :)
+            where  $disUri = $src/uri/text() and $disPg = $src/pg/text()  (: URI and page from columns must match with iterated item in the source index :)
+            return '#bib'||$uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
+        else ()
+    return  (: use computed element constructor instead of direct since the source attribute is optional :)
+        element note {
+          namespace tei {"http://www.tei-c.org/ns/1.0"},
+          attribute { "type" } { "disabmiguation" },
+          attribute { "xml:lang" } { "en" },   (: this is also a hack and can't handle disambiguations in other languages :)
+          if ($disUri != '')
+              then attribute { "source" } {$sourceAttribute}
+          else (),
+          $text
+      }
+
+(: create the incerta element. All the same issues with the disambituation element are here.  This is basically a cut and paste of disambiguation :)
+let $incerta := 
+    for $inc in $headerMap 
+    let $text := local:trim($document/*[name() = $inc/name/text()]/text()) (: look up the text in that column :)
+    where $inc/string/text() = 'note.incerta' and $text != '' (: screen for correct column and skip over empty elements :)
+    let $incUri := local:trim($document/*[name() = 'sourceURI.note.incerta']/text())  (: this is a hack that just pulls the text from the sourcURI column.  Use the lookup method if it gets more complicated :)
+    let $incPg := local:trim($document/*[name() = 'pages.note.incerta']/text())  (: this is a hack that just pulls the text from the pages column.  Use the lookup method if it gets more complicated :)
+    let $sourceAttribute := 
+        if ($incUri != '')
+        then
+            for $src at $srcNumber in $sources  (: step through the source index :)
+            where  $incUri = $src/uri/text() and $incPg = $src/pg/text()  (: URI and page from columns must match with iterated item in the source index :)
+            return '#bib'||$uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
+        else ()
+    return  (: use computed element constructor instead of direct since the source attribute is optional :)
+        element note {
+          namespace tei {"http://www.tei-c.org/ns/1.0"},
+          attribute { "type" } { "disabmiguation" },
+          attribute { "xml:lang" } { "en" },   (: this is also a hack and can't handle disambiguations in other languages :)
+          if ($incUri != '')
+              then attribute { "source" } {$sourceAttribute}
+          else (),
+          $text
+      }
+
+return $incerta
