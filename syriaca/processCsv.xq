@@ -114,7 +114,7 @@ let $delimiter := '&#9;' (: tab character, change if a different delimiter like 
 let $baseLanguage := 'en'
 
 let $listBibl := 
-<listBibl xmlns:tei="http://www.tei-c.org/ns/1.0">
+<listBibl xmlns="http://www.tei-c.org/ns/1.0">
     <bibl>
         <ptr target="#bib75-2"/>
     </bibl>
@@ -227,7 +227,7 @@ let $date := current-date()
 let $uriLocalName := local:trim($document/uri/text())
 
 let $availability :=
-  <availability xmlns:tei="http://www.tei-c.org/ns/1.0">
+  <availability xmlns="http://www.tei-c.org/ns/1.0">
       <licence target="http://creativecommons.org/licenses/by/3.0/">
           <p>Distributed under a Creative Commons Attribution 3.0 Unported License.</p>
           <p>This entry incorporates copyrighted material from the following work(s):
@@ -239,7 +239,7 @@ let $availability :=
   </availability>
 
 let $pubStatement :=
-  <publicationStmt xmlns:tei="http://www.tei-c.org/ns/1.0">
+  <publicationStmt xmlns="http://www.tei-c.org/ns/1.0">
       <authority>Syriaca.org: The Syriac Reference Portal</authority>,
       <idno type="URI">http://syriaca.org/place/{$uriLocalName}/tei</idno>,
       {$availability},
@@ -252,7 +252,7 @@ let $title :=
     let $bltag := $baseLanguageHeadword/langCode/text()
     let $blabel := local:trim($document/*[name() = $baseLanguageHeadword/labelColumnElementName/text()]/text())
     return 
-         <title xmlns:tei="http://www.tei-c.org/ns/1.0" level="a" xml:lang="{$bltag}">{$blabel}
+         <title xmlns="http://www.tei-c.org/ns/1.0" level="a" xml:lang="{$bltag}">{$blabel}
               — {
                     for $foreignHeadword in $headwordIndex
                     where $foreignHeadword/langCode/text() != $baseLanguage
@@ -262,7 +262,7 @@ let $title :=
         }</title>
     
 let $titleStatement := 
-  <titleStmt xmlns:tei="http://www.tei-c.org/ns/1.0">{
+  <titleStmt xmlns="http://www.tei-c.org/ns/1.0">{
       $title,
       <sponsor>Syriaca.org: The Syriac Reference Portal</sponsor>,
       <funder>The National Endowment for the Humanities</funder>,
@@ -275,7 +275,7 @@ let $titleStatement :=
   }</titleStmt>
 
 let $fileDesc := 
-  <fileDesc xmlns:tei="http://www.tei-c.org/ns/1.0">{
+  <fileDesc xmlns="http://www.tei-c.org/ns/1.0">{
       $titleStatement,
       <editionStmt>
           <edition n="1.0"/>
@@ -293,7 +293,7 @@ let $fileDesc :=
   }</fileDesc>
   
 let $header :=
-    <teiHeader xmlns:tei="http://www.tei-c.org/ns/1.0">{
+    <teiHeader xmlns="http://www.tei-c.org/ns/1.0">{
       $fileDesc,
       <encodingDesc>
           <editorialDecl>
@@ -347,7 +347,7 @@ let $sources := local:distinct-deep($redundantSources)
 let $bibl :=
     for $source at $number in $sources
     return
-    <bibl xmlns:tei="http://www.tei-c.org/ns/1.0" xml:id="bib{$uriLocalName}-{$number}">
+    <bibl xmlns="http://www.tei-c.org/ns/1.0" xml:id="bib{$uriLocalName}-{$number}">
         <ptr target="{$source/uri/text()}"/>
         <citedRange unit="pp">{$source/pg/text()}</citedRange>
     </bibl>
@@ -356,14 +356,14 @@ let $idnos :=
     for $idno in $document/idno
     where local:trim($idno/text()) != ''
     return
-      <idno xmlns:tei="http://www.tei-c.org/ns/1.0" type="URI">{local:trim($idno/text())}</idno>
+      <idno xmlns="http://www.tei-c.org/ns/1.0" type="URI">{local:trim($idno/text())}</idno>
 
 (: create the placeName elements for the headwords :)
 let $headwordNames :=
     for $headword at $number in $headwordIndex
     let $text := local:trim($document/*[name() = $headword/labelColumnElementName/text()]/text()) (: look up the headword for that language :)
     where $text != '' (: skip the headword columns that are empty :)
-    return <placeName xml:id="{'name'||$uriLocalName}-{$number}" xml:lang="{local:trim($headword/langCode/text())}" syriaca-tags="#syriaca-headword" resp="http://syriaca.org">{$text}</placeName>
+    return <placeName xmlns="http://www.tei-c.org/ns/1.0" xml:id="{'name'||$uriLocalName}-{$number}" xml:lang="{local:trim($headword/langCode/text())}" syriaca-tags="#syriaca-headword" resp="http://syriaca.org">{$text}</placeName>
 
 (: create the placeName elements for the names in different languages :)
 let $numberHeadwords := count($headwordNames)  (: need to add this to the name index to generate last number at end of id attribute :)
@@ -465,7 +465,7 @@ let $settlementElement :=
         if ($setName != '')
         then
             let $setUri := local:trim($document/*[name() = 'nestedURI.settlement']/text())
-            return <settlement xmlns:tei="http://www.tei-c.org/ns/1.0" ref="{$setUri}">{$setName}</settlement>
+            return <settlement xmlns="http://www.tei-c.org/ns/1.0" ref="{$setUri}">{$setName}</settlement>
         else()
 let $settlementSourceAttribute :=
     let $setSrc := local:trim($document/*[name() = 'sourceURI.nested.settlement']/text())    
@@ -485,7 +485,7 @@ let $regionElement :=
         if ($regName != '')
         then
             let $regUri := local:trim($document/*[name() = 'nestedURI.region']/text())
-            return <region xmlns:tei="http://www.tei-c.org/ns/1.0" ref="{$regUri}">{$regName}</region>
+            return <region xmlns="http://www.tei-c.org/ns/1.0" ref="{$regUri}">{$regName}</region>
         else()
 let $regionSourceAttribute :=
     let $regSrc := local:trim($document/*[name() = 'sourceURI.nested.region']/text())    
@@ -511,7 +511,7 @@ let $locationAttribute := $settlementSourceAttribute||$separator||$regionSourceA
 let $location :=
     if ($locationAttribute != '')
     then 
-        <location xmlns:tei="http://www.tei-c.org/ns/1.0" type="nested" source="{$locationAttribute}">{
+        <location xmlns="http://www.tei-c.org/ns/1.0" type="nested" source="{$locationAttribute}">{
             $settlementElement,
             $regionElement
       }</location>
@@ -521,7 +521,7 @@ let $location :=
 (: we now have all of the bits necessary to build the entire place element (which is the only element in listPlace, which is the only elelment in the body element, which is the only element in the text element :)
 
 let $text := 
-<text xmlns:tei="http://www.tei-c.org/ns/1.0">
+<text xmlns="http://www.tei-c.org/ns/1.0">
   <body>
      <listPlace>
         <place type="{local:trim($document/*[name() = 'placeType']/text())}">{
