@@ -1,6 +1,7 @@
 xquery version "3.1";
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 declare option output:omit-xml-declaration "no";
+declare option file:omit-xml-declaration "no";
 
 (: ----------------------------------------- :)
 (: function declarations :)
@@ -112,6 +113,9 @@ else
 let $url := "https://raw.githubusercontent.com/srophe/draft-data/master/data/TSVTransformsXQuery/placesToTransform.tsv"
 let $delimiter := '&#9;' (: tab character, change if a different delimiter like comma is used :)
 let $baseLanguage := 'en'
+let $fileOrConsole := 'file'  (: use 'file' to output to file(s) in $path, use 'console' to output to the console :)
+let $path := 'temp/syriaca/'  (: on Mac this seems to default to subdirectories of the home directory.   Specifying '~' isn't recognaized :)
+(: NOTE: line 225 controls whether a single record is output or if all records are output.  Comment it out for all records :)
 
 let $listBibl := 
 <listBibl xmlns="http://www.tei-c.org/ns/1.0">
@@ -219,7 +223,7 @@ let $abstractIndex := local:createAbstractIndex($headerMap) (: find and process 
 (: set up the loop that generates an output document for each row in the TSV file :)
 
 for $document at $row in $data
-where $row = 1  (: outputs a single row instead of all of them. Comment out this line when testing is done :)
+where $row = 8  (: outputs a single row instead of all of them. Comment out this line when testing is done :)
 
 (: ----------------------------------------- :)
 (: This part of the script builds the TEI header element from inner parts outward :)
@@ -240,9 +244,9 @@ let $availability :=
 
 let $pubStatement :=
   <publicationStmt xmlns="http://www.tei-c.org/ns/1.0">
-      <authority>Syriaca.org: The Syriac Reference Portal</authority>,
-      <idno type="URI">http://syriaca.org/place/{$uriLocalName}/tei</idno>,
-      {$availability},
+      <authority>Syriaca.org: The Syriac Reference Portal</authority>
+      <idno type="URI">http://syriaca.org/place/{$uriLocalName}/tei</idno>
+      {$availability}
       <date>{$date}</date>
   </publicationStmt>
 
@@ -255,10 +259,10 @@ let $title :=
          <title xmlns="http://www.tei-c.org/ns/1.0" level="a" xml:lang="{$bltag}">{$blabel}
               — {
                     for $foreignHeadword in $headwordIndex
-                    where $foreignHeadword/langCode/text() != $baseLanguage
-                    let $fltag := $baseLanguageHeadword/langCode/text()
-                    let $flabel := local:trim($document/*[name() = $foreignHeadword/labelColumnElementName/text()]/text())
-                    return <foreign xml:lang="{$foreignHeadword/langCode/text()}">{$flabel}</foreign>
+                    where $foreignHeadword/*:langCode/text() != $baseLanguage
+                    let $fltag := $foreignHeadword/*:langCode/text()
+                    let $flabel := local:trim($document/*[name() = $foreignHeadword/*:labelColumnElementName/text()]/text())
+                    return <foreign xml:lang="{$fltag}">{$flabel}</foreign>
         }</title>
     
 let $titleStatement := 
@@ -348,8 +352,8 @@ let $bibl :=
     for $source at $number in $sources
     return
     <bibl xmlns="http://www.tei-c.org/ns/1.0" xml:id="bib{$uriLocalName}-{$number}">
-        <ptr target="{$source/uri/text()}"/>
-        <citedRange unit="pp">{$source/pg/text()}</citedRange>
+        <ptr target="{$source/*:uri/text()}"/>
+        <citedRange unit="pp">{$source/*:pg/text()}</citedRange>
     </bibl>
 
 let $idnos := 
@@ -363,7 +367,8 @@ let $headwordNames :=
     for $headword at $number in $headwordIndex
     let $text := local:trim($document/*[name() = $headword/labelColumnElementName/text()]/text()) (: look up the headword for that language :)
     where $text != '' (: skip the headword columns that are empty :)
-    return <placeName xmlns="http://www.tei-c.org/ns/1.0" xml:id="{'name'||$uriLocalName}-{$number}" xml:lang="{local:trim($headword/langCode/text())}" syriaca-tags="#syriaca-headword" resp="http://syriaca.org">{$text}</placeName>
+    let $langAttrib := local:trim($headword/langCode/text())
+    return <placeName xmlns="http://www.tei-c.org/ns/1.0" xml:id="{'name'||$uriLocalName}-{$number}" xml:lang="{$langAttrib}" syriaca-tags="#syriaca-headword" resp="http://syriaca.org">{$text}</placeName>
 
 (: create the placeName elements for the names in different languages :)
 let $numberHeadwords := count($headwordNames)  (: need to add this to the name index to generate last number at end of id attribute :)
@@ -377,7 +382,8 @@ let $names :=
         for $src at $srcNumber in $sources  (: step through the source index :)
         where  $nameUri = $src/uri/text() and $namePg = $src/pg/text()  (: URI and page from columns must match with iterated item in the source index :)
         return $uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
-    return <placeName xml:id="name{$uriLocalName}-{$number + $numberHeadwords}" xml:lang="{local:trim($name/langCode/text())}" source="#bib{$sourceFragId}">{$text}</placeName>
+    let $langAttrib := local:trim($name/langCode/text())
+    return <placeName xmlns="http://www.tei-c.org/ns/1.0" xml:id="name{$uriLocalName}-{$number + $numberHeadwords}" xml:lang="{$langAttrib}" source="#bib{$sourceFragId}">{$text}</placeName>
 
 (: create the abstract elements.  In the current table model there are only Engilsh ones, but this will still work if abstracts are added in other languages :)
 let $abstracts :=
@@ -393,17 +399,10 @@ let $abstracts :=
             where  $nameUri = $src/uri/text() and $namePg = $src/pg/text()  (: URI and page from columns must match with iterated item in the source index :)
             return '#bib'||$uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
         else ()
-    return  (: use computed element constructor instead of direct since the source attribute is optional :)
-        element desc {
-          namespace tei {"http://www.tei-c.org/ns/1.0"},
-          attribute { "type" } { "abstract" },
-          attribute { "xml:id" } { "abstract"||$uriLocalName||'-'||$number },
-          attribute { "xml:lang" } { $abstract/langCode/text() },
-          if ($nameUri != '')
-              then attribute { "source" } {$sourceAttribute}
-          else (),
-          $text
-        }
+    return
+        if ($nameUri = '')
+        then <desc xmlns = "http://www.tei-c.org/ns/1.0" type="abstract" xml:id="{ 'abstract'||$uriLocalName||'-'||$number }" xml:lang="{ $abstract/*:langCode/text() }">$text</desc>
+        else <desc xmlns = "http://www.tei-c.org/ns/1.0" type="abstract" xml:id="{ 'abstract'||$uriLocalName||'-'||$number }" xml:lang="{ $abstract/*:langCode/text() }" source="{$sourceAttribute}">$text</desc>
 
 (: create the disambiguation element. It's a bit unclear whether there can be multiple values or multiple languages, or if source is required. :)
 let $disambiguation := 
@@ -419,16 +418,10 @@ let $disambiguation :=
             where  $disUri = $src/uri/text() and $disPg = $src/pg/text()  (: URI and page from columns must match with iterated item in the source index :)
             return '#bib'||$uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
         else ()
-    return  (: use computed element constructor instead of direct since the source attribute is optional :)
-        element note {
-          namespace tei {"http://www.tei-c.org/ns/1.0"},
-          attribute { "type" } { "disabmiguation" },
-          attribute { "xml:lang" } { "en" },   (: this is also a hack and can't handle disambiguations in other languages :)
-          if ($disUri != '')
-              then attribute { "source" } {$sourceAttribute}
-          else (),
-          $text
-      }
+    return  (: this is also a hack and can't handle disambiguations in other languages :)
+        if ($disUri = '')
+        then <note xmlns = "http://www.tei-c.org/ns/1.0" type="disabmiguation" xml:lang="en">$text</note>
+        else <note xmlns = "http://www.tei-c.org/ns/1.0" type="disabmiguation" xml:lang="en" source="{$sourceAttribute}">$text</note>
 
 (: create the incerta element. All the same issues with the disambituation element are here.  This is basically a cut and paste of disambiguation :)
 let $incerta := 
@@ -444,16 +437,10 @@ let $incerta :=
             where  $incUri = $src/uri/text() and $incPg = $src/pg/text()  (: URI and page from columns must match with iterated item in the source index :)
             return '#bib'||$uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
         else ''
-    return  (: use computed element constructor instead of direct since the source attribute is optional :)
-        element note {
-          namespace tei {"http://www.tei-c.org/ns/1.0"},
-          attribute { "type" } { "incerta" },
-          attribute { "xml:lang" } { "en" },   (: this is also a hack and can't handle disambiguations in other languages :)
-          if ($incUri != '')
-              then attribute { "source" } {$sourceAttribute}
-          else (),
-          $text
-      }
+    return  (: this is also a hack and can't handle disambiguations in other languages :)
+        if ($incUri = '')
+        then <note xmlns = "http://www.tei-c.org/ns/1.0" type="incerta" xml:lang="en">$text</note>
+        else <note xmlns = "http://www.tei-c.org/ns/1.0" type="incerta" xml:lang="en" source="{$sourceAttribute}">$text</note>
 
 (: ----------------------------------------- :)
 (: create nested location element. Since this is a very ideosyncratic element, I'm not going to attempt to generalize it, but rather just hard code the column headers :)
@@ -552,10 +539,9 @@ let $document:= (
 )
 
 (: If output is to be written to files, hard-code the file location as $path :)
-let $path := 'c:\test\syriaca\'
 let $nothing := file:create-dir($path)    (: creates the directory if it doesn't already exist, does nothing if it exists :)
 
 return
-(:  file:write($path||$uriLocalName||'.xml',  :)   (: comment out this line to test and send output to the console instead of a file :)
-  $document
-(: ) :)   (: comment out this line to test and send output to the console instead of a file :)
+  if ($fileOrConsole = 'file')
+  then file:write($path||$uriLocalName||'.xml',  $document, map { 'omit-xml-declaration': 'no'})
+  else $document
