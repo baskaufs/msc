@@ -115,7 +115,7 @@ let $delimiter := '&#9;' (: tab character, change if a different delimiter like 
 let $baseLanguage := 'en'
 let $fileOrConsole := 'file'  (: use 'file' to output to file(s) in $path, use 'console' to output to the console :)
 let $path := 'temp/syriaca/'  (: on Mac this seems to default to subdirectories of the home directory.   Specifying '~' isn't recognaized :)
-(: NOTE: line 225 controls whether a single record is output or if all records are output.  Comment it out for all records :)
+(: NOTE: line 226 controls whether a single record is output or if all records are output.  Comment it out for all records :)
 
 let $listBibl := 
 <listBibl xmlns="http://www.tei-c.org/ns/1.0">
@@ -223,7 +223,7 @@ let $abstractIndex := local:createAbstractIndex($headerMap) (: find and process 
 (: set up the loop that generates an output document for each row in the TSV file :)
 
 for $document at $row in $data
-where $row = 1  (: outputs a single row instead of all of them. Comment out this line when testing is done :)
+where $row = 8  (: outputs a single row instead of all of them. Comment out this line when testing is done :)
 
 (: ----------------------------------------- :)
 (: This part of the script builds the TEI header element from inner parts outward :)
