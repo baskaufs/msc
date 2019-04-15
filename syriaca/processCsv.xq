@@ -223,7 +223,7 @@ let $abstractIndex := local:createAbstractIndex($headerMap) (: find and process 
 (: set up the loop that generates an output document for each row in the TSV file :)
 
 for $document at $row in $data
-where $row = 8  (: outputs a single row instead of all of them. Comment out this line when testing is done :)
+where $row = 1  (: outputs a single row instead of all of them. Comment out this line when testing is done :)
 
 (: ----------------------------------------- :)
 (: This part of the script builds the TEI header element from inner parts outward :)
@@ -257,12 +257,24 @@ let $title :=
     let $blabel := local:trim($document/*[name() = $baseLanguageHeadword/labelColumnElementName/text()]/text())
     return 
          <title xmlns="http://www.tei-c.org/ns/1.0" level="a" xml:lang="{$bltag}">{$blabel}
-              — {
+          {
+          let $foreignHeadwordElements :=
                     for $foreignHeadword in $headwordIndex
                     where $foreignHeadword/*:langCode/text() != $baseLanguage
                     let $fltag := $foreignHeadword/*:langCode/text()
                     let $flabel := local:trim($document/*[name() = $foreignHeadword/*:labelColumnElementName/text()]/text())
-                    return <foreign xml:lang="{$fltag}">{$flabel}</foreign>
+                    return if ($flabel != '')
+                    then
+                        <foreign xml:lang="{$fltag}">{$flabel}</foreign>
+                    else ()
+          return if (count($foreignHeadwordElements) != 0)
+          (: I have no idea why this weird line break and dash is necessary ... :)
+          then (
+              "
+                                        - ",
+              $foreignHeadwordElements
+            )
+          else ()
         }</title>
     
 let $titleStatement := 
