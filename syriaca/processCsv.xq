@@ -413,8 +413,8 @@ let $abstracts :=
         else ()
     return
         if ($nameUri = '')
-        then <desc xmlns = "http://www.tei-c.org/ns/1.0" type="abstract" xml:id="{ 'abstract'||$uriLocalName||'-'||$number }" xml:lang="{ $abstract/*:langCode/text() }">$text</desc>
-        else <desc xmlns = "http://www.tei-c.org/ns/1.0" type="abstract" xml:id="{ 'abstract'||$uriLocalName||'-'||$number }" xml:lang="{ $abstract/*:langCode/text() }" source="{$sourceAttribute}">$text</desc>
+        then <desc xmlns = "http://www.tei-c.org/ns/1.0" type="abstract" xml:id="{ 'abstract'||$uriLocalName||'-'||$number }" xml:lang="{ $abstract/*:langCode/text() }">{$text}</desc>
+        else <desc xmlns = "http://www.tei-c.org/ns/1.0" type="abstract" xml:id="{ 'abstract'||$uriLocalName||'-'||$number }" xml:lang="{ $abstract/*:langCode/text() }" source="{$sourceAttribute}">{$text}</desc>
 
 (: create the disambiguation element. It's a bit unclear whether there can be multiple values or multiple languages, or if source is required. :)
 let $disambiguation := 
@@ -432,8 +432,8 @@ let $disambiguation :=
         else ()
     return  (: this is also a hack and can't handle disambiguations in other languages :)
         if ($disUri = '')
-        then <note xmlns = "http://www.tei-c.org/ns/1.0" type="disabmiguation" xml:lang="en">$text</note>
-        else <note xmlns = "http://www.tei-c.org/ns/1.0" type="disabmiguation" xml:lang="en" source="{$sourceAttribute}">$text</note>
+        then <note xmlns = "http://www.tei-c.org/ns/1.0" type="disabmiguation" xml:lang="en">{$text}</note>
+        else <note xmlns = "http://www.tei-c.org/ns/1.0" type="disabmiguation" xml:lang="en" source="{$sourceAttribute}">{$text}</note>
 
 (: create the incerta element. All the same issues with the disambituation element are here.  This is basically a cut and paste of disambiguation :)
 let $incerta := 
@@ -451,8 +451,8 @@ let $incerta :=
         else ''
     return  (: this is also a hack and can't handle disambiguations in other languages :)
         if ($incUri = '')
-        then <note xmlns = "http://www.tei-c.org/ns/1.0" type="incerta" xml:lang="en">$text</note>
-        else <note xmlns = "http://www.tei-c.org/ns/1.0" type="incerta" xml:lang="en" source="{$sourceAttribute}">$text</note>
+        then <note xmlns = "http://www.tei-c.org/ns/1.0" type="incerta" xml:lang="en">{$text}</note>
+        else <note xmlns = "http://www.tei-c.org/ns/1.0" type="incerta" xml:lang="en" source="{$sourceAttribute}">{$text}</note>
 
 (: ----------------------------------------- :)
 (: create nested location element. Since this is a very ideosyncratic element, I'm not going to attempt to generalize it, but rather just hard code the column headers :)
