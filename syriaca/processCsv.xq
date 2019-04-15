@@ -1,5 +1,6 @@
 xquery version "3.1";
 declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare option output:omit-xml-declaration "no";
 
 (: ----------------------------------------- :)
 (: function declarations :)
@@ -215,16 +216,14 @@ In the current system, there is only one English abstract, but this allows for a
 let $abstractIndex := local:createAbstractIndex($headerMap) (: find and process the abstracts columns :)
 
 (: ----------------------------------------- :)
-(: set up the loop that generates a document for each row in the TSV file :)
+(: set up the loop that generates an output document for each row in the TSV file :)
 
 for $document at $row in $data
-where $row = 8  (: comment out this row when testing is done :)
-return
+where $row = 1  (: outputs a single row instead of all of them. Comment out this line when testing is done :)
 
 (: ----------------------------------------- :)
 (: This part of the script builds the TEI header element from inner parts outward :)
 let $date := current-date()
-
 let $uriLocalName := local:trim($document/uri/text())
 
 let $availability :=
@@ -357,7 +356,7 @@ let $idnos :=
     for $idno in $document/idno
     where local:trim($idno/text()) != ''
     return
-      <idno type="URI">{local:trim($idno/text())}</idno>
+      <idno xmlns:tei="http://www.tei-c.org/ns/1.0" type="URI">{local:trim($idno/text())}</idno>
 
 (: create the placeName elements for the headwords :)
 let $headwordNames :=
@@ -448,7 +447,7 @@ let $incerta :=
     return  (: use computed element constructor instead of direct since the source attribute is optional :)
         element note {
           namespace tei {"http://www.tei-c.org/ns/1.0"},
-          attribute { "type" } { "disabmiguation" },
+          attribute { "type" } { "incerta" },
           attribute { "xml:lang" } { "en" },   (: this is also a hack and can't handle disambiguations in other languages :)
           if ($incUri != '')
               then attribute { "source" } {$sourceAttribute}
@@ -456,14 +455,17 @@ let $incerta :=
           $text
       }
 
+(: ----------------------------------------- :)
 (: create nested location element. Since this is a very ideosyncratic element, I'm not going to attempt to generalize it, but rather just hard code the column headers :)
+
+(: here's the settlement child element and it's associated source attribute :)
 let $settlementElement := 
     let $setName := local:trim($document/*[name() = 'nestedName.settlement']/text())  (: this is a hack that just pulls the text from the sourcURI column.  Use the lookup method if it gets more complicated :)
     return
         if ($setName != '')
         then
             let $setUri := local:trim($document/*[name() = 'nestedURI.settlement']/text())
-            return <settlement ref="{$setUri}">{$setName}</settlement>
+            return <settlement xmlns:tei="http://www.tei-c.org/ns/1.0" ref="{$setUri}">{$setName}</settlement>
         else()
 let $settlementSourceAttribute :=
     let $setSrc := local:trim($document/*[name() = 'sourceURI.nested.settlement']/text())    
@@ -476,13 +478,14 @@ let $settlementSourceAttribute :=
             return '#bib'||$uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
         else ''
 
+(: here's the region child element and it's associated source attribute :)
 let $regionElement :=
     let $regName := local:trim($document/*[name() = 'nestedName.region']/text())  (: this is a hack that just pulls the text from the sourcURI column.  Use the lookup method if it gets more complicated :)
     return
         if ($regName != '')
         then
             let $regUri := local:trim($document/*[name() = 'nestedURI.region']/text())
-            return <region ref="{$regUri}">{$regName}</region>
+            return <region xmlns:tei="http://www.tei-c.org/ns/1.0" ref="{$regUri}">{$regName}</region>
         else()
 let $regionSourceAttribute :=
     let $regSrc := local:trim($document/*[name() = 'sourceURI.nested.region']/text())    
@@ -495,4 +498,64 @@ let $regionSourceAttribute :=
             return '#bib'||$uriLocalName||'-'||$srcNumber    (: create the last part of the source attribute :)
         else ''
 
-return $regionElement
+(: now we need to build the source attribute from one or more of the sources representing the child elements :)
+
+let $separator :=   (: the separator needs to be the empty string if only one of the child elements has a source.  If they both do, the separator needs to be a single space :)
+    if ($settlementSourceAttribute != '' and $regionSourceAttribute != '')
+    then ' '
+    else ''
+let $locationAttribute := $settlementSourceAttribute||$separator||$regionSourceAttribute
+
+(: we have all the pieces to build the nested location element now.  If the $locationAttribute isn't an empty string, there is a ref for one or the other nested type, so use that as the test :)
+
+let $location :=
+    if ($locationAttribute != '')
+    then 
+        <location xmlns:tei="http://www.tei-c.org/ns/1.0" type="nested" source="{$locationAttribute}">{
+            $settlementElement,
+            $regionElement
+      }</location>
+    else ()
+
+(: ----------------------------------------- :)
+(: we now have all of the bits necessary to build the entire place element (which is the only element in listPlace, which is the only elelment in the body element, which is the only element in the text element :)
+
+let $text := 
+<text xmlns:tei="http://www.tei-c.org/ns/1.0">
+  <body>
+     <listPlace>
+        <place type="{local:trim($document/*[name() = 'placeType']/text())}">{
+            $headwordNames,
+            $names,
+            $abstracts,
+            $incerta,
+            $disambiguation,
+            $location,
+            <idno type="URI">http://syriaca.org/place/{$uriLocalName}</idno>,
+            $idnos,
+            $bibl
+        }</place>
+     </listPlace>
+  </body>
+</text>
+
+(: ----------------------------------------- :)
+(: build the entire document now :)
+
+let $document:= (
+<?xml-model href="https://raw.githubusercontent.com/srophe/draft-data/master/data/schemaPlaceDraftData/out/syriacaPlacesTEI.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>,
+<?xml-model href="https://raw.githubusercontent.com/srophe/draft-data/master/data/schemaPlaceDraftData/out/syriacaPlacesTEI.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>,
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">{
+    $header,
+    $text
+}</TEI>
+)
+
+(: If output is to be written to files, hard-code the file location as $path :)
+let $path := 'c:\test\syriaca\'
+let $nothing := file:create-dir($path)    (: creates the directory if it doesn't already exist, does nothing if it exists :)
+
+return
+(:  file:write($path||$uriLocalName||'.xml',  :)   (: comment out this line to test and send output to the console instead of a file :)
+  $document
+(: ) :)   (: comment out this line to test and send output to the console instead of a file :)
