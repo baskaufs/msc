@@ -113,7 +113,7 @@ else
 let $url := "https://raw.githubusercontent.com/srophe/draft-data/master/data/TSVTransformsXQuery/placesToTransform.tsv"
 let $delimiter := '&#9;' (: tab character, change if a different delimiter like comma is used :)
 let $baseLanguage := 'en'
-let $fileOrConsole := 'file'  (: use 'file' to output to file(s) in $path, use 'console' to output to the console :)
+let $fileOrConsole := 'console'  (: use 'file' to output to file(s) in $path, use 'console' to output to the console :)
 let $path := 'temp/syriaca/'  (: on Mac this seems to default to subdirectories of the home directory.   Specifying '~' isn't recognaized :)
 (: NOTE: line 226 controls whether a single record is output or if all records are output.  Comment it out for all records :)
 
@@ -223,7 +223,7 @@ let $abstractIndex := local:createAbstractIndex($headerMap) (: find and process 
 (: set up the loop that generates an output document for each row in the TSV file :)
 
 for $document at $row in $data
-where $row = 8  (: outputs a single row instead of all of them. Comment out this line when testing is done :)
+where $row = 6  (: outputs a single row instead of all of them. Comment out this line when testing is done :)
 
 (: ----------------------------------------- :)
 (: This part of the script builds the TEI header element from inner parts outward :)
@@ -374,20 +374,35 @@ let $idnos :=
     return
       <idno xmlns="http://www.tei-c.org/ns/1.0" type="URI">{local:trim($idno/text())}</idno>
 
+(: For this row, find only the headword columns that have values. Need to do this since the schema requires placeName ids to have consecutive nubmers and therefore there can't be missing names :)
+let $lineHeadwordIndex :=
+    for $headword in $headwordIndex
+    let $element := local:trim($document/*[name() = $headword/labelColumnElementName/string()]/text())
+    return if ($element != '')
+            then $headword
+            else ()
+
 (: create the placeName elements for the headwords :)
 let $headwordNames :=
-    for $headword at $number in $headwordIndex
+    for $headword at $number in $lineHeadwordIndex
     let $text := local:trim($document/*[name() = $headword/labelColumnElementName/text()]/text()) (: look up the headword for that language :)
     where $text != '' (: skip the headword columns that are empty :)
     let $langAttrib := local:trim($headword/langCode/text())
     return <placeName xmlns="http://www.tei-c.org/ns/1.0" xml:id="{'name'||$uriLocalName}-{$number}" xml:lang="{$langAttrib}" syriaca-tags="#syriaca-headword" resp="http://syriaca.org">{$text}</placeName>
 
+(: for this row, find only the names columns that have values.  This avoids skipping numbers in placeName ids :)
+let $lineNamesIndex :=
+    for $name in $namesIndex
+    let $element := local:trim($document/*[name() = $name/labelColumnElementName/string()]/text())
+    return if ($element != '')
+            then $name
+            else ()
+
 (: create the placeName elements for the names in different languages :)
 let $numberHeadwords := count($headwordNames)  (: need to add this to the name index to generate last number at end of id attribute :)
 let $names :=
-    for $name at $number in $namesIndex     (: loop through each of the names in various languages :)
+    for $name at $number in $lineNamesIndex     (: loop through each of the names in various languages :)
     let $text := local:trim($document/*[name() = $name/labelColumnElementName/text()]/text()) (: look up the name for that column :)
-    where $text != ''   (: skip the name columns that are empty :)
     let $nameUri := local:trim($document/*[name() = $name/sourceUriElementName/text()]/text())  (: look up the URI that goes with the name column :)
     let $namePg := local:trim($document/*[name() = $name/pagesElementName/text()]/text())  (: look up the page that goes with the name column :)
     let $sourceFragId := 
