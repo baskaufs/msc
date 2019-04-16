@@ -356,7 +356,7 @@ let $redundantSources :=
       let $sourcePage := local:trim($document/*[name() = $sourcePgColumnName]/text())
       return (<source><uri>{$sourceUri}</uri>,<pg>{$sourcePage}</pg></source>)
 
-(: remove redunant sources :)
+(: remove redundant sources :)
 let $sources := local:distinct-deep($redundantSources)
 
 (: build the bibl elements :)
@@ -532,7 +532,7 @@ let $location :=
     else ()
 
 (: ----------------------------------------- :)
-(: we now have all of the bits necessary to build the entire place element (which is the only element in listPlace, which is the only elelment in the body element, which is the only element in the text element :)
+(: we now have all of the bits necessary to build the entire place element (which is the only element in listPlace, which is the only element in the body element, which is the only element in the text element :)
 
 let $text := 
 <text xmlns="http://www.tei-c.org/ns/1.0">
