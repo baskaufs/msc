@@ -6,5 +6,5 @@ def drawSquare(myTurtle,maxSide):
         myTurtle.right(170)
 
 t = turtle.Turtle()
-drawSquare(t,100)
+drawSquare(t,40)
 			
