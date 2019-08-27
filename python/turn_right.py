@@ -7,5 +7,4 @@ def drawSquare(myTurtle,maxSide):
 
 t = turtle.Turtle()
 drawSquare(t,100)
-
 			
