@@ -20,21 +20,24 @@ for ifd in ("0th", "Exif", "GPS", "1st"):
 def rotate_image(imageName, inDirectory, outDirectory):
     im = Image.open(inDirectory + '/' + imageName)
     exif_dict = piexif.load(im.info["exif"])
+    try:
+        # diagram on rotations at https://www.daveperrett.com/articles/2012/07/28/exif-orientation-handling-is-a-ghetto/
+        if exif_dict["0th"][274] != 1: # rotate any image that's not already unrotated
+            # perform a hard rotation to the correct orientation
+            if exif_dict["0th"][274] == 6:
+                out = im.transpose(Image.ROTATE_270)
+            elif exif_dict["0th"][274] == 8:
+                out = im.transpose(Image.ROTATE_90)
+            elif exif_dict["0th"][274] == 3:
+                out = im.transpose(Image.ROTATE_180)
 
-    # diagram on rotations at https://www.daveperrett.com/articles/2012/07/28/exif-orientation-handling-is-a-ghetto/
-    if exif_dict["0th"][274] != 1: # rotate any image that's not already unrotated
-        # perform a hard rotation to the correct orientation
-        if exif_dict["0th"][274] == 6:
-            out = im.transpose(Image.ROTATE_270)
-        elif exif_dict["0th"][274] == 8:
-            out = im.transpose(Image.ROTATE_90)
-        elif exif_dict["0th"][274] == 3:
-            out = im.transpose(Image.ROTATE_180)
-
-        # change image orientation setting from rotated to unrotated
-        exif_dict["0th"][274] = 1
-        exif_bytes = piexif.dump(exif_dict)
-        out.save(outDirectory + '/' + imageName, "jpeg", exif=exif_bytes)
+            # change image orientation setting from rotated to unrotated
+            exif_dict["0th"][274] = 1
+            exif_bytes = piexif.dump(exif_dict)
+            out.save(outDirectory + '/' + imageName, "jpeg", exif=exif_bytes)
+            print(file) # print the file being processed so you can see it's doing something
+    except:
+        print("Didn't process " + imageName + ", probably no orientation set")
 
 # ***** main script **************
 
@@ -44,5 +47,4 @@ outputSubdirectory = 'out'
 # hacked from https://stackoverflow.com/questions/11968976/list-files-only-in-the-current-directory
 files = [f for f in os.listdir('./' + inputSubdirectory) if os.path.isfile(os.path.join('./' + inputSubdirectory, f))]
 for file in files:
-    print(file) # print the file being processed so you can see it's doing something
     rotate_image(file, inputSubdirectory, outputSubdirectory)
