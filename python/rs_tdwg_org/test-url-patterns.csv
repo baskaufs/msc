@@ -1,0 +1,22 @@
+uri,pattern_type
+,root of namespace (redirect to index)
+index,index for namespace
+dwc/,vocabulary
+ac/xmp/,term list
+dwc/terms/recordedBy,term (redirect)
+dwc/geospatial/GeoreferenceProtocol,term (generate page)
+dump/audubon,dataset dump
+version/dwc/2009-09-21,vocabulary version
+ac/version/xmp/2013-10-28,term list version
+dwc/geospatial/version/GeoreferenceProtocol-2007-04-17,term version
+dwc/terms/attributes/,utility term list
+dwc/terms/attributes/abcdEquivalence,utility term
+dwc/terms/attributes/version/Vocabulary-2017-06-06,utility term version
+decisions/,decisions list
+decisions/decision-2011-10-16_10,decision
+abcd/doc/primer/,generic doc (redirect)
+sds/doc/specification/2007-11-05,generic doc version (redirect)
+dwc/terms/guides/rdf/,ideosyncratic DwC document
+dwc/terms/simple/,ideosyncratic DwC document
+dwc/terms/guides/text/2014-11-08,ideosyncratic DwC document version
+dwc/terms/namespace/2018-08-26,ideosyncratic DwC document version
