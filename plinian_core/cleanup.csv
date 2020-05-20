@@ -1,0 +1,114 @@
+term_localName,label,definition,usage,notes,rdf_type
+abstract,abstract,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+ancillaryData,ancillary data,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+annualCycleAtomized,atomized annual cycle,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+annualCycles,annual cycle,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+annualCycleUnstructured,unstructured annual cycle,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+distributionAtomized,atomized distribution,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+audience,audience,Repetitive concept where the target audiences are written one by one.,,Predetermined list: 01. Expert (High). 02. Knowledgeable (Medium). 03. General (Low).,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+audiencesUnstructured,unstructured audiences,List audience codes separated by means of comma or /.,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+baseElements,base elements,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+behavior,behavior,"Responses, reactions or movements made by an organism in a particular situation.",,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+behaviorAtomized,atomized behavior,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+behaviorUnstructured,unstructured behavior,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+briefDescription,brief description,"Brief description which reflect only the diagnostic characters, i.e. those that distinguish a taxon from other related or close taxa.",,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+commonNamesAtomized,atomized common names,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+commonNames,common names,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+demographyAndThreat,demography and threat,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+demographyAndThreatUnstructured,unstructured demography and threat,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+detailAtomized,atomized detail,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+detailUnstructured,unstructured detail,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+directThreats,,"Direct threats are the proximate human activities or processes that have caused, are causing, or may cause the destruction, degradation, and/or impairment of biodiversity targets. Direct threats are synonymous with sources of stress and proximate pressures.",,"Examples: unsustainable fishing or logging. Threats can be past (historical), ongoing, and/or likely to occur in the future.",http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+directThreatAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+directThreatUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+dispersal,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+dispersalAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+dispersalUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+distribution,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+distributionUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+ecologicalSignificance,,Ecological importance of the taxon. (Placeholder),,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+ecologicalSignificanceAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+ecologicalSignificanceUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+endemic,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+endemicAtomized,,List of areas structured and categorized the degree of safety.,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+environmentalEnvelope,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+environmentalEnvelopeAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+environmentalEnvelopeUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+endemicUnstructured,,List of areas presented in an unstructured and categorized the degree of safety.,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+feeding,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+feedingAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+feedingUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+fullDescription,,"Complete and detailed account of the taxonomic and systematic characters, i.e. those that define and allow to recognize an organism.",,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+fullDescriptionAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+fullDescriptionUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+habitatAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+habitatAndDistribution,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+habitatAndDistributionUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+habitats,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+habitatUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+hierarchy,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+interactionAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+identificationKeys,,"Tool for the identification of organisms, comprising a series of steps, each of which represents a question about one or more characters of the organism. Each step offers multiple alternatives, choosing one of them will lead us to the next step until ending, finally, in the name of the organism.",,"Most printed keys have only two alternatives, so called dichotomous keys.  A taxon includes a key or an identification of key in the subordinate taxons. If we are in a register of a genre, this register would include the keys of the species that this register includes, and if it´s one specie, then it would include the key of the infraspecific rank (For plants: subspecies, variety forms)",http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+interactions,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+interactionUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+invasiveness,,"Information about invasive exotic species that could threaten to ecosystem, habitats and species",,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+invasivenessAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+invasivenessUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+keys,,Dichotomic or multientrance keys.,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+legislationAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+language,,"The language of the taxon record, according to ISO 639.",,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+lifeCycle,,Life history of a living organism: The course of developmental changes in an organism from fertilized zygote to maturity or stages through which an organism passes.,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+lifeForm,,"General appearance. Characteristic mode of growth or occurrence associated to its environment, particularly for plants. Comprising its size, shape, texture and orientation.",,"Example: tree, shrubs, herbs.",http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+lifeCycleAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+lifeCycleUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+lifeFormAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+lifeFormUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+legislation,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+legislationUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+managementAndConservation,,Management: actions directed at conserving or restoring species / Conservation: interventions undertaken designed to preserve species,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+managementAndConservationAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+managementAndConservationUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+measurementOrFact,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+metadata,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+migratory,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+migratoryAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+migratoryUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+miscDetails,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+molecularData,,"Information on the chemical structures and biological processes at the molecular level: DNA and proteins sequences, protein structures, expression profiles of genes protein domains, families of genes,  mutations, polymorphisms, involvement in disease, ...",,"Undeveloped. Placeholder for connecting with standards developed by specialists. For example, Standards for Data Exchange and Management from Scalalife (http://www.scalalife.eu/content/data)",http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+molecularDataAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+molecularDataUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+naturalHistory,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+naturalHistoryUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+nomenclatureAndClassification,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+commonNamesUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+populationBiology,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+populationBiologyAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+populationBiologyUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+recordMetadata,,"This element includes the information about the Version, Revision,the language and target audiences of the Taxon Record.",,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+reproductionAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+revision,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+references,,From EOL,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+reproduction,,All data related to the production of offspring.,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+reproductionUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+synonymsAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+synonyms,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+synonymsUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+targetAudiences,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+taxonomicDescription,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+taxonomicDescriptionUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+taxonRecord,,Information about the record.,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+taxonRecordName,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+territoryUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+territory,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+territoryAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+threatStatusUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+threatStatus,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+threatStatusAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+usesAtomized,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+uses,,Ways in which species are utilized by people,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+usesManagementAndConservation,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+usesManagementAndConservationUnstructured,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+usesUnstructured,,Uses in a unstructured format.,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+value,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+version,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+iD,,,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
