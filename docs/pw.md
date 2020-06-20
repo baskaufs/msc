@@ -2061,10 +2061,6 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Controlled Value</td>
 			<td>intentional</td>
 		</tr>
-		<tr>
-			<td>Has broader concept</td>
-			<td><a href="#dwcpw_">dwcpw:</a></td>
-		</tr>
 	</tbody>
 </table>
 
@@ -2099,10 +2095,6 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Controlled Value</td>
 			<td>unintentional</td>
 		</tr>
-		<tr>
-			<td>Has broader concept</td>
-			<td><a href="#dwcpw_">dwcpw:</a></td>
-		</tr>
 	</tbody>
 </table>
 
@@ -2136,10 +2128,6 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 		<tr>
 			<td>Controlled Value</td>
 			<td>corridorAndDispersal</td>
-		</tr>
-		<tr>
-			<td>Has broader concept</td>
-			<td><a href="#dwcpw_">dwcpw:</a></td>
 		</tr>
 	</tbody>
 </table>
