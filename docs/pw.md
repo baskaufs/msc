@@ -110,11 +110,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p001">http://rs.tdwg.org/dwc/pw/p001</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p001-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p001-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -130,12 +133,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Released intentionally into the (semi)natural environment with the purpose of controlling the population(s) of one or more organisms. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>biologicalControl</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p045">dwcpw:p045</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -148,11 +155,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p002">http://rs.tdwg.org/dwc/pw/p002</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p002-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p002-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -168,12 +178,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Probably only applicable only to plants. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>erosionControl</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p045">dwcpw:p045</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -186,11 +200,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p003">http://rs.tdwg.org/dwc/pw/p003</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p003-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p003-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -206,12 +223,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Largely applicable to freshwater and anadromous fish. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>fisheryInTheWild</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p045">dwcpw:p045</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -224,11 +245,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p004">http://rs.tdwg.org/dwc/pw/p004</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p004-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p004-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -244,12 +268,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Largely applicable to terrestrial vertebrates. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>hunting</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p045">dwcpw:p045</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -262,11 +290,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p005">http://rs.tdwg.org/dwc/pw/p005</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p005-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p005-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -282,12 +313,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>"Improvement" in this context is intended for introductions for the purpose of aesthetic enhancement of the landscape, as opposed to practical introductions for the purpose of erosion control, agriculture, forestry etc. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>landscapeImprovement</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p045">dwcpw:p045</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -300,11 +335,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p006">http://rs.tdwg.org/dwc/pw/p006</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p006-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p006-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -320,12 +358,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>The organism was released with the intention of improving its conservation status of the species or the conservation status other species in the habitat. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>conservationOrWildlifeManagement</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p045">dwcpw:p045</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -338,11 +380,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p007">http://rs.tdwg.org/dwc/pw/p007</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p007-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p007-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -358,12 +403,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>This term refers to organisms intentionally and directly released into the wild to serve a specific purpose. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>releasedForUse</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p045">dwcpw:p045</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -376,11 +425,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p008">http://rs.tdwg.org/dwc/pw/p008</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p008-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p008-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -396,12 +448,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Compare with "other escape from confinement". See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>otherIntentionalRelease</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p045">dwcpw:p045</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -414,11 +470,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p009">http://rs.tdwg.org/dwc/pw/p009</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p009-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p009-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -434,12 +493,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>agriculture</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p046">dwcpw:p046</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -452,11 +515,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p010">http://rs.tdwg.org/dwc/pw/p010</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p010-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p010-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -472,12 +538,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>aquacultureMariculture</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p046">dwcpw:p046</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -490,11 +560,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p011">http://rs.tdwg.org/dwc/pw/p011</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p011-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p011-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -510,12 +583,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>publisGardenZooAquaria</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p046">dwcpw:p046</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -528,11 +605,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p012">http://rs.tdwg.org/dwc/pw/p012</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p012-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p012-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -552,12 +632,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>pet</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p046">dwcpw:p046</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -570,11 +654,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p013">http://rs.tdwg.org/dwc/pw/p013</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p013-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p013-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -590,12 +677,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Farmed animals are generally kept in a defined area, such as a fields. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>farmedAnimals</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p046">dwcpw:p046</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -608,11 +699,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p014">http://rs.tdwg.org/dwc/pw/p014</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p014-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p014-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -628,12 +722,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>forestry</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p046">dwcpw:p046</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -646,11 +744,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p015">http://rs.tdwg.org/dwc/pw/p015</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p015-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p015-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -666,12 +767,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Probably only applicable to vertebrates raised for their pelts and skins. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>fur</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p046">dwcpw:p046</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -684,11 +789,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p016">http://rs.tdwg.org/dwc/pw/p016</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p016-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p016-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -708,12 +816,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>horticulture</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p046">dwcpw:p046</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -726,11 +838,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p017">http://rs.tdwg.org/dwc/pw/p017</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p017-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p017-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -746,12 +861,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>ornamentalNonHorticulture</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p046">dwcpw:p046</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -764,11 +883,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p018">http://rs.tdwg.org/dwc/pw/p018</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p018-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p018-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -784,12 +906,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>research</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p046">dwcpw:p046</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -802,11 +928,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p019">http://rs.tdwg.org/dwc/pw/p019</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p019-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p019-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -822,12 +951,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Live food, such as mealworms, for the organisms kept as pets should be classified under the pet term. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>liveFoodLiveBait</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p046">dwcpw:p046</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -840,11 +973,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p020">http://rs.tdwg.org/dwc/pw/p020</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p020-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p020-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -860,12 +996,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>otherEscape</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p046">dwcpw:p046</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -878,11 +1018,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p021">http://rs.tdwg.org/dwc/pw/p021</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p021-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p021-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -898,12 +1041,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>These may be other plants, diseases, fungi and animals. They may be attached to the plant or within the soil. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>contaminantNursery</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p047">dwcpw:p047</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -916,11 +1063,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p022">http://rs.tdwg.org/dwc/pw/p022</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p022-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p022-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -936,12 +1086,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Typical examples include crustaceans, cephalopods and molluscs. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>contaminateBait</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p047">dwcpw:p047</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -954,11 +1108,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p023">http://rs.tdwg.org/dwc/pw/p023</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p023-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p023-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -974,12 +1131,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>This term includes unintentional introduction of contaminants such as diseases on those foods and in the case of plants, should include seeds. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>foodContaminant</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p047">dwcpw:p047</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -992,11 +1153,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p024">http://rs.tdwg.org/dwc/pw/p024</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p024-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p024-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1016,12 +1180,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Transported animals carry other organisms in their coat, on thier gut and in soil on their hooves and feet. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>contaminantOnAnimals</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p047">dwcpw:p047</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1034,11 +1202,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p025">http://rs.tdwg.org/dwc/pw/p025</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p025-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p025-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1054,12 +1225,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>parasitesOnAnimals</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p047">dwcpw:p047</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1072,11 +1247,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p026">http://rs.tdwg.org/dwc/pw/p026</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p026-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p026-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1096,12 +1274,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>contaminantOnPlants</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p047">dwcpw:p047</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1114,11 +1296,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p027">http://rs.tdwg.org/dwc/pw/p027</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p027-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p027-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1134,12 +1319,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>parasitesOnPlants</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p047">dwcpw:p047</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1152,11 +1341,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p028">http://rs.tdwg.org/dwc/pw/p028</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p028-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p028-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1172,12 +1364,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>These may be parasites or pathogens of the seeds, seeds of other species not intended to be transported, or species that eat seeds. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>seedContaminant</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p047">dwcpw:p047</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1190,11 +1386,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p029">http://rs.tdwg.org/dwc/pw/p029</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p029-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p029-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1214,12 +1413,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Examples include wooden furniture, saw dust and fire wood. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>timberTrade</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p047">dwcpw:p047</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1232,11 +1435,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p030">http://rs.tdwg.org/dwc/pw/p030</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p030-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p030-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1252,12 +1458,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Examples include materials such as soil, vegetation, straw and wood chips. Unless these materials are sterilised the organisms can be transported with their habitat to a new location. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>transportationHabitatMaterial</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p047">dwcpw:p047</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1270,11 +1480,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p031">http://rs.tdwg.org/dwc/pw/p031</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p031-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p031-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1290,12 +1503,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>fishingEquipment</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p048">dwcpw:p048</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1308,11 +1525,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p032">http://rs.tdwg.org/dwc/pw/p032</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p032-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p032-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1328,12 +1548,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>The difference between this category and others, such as "hitchhikers on ship/boat", is that the organism embarked and disembarked from the container itself rather than the ship. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>containerBulk</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p048">dwcpw:p048</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1346,11 +1570,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p033">http://rs.tdwg.org/dwc/pw/p033</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p033-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p033-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1366,12 +1593,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>This term does not apply to organisms that embarked onto containers that were subsequently loaded on to an aircraft. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>hitchhikersAirplane</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p048">dwcpw:p048</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1384,11 +1615,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p034">http://rs.tdwg.org/dwc/pw/p034</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p034-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p034-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1404,12 +1638,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>This term does not apply to organisms that embarked containers that are subsequently loaded on the ship, nor to contaminents of products loaded on the ship. The term is intended for organisms that directly interact with the boat or ship. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>hitchhikersShip</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p048">dwcpw:p048</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1422,11 +1660,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p035">http://rs.tdwg.org/dwc/pw/p035</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p035-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p035-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1442,12 +1683,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>This includes military equipment, farm machinery and manufacturing equipment. This term does not include products carried by vehicles. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>machineryEquipment</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p048">dwcpw:p048</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1460,11 +1705,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p036">http://rs.tdwg.org/dwc/pw/p036</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p036-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p036-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1484,12 +1732,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Examples include organisms transported by tourists. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>people</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p048">dwcpw:p048</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1502,11 +1754,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p037">http://rs.tdwg.org/dwc/pw/p037</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p037-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p037-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1522,12 +1777,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Examples include woodern pallets, boxes, bags and baskets. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>packingMaterial</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p048">dwcpw:p048</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1540,11 +1799,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p038">http://rs.tdwg.org/dwc/pw/p038</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p038-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p038-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1560,12 +1822,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>ballastWater</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p048">dwcpw:p048</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1578,11 +1844,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p039">http://rs.tdwg.org/dwc/pw/p039</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p039-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p039-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1598,12 +1867,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>hullFouling</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p048">dwcpw:p048</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1616,11 +1889,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p040">http://rs.tdwg.org/dwc/pw/p040</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p040-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p040-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1636,12 +1912,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>These organisms may be carried on or within the vehicle. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>vehicles</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p048">dwcpw:p048</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1654,11 +1934,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p041">http://rs.tdwg.org/dwc/pw/p041</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p041-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p041-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1674,12 +1957,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>Examples include the movement of offshore installations, such as drilling platforms, but also pipeline and cable transport. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>otherTransport</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p048">dwcpw:p048</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1692,11 +1979,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p042">http://rs.tdwg.org/dwc/pw/p042</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p042-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p042-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1716,12 +2006,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>waterwaysBasinsSeas</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p049">dwcpw:p049</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1734,11 +2028,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p043">http://rs.tdwg.org/dwc/pw/p043</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p043-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p043-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1754,12 +2051,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>tunnelsBridges</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p049">dwcpw:p049</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1772,11 +2073,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p044">http://rs.tdwg.org/dwc/pw/p044</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p044-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p044-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1792,12 +2096,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>These are alien species that have previously been introduced through one of these pathways: release in nature, excape from confinement, transport-contaminant, transport-stowaway, or corridor. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>naturalDispersal</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p050">dwcpw:p050</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1810,11 +2118,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p045">http://rs.tdwg.org/dwc/pw/p045</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p045-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p045-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1830,12 +2141,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>releaseInNature</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p051">dwcpw:p051</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1848,11 +2163,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p046">http://rs.tdwg.org/dwc/pw/p046</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p046-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p046-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1868,12 +2186,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>escapeFromConfinement</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p051">dwcpw:p051</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1886,11 +2208,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p047">http://rs.tdwg.org/dwc/pw/p047</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p047-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p047-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1906,12 +2231,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>An alien species is a contaminant if it had a trophic or biotic relationship to organisms or items being transported and was to some extent dependent on them for survival. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>transportContaminant</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p052">dwcpw:p052</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1924,11 +2253,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p048">http://rs.tdwg.org/dwc/pw/p048</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p048-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p048-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1944,12 +2276,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>A stowaway has no trophic or biotic relationship to the organisms or items being transported. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>transportStowaway</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p052">dwcpw:p052</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -1962,11 +2298,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p049">http://rs.tdwg.org/dwc/pw/p049</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p049-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p049-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -1982,12 +2321,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>corridor</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p053">dwcpw:p053</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -2000,11 +2343,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p050">http://rs.tdwg.org/dwc/pw/p050</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p050-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p050-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -2020,12 +2366,16 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>The term refers to secondary dispersal from an area where the taxon is also alien. See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>unaided</td>
 		</tr>
 		<tr>
 			<td>Has broader concept</td>
 			<td><a href="#dwcpw_p053">dwcpw:p053</a></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -2038,11 +2388,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p051">http://rs.tdwg.org/dwc/pw/p051</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p051-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p051-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -2058,8 +2411,12 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>intentional</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -2072,11 +2429,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p052">http://rs.tdwg.org/dwc/pw/p052</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p052-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p052-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -2092,8 +2452,12 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>unintentional</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
@@ -2106,11 +2470,14 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 	</thead>
 	<tbody>
 		<tr>
-			<td>Normative IRI:</td>
+			<td>Term IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/p053">http://rs.tdwg.org/dwc/pw/p053</a></td>
 		</tr>
+			<td>Modified</td>
+			<td>2020-06-15</td>
+		</tr>
 		<tr>
-			<td>Version</td>
+			<td>Term version IRI</td>
 			<td><a href="http://rs.tdwg.org/dwc/pw/version/p053-2020-06-15">http://rs.tdwg.org/dwc/pw/version/p053-2020-06-15</a></td>
 		</tr>
 		<tr>
@@ -2126,8 +2493,12 @@ Due to the requirements of [Section 1.4.3 of the Darwin Core RDF Guide](https://
 			<td>See also Harrower et al. 2017 <a href="http://nora.nerc.ac.uk/id/eprint/519129">http://nora.nerc.ac.uk/id/eprint/519129</a></td>
 		</tr>
 		<tr>
-			<td>Controlled Value</td>
+			<td>Controlled value</td>
 			<td>corridorAndDispersal</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Concept</td>
 		</tr>
 	</tbody>
 </table>
