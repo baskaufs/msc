@@ -1,0 +1,974 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/e",
+      "@type": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "extent concept scheme"
+        },
+        {
+          "@language": "es",
+          "@value": "esquema de concepto de extensión"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/m",
+      "@type": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "methodology concept scheme"
+        },
+        {
+          "@language": "es",
+          "@value": "esquema de concepto de metodología"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s",
+      "@type": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "survey concept scheme"
+        },
+        {
+          "@language": "es",
+          "@value": "esquema de concepto de encuesta"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/e001",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "fixedTime",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/e",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "fixed time"
+        },
+        {
+          "@language": "es",
+          "@value": "horario fijo"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/e002",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "fixedSpace",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/e",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "fixed space"
+        },
+        {
+          "@language": "es",
+          "@value": "espacio fijo"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/e003",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "area",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/e",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/e002"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "area"
+        },
+        {
+          "@language": "es",
+          "@value": "zona"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/e004",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "transect",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/e",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/e002"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "transect"
+        },
+        {
+          "@language": "es",
+          "@value": "transecto"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/m001",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "capture",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/m",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "capture"
+        },
+        {
+          "@language": "es",
+          "@value": "capturar"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/m002",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "sensor",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/m",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "sensor"
+        },
+        {
+          "@language": "es",
+          "@value": "sensor"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/m003",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "search",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/m",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "search"
+        },
+        {
+          "@language": "es",
+          "@value": "buscar"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/m004",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "activeCapture",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/m",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m001"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "active capture"
+        },
+        {
+          "@language": "es",
+          "@value": "captura activa"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/m005",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "passiveCapture",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/m",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m001"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "passive capture"
+        },
+        {
+          "@language": "es",
+          "@value": "captura pasiva"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/m006",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "fixedSensor",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/m",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m002"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "fixed sensor"
+        },
+        {
+          "@language": "es",
+          "@value": "sensor fijo"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/m007",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "mobileSensor",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/m",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m002"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "mobile sensor"
+        },
+        {
+          "@language": "es",
+          "@value": "sensor móvil"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/m008",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "passiveSearch",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/m",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m003"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "passive search"
+        },
+        {
+          "@language": "es",
+          "@value": "búsqueda pasiva"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/m009",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "activeSearch",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/m",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m003"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "active search"
+        },
+        {
+          "@language": "es",
+          "@value": "búsqueda activa"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s002",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "anabat",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m006",
+        "http://rs.tdwg.org/humbcv/values/e003"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ANABAT"
+        },
+        {
+          "@language": "es",
+          "@value": "ANABAT"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A set of methods using ANABAT echolocation recording devices for measuring the presence of bat species within a given area. The specifics of recording medium, type of detector, frequency range, configuration, placement, orientation, azmuth/depth, deployment period, etc. are detailed in specific and general methods under this category."
+        },
+        {
+          "@language": "es",
+          "@value": " Un conjunto de métodos que utilizan dispositivos de registro de ecolocalización ANABAT para medir la presencia de especies de murciélagos dentro de un área determinada. Los detalles del medio de grabación, tipo de detector, rango de frecuencia, configuración, ubicación, orientación, azmut / profundidad, período de despliegue, etc. se detallan en métodos específicos y generales en esta categoría."
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s003",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "passiveAcousticMonitoring",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m006"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Passive acoustic monitoring"
+        },
+        {
+          "@language": "es",
+          "@value": "Monitorización acústica pasiva"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A set of methods using locationally fixed acoustic recording devices for measuring the presence of vocal species within a given area. The specifics of recording medium, type of detector, amplification and gain measures, frequency range, configuration, placement, orientation, directionality, deployment period, etc. are detailed in specific and general methods under this category."
+        },
+        {
+          "@language": "es",
+          "@value": " Un conjunto de métodos que utilizan dispositivos de grabación acústica localmente fijados para medir la presencia de especies vocales dentro de un área determinada. Los detalles del medio de grabación, el tipo de detector, las medidas de amplificación y ganancia, el rango de frecuencia, la configuración, la ubicación, la orientación, la direccionalidad, el período de despliegue, etc., se detallan en métodos específicos y generales en esta categoría."
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s004",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "activeAcousticRecorder",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m007"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Active acoustic recorder named thing"
+        },
+        {
+          "@language": "es",
+          "@value": "Grabadora acústica activa llamada cosa"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A set of methods using portable acoustic recording devices for measuring the presence of vocal species within a given area. The specifics of recording medium, type of detector, amplification and gain measures, frequency range, configuration, placement, orientation, directionality, deployment period, etc. are detailed in specific and general methods under this category."
+        },
+        {
+          "@language": "es",
+          "@value": " Conjunto de métodos que utilizan dispositivos portátiles de grabación acústica para medir la presencia de especies vocales dentro de un área determinada. Los detalles del medio de grabación, el tipo de detector, las medidas de amplificación y ganancia, el rango de frecuencia, la configuración, la ubicación, la orientación, la direccionalidad, el período de despliegue, etc., se detallan en métodos específicos y generales en esta categoría."
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s005",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "cameraTrap",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m006",
+        "http://rs.tdwg.org/humbcv/values/e003"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Camera trap"
+        },
+        {
+          "@language": "es",
+          "@value": "Trampa de cámara"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A set of methods for recording mobile organisms or other entities involving locationally fixed passive recording sensors spanning the infra-red, visible and ultra-violet spectral range. These methods enable temporal and geotagging of mobile targets such that they can be identified as a presence observation in space and time. Specific varibales such as camera type, trigger mechanism, baits used, spectral range, mounting arrangement, etc. are detailed under specific and general methods under this category."
+        },
+        {
+          "@language": "es",
+          "@value": "Un conjunto de métodos para registrar organismos móviles u otras entidades que involucran sensores de registro pasivos fijos en la ubicación que abarcan el rango espectral infrarrojo, visible y ultravioleta. Estos métodos permiten el etiquetado temporal y geográfico de los objetivos móviles de manera que puedan identificarse como una observación de presencia en el espacio y el tiempo. Varibales específicos tales como tipo de cámara, mecanismo de disparo, cebos utilizados, rango espectral, disposición de montaje, etc. se detallan en métodos específicos y generales en esta categoría."
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s006",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "mobileSensorThing",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m007"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "mobile sensor named thing"
+        },
+        {
+          "@language": "es",
+          "@value": "mobile sensor named thing"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A set of methods for animal tracking involving transmitting sensors mounted on mobile organisms or other entities, which enable temporal and geotagging of mobile hosts such that their movements can be tracked in space and time. Receiving sensors may be locationally fixed or portable."
+        },
+        {
+          "@language": "es",
+          "@value": "A set of methods for animal tracking involving transmitting sensors mounted on mobile organisms or other entities, which enable temporal and geotagging of mobile hosts such that their movements can be tracked in space and time. Receiving sensors may be locationally fixed or portable."
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s007",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "harpTrap",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m005"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Harp trapping"
+        },
+        {
+          "@language": "es",
+          "@value": "Harp trapping"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A non-destructive trapping technique for intercepting in-flight micro-bats to survey for bat species presence. The specifics of configuration, trap size, placement, deployment period, etc. are detailed in specific and general methods under this category."
+        },
+        {
+          "@language": "es",
+          "@value": "A non-destructive trapping technique for intercepting in-flight micro-bats to survey for bat species presence. The specifics of configuration, trap size, placement, deployment period, etc. are detailed in specific and general methods under this category."
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s008",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "distanceSampling",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m009",
+        "http://rs.tdwg.org/humbcv/values/e004"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Distance sampling"
+        },
+        {
+          "@language": "es",
+          "@value": "Distance sampling"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A set of methods for estimating the density and/or abundance of animal populations. Collected data represents the distances of the objects being surveyed from randomly set transects or points to estimate the average density of objects within a region. The specifics of transect/point configuration and frequency, survey duration, etc. are detailed in specific and general methods under this category."
+        },
+        {
+          "@language": "es",
+          "@value": "A set of methods for estimating the density and/or abundance of animal populations. Collected data represents the distances of the objects being surveyed from randomly set transects or points to estimate the average density of objects within a region. The specifics of transect/point configuration and frequency, survey duration, etc. are detailed in specific and general methods under this category."
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s009",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "aerialDistance",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m009",
+        "http://rs.tdwg.org/humbcv/values/e004"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Aerial distance sampler method"
+        },
+        {
+          "@language": "es",
+          "@value": "Aerial distance sampler method"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A variant of the standard distance sample method in which observations are conducted from an airborne platform rather than a terrestrial based platform."
+        },
+        {
+          "@language": "es",
+          "@value": "A variant of the standard distance sample method in which observations are conducted from an airborne platform rather than a terrestrial based platform."
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s010",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "timeConstrained",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m009",
+        "http://rs.tdwg.org/humbcv/values/e001"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Time constrained collecting"
+        },
+        {
+          "@language": "es",
+          "@value": "Time constrained collecting"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s013",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "mistNet",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m008"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Mist netting"
+        },
+        {
+          "@language": "es",
+          "@value": "Mist netting"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A non-destructive trapping technique for intercepting in-flight avifauna to survey for bird species presence. The specifics of configuration, trap size, placement, deployment period, etc. are detailed in specific and general methods under this category."
+        },
+        {
+          "@language": "es",
+          "@value": "A non-destructive trapping technique for intercepting in-flight avifauna to survey for bird species presence. The specifics of configuration, trap size, placement, deployment period, etc. are detailed in specific and general methods under this category."
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s014",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "trackPlot",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m009",
+        "http://rs.tdwg.org/humbcv/values/e003"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Track plot method"
+        },
+        {
+          "@language": "es",
+          "@value": "Track plot method"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A set of methods for sampling animal presence and abundance via observations of evidence of presence. The specifics of configuration, area covered, duration of sampling effort, etc. are detailed in specific and general methods under this category."
+        },
+        {
+          "@language": "es",
+          "@value": "A set of methods for sampling animal presence and abundance via observations of evidence of presence. The specifics of configuration, area covered, duration of sampling effort, etc. are detailed in specific and general methods under this category."
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s015",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "activeObservation",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m009",
+        "http://rs.tdwg.org/humbcv/values/e003"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "active observational search"
+        },
+        {
+          "@language": "es",
+          "@value": "active observational search"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s017",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "pointCount",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m008"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Point/stand count"
+        },
+        {
+          "@language": "es",
+          "@value": "Point/stand count"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A method for passively monitoring birds and other vertebrate fauna visiting a localised area around a locationally fixed visual observation station (eg. a hide). Observers wait quitely at a stationary location for a set period of time, identifying and counting species of interest observed entering their observation zone. The specifics of duration and timing of observing events, number of observers, size of observation zone, etc. may vary and be specified in specific surveys."
+        },
+        {
+          "@language": "es",
+          "@value": "A method for passively monitoring birds and other vertebrate fauna visiting a localised area around a locationally fixed visual observation station (eg. a hide). Observers wait quitely at a stationary location for a set period of time, identifying and counting species of interest observed entering their observation zone. The specifics of duration and timing of observing events, number of observers, size of observation zone, etc. may vary and be specified in specific surveys."
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s018",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "cageTrap",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m005"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Cage trapping"
+        },
+        {
+          "@language": "es",
+          "@value": "Cage trapping"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s019",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "callPlayback",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m005"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Call playback"
+        },
+        {
+          "@language": "es",
+          "@value": "Call playback"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s020",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "boxTrap",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m005",
+        "http://rs.tdwg.org/humbcv/values/e004"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Elliot (box) trapping"
+        },
+        {
+          "@language": "es",
+          "@value": "Elliot (box) trapping"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s022",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "spotlightSampling",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m004"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Spotlight sampling"
+        },
+        {
+          "@language": "es",
+          "@value": "Spotlight sampling"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/humbcv/values/s023",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "electrofishing",
+      "skos:inScheme": "http://rs.tdwg.org/humbcv/values/s",
+      "skos:broader": [
+        "http://rs.tdwg.org/humbcv/values/m004"
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Electrofishing"
+        },
+        {
+          "@language": "es",
+          "@value": "Electrofishing"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": ""
+        },
+        {
+          "@language": "es",
+          "@value": ""
+        }
+      ]
+    }
+  ]
+}
