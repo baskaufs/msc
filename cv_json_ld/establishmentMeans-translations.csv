@@ -1,0 +1,8 @@
+term_localName,label_en,label_es,label_zh-Hans,definition_en,definition_es,definition_zh-Hans
+e,establishmentMeans controlled concept scheme,,,A SKOS Concept Scheme to be used as a controlled vocabulary for the Darwin Core terms dwc:establishmentMeans and dwciri:establishmentMeans,,
+e001,native (indigenous),,,A taxon occurring within its natural range,,
+e002,native: reintroduced,,,"A taxon re-established by direct introduction by humans into an area which was once part of its natural range, but from where it had become extinct.",,
+e003,"introduced (alien, exotic, non-native, nonindigenous)",,,Establishment of a taxon by human agency into an area that is not part of its natural range,,
+e004,introduced: assisted colonisation,,,Establishment of a taxon specifically with the attention of creating a self-sustaining  wild population in an area that is not part of the taxon's natural range,,
+e005,vagrant (casual),,,The temporary occurrence of a taxon far outside its natural or migratory range.,,
+e006,"uncertain (unknown, cryptogenic)",,,The origin of the occurrence of the taxon in an area is obscure,,
