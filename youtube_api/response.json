@@ -1,0 +1,453 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "sNkOXvsKLMnsR_7CZ_4bQ2yjwTU",
+  "regionCode": "US",
+  "pageInfo": {
+    "totalResults": 13,
+    "resultsPerPage": 13
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "iNzlLuDbkp8lOqpsiFOqYBzhzkU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HwGqYbS2DCA"
+      },
+      "snippet": {
+        "publishedAt": "2020-09-01T00:14:38Z",
+        "channelId": "UCMaeGsI0fIQ9UFoJBHVN_AA",
+        "title": "017b Markdown",
+        "description": "GitHub for beginners - Markdown.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HwGqYbS2DCA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HwGqYbS2DCA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HwGqYbS2DCA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Steve Baskauf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-09-01T00:14:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MWOwal95-vndfhx3-0T6-P1CEpM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mQhFHcl3arA"
+      },
+      "snippet": {
+        "publishedAt": "2009-01-08T00:30:18Z",
+        "channelId": "UCMaeGsI0fIQ9UFoJBHVN_AA",
+        "title": "Whooping cranes at Bell&#39;s Bend",
+        "description": "Whooping cranes observed Jan. 7, 2009 at Bell's Bend, near Nashville, TN.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mQhFHcl3arA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mQhFHcl3arA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mQhFHcl3arA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Steve Baskauf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2009-01-08T00:30:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gSg0eVFGU3Uy-VCHmWdVYw191Zo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hWl6pMLWRac"
+      },
+      "snippet": {
+        "publishedAt": "2020-03-19T18:38:14Z",
+        "channelId": "UCMaeGsI0fIQ9UFoJBHVN_AA",
+        "title": "DiSC Intermediate Python for Data Analysis and Visualization - lesson 1",
+        "description": "Introduction to lists, data frames, and modules. Taught by Dr. Sanjay Mishra. Sponsored by the Vanderbilt Libraries Digital Scholarship and Communications ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hWl6pMLWRac/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hWl6pMLWRac/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hWl6pMLWRac/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Steve Baskauf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-03-19T18:38:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ULz2kxjQIlL2SKv4cyffOMNPd50",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UI5_myx3HxI"
+      },
+      "snippet": {
+        "publishedAt": "2020-05-15T18:32:23Z",
+        "channelId": "UCMaeGsI0fIQ9UFoJBHVN_AA",
+        "title": "007g Manipulating images",
+        "description": "NumPy arrays - Manipulating images.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UI5_myx3HxI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UI5_myx3HxI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UI5_myx3HxI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Steve Baskauf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-05-15T18:32:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4aIu8sF3sxo1MLZKhXT0kEWm1fM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PH8P5crGfrY"
+      },
+      "snippet": {
+        "publishedAt": "2020-04-08T11:17:39Z",
+        "channelId": "UCMaeGsI0fIQ9UFoJBHVN_AA",
+        "title": "Python Lesson 5: Dictionaries and JSON",
+        "description": "The dictionary data structure, try...except..., and JSON.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PH8P5crGfrY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PH8P5crGfrY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PH8P5crGfrY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Steve Baskauf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-04-08T11:17:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PSh10dMuarCeC9oPcMxeRWC-_wQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "i6dz9hHtuU4"
+      },
+      "snippet": {
+        "publishedAt": "2020-04-02T18:47:20Z",
+        "channelId": "UCMaeGsI0fIQ9UFoJBHVN_AA",
+        "title": "DiSC Intermediate Python for Data Analysis and Visualization - lesson 3",
+        "description": "Curve fitting and graphing using Pandas, NumPy, and MatPlotLib taught by Sanjay Mishra.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/i6dz9hHtuU4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/i6dz9hHtuU4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/i6dz9hHtuU4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Steve Baskauf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-04-02T18:47:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NzpXMoYb1JADlC8I9FNmeQqw51I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "P893Dq3rLHI"
+      },
+      "snippet": {
+        "publishedAt": "2020-11-03T18:32:03Z",
+        "channelId": "UCMaeGsI0fIQ9UFoJBHVN_AA",
+        "title": "029e Analyzing the transformed data",
+        "description": "Intro to stats with R - Analyzing the transformed data.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/P893Dq3rLHI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/P893Dq3rLHI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/P893Dq3rLHI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Steve Baskauf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-11-03T18:32:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FcJLFZZS5VWApNOmlkPFvFBx1oI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "51ZbsobTQwE"
+      },
+      "snippet": {
+        "publishedAt": "2020-04-17T20:59:44Z",
+        "channelId": "UCMaeGsI0fIQ9UFoJBHVN_AA",
+        "title": "DiSC Beginner R lesson 6",
+        "description": "Data visualization with ggplot.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/51ZbsobTQwE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/51ZbsobTQwE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/51ZbsobTQwE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Steve Baskauf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-04-17T20:59:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FskIw19Jb9bvXEWBcOFQo9HXEyM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YBq4MCrvWy8"
+      },
+      "snippet": {
+        "publishedAt": "2020-04-09T18:14:41Z",
+        "channelId": "UCMaeGsI0fIQ9UFoJBHVN_AA",
+        "title": "DiSC Intermediate Python for Data Analysis and Visualization - lesson 4",
+        "description": "Image processing basics taught by Sanjay Mishra.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YBq4MCrvWy8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YBq4MCrvWy8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YBq4MCrvWy8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Steve Baskauf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-04-09T18:14:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XRWgDs-lHQK3-TxRPhC-nN8eXBA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "i6s7ChI5qdw"
+      },
+      "snippet": {
+        "publishedAt": "2020-04-21T20:16:11Z",
+        "channelId": "UCMaeGsI0fIQ9UFoJBHVN_AA",
+        "title": "Python Lesson 7: APIs and the Internet",
+        "description": "HTTP basics, API endpoint URLs, sending requests using the Python requests library, interpreting response JSON.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/i6s7ChI5qdw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/i6s7ChI5qdw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/i6s7ChI5qdw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Steve Baskauf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-04-21T20:16:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Jr6SBpbsKPbnAiZqroBV8lwMxZk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "GK5g1HGy1Pk"
+      },
+      "snippet": {
+        "publishedAt": "2020-04-16T17:55:50Z",
+        "channelId": "UCMaeGsI0fIQ9UFoJBHVN_AA",
+        "title": "DiSC Intermediate Python for Data Analysis and Visualization - lesson 5",
+        "description": "Reproducible code with Jupyter notebooks taught by Sanjay Mishra. Includes LaTeX.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GK5g1HGy1Pk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GK5g1HGy1Pk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GK5g1HGy1Pk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Steve Baskauf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-04-16T17:55:50Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "eEKZQljpy-abZG9N5jv679yhPZg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "X84EWAtRn0k"
+      },
+      "snippet": {
+        "publishedAt": "2020-03-24T19:55:39Z",
+        "channelId": "UCMaeGsI0fIQ9UFoJBHVN_AA",
+        "title": "DiSC Beginner Python lesson: Object oriented programming",
+        "description": "This Python lesson introduces the concepts of classes and instances, and demonstrates how attributes are assigned and used. It also provides examples of ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/X84EWAtRn0k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/X84EWAtRn0k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/X84EWAtRn0k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Steve Baskauf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-03-24T19:55:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "D_9CgrQhqbbeKc3qHa5T_T3HuNc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "6zbPZigoKBo"
+      },
+      "snippet": {
+        "publishedAt": "2020-03-31T20:41:40Z",
+        "channelId": "UCMaeGsI0fIQ9UFoJBHVN_AA",
+        "title": "DiSC Beginner Python lesson: Lists and loops",
+        "description": "Introduction to lists. Manipulating lists and strings. Iterating with FOR on lists, strings, and ranges.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6zbPZigoKBo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6zbPZigoKBo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6zbPZigoKBo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Steve Baskauf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-03-31T20:41:40Z"
+      }
+    }
+  ]
+}
