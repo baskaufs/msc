@@ -1,0 +1,269 @@
+id,title,length_minutes
+bmUHSpFvC1M,001a Basic Programming Terminology - Introduction,2.13333333333333
+QrdcadJgELw,001b Terms for programs,2.13333333333333
+sQz07LOo66I,001c Command-line interfaces,4.65
+dQWrx4e5QpM,001d Variables and objects,2.33333333333333
+VNjR9e0OwH4,001e Executing code,4.5
+3IlQY1S5EPA,001f Writing code with an editor,1.85
+IsziBfgucQs,001g Getting help,0.783333333333333
+4JLaZLAqOlg,002a What is an environment?,6.55
+biWi6U6fCWw,002b Integrated development environment (IDE),5.55
+po0cyfkmZXQ,002c Spyder IDE for Python,5.45
+OYgTimmZ4kY,002d RStudio IDE for R,3.95
+jY5kaT35db0,002e Literate programming with Jupyter notebooks,9.06666666666667
+WYyet_mv4AI,002f Functions,8.4
+n7H-EaIYtIk,002g Libraries,5.46666666666667
+2mHVzfOqrZU,002h Package managers,6.45
+iM6m-l6HgRg,003a Programming environment choices,3.51666666666667
+T19e_Idg2WY,003b What is Anaconda?,6.5
+HtRoV_S8BD8,003c Choices for running Jupyter notebooks,1.53333333333333
+G8P5cg2DuEQ,003c Choices for running Jupyter notebooks - obsolete,1.5
+ -ijS8WTo8is,003d Running your own Jupyter notebook locally,3.93333333333333
+FsMZ40jL4uQ,003e Downloading and running a Jupyter notebook from GitHub,1.9
+Eg4nz-AlIoo,003e1 Set up VS Code to run Jupyter notebooks,5.13333333333333
+bo8Wvs5Ufdk,003f Running your own Jupyter notebook in Azure,3.31666666666667
+QWYTXeMaf1c,003g Running someone else's Jupyter notebook in Azure,3.33333333333333
+XbUtlOa-gFQ,003h Running your own Jupyter notebook in Colab,4.36666666666667
+fxrFqoOsa2w,003i Running someone else's Jupyter notebook in Colab,3.58333333333333
+Mk3LtnIEpVg,003j Deciding on a programming environment,1.76666666666667
+FAvnuY4HEks,004a Introduction to variable assignment,3.41666666666667
+iIgDMsXXQxg,004b Assignment to variables: coding conventions,7.46666666666667
+VUSoRRlZFM8,004c Review of functions,2.23333333333333
+f3NqLIXUtJs,004d Built-in functions: print and input,5.28333333333333
+SlIcpI8Vc68,004e Review of function behavior,1.76666666666667
+utKSuOm6IMM,004f Comments in programs,1.95
+oPvbsy4vRho,004g The type function,3.23333333333333
+rJE-LKasScU,004h Cross-cell persistence of values,3.25
+0JWsQcGImv8,004i String return value of input,1.51666666666667
+VCV8PQAJl-g,004j Determining the type of a variable,2.31666666666667
+S5sRJ5rN2dE,004k Requirements of function arguments,4.95
+qX52UcnVebY,004l Inputting a number,4.63333333333333
+0jbgW1-FB8c,004m Math operations and concatenation,3.3
+NymzeTpOj_E,004n Working with boolean operations,7.81666666666667
+2kN9jsiSkJM,004o Practice instructions,0.783333333333333
+b-ijvZIZUlk,004p Practice script 1,2.23333333333333
+9s-HL4GFYLI,004q Practice script 2,3.03333333333333
+peWMt0oUsMw,004s Practice script 3,2.48333333333333
+NnQ9LWHuqL8,004t Practice script 4,2.31666666666667
+Gp0bOJ3dRdo,004u Practice script 5,2.68333333333333
+wqJM9a75AvA,005a Introduction to the import statement,3.56666666666667
+EeJ5hkpcqaQ,005b Using the input statement,3.13333333333333
+2YxQSqQ8tnA,005c The time module,2.46666666666667
+NHy1a6KhihU,005d The os (operating system) module,3.2
+GvN58T_V1tU,005e Introduction to methods,4.33333333333333
+1zWgFlzXqKQ,005f String class methods,1.13333333333333
+RSRLhxu9_Ek,005g The datetime module,9.13333333333333
+kQdCeEQTHfg,005h Practice script 1,1.2
+rYqBBtQ0xgs,005i Practice script 2,3.68333333333333
+hSd3zVXVIRI,005j Imported function or method?,1.73333333333333
+Z3-gPTHsYJ0,006a Introduction to lists,5.8
+AhkagcbtDw4,006a Lists,5.98333333333333
+X1lSuOQbliA,006b Lists as output of functions,5.73333333333333
+mGnQCI6RcCk,006c Slicing a list,5.11666666666667
+joHgR4vtnuY,006c1 Procedural vs. vectorized paradigm,4.16666666666667
+12r7CQzshHw,006c2 if statements,9.48333333333333
+1yoVZQfkxTY,006c3 else and elif,7.58333333333333
+DCxP-Us7hpQ,006c4 Flags,9.61666666666667
+1yN_zjZQbJE,006c5 Complex flag example,6.18333333333333
+xKbfRXNMDNk,006c6 Error trapping,7.1
+E4DgTGHn0S8,006d Manipulating lists,4.25
+d5CWyyg_vQ4,006e Modifying a list,4.33333333333333
+uAlD1Y5e4Ao,006f for loops,5.76666666666667
+WeoJz01w1ww,006g Iterating over a range object,10.4666666666667
+UU1i2KhFg9I,006h while loops,10.7333333333333
+Lx0HGUmfX-g,006i Aside: Applying methods sequentially,6.28333333333333
+DjOhhv6LHAI,006j Dictionaries,6.85
+tzKr4GD4Zro,006j Practice problem 1,1.8
+CjnEB4Q-P6Y,006k Practice problem 2,4.06666666666667
+yym2lYOsH_Q,006l Practice problem 3,2.55
+Y399DyeXB4s,006m Practice problem 4,3.35
+K7_8JNartQU,006n Practice problem 5,9.78333333333333
+JQn8n0P8Kvc,006o Practice problem 6,6.15
+6cYjQq1usJ8,007a Review of looping through a list,3.16666666666667
+qCwY0cxOz_Q,007b Introduction to vectorized computing,7.56666666666667
+Fq6sft8rtrY,007c Array dimensions,3.86666666666667
+JTjCBWGOnLE,007d Array indices and slices,4.76666666666667
+W9q_sz9vPTI,007e Array-based calculations,5.78333333333333
+vzKFTJlRLtg,007f Representing images as ndarrays,5.4
+UI5_myx3HxI,007g Manipulating images,8.25
+IpPmHfSKveI,007h Practice problem 1,1.46666666666667
+n6I6XcY8V1Y,007i Practice problem 2,2.46666666666667
+5BiYvt8DVEY,007j Practice problem 3,3
+cWndTYPEXE0,007k Practice problem 4,7.01666666666667
+tQ1kXMkpKhM,008a Introduction to Pandas,2.93333333333333
+Cp-RxkYrCvY,008b Creating series,7.51666666666667
+F1ak-vMzaz4,008c Referring to parts of series,3.6
+d1Z-SI8uU-M,008d Creating a data fram from scratch,3.58333333333333
+hK5Gn5EYfCc,008e Referring to parts of a data frame,4.23333333333333
+oJKj58dxyrE,008f Review of data frames,1.55
+mTRm-DNfa7I,008g Creating a data frame from an Excel file,5.73333333333333
+nB3Plmz3b7E,008h Review of data frame attributes and methods,0.783333333333333
+IZeWvmtmvgk,008i Summary of functions to read from and write to files,1.11666666666667
+UTazGZrXTc0,008j Reading a CSV file from a URL,2.05
+L_1rOWe-wvo,008k View vs. copy,2.05
+G_eKb8zsKTA,009a Introduction,2.06666666666667
+uXTpu-366QU,009b Setting labels,4.75
+yRWjJHXPW0w,009c Making changes persist,5.15
+wQwMnWUr-aQ,009d Removing rows and columns,4.86666666666667
+tdMpI_FPSlA,009e Missing data,5.73333333333333
+Izd4LGJ9hHE,009f Sorting rows,2.81666666666667
+q9LxaBz6GZ8,009g Slicing rows and columns,6.2
+2bZqQq5TIys,009h Selecting rows,8.7
+e0G41_XbuVY,009i Transpose,1.83333333333333
+bSwEZPl92ps,009j Grouping and group operations,5.21666666666667
+O-7MCGSdJUI,009k Unstacking long data frames,6.25
+UVOGbyGrzjM,009l Switching between long and wide table forms,6.1
+zmrsmJBMvqw,009m Data table joins,3.41666666666667
+b_wEfCdG-hY,009n Merges in pandas,12.0166666666667
+G5TrCBgox1A,010a - Line graphs from pandas DataFrames,6.95
+4cyWVMOrOng,010b Subplots from pandas DataFrames,3.46666666666667
+Q8Zk_8yXQRk,010c Other plot types from pandas DataFrames,1.91666666666667
+QGxAEw-xWxY,010d Scatterplot from a pandas DataFrame,0.9
+Qv-4E8cpnE8,010e Pie charts from pandas a DataFrame,7.9
+nKIGnDH5kZs,010f Bar chart from a pandas DataFrame,2.06666666666667
+xl4N5qjiZkw,010g What is pyplot?,1.76666666666667
+mr8URVnVf5w,010h Pyplot plot function,5.75
+4Xt2MHlh7qI,010i Pyplot figures and subplots,7.56666666666667
+UYjzEOzNpgM,010j Plotting in a single Pyplot subplot,4.51666666666667
+VzowOXwzCVg,010k Creating non-standard plots with Pyplot,3.31666666666667
+Uic3-7uFgYg,010l Creating a stacked bar chart with Pyplot,16.7833333333333
+Ll_x2FKlVyE,011a R objects,9.66666666666667
+2QcGw6OS6VQ,011b Function review,4.11666666666667
+otIwmZdviKc,011c Loading an R script,4.91666666666667
+keDHZ9EsVmk,011d Vectors,12.7166666666667
+O5JM-3gKC98,011e Vectorized computing,7.63333333333333
+AcQyEgaeAV0,011f Using packages,10.55
+yJfGLlaWW74,012a Lists,6.45
+3ummkARwUJM,012b Data frames,5.3
+TcYdBxI2hKo,012c Tibbles,2.48333333333333
+xYKLZhz6V2s,012d Loading data frames,7.08333333333333
+xoIvFDl46yY,012e Variations on loading data frames,7.03333333333333
+d_SoTx8w1Ys,012f Basic operations on data frames,12.0833333333333
+lQozOTrEwEU,013a Introduction,1.06666666666667
+yOEAAFbjehY,013b The missing data indicator NA,3.9
+N4tJtJSoTh0,013c Missing data when reading from CSV files,9.26666666666667
+Nv3Tq_ki8HY,013d Basic statistical quantities,7.45
+Y_rNZ_KQpKo,013e Procedural vs. vectorized programming,4.66666666666667
+i3VqjttEE14,013f The is.na() function,0.783333333333333
+8jsL9o3c6MQ,013g Replacing NA with zeros,9.88333333333333
+nR1Sm99vTwE,013h Histograms,3.38333333333333
+lC3Pj_jhjIc,013i Box-and-whisker plot,2.56666666666667
+_xLWg_LYSYY,013j Scatterplot with trendline,3.76666666666667
+Pw5RffvMgHw,014a Options for recording data,4.53333333333333
+R0VC_502Hd8,014b What is Tidy Data?,4.23333333333333
+aHECwUOFpUo,014c The pivot_longer() function,2.58333333333333
+G5NKzmdvKIc,014d Tidying and untidying data using R,5.5
+oiBH_N7LCB8,014e Subsetting rows using filter(),6.05
+K0pnSiiW4Vk,014f Subsetting columns using select(),4.08333333333333
+vtQZud_UXOA,014g Creating new columns with mutate() and transmutate(),4.2
+kjBL9Gah934,014h The replace function,8.11666666666667
+ZhE1WIN0syI,014i Problems with replace(),2.11666666666667
+mz0rWxHhtWI,014j Description of the ifelse() function,5.26666666666667
+8wswSM0ln8I,014k R script using ifelse(),3.41666666666667
+bTnTWBR6gaU,014l Changing tibbles with ifelse(),7.1
+8k7AbBkTh_Y,014m Introducing data pipelines,6.5
+cZl2JKmGXA4,014n A description of piping,6.23333333333333
+UYeeWZm94w0,014o Coding R with pipes,6.71666666666667
+pwYqJB5TjEk,014p Conclusion,0.8
+7LBXSbBe0WI,015a GitHub Introduction,2.26666666666667
+OCOy-DShWSY,015b What is version control?,5.33333333333333
+xDabhZxxo20,015c Git vs. GitHub,4.81666666666667
+ov7MvpnRddI,015d Module goals,3.9
+Q_n3BC7WMpE,015e For more help,0.75
+OG3qRdOioNA,016a GitHub setup,6.46666666666667
+kgVcm8VD4YE,016b Installing GitHub Desktop,2.55
+uT7zHG0SVjo,016c Cloning a repository,6.63333333333333
+eWKIsnqdxvI,017a Commits,2.55
+HwGqYbS2DCA,017b Markdown,3.36666666666667
+OpDGtHpV2FM,017c Committing online,9.6
+cJZxqaTmxwA,017d Code editors,3.7
+YDs3CgvrTXw,017e GitHub work cycle,9.23333333333333
+FfCuGxq0JL4,018a Creating and staging documents,1.41666666666667
+3vq1ZwYYu6k,018b Beginning the work cycle,3.88333333333333
+RkxojEAm0qg,018c CSV spreadsheets,4.63333333333333
+ijtLFaQKCv4,018d Checkboxes and staging,3.05
+Xl0HUxnjGzU,018e Making a second commit,4.08333333333333
+zrLhxxogHMI,018f Viewing rendered files and diffs,8.01666666666667
+RrB3L-SbqVE,018g The problem of binary files,3.71666666666667
+iBR-DixFzqM,018h Recovering a deleted file,2.05
+GRagHQFahDw,018i Editing .gitignore,5.15
+Om7wzi_dH9s,"018j Making, pushing, and viewing a PDF",4.28333333333333
+YuLHr0EYF7U,018k Ending your work session,2.26666666666667
+mUckBPk15YA,019a Recovering from saving a bad file,4.38333333333333
+Avnyb2dqrZM,019b Reverting a bad commit,4.46666666666667
+gf9FWjgDgbg,019c Resolving a version conflict,4
+kYb72Z6oQDM,019d Recloning the repository,3.95
+kX8ctzlrXss,019e Summary and future lessons,1.11666666666667
+RIzK188oW2A,020a Introduction to text and code editors,2.51666666666667
+L_PQ7PMByGk,020b TextEdit text editor for Mac,2.13333333333333
+CFfyRemw394,020c Notepad text editor for Windows,0.966666666666667
+waJUTY9Jl98,020d Code editors,2.21666666666667
+4d_vtoLSoaM,020e Writing to a text file,4.2
+0dOZAYedS6c,020f Reading text from a file,3.48333333333333
+fP05GAvNeUs,020g Accessing the local file system (Mac and PC),4.66666666666667
+_khXR_U4EpM,020h Accessing the cloud drive system (Colab),4.91666666666667
+ -kVOytSPiv8,020i Newlines and writing using print(),5.51666666666667
+t33mY4UBXvY,020j Writing a list of strings,5.45
+CzRG-ABZrB0,020k Iterating a file object,5.3
+zG0CNgPbfhk,020l Variations on reading lines from files,4.43333333333333
+JV8Jiavqlnw,020m Reading files via the Internet,6.71666666666667
+UP3K-EiG9gU,021a Lists of lists,5.08333333333333
+0QEAkL9nS_Y,021b Nested for loops,3.11666666666667
+qsht_LBKKTw,021c Nested for loops with range(),4.23333333333333
+1w7Cuog4LbQ,021d Lists of dictionaries,4.96666666666667
+6JnCBMK4srI,021e Lists of dictionaries examples,5.66666666666667
+xNpXwvP5fCU,021f Defining your own function,5.56666666666667
+1X9a7ZoPzdw,021g Example of defining a function,1.7
+gPyHNyRwfxk,022a About CSV files,7.48333333333333
+5Ub557F5fhg,022b Generating a CSV file from text,1.86666666666667
+HeMsMKUNthM,022c Using the csv.reader() object,2.73333333333333
+t-1hSXpfFrc,022d Function to read from a CSV into a list of lists,3.73333333333333
+MkvI8PwAlkg,022e Writing a list of lists to a CSV,2.86666666666667
+g2SY3ACHxiU,022f Function to read from a CSV into a list of dictionaries,8.11666666666667
+p2HYpIQB880,022g Writing a list of dictionaries to a CSV file,2.13333333333333
+Gx-6bvtbJDU,022h Reading a CSV file from the Internet,4.83333333333333
+7OBPYrBcZBY,026a Intro to stats with R - Introduction,1.36666666666667
+q4jOF5sTFtI,026b Intro to stats with R - Factors,5.16666666666667
+vnds12eeUlc,026c Intro to stats with R - Data frames and factors,4.18333333333333
+BdaM0ZkC7Vs,026d Intro to stats in R - t-test of means,4.51666666666667
+DZJlkT2F8YY,026e Intro to stats with R - Review of P value,8.9
+Hk-UV2iLmyQ,026f Intro to stats with R - Testing for normality,7.1
+bxD0eYLavJ8,026g Intro to stats in R - Equal variances assumption,2.03333333333333
+K9gHuZDbv8o,027a Testing for normality,3.41666666666667
+ig2d1Kr_Gao,027b Applying a log transformation,3.88333333333333
+mLT0MHYlu5I,027c Fixing unequal variances,1.76666666666667
+S-8WLp2Hn_g,027d Test results after transformation,3.51666666666667
+BPJfE26mUqc,027e Using a non-parametric test,6.21666666666667
+V5Sf3Se0bIE,027f Visualization options for t-test of means,5.98333333333333
+xO2s3bllW0k,028a Analyzing two continuous variables,3.26666666666667
+_HEOl0RUk4c,028b What is linear regression?,4.53333333333333
+Lwj_7ewoazE,028c Creating the linear model,3.73333333333333
+YWq1ojQ4i58,028d Predictions with the linear model,1.23333333333333
+YVRooNEIZrY,028e R-squared,3.51666666666667
+ajhBCIwlQ1Q,028f Linear regression as a statistical test,1.93333333333333
+DhWF0F7kUE8,028g Example linear regression test,3.35
+Y3_GISEH2YA,028h Assumptions of linear regression,2.95
+okRGT2v3b0M,028i Testing the residuals,4.86666666666667
+f7bVB1VitoQ,028j Transformation and regression,3.95
+mshye8N7eR4,028k Non-parametric linear regression,1.73333333333333
+sFh_G2UEUIs,028l Correlation example,2.98333333333333
+tkVa4y-JN4s,028m Testing assumptions of correlation,2.55
+l3MTYUkCOoY,028n Non-parametric correlation,6.55
+Q9c76livoEw,029a deprecated,
+spSxa7N5aco,029a Introduction to ANOVA,2.21666666666667
+5iIlXImiaJU,029b How an ANOVA works,7.85
+v9eq3nFLfvQ,029c ANOVA format and assumptions,2.63333333333333
+nCklxs7qnpQ,029d Testing assumptions of ANOVA,5.11666666666667
+P893Dq3rLHI,029e Analyzing the transformed data,3.91666666666667
+IYOIOGrl4xY,029f ANOVA vs. t-test of means,2.73333333333333
+7sF8BVKET9A,029g Post-hoc pairwise comparisons,4.05
+pp8xuGx_xbs,029h Kruskal-Wallis non-parametric alternative,2.51666666666667
+MABRwbnbA2o,029i Introduction to two-factor fixed effects ANOVA,2.08333333333333
+zHeNEIyyXWk,029j Full factorial experimental design setup,3.26666666666667
+YqHjEtJ02_0,029k Setting up the model,5.06666666666667
+_8tKfEFmNU8,029l Two factor ANOVA table,1.61666666666667
+iYRaFP-yvt8,029m Running the two-factor ANOVA,3.4
+g-od0lqZCh4,029n What are random effects?,4.03333333333333
+o5vnmwnrRww,029o Modeling the experiment,4.28333333333333
+c1znqusEzWA,029p Carrying out the test,4.48333333333333
+cJzZ8V34i_8,029q Paired t-test vs. ANOVA with blocking,3.26666666666667
