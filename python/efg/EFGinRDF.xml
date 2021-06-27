@@ -1,0 +1,900 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dwcattributes="http://rs.tdwg.org/dwc/terms/attributes/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:swivt="http://semantic-mediawiki.org/swivt/1.0#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:property="http://terms.gbif.org/wiki/Special:URIResolver/Property-3A" xml:base="http://rs.tdwg.org/dwc/terms/">
+  <rdf:Description rdf:value=""/>
+  <dcterms:title xml:lang="en">ABCD EFG</dcterms:title>
+  <dc:description>ABCD EFG (ABCD Extended for Geosciences) is an extension for the [[ABCD 2|ABCD XML Schema]] (Access to Biological Collection Databases) for use with palaeontological, mineralogical and geological digitalized collection data.</dc:description>
+  <dc:publisher/>
+  <dcterms:bibliographicCitation/>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAllocthonousMaterial">
+    <skos:altLabel xml:lang="en">/AllocthonousMaterial</skos:altLabel>
+    <rdfs:label xml:lang="en">AllocthonousMaterial</rdfs:label>
+    <rdfs:comment xml:lang="en">Container for descriptive elements related to transported material ranging from glacial erratics to meteorites</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AllocthonousMaterial"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAlteration">
+    <skos:altLabel xml:lang="en">/Alteration</skos:altLabel>
+    <rdfs:label xml:lang="en">Alteration</rdfs:label>
+    <rdfs:comment xml:lang="en">Container for describing metasomatic, metamorphic or diagenetic changes to units</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Alteration"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAlterationDegree">
+    <skos:altLabel xml:lang="en">/Alteration/AlterationDegree</skos:altLabel>
+    <rdfs:label xml:lang="en">AlterationDegree</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text describing the degree of alteration or metamorphic phase that has affected a rock. [This element may need to be split into hydrothermal mineralogical change and metamorphic phases]</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AlterationDegree"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAlterationType">
+    <skos:altLabel xml:lang="en">/Alteration/AlterationType</skos:altLabel>
+    <rdfs:label xml:lang="en">AlterationType</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text describing the type of change that has taken place e.g. chloritisation, migmatisation, cataclastic brecciation etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AlterationType"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisDateTime">
+    <skos:altLabel xml:lang="en">/AnalysisDateTime</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisDateTime</rdfs:label>
+    <rdfs:comment xml:lang="en">When the analysis was carried out.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisDateTime"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisDateTime-2DDateText">
+    <skos:altLabel xml:lang="en">/AnalysisDateTime/DateText</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisDateTime-DateText</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text to allow for vague dates or description of analysis period.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisDateTime-DateText"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisDateTime-2DDayNumberBegin">
+    <skos:altLabel xml:lang="en">/AnalysisDateTime/ExactDate/DayNumberBegin</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisDateTime-DayNumberBegin</rdfs:label>
+    <rdfs:comment xml:lang="en">Julian day number in the year for the exact date or for the beginning day of a period</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisDateTime-DayNumberBegin"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisDateTime-2DDayNumberEnd">
+    <skos:altLabel xml:lang="en">/AnalysisDateTime/ExactDate/DayNumberEnd</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisDateTime-DayNumberEnd</rdfs:label>
+    <rdfs:comment xml:lang="en">The Julian day number of the last day in a period.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisDateTime-DayNumberEnd"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisDateTime-2DExactDate">
+    <skos:altLabel xml:lang="en">/AnalysisDateTime/ExactDate</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisDateTime-ExactDate</rdfs:label>
+    <rdfs:comment xml:lang="en">Uses DateTime element from ABCD.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisDateTime-ExactDate"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisDateTime-2DExactDate-2DDateText">
+    <skos:altLabel xml:lang="en">/AnalysisDateTime/ExactDate/DateText</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisDateTime-ExactDate-DateText</rdfs:label>
+    <rdfs:comment xml:lang="en">The date in text format.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisDateTime-ExactDate-DateText"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisDateTime-2DISODateTimeBegin">
+    <skos:altLabel xml:lang="en">/AnalysisDateTime/ExactDate/ISODateTimeBegin</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisDateTime-ISODateTimeBegin</rdfs:label>
+    <rdfs:comment xml:lang="en">The exact date (and time) or beginning of a period, expressed in a modified ISO/ANSI 8601 standard structured format.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisDateTime-ISODateTimeBegin"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisDateTime-2DISODateTimeEnd">
+    <skos:altLabel xml:lang="en">/AnalysisDateTime/ExactDate/ISODateTimeEnd</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisDateTime-ISODateTimeEnd</rdfs:label>
+    <rdfs:comment xml:lang="en">The end of a period expressed in a modified ISO/ANSI 8601 standard structured format.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisDateTime-ISODateTimeEnd"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisDateTime-2DPeriodExplicit">
+    <skos:altLabel xml:lang="en">/AnalysisDateTime/ExactDate/PeriodExplicit</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisDateTime-PeriodExplicit</rdfs:label>
+    <rdfs:comment xml:lang="en">Set to True if the event takes place for the period indicated, set to False if it occurs at some point of time during the period, not filled if unknown or no period specified.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisDateTime-PeriodExplicit"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisDateTime-2DTimeOfDayBegin">
+    <skos:altLabel xml:lang="en">/AnalysisDateTime/ExactDate/TimeOfDayBegin</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisDateTime-TimeOfDayBegin</rdfs:label>
+    <rdfs:comment xml:lang="en">Time of day in hours from midnight for an exact point in time or for the beginning of a time period.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisDateTime-TimeOfDayBegin"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisDateTime-2DTimeOfDayEnd">
+    <skos:altLabel xml:lang="en">/AnalysisDateTime/ExactDate/TimeOfDayEnd</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisDateTime-TimeOfDayEnd</rdfs:label>
+    <rdfs:comment xml:lang="en">Time of day in hours from midnight for the end of a time period.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisDateTime-TimeOfDayEnd"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisDateTime-2DTimeZone">
+    <skos:altLabel xml:lang="en">/AnalysisDateTime/ExactDate/TimeZone</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisDateTime-TimeZone</rdfs:label>
+    <rdfs:comment xml:lang="en">The time zone to which the time-of-day data refer.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisDateTime-TimeZone"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisReferences">
+    <skos:altLabel xml:lang="en">/AnalysisReferences</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisReferences</rdfs:label>
+    <rdfs:comment xml:lang="en">Container for 1 or more references related to the analysis.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisReferences"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisReferences-2DAnalysisReference">
+    <skos:altLabel xml:lang="en">/AnalysisReferences/AnalysisReference</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisReferences-AnalysisReference</rdfs:label>
+    <rdfs:comment xml:lang="en">Individual documentary reference linked to an analysis. Uses abcd:Reference Type</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisReferences-AnalysisReference"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisReferences-2DCitationDetail">
+    <skos:altLabel xml:lang="en">/AnalysisReferences/AnalysisReference/CitationDetail</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisReferences-CitationDetail</rdfs:label>
+    <rdfs:comment xml:lang="en">Specific page, figure or illustration number(s) within the reference.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisReferences-CitationDetail"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisReferences-2DTitleCitation">
+    <skos:altLabel xml:lang="en">/AnalysisReferences/AnalysisReference/TitleCitation</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisReferences-TitleCitation</rdfs:label>
+    <rdfs:comment xml:lang="en">Formal citation for a paper or electronic publication.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisReferences-TitleCitation"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAnalysisReferences-2DURI">
+    <skos:altLabel xml:lang="en">/AnalysisReferences/AnalysisReference/URI</skos:altLabel>
+    <rdfs:label xml:lang="en">AnalysisReferences-URI</rdfs:label>
+    <rdfs:comment xml:lang="en">Universal Resource Identifier - Path to electronic source of document.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AnalysisReferences-URI"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AArticulation">
+    <skos:altLabel xml:lang="en">/PalaeontologicalUnit/Articulation</skos:altLabel>
+    <rdfs:label xml:lang="en">Articulation</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text description of the articulation in the preserved specimen - applies to invertebrate shells and exoskeletons as well as vertebrate skeletons. e.g. articulated, dis-articulated, single valves etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Articulation"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AAssemblageOrigin">
+    <skos:altLabel xml:lang="en">/PalaeontologicalUnit/AssemblageOrigin</skos:altLabel>
+    <rdfs:label xml:lang="en">AssemblageOrigin</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text description relating to the mode of origin of the assemblage e.g. unknown, allochthonous, autochthonous, paraautochthonous etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:AssemblageOrigin"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ABaselineDatum">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/SectionLog/MeasureFromBaseline/BaselineDatum</skos:altLabel>
+    <rdfs:label xml:lang="en">BaselineDatum</rdfs:label>
+    <rdfs:comment xml:lang="en">Text - what is the baseline e.g. top of borehole or base of measured section</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:BaselineDatum"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ABioerosion">
+    <skos:altLabel xml:lang="en">/PalaeontologicalUnit/Bioerosion</skos:altLabel>
+    <rdfs:label xml:lang="en">Bioerosion</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text description of damage due to biological action, such as, boring worms and sponges.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Bioerosion"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ABorehole">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole</skos:altLabel>
+    <rdfs:label xml:lang="en">Borehole</rdfs:label>
+    <rdfs:comment xml:lang="en">Container for details specific to boreholes and wells. Does not contain spatial reference as this and details of platform etc. are under Gathering in main ABCD schema - but they could be copied to make an independent schema.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Borehole"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ABottomSurface">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/SectionLog/BottomSurface</skos:altLabel>
+    <rdfs:label xml:lang="en">BottomSurface</rdfs:label>
+    <rdfs:comment xml:lang="en">Container for details of bottom surface of layer or stratum.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:BottomSurface"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ABottomSurfaceFeature">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/SectionLog/BottomSurface/BottomSurfaceFeature</skos:altLabel>
+    <rdfs:label xml:lang="en">BottomSurfaceFeature</rdfs:label>
+    <rdfs:comment xml:lang="en">Text describing features at the base of a layer or stratum.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:BottomSurfaceFeature"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACertainty">
+    <skos:altLabel xml:lang="en">/Certainty</skos:altLabel>
+    <rdfs:label xml:lang="en">Certainty</rdfs:label>
+    <rdfs:comment xml:lang="en">Degree of certainty associated with the date determination e.g. unknown, certain, uncertain, possibly, known wrong.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Certainty"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACommissionedBy">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/CommissionedBy</skos:altLabel>
+    <rdfs:label xml:lang="en">CommissionedBy</rdfs:label>
+    <rdfs:comment xml:lang="en">Company or organisation who commissioned the borehole or well.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CommissionedBy"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACompleteness">
+    <skos:altLabel xml:lang="en">/PalaeontologicalUnit/Completeness</skos:altLabel>
+    <rdfs:label xml:lang="en">Completeness</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text descrbing the degree of completeness of the specimen e.g. complete, cephalon only, but may describe completeness of a part e.g. complete skull.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Completeness"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AContractor">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Contractor</skos:altLabel>
+    <rdfs:label xml:lang="en">Contractor</rdfs:label>
+    <rdfs:comment xml:lang="en">The drilling contractor who carried out the work.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Contractor"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalForm">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalForm</rdfs:label>
+    <rdfs:comment xml:lang="en">Container element for describing the crystal form of a mineral unit.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalForm"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalFormText">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalFormText</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalFormText</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text description of crystal form.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalFormText"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement</rdfs:label>
+    <rdfs:comment xml:lang="en">Individual measurement or fact related to a crystal unit - container for standard MeasurementOrFact complex type from main schema.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DAccuracy">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/Accuracy</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-Accuracy</rdfs:label>
+    <rdfs:comment xml:lang="en">Statement of accuracy of measurement.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-Accuracy"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DAppliesTo">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/AppliesTo</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-AppliesTo</rdfs:label>
+    <rdfs:comment xml:lang="en">Depending on the use of the type, this can further specify the actual part measured. For example, a measurement of temperature may be a surface, air or sub-surface measurement.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-AppliesTo"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DAppliesTo-2D@language">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/AppliesTo/@language</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-AppliesTo-@language</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-AppliesTo-@language"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AInternal_-2D_Missing_definition</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DCitationDetail">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/MeasurementOrFactReference/CitationDetail</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-CitationDetail</rdfs:label>
+    <rdfs:comment xml:lang="en">Specific page, figure or illustration number(s) within the reference.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-CitationDetail"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DDuration">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/Duration</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-Duration</rdfs:label>
+    <rdfs:comment xml:lang="en">Duration of measurement in time.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-Duration"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DIsQuantitative">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/IsQuantitative</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-IsQuantitative</rdfs:label>
+    <rdfs:comment xml:lang="en">Flag indicating if the value represents the numerical result of a quantitative measurement (TRUE) or a descriptor with textual or categorical result (FALSE).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-IsQuantitative"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DLowerValue">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/LowerValue</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-LowerValue</rdfs:label>
+    <rdfs:comment xml:lang="en">Lower or only value or fact text.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-LowerValue"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DLowerValue-2D@language">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/LowerValue/@language</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-LowerValue-@language</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-LowerValue-@language"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AInternal_-2D_Missing_definition</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DMeasuredBy">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/MeasuredBy</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-MeasuredBy</rdfs:label>
+    <rdfs:comment xml:lang="en">Attribution of the measurement to a Person</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-MeasuredBy"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DMeasurementDateTime">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/MeasurementDateTime</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-MeasurementDateTime</rdfs:label>
+    <rdfs:comment xml:lang="en">Date and/or Time the measurement was taken.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-MeasurementDateTime"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DMeasurementOrFactAtomised">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-MeasurementOrFactAtomised</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-MeasurementOrFactAtomised"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AInternal_-2D_Missing_definition</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DMeasurementOrFactReference">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/MeasurementOrFactReference</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-MeasurementOrFactReference</rdfs:label>
+    <rdfs:comment xml:lang="en">Reference (publication) where this measurement was taken from.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-MeasurementOrFactReference"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DMeasurementOrFactText">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactText</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-MeasurementOrFactText</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text alternative to atomised version.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-MeasurementOrFactText"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DMeasurementOrFactText-2D@language">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactText/@language</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-MeasurementOrFactText-@language</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-MeasurementOrFactText-@language"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AInternal_-2D_Missing_definition</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DMethod">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/Method</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-Method</rdfs:label>
+    <rdfs:comment xml:lang="en">Method used to make measurement.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-Method"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DMethod-2D@language">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/Method/@language</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-Method-@language</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-Method-@language"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AInternal_-2D_Missing_definition</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DParameter">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/Parameter</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-Parameter</rdfs:label>
+    <rdfs:comment xml:lang="en">Describes type of measurement or fact, such as width, abundance, circumference, temperature etc. or color etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-Parameter"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DParameter-2D@language">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/Parameter/@language</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-Parameter-@language</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-Parameter-@language"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AInternal_-2D_Missing_definition</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DTitleCitation">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/MeasurementOrFactReference/TitleCitation</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-TitleCitation</rdfs:label>
+    <rdfs:comment xml:lang="en">Formal citation for a paper or electronic publication.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-TitleCitation"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DURI">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/MeasurementOrFactReference/URI</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-URI</rdfs:label>
+    <rdfs:comment xml:lang="en">Universal Resource Identifier - Path to electronic source of document.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-URI"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DUnitOfMeasurement">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/UnitOfMeasurement</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-UnitOfMeasurement</rdfs:label>
+    <rdfs:comment xml:lang="en">Unit of measurement.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-UnitOfMeasurement"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DUpperValue">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/UpperValue</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-UpperValue</rdfs:label>
+    <rdfs:comment xml:lang="en">Upper value where there is a range.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-UpperValue"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurement-2DUpperValue-2D@language">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements/CrystalMeasurement/MeasurementOrFactAtomised/UpperValue/@language</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurement-UpperValue-@language</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurement-UpperValue-@language"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AInternal_-2D_Missing_definition</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ACrystalMeasurements">
+    <skos:altLabel xml:lang="en">/MineralogicalUnit/CrystalForm/CrystalMeasurements</skos:altLabel>
+    <rdfs:label xml:lang="en">CrystalMeasurements</rdfs:label>
+    <rdfs:comment xml:lang="en">Container for measurements of crystal physical and chemical characteristics.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:CrystalMeasurements"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ADatingQualifier">
+    <skos:altLabel xml:lang="en">/DatingQualifier</skos:altLabel>
+    <rdfs:label xml:lang="en">DatingQualifier</rdfs:label>
+    <rdfs:comment xml:lang="en">Allows for qualification of date terms e.g. early/lower, middle, late/upper.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:DatingQualifier"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ADiageneticChange">
+    <skos:altLabel xml:lang="en">/Alteration/DiageneticChange</skos:altLabel>
+    <rdfs:label xml:lang="en">DiageneticChange</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text for describing any physical and chemical changes that took place in a sediment during the lithification process e.g. compaction, cementation, recrystallisation, dolomitisation and replacement.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:DiageneticChange"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ADipDegrees">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/SectionLog/DipDegrees</skos:altLabel>
+    <rdfs:label xml:lang="en">DipDegrees</rdfs:label>
+    <rdfs:comment xml:lang="en">The dip in degrees of laminae or stratal surfaces in this layer.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:DipDegrees"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ADistanceFromBaseline">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/SectionLog/MeasureFromBaseline/DistanceFromBaseline</skos:altLabel>
+    <rdfs:label xml:lang="en">DistanceFromBaseline</rdfs:label>
+    <rdfs:comment xml:lang="en">Number representing distance measured.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:DistanceFromBaseline"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3ADrillMethod">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/DrillMethod</skos:altLabel>
+    <rdfs:label xml:lang="en">DrillMethod</rdfs:label>
+    <rdfs:comment xml:lang="en">How the borehole or well was drilled e.g. reverse circulation drilling, diamond coring, percussion drilling, auger drilling, rotary/barber drilling etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:DrillMethod"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AEarthScienceSpecimen">
+    <skos:altLabel xml:lang="en">/EarthScienceSpecimen</skos:altLabel>
+    <rdfs:label xml:lang="en">EarthScienceSpecimen</rdfs:label>
+    <rdfs:comment xml:lang="en">Container for details that generally relate to the management of earth science specimens and their individual stratigraphic age (which may be different or more specific than that recorderd for the gathering site or the host rock.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:EarthScienceSpecimen"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AEncrustation">
+    <skos:altLabel xml:lang="en">/PalaeontologicalUnit/Encrustation</skos:altLabel>
+    <rdfs:label xml:lang="en">Encrustation</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text description of biological encrustations, such as oysters and tube worms.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Encrustation"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AFeedingPredationTraces">
+    <skos:altLabel xml:lang="en">/PalaeontologicalUnit/FeedingPredationTraces</skos:altLabel>
+    <rdfs:label xml:lang="en">FeedingPredationTraces</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text description relating to aspects of feeding and predation e.g. ammonite with bite mark from plesiosaur,  shell drilled by predatory gastropod etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:FeedingPredationTraces"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists</rdfs:label>
+    <rdfs:comment xml:lang="en">The geologist(s) and or organisation responsible for logging the borehole and or maintaining the borehole record.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DAbbreviation">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Organisation/Name/Representation/Abbreviation</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-Abbreviation</rdfs:label>
+    <rdfs:comment xml:lang="en">Restricted to 50 characters maximum length, including blanks (recommended to be shorter!). Label abbreviations are especially important when displaying information in a tabular format.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-Abbreviation"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DAtomisedName">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Person/AtomisedName</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-AtomisedName</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-AtomisedName"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AInternal_-2D_Missing_definition</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DFullName">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Person/FullName</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-FullName</rdfs:label>
+    <rdfs:comment xml:lang="en">Preferred form of personal name for display as a string.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-FullName"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DGivenNames">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Person/AtomisedName/GivenNames</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-GivenNames</rdfs:label>
+    <rdfs:comment xml:lang="en">The name given to a person as a personal name (= first or christian name in western cultures, including 'middle initials') may contain several words ('Ana Maria', 'Jerry B.'). Applicable only to persons. (vCard:N.Given + vCard:N.Middle)</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-GivenNames"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DInheritedName">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Person/AtomisedName/InheritedName</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-InheritedName</rdfs:label>
+    <rdfs:comment xml:lang="en">Family names, generational names, clan name, parents/grandparents personal names, etc. This (= last name in western cultures) may be compound ('Fischer von Waldheim', 'da Selva', 'Silvano Morales'). Depending on culture it is not necessarily the name of the parents nor common to the married couple and children, thus 'family name' should be avoided even though used in vCard.  (vCard:N.Family)</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-InheritedName"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DName">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Organisation/Name</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-Name</rdfs:label>
+    <rdfs:comment xml:lang="en">Full organization or corporate name in multiple languages (en: 'Botanical Garden of ...', de: 'Botanischer Garten von ...'). vCard:Org.OrgName). The Label mechanism also supports acronyms / abbreviations (no vCard equivalent!).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-Name"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DOrgUnit">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Organisation/OrgUnits/OrgUnit</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-OrgUnit</rdfs:label>
+    <rdfs:comment xml:lang="en">(vCard:OrgUnit)</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-OrgUnit"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DOrgUnit-2D@language">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Organisation/OrgUnits/OrgUnit/@language</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-OrgUnit-@language</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-OrgUnit-@language"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AInternal_-2D_Missing_definition</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DOrgUnits">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Organisation/OrgUnits</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-OrgUnits</rdfs:label>
+    <rdfs:comment xml:lang="en">If the contact contains no person definition: the unit within the organization the agent represents; else a list of the various organisational units to which a person may belong. (vCard:OrgUnit)</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-OrgUnits"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DOrganisation">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Organisation</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-Organisation</rdfs:label>
+    <rdfs:comment xml:lang="en">Organisation type from the abcd schema.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-Organisation"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DPerson">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Person</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-Person</rdfs:label>
+    <rdfs:comment xml:lang="en">Person type from the abcd schema.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-Person"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DPreferredName">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Person/AtomisedName/PreferredName</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-PreferredName</rdfs:label>
+    <rdfs:comment xml:lang="en">May differ from the first given name: second given name, nickname ('Bob' for 'Robert'), etc. (vCard:Nickname)</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-PreferredName"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DPrefix">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Person/AtomisedName/Prefix</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-Prefix</rdfs:label>
+    <rdfs:comment xml:lang="en">Prefix to inherited name that should be output before name, but is usually not included in sorting. Examples: 'von', 'Lord'. Compare Title for 'Prof', 'Dr.' (vCard:N.Prefix)</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-Prefix"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DRepresentation">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Organisation/Name/Representation</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-Representation</rdfs:label>
+    <rdfs:comment xml:lang="en">Language-specific label representation.
+[ATTR: language]</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-Representation"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DRepresentation-2D@language">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Organisation/Name/Representation/@language</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-Representation-@language</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-Representation-@language"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AInternal_-2D_Missing_definition</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DSortingName">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Person/SortingName</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-SortingName</rdfs:label>
+    <rdfs:comment xml:lang="en">The full name with the elements in preferred sorting sequence (vCard: Sort-String).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-SortingName"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DSuffix">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Person/AtomisedName/Suffix</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-Suffix</rdfs:label>
+    <rdfs:comment xml:lang="en">Suffix to name that should be output after name, regardless whether it is in sorting sequence (Inherited, Given) or not. Examples: 'Jun.', 'III.'. (vCard:N.Suffix)</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-Suffix"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AGeologists-2DText">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/Geologists/Organisation/Name/Representation/Text</skos:altLabel>
+    <rdfs:label xml:lang="en">Geologists-Text</rdfs:label>
+    <rdfs:comment xml:lang="en">Label text in a specific language.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Geologists-Text"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AHazard">
+    <skos:altLabel xml:lang="en">/EarthScienceSpecimen/Hazard</skos:altLabel>
+    <rdfs:label xml:lang="en">Hazard</rdfs:label>
+    <rdfs:comment xml:lang="en">Container for describing hazards that may be associated with the specimen e.g. radioactive, toxic, carcinogens etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:Hazard"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AHazardKeywords">
+    <skos:altLabel xml:lang="en">/EarthScienceSpecimen/Hazard/HazardKeywords</skos:altLabel>
+    <rdfs:label xml:lang="en">HazardKeywords</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:HazardKeywords"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AInternal_-2D_Missing_definition</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AHazardText">
+    <skos:altLabel xml:lang="en">/EarthScienceSpecimen/Hazard/HazardText</skos:altLabel>
+    <rdfs:label xml:lang="en">HazardText</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text describing any hazards that may be associated with the specimen/unit e.g. is it radioactive, poisonous, carcinogenic?</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:HazardText"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AHoleDiameter">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/HoleDiameter</skos:altLabel>
+    <rdfs:label xml:lang="en">HoleDiameter</rdfs:label>
+    <rdfs:comment xml:lang="en">Diameter of the borehole in milliimetres.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:HoleDiameter"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AHoleDirection">
+    <skos:altLabel xml:lang="en">/SiteStratigraphy/SiteSections/Borehole/HoleDirection</skos:altLabel>
+    <rdfs:label xml:lang="en">HoleDirection</rdfs:label>
+    <rdfs:comment xml:lang="en">Direction and inclination of the borehole or well.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:HoleDirection"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AHostRockStratigraphy">
+    <skos:altLabel xml:lang="en">/UnitHostRock/HostRockStratigraphy</skos:altLabel>
+    <rdfs:label xml:lang="en">HostRockStratigraphy</rdfs:label>
+    <rdfs:comment xml:lang="en">Container for any stratigraphic determination specific to the host rock. For instance the gathering site may include a range of stratigraphic horizons whilst the unit host rock may represent just one. The unit itself might be different if it is allochthonous in origin. Minerals may be of a different age from their host rock.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:HostRockStratigraphy"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AHostRockStratigraphy-2DBed">
+    <skos:altLabel xml:lang="en">/UnitHostRock/HostRockStratigraphy/LithostratigraphicAttributions/LithostratigraphicAttribution/Bed</skos:altLabel>
+    <rdfs:label xml:lang="en">HostRockStratigraphy-Bed</rdfs:label>
+    <rdfs:comment xml:lang="en">The smallest division of a named stratified series normally with well defined division from adjacent deposits.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:HostRockStratigraphy-Bed"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AHostRockStratigraphy-2DBiostratigraphicAttribution">
+    <skos:altLabel xml:lang="en">/UnitHostRock/HostRockStratigraphy/BiostratigraphicAttributions/BiostratigraphicAttribution</skos:altLabel>
+    <rdfs:label xml:lang="en">HostRockStratigraphy-BiostratigraphicAttribution</rdfs:label>
+    <rdfs:comment xml:lang="en">A single declaration of a fossil zone or subzone.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:HostRockStratigraphy-BiostratigraphicAttribution"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AHostRockStratigraphy-2DBiostratigraphicAttribution-2DAbbreviation">
+    <skos:altLabel xml:lang="en">/UnitHostRock/HostRockStratigraphy/BiostratigraphicAttributions/BiostratigraphicAttribution/Identifiers/Organisation/Name/Representation/Abbreviation</skos:altLabel>
+    <rdfs:label xml:lang="en">HostRockStratigraphy-BiostratigraphicAttribution-Abbreviation</rdfs:label>
+    <rdfs:comment xml:lang="en">Restricted to 50 characters maximum length, including blanks (recommended to be shorter!). Label abbreviations are especially important when displaying information in a tabular format.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:HostRockStratigraphy-BiostratigraphicAttribution-Abbreviation"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AHostRockStratigraphy-2DBiostratigraphicAttribution-2DAccuracy">
+    <skos:altLabel xml:lang="en">/UnitHostRock/HostRockStratigraphy/BiostratigraphicAttributions/BiostratigraphicAttribution/StratigraphicMeasurementsOrFacts/StratigraphicMeasurementOrFact/MeasurementOrFactAtomised/Accuracy</skos:altLabel>
+    <rdfs:label xml:lang="en">HostRockStratigraphy-BiostratigraphicAttribution-Accuracy</rdfs:label>
+    <rdfs:comment xml:lang="en">Statement of accuracy of measurement.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:HostRockStratigraphy-BiostratigraphicAttribution-Accuracy"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AHostRockStratigraphy-2DBiostratigraphicAttribution-2DAppliesTo">
+    <skos:altLabel xml:lang="en">/UnitHostRock/HostRockStratigraphy/BiostratigraphicAttributions/BiostratigraphicAttribution/StratigraphicMeasurementsOrFacts/StratigraphicMeasurementOrFact/MeasurementOrFactAtomised/AppliesTo</skos:altLabel>
+    <rdfs:label xml:lang="en">HostRockStratigraphy-BiostratigraphicAttribution-AppliesTo</rdfs:label>
+    <rdfs:comment xml:lang="en">Depending on the use of the type, this can further specify the actual part measured. For example, a measurement of temperature may be a surface, air or sub-surface measurement.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:HostRockStratigraphy-BiostratigraphicAttribution-AppliesTo"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AHostRockStratigraphy-2DBiostratigraphicAttribution-2DAppliesTo-2D@language">
+    <skos:altLabel xml:lang="en">/UnitHostRock/HostRockStratigraphy/BiostratigraphicAttributions/BiostratigraphicAttribution/StratigraphicMeasurementsOrFacts/StratigraphicMeasurementOrFact/MeasurementOrFactAtomised/AppliesTo/@language</skos:altLabel>
+    <rdfs:label xml:lang="en">HostRockStratigraphy-BiostratigraphicAttribution-AppliesTo-@language</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:HostRockStratigraphy-BiostratigraphicAttribution-AppliesTo-@language"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AInternal_-2D_Missing_definition</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:value="http://terms.tdwg.org/wiki/Special:URIResolver/abcd-2Defg-3AHostRockStratigraphy-2DBiostratigraphicAttribution-2DAtomisedName">
+    <skos:altLabel xml:lang="en">/UnitHostRock/HostRockStratigraphy/BiostratigraphicAttributions/BiostratigraphicAttribution/Identifiers/Person/AtomisedName</skos:altLabel>
+    <rdfs:label xml:lang="en">HostRockStratigraphy-BiostratigraphicAttribution-AtomisedName</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://terms.tdwg.org/wiki/Special:ExportRDF/abcd-efg:HostRockStratigraphy-BiostratigraphicAttribution-AtomisedName"/>
+    <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AInternal_-2D_Missing_definition</rdf:type>
+    <rdf:type>http://www.w3.org/2004/02/skos/core#Concept</rdf:type>
+    <rdf:type>http://terms.tdwg.org/wiki/Special:URIResolver/Category-3AABCD_EFG</rdf:type>
+  </rdf:Description>
+</rdf:RDF>
