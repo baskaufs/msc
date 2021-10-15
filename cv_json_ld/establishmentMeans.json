@@ -3,7 +3,10 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "skos:inScheme": {
+      "@type": "@id"
+    }
   },
   "@graph": [
     {
@@ -60,7 +63,7 @@
       "skos:definition": [
         {
           "@language": "en",
-          "@value": "A taxon occurring within its natural range"
+          "@value": "A taxon occurring within its natural range."
         },
         {
           "@language": "es",
@@ -94,7 +97,7 @@
       "skos:definition": [
         {
           "@language": "en",
-          "@value": "A taxon re-established by direct introduction by humans into an area which was once part of its natural range, but from where it had become extinct."
+          "@value": "A taxon re-established by direct introduction by humans into an area that was once part of its natural range, but from where it had become extinct."
         },
         {
           "@language": "es",
@@ -128,7 +131,7 @@
       "skos:definition": [
         {
           "@language": "en",
-          "@value": "Establishment of a taxon by human agency into an area that is not part of its natural range"
+          "@value": "Establishment of a taxon by human agency into an area that is not part of its natural range."
         },
         {
           "@language": "es",
@@ -162,7 +165,7 @@
       "skos:definition": [
         {
           "@language": "en",
-          "@value": "Establishment of a taxon specifically with the intention of creating a self-sustaining wild population in an area that is not part of the taxon's natural range"
+          "@value": "Establishment of a taxon specifically with the intention of creating a self-sustaining wild population in an area that is not part of the taxon's natural range."
         },
         {
           "@language": "es",
@@ -230,7 +233,7 @@
       "skos:definition": [
         {
           "@language": "en",
-          "@value": "The origin of the occurrence of the taxon in an area is obscure"
+          "@value": "The origin of the occurrence of the taxon in an area is obscure."
         },
         {
           "@language": "es",
