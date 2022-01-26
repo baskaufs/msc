@@ -109,7 +109,7 @@ def score_words_by_information(wordle):
     '''
     # Random option:
     if wordle.n == 2:
-        choice_list = wordle.wordlist
+        choice_list = list(wordle.wordlist)
         first_word = random.choice(choice_list)
         choice_list.remove(first_word)
         return [{'word': first_word, 'value': 1.0, 'distribution': [0,1]}, {'word': choice_list[0], 'value': 1.0, 'distribution': [0,1]}]
