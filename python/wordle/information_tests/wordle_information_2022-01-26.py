@@ -437,25 +437,17 @@ class Wordle_list():
                         incorrect_letter = guess_list[position][1].lower()
                         # Only screen if it's a new one
                         if not incorrect_letter in self.letters_out:
-                            # Need to check for the special case where the same letter was guessed in an earlier position
-                            # in the word and was identified as present (but not in the correct position). In that case,
-                            # the second (incorrect) guess must not trigger addition to the letters_out list, as that would
-                            # result in the incorrect screening out of all words containing that letter.
                             # NOTE: Correct operation of this test depends on the first occurrence of that letter in a guess
                             # word being scored as present and the second occurrence being scored as absent. I haven't
                             # tested this with the real app to see if this is actually the behavior.
-                            if self.letters_in.count(incorrect_letter) == 0: 
-                                self.letters_out.append(incorrect_letter)
-                                # Remove any words that have that letter in any position
-                                new_list = list(self.wordlist)
-                                for word in self.wordlist:
-                                    remove = False
-                                    for position in range(letters_in_game): # set to remove if letter occurs any number of times
-                                        if word[position] == incorrect_letter:
-                                            remove = True
-                                    if remove:
-                                        new_list.remove(word)
-                                self.wordlist = new_list
+                            self.letters_out.append(incorrect_letter)
+                            # Remove words with too many of the incorrect letter
+                            new_list = list(self.wordlist)
+                            for word in self.wordlist:
+                                # The number has to be more than the number of that letter known to be correct in the word
+                                if word.count(incorrect_letter) > self.letters_in.count(incorrect_letter):
+                                    new_list.remove(word)
+                            self.wordlist = new_list
 
                 if self.print_lists:
                     print('wordlist after removing words with incorrect letters:', self.wordlist)
