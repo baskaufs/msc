@@ -462,7 +462,6 @@ class Wordle_list():
             if self.print_lists:
                 print('Error. Was the guess string malformed? No screen applied.')
         
-        ''' Skip this to speed up testing. It's not currently used for anything.
         # Create list of words with unique letters in unknown positions
         unique_letter_words = []
         for word in self.wordlist:
@@ -475,8 +474,7 @@ class Wordle_list():
             if len(unique_letter_list) == len(letter_list):
                 unique_letter_words.append(word)
         self.unique = unique_letter_words
-        '''
-
+        
         self.n = len(self.wordlist)
 
     def frequencies(self, position=-1):
@@ -532,88 +530,80 @@ def all_scores_same(score_list):
     return all_same
 
 # Start of main script
-'''
 
-'''
 # Initial setup
-trials_per_puzzle_word = 1000
+fixed_first_word = 'slate'
+
+score_sum = 0
+word_count = 0
+answer_frequencies = []
+for index in range(12):
+    answer_frequencies.append(0)
+word_scores = []
 
 # Instantiate initial Wordle_list object in order to get the test list to iterate through
 test_wordlist = Wordle_list().wordlist
 
-word_count = 0
-word_scores = []
-
-score_grand_sum = 0
-overall_answer_frequencies = []
-for index in range(12):
-    overall_answer_frequencies.append(0)
-
 for actual_word in test_wordlist:
     print('Testing puzzle word', str(word_count) + ':', actual_word)
 
-    # Set up bookkeeping for the 100 trials
-    score_sum = 0
-    answer_frequencies = []
-    for index in range(12):
-        answer_frequencies.append(0)
+    # Re-instantiate initial Wordle_list object for every new test word
+    start = Wordle_list()
+    guess_number = 1
+        
+    next_guess_code = generate_guess_code(fixed_first_word, actual_word)
+    # Instantiate the Wordle list after screening by test word
+    next_wordle_list = Wordle_list(guess=next_guess_code, wordlist=start.wordlist)
+    print('  Words to check after guess 1:', next_wordle_list.n)
 
-    # Repeat the random trial 100 times per puzzle word
-    for test_number in range(trials_per_puzzle_word):
+    # Default the number of additional turns to one for case where screening results in only one possible word, but it must be guessed.
+    # This is the normal while loop termination situation.
+    additional_turns_required = 1
 
-
-        # Default the number of additional turns to one for case where screening results in only one possible word, but it must be guessed.
-        # This is the normal while loop termination situation.
-        additional_turns_required = 1
-        guess_number = 0
-            
-        # Re-instantiate initial Wordle_list object for every new test word
-        next_wordle_list = Wordle_list()
+    # Handle edge case where the word is the original guess word
+    if fixed_first_word == actual_word:
+        words_remaining = 1
+        guess_number = 0 # need to set this since one will be added at the end
+    else:
         words_remaining = next_wordle_list.n
 
-        while words_remaining > 1:
-            guess_number += 1
-            score_list = score_words_by_random(next_wordle_list)
+    while words_remaining > 1:
+        guess_number += 1
+        score_list = score_words_by_remaining(next_wordle_list)
 
-            next_guess_word = score_list[0]['word']
-            #print('Guess word', str(guess_number) + ':', next_guess_word)
+        next_guess_word = score_list[0]['word']
+        print('Guess word', str(guess_number) + ':', next_guess_word)
 
-            # Lucky guess contingency: the top screening word is the word. Quit the loop and add default one turn for the guess without incrementing.
-            if next_guess_word == actual_word:
-                additional_turns_required = 0
-                #print('lucky guess')
-                break
+        # Lucky guess contingency: the top screening word is the word. Quit the loop and add default one turn for the guess without incrementing.
+        if next_guess_word == actual_word:
+            additional_turns_required = 0
+            #print('lucky guess')
+            break
 
-            next_guess_code = generate_guess_code(next_guess_word, actual_word)
-            #print('next guess code:', next_guess_code)
-            next_wordle_list = Wordle_list(letters_in=next_wordle_list.letters_in, letters_out=next_wordle_list.letters_out, position_known=next_wordle_list.position_known, guess=next_guess_code, wordlist=next_wordle_list.wordlist)
-            words_remaining = next_wordle_list.n
-            #print('  Words to check after guess', str(guess_number) + ':', words_remaining)
+        next_guess_code = generate_guess_code(next_guess_word, actual_word)
+        #print('next guess code:', next_guess_code)
+        next_wordle_list = Wordle_list(letters_in=next_wordle_list.letters_in, letters_out=next_wordle_list.letters_out, position_known=next_wordle_list.position_known, guess=next_guess_code, wordlist=next_wordle_list.wordlist)
+        words_remaining = next_wordle_list.n
+        print('  Words to check after guess', str(guess_number) + ':', words_remaining)
 
-        #print('Answer:', actual_word, ' Guesses:', guess_number + additional_turns_required)
-        #print()
-        score = guess_number + additional_turns_required
-        score_sum += score
-        score_grand_sum += score
-        answer_frequencies[score] += 1
-        overall_answer_frequencies[score] += 1
-        #print(answer_frequencies)
-    
-    average_guesses = score_sum / trials_per_puzzle_word
-    print('average guesses:', average_guesses)
-    print('frequencies', answer_frequencies)
+    print('Answer:', actual_word, ' Guesses:', guess_number + additional_turns_required)
     print()
+    score = guess_number + additional_turns_required
+    score_sum += score
     word_count += 1
-    word_scores.append({'word': actual_word, 'average_guesses': average_guesses, 'frequencies': json.dumps(answer_frequencies)})
-
+    answer_frequencies[score] += 1
+    #print(answer_frequencies)
+    word_scores.append({'word': actual_word, 'score': score})
+    
     # Write answers after each word in case script crashes
-    fieldnames = ['word', 'average_guesses', 'frequencies']
-    writeToFile('wordle_random_guesses2.csv', fieldnames, word_scores)
+    #fieldnames = ['word', 'score']
+    #writeToFile('wordle_x_min_words_test_results.csv', fieldnames, word_scores)
 
-word_scores.append({'word': 'all words', 'average_guesses': score_grand_sum / (word_count * trials_per_puzzle_word), 'frequencies': json.dumps(overall_answer_frequencies)})
-#print(word_scores)
-
-fieldnames = ['word', 'average_guesses', 'frequencies']
-writeToFile('wordle_random_guesses2.csv', fieldnames, word_scores)
-
+print()
 print('done')
+print(score_sum/word_count)
+print(answer_frequencies)
+print()
+
+fieldnames = ['word', 'score']
+writeToFile('wordle_slate_remaining2_test_results.csv', fieldnames, word_scores)
