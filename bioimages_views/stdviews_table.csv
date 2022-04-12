@@ -1,0 +1,87 @@
+iri,part_label,subjectPart_cv_string,view_label,subjectOrientation_cv_string
+http://bioimages.vanderbilt.edu/rdf/stdview#010200,bark,bark,unspecified bark view,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010201,bark,bark,bark of a large tree,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#010203,bark,bark,bark of a small tree or small branch,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#010202,bark,bark,bark of a medium tree or large branch,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#030200,bark,bark,unspecified bark view,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#030201,bark,bark,bark of a large tree,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#030202,bark,bark,bark of a medium tree or large branch,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#030203,bark,bark,bark of a small tree or small branch,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#030501,cone,maleCone,male cones,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#030502,cone,femaleCone,mature open female cone,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#030500,cone,strobilis,unspecified cone view,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#030503,cone,femaleCone,mature closed female cone,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#030504,cone,femaleCone,receptive female cone,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#030505,cone,femaleCone,one year-old female cone,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#000100,entire organism,entireOrganism,unspecified view of entire organism,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010101,entire organism,entireOrganism,general view of entire organism,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010100,entire organism,entireOrganism,unspecified view of entire organism,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010102,entire organism,entireOrganism,view of entire organism in winter,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010103,entire organism,entireOrganism,view up trunk,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#020102,entire organism,entireOrganism,whole plant in flower,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020101,entire organism,entireOrganism,whole juvenile plant,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020100,entire organism,entireOrganism,unspecified view of entire organism,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020103,entire organism,entireOrganism,whole plant in fruit,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#030102,entire organism,entireOrganism,view up trunk,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#030101,entire organism,entireOrganism,general view of entire organism,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#030100,entire organism,entireOrganism,unspecified view of entire organism,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#040100,entire organism,entireOrganism,unspecified view of entire organism,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#050100,entire organism,entireOrganism,unspecified view of entire organism,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#060100,entire organism,entireOrganism,unspecified view of entire organism,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010602,fruit,fruit,lateral or general close-up of fruit,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#010601,fruit,fruit,fruit as borne on plant,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010600,fruit,fruit,unspecified fruit view,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010603,fruit,fruit,section or open fruit,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010604,fruit,fruit,immature fruit,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020500,fruit,fruit,unspecified fruit view,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020501,fruit,fruit,fruit as borne on plant,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020503,fruit,fruit,section or open fruit,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020502,fruit,fruit,lateral or general close-up of fruit,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#020504,fruit,fruit,immature fruit,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010501,inflorescence,inflorescence,whole inflorescence of unspecified gender,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010500,inflorescence,inflorescence,unspecified inflorescence view,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010502,inflorescence,inflorescence,whole female inflorescence,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010504,inflorescence,flower,lateral view of flower,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#010503,inflorescence,inflorescence,whole male inflorescence,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010505,inflorescence,flower,frontal view of flower,apical
+http://bioimages.vanderbilt.edu/rdf/stdview#010507,inflorescence,flower,close-up of flower interior,apical
+http://bioimages.vanderbilt.edu/rdf/stdview#010506,inflorescence,flower,ventral view of flower and perianth,basal
+http://bioimages.vanderbilt.edu/rdf/stdview#020400,inflorescence,inflorescence,unspecified inflorescence view,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020401,inflorescence,inflorescence,whole inflorescence of unspecified gender,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020403,inflorescence,inflorescence,whole male inflorescence,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020402,inflorescence,inflorescence,whole female inflorescence,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020404,inflorescence,flower,lateral view of flower,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#020405,inflorescence,flower,frontal view of flower,apical
+http://bioimages.vanderbilt.edu/rdf/stdview#020406,inflorescence,flower,ventral view of flower and perianth,basal
+http://bioimages.vanderbilt.edu/rdf/stdview#020407,inflorescence,flower,close-up of flower interior,apical
+http://bioimages.vanderbilt.edu/rdf/stdview#010401,leaf,leaf,whole upper surface of leaf,adaxial
+http://bioimages.vanderbilt.edu/rdf/stdview#010400,leaf,leaf,unspecified leaf view,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010402,leaf,leaf,margin of upper and lower leaf surface,adaxial
+http://bioimages.vanderbilt.edu/rdf/stdview#010403,leaf,leaf,orientation of leaves on twig,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020301,leaf,leaf,basal or lower stem leaves,adaxial
+http://bioimages.vanderbilt.edu/rdf/stdview#020302,leaf,leaf,upper stem leaves,adaxial
+http://bioimages.vanderbilt.edu/rdf/stdview#020303,leaf,leaf,margin of upper and lower leaf surface,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020300,leaf,leaf,unspecified leaf view,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#030400,leaf,leaf,unspecified leaf view,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#030401,leaf,leaf,entire needles,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#030402,leaf,leaf,orientation of leaves on twig,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010701,seed,seed,general seed view,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#010700,seed,seed,unspecified seed view,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#020601,seed,seed,general seed view,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#030601,seed,seed,general seed view,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#020201,stem,stem,stem showing leaf bases,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#020200,stem,stem,unspecified stem view,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010301,twig,twig,twig showing orientation of petioles,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#010300,twig,twig,unspecified twig view,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010304,twig,twig,close-up winter twig showing terminal bud,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#010303,twig,twig,close-up of winter twig showing leaf scar/bud,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#010302,twig,twig,winter twig overall,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#030301,twig,twig,twig after fallen needles,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#030300,twig,twig,unspecified twig view,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#030302,twig,twig,twig showing attachment of needles,lateral
+http://bioimages.vanderbilt.edu/rdf/stdview#000000,unspecified part,unspecifiedPart,view of unspecified part,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#010000,unspecified part,unspecifiedPart,view of unspecified part,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#020000,unspecified part,unspecifiedPart,view of unspecified part,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#040000,unspecified part,unspecifiedPart,view of unspecified part,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#050000,unspecified part,unspecifiedPart,view of unspecified part,unspecifiedOrientation
+http://bioimages.vanderbilt.edu/rdf/stdview#060000,unspecified part,unspecifiedPart,view of unspecified part,unspecifiedOrientation
