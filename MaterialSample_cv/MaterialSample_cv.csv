@@ -1,0 +1,5 @@
+term_localName,label,skos_broader,skos_inScheme,definition,definition_derived_from,usage,notes,examples,controlled_value_string,type
+m,material sample concept scheme,,,A SKOS concept scheme for material sample types.,,,,,,http://www.w3.org/2004/02/skos/core#ConceptScheme
+m000,living specimen,,m,A specimen that is alive.,http://rs.tdwg.org/dwc/terms/version/LivingSpecimen-2018-09-06,,,A living plant in a botanical garden. A living animal in a zoo.,LivingSpecimen,http://www.w3.org/2004/02/skos/core#Concept
+m001,preserved specimen,,m,A specimen that has been preserved.,http://rs.tdwg.org/dwc/terms/version/PreservedSpecimen-2018-09-06,,,A plant on an herbarium sheet. A cataloged lot of fish in a jar.,PreservedSpecimen,http://www.w3.org/2004/02/skos/core#Concept
+m002,fossil specimen,m001,m,A preserved specimen that is a fossil.,http://rs.tdwg.org/dwc/terms/version/FossilSpecimen-2018-09-06,,,A body fossil. A coprolite. A gastrolith. An ichnofossil. A piece of a petrified tree.,FossilSpecimen,http://www.w3.org/2004/02/skos/core#Concept

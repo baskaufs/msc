@@ -1,0 +1,16 @@
+{
+    "date_issued": "2022-04-19",
+    "local_offset_from_utc": "-05:00",
+    "vocab_type": 3,
+    "namespaces": [
+        {
+            "namespace_uri": "http://rs.tdwg.org/dwcmatter/values/",
+            "database": "dwcmatter",
+            "borrowed": false,
+            "new_term_list": true,
+            "utility_namespace": false,
+            "modifications_file_path": "dwc-revisions/matter-cv-addition-2022-04-19/MaterialSample_cv.csv",
+            "termlist_uri": ""
+        }
+    ]
+}
