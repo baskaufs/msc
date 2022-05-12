@@ -1,0 +1,2 @@
+?qid wdt:P1462 wd:Q4914768.
+?qid wdt:P31 wd:Q317623.
