@@ -6,8 +6,7 @@ Q110140814,http://www.wikidata.org/entity/Q110140814,Jörg Holetschek,,,,http://
 Q11255062,http://viaf.org/viaf/112328349,Peter Wyse Jackson,,112328349,,,Q1339511
 Q2024617,http://viaf.org/viaf/80432287,Laurence J. Dorr,,80432287,,,
 Q21339849,http://viaf.org/viaf/69104243,Kerry Walter,,69104243,,,Q1807521
-Q21340328,http://viaf.org/viaf/92780116,Barry Conn,,92780116,,,Q1339511
-Q21340328,https://orcid.org/0000-0001-9832-3809,Barry J. Conn,0000-0001-9832-3809,,,,
+Q21340328,https://orcid.org/0000-0001-9832-3809,Barry J. Conn,0000-0001-9832-3809,92780116,,,
 Q21340682,https://orcid.org/0000-0003-0768-1286,Richard Pyle,0000-0003-0768-1286,,,,Q826520
 Q21505095,http://viaf.org/viaf/64067143,Robert Allkin,,64067143,,,
 Q21506569,http://purl.oclc.org/net/edu.harvard.huh/guid/uuid/1f870a85-7a31-473e-ad76-fcce00469c83,Neil A. Brummitt,,,110736,http://purl.oclc.org/net/edu.harvard.huh/guid/uuid/1f870a85-7a31-473e-ad76-fcce00469c83,
@@ -94,32 +93,32 @@ Q96219542,https://orcid.org/0000-0003-1593-1417,Dimitry Mozzherin,0000-0003-1593
 Q98970725,https://orcid.org/0000-0001-9382-5594,Carol Roetzel Butler,0000-0001-9382-5594,,,,Q131626
 Q99580181,https://orcid.org/0000-0003-2863-2491,William Ulate ,0000-0003-2863-2491,,,,
 Q99580292,https://orcid.org/0000-0002-6108-0572,Ben Richardson,0000-0002-6108-0572,,,,Q1191429
-,https://orcid.org/0000-0002-0772-0022,Annette Olson,0000-0002-0772-0022,,,,Q40358
-,http://viaf.org/viaf/236192,Barbara Mathé,,236192,,,
-,https://orcid.org/0000-0002-2541-5822,Chris Freeland,0000-0002-2541-5822,,,,Q1852803
-,http://viaf.org/viaf/194025057,Diane Wyse Jackson,,194025057,,,Q1339511
-,http://rs.tdwg.org/contributor/3,Doug Holland,,,,http://rs.tdwg.org/contributor/3,Q1852803
-,http://viaf.org/viaf/76413207,Elizabeth R. Smith,,76413207,,,
-,http://viaf.org/viaf/61185227,Frances E. M. Cook,,61185227,,,Q18748726
-,https://orcid.org/0000-0002-5178-4170,Gail E. Kampmeier,0000-0002-5178-4170,,,,Q457281
-,https://orcid.org/0000-0002-2954-9027,Greg Whitbread,0000-0002-2954-9027,,,,Q4914768
-,https://orcid.org/0000-0003-4176-2274,Ivan Teage,0000-0003-4176-2274,,,,
-,https://orcid.org/0000-0001-8332-2571,Joel Sachs,0000-0001-8332-2571,,,,Q4914768
-,https://orcid.org/0000-0002-2524-2773,Ken Bailey,0000-0002-2524-2773,,,,Q18748726
-,https://orcid.org/0000-0002-8481-9034,Marie Elise Lecoq,0000-0002-8481-9034,,,,
-,https://orcid.org/0000-0003-0623-6682,Matthew Blissett,0000-0003-0623-6682,,,,Q1531570
-,https://orcid.org/0000-0002-8234-0599,Mihail Carausu,0000-0002-8234-0599,,,,
-,https://orcid.org/0000-0003-2231-6228,Neil Thomson,0000-0003-2231-6228,,,,Q309388
-,https://orcid.org/0000-0002-4601-8180,P. Bryan Heidorn,0000-0002-4601-8180,,,,Q457281
-,http://rs.tdwg.org/contributor/14,Patricia Kelbert,,,,http://rs.tdwg.org/contributor/14,Q163255
-,https://orcid.org/0000-0001-5172-8577,Patrick Leary,0000-0001-5172-8577,,,,
-,http://purl.oclc.org/net/edu.harvard.huh/guid/uuid/5e51de22-d841-4c47-b0c4-d5ad0bd03035,Paul J. Morris ,,,90417,http://purl.oclc.org/net/edu.harvard.huh/guid/uuid/5e51de22-d841-4c47-b0c4-d5ad0bd03035,Q51926077
-,https://orcid.org/0000-0002-7104-7266,Renato De Giovanni,0000-0002-7104-7266,,,,Q29168927
-,http://viaf.org/viaf/232871584,Richard J. White,,232871584,,,
-,http://viaf.org/viaf/41424576,Richard Piacentini,,41424576,,,Q1339511
-,http://viaf.org/viaf/278739412,Ruud Altenburg,,278739412,,,Q51926832
-,http://viaf.org/viaf/26204975,S. Hollis,,26204975,,,
-,https://orcid.org/0000-0002-4726-7373,Simon Thornton Wood,0000-0002-4726-7373,,,,Q1032739
-,https://orcid.org/0000-0002-4419-6960,Stanley Blum,0000-0002-4419-6960,,,,Q4914768
-,http://viaf.org/viaf/91310738,Theodore J. Crovello,,91310738,,,
-,http://viaf.org/viaf/276948380,Toni Anne Paine,,276948380,,,
+Q111976094,https://orcid.org/0000-0002-0772-0022,Annette Olson,0000-0002-0772-0022,,,,Q40358
+Q111976095,http://viaf.org/viaf/236192,Barbara Mathé,,236192,,,
+Q111976097,https://orcid.org/0000-0002-2541-5822,Chris Freeland,0000-0002-2541-5822,,,,Q1852803
+Q111976098,http://viaf.org/viaf/194025057,Diane Wyse Jackson,,194025057,,,Q1339511
+Q111976099,http://www.wikidata.org/entity/Q111976099,Doug Holland,,,,http://rs.tdwg.org/contributor/3,Q1852803
+Q111976100,http://viaf.org/viaf/76413207,Elizabeth R. Smith,,76413207,,,
+Q111976101,http://viaf.org/viaf/61185227,Frances E. M. Cook,,61185227,,,Q18748726
+Q111976102,https://orcid.org/0000-0002-5178-4170,Gail E. Kampmeier,0000-0002-5178-4170,,,,Q457281
+Q111976104,https://orcid.org/0000-0002-2954-9027,Greg Whitbread,0000-0002-2954-9027,,,,Q4914768
+Q111976105,https://orcid.org/0000-0003-4176-2274,Ivan Teage,0000-0003-4176-2274,,,,
+Q111976106,https://orcid.org/0000-0001-8332-2571,Joel Sachs,0000-0001-8332-2571,,,,Q4914768
+Q111976107,https://orcid.org/0000-0002-2524-2773,Ken Bailey,0000-0002-2524-2773,,,,Q18748726
+Q111976108,https://orcid.org/0000-0002-8481-9034,Marie Elise Lecoq,0000-0002-8481-9034,,,,
+Q111976110,https://orcid.org/0000-0003-0623-6682,Matthew Blissett,0000-0003-0623-6682,,,,Q1531570
+Q111976111,https://orcid.org/0000-0002-8234-0599,Mihail Carausu,0000-0002-8234-0599,,,,
+Q111976113,https://orcid.org/0000-0003-2231-6228,Neil Thomson,0000-0003-2231-6228,,,,Q309388
+Q111976115,https://orcid.org/0000-0002-4601-8180,P. Bryan Heidorn,0000-0002-4601-8180,,,,Q457281
+Q111976136,http://www.wikidata.org/entity/Q111976136,Patricia Kelbert,,,,http://rs.tdwg.org/contributor/14,Q163255
+Q111976117,https://orcid.org/0000-0001-5172-8577,Patrick Leary,0000-0001-5172-8577,,,,
+Q111976118,http://purl.oclc.org/net/edu.harvard.huh/guid/uuid/5e51de22-d841-4c47-b0c4-d5ad0bd03035,Paul J. Morris ,,,90417,http://purl.oclc.org/net/edu.harvard.huh/guid/uuid/5e51de22-d841-4c47-b0c4-d5ad0bd03035,Q51926077
+Q111976119,https://orcid.org/0000-0002-7104-7266,Renato De Giovanni,0000-0002-7104-7266,,,,Q29168927
+Q111976121,http://viaf.org/viaf/232871584,Richard J. White,,232871584,,,
+Q111976122,http://viaf.org/viaf/41424576,Richard Piacentini,,41424576,,,Q1339511
+Q111976123,http://viaf.org/viaf/278739412,Ruud Altenburg,,278739412,,,Q51926832
+Q111976124,http://viaf.org/viaf/26204975,S. Hollis,,26204975,,,
+Q111976125,https://orcid.org/0000-0002-4726-7373,Simon Thornton Wood,0000-0002-4726-7373,,,,Q1032739
+Q111976126,https://orcid.org/0000-0002-4419-6960,Stanley Blum,0000-0002-4419-6960,,,,Q4914768
+Q111976127,http://viaf.org/viaf/91310738,Theodore J. Crovello,,91310738,,,
+Q111976128,http://viaf.org/viaf/276948380,Toni Anne Paine,,276948380,,,

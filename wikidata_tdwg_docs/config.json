@@ -1,0 +1,123 @@
+{
+  "data_path": "",
+  "item_source_csv": "",
+  "item_pattern_file": "graph_pattern.txt",
+  "outfiles": [
+    {
+      "manage_descriptions": true,
+      "label_description_language_list": [
+        "en"
+      ],
+      "output_file_name": "authors.csv",
+      "prop_list": [
+        {
+          "pid": "P31",
+          "variable": "instance_of",
+          "value_type": "item",
+          "qual": [],
+          "ref": []
+        },
+        {
+          "pid": "P21",
+          "variable": "gender",
+          "value_type": "item",
+          "qual": [],
+          "ref": []
+        },
+        {
+          "pid": "P496",
+          "variable": "orcid",
+          "value_type": "string",
+          "qual": [],
+          "ref": [
+            {
+              "pid": "P813",
+              "variable": "retrieved",
+              "value_type": "date"
+            }
+          ]
+        },
+        {
+          "pid": "P214",
+          "variable": "viaf",
+          "value_type": "string",
+          "qual": [],
+          "ref": [
+            {
+              "pid": "P813",
+              "variable": "retrieved",
+              "value_type": "date"
+            }
+          ]
+        },
+        {
+          "pid": "P6264",
+          "variable": "huh",
+          "value_type": "string",
+          "qual": [],
+          "ref": [
+            {
+              "pid": "P813",
+              "variable": "retrieved",
+              "value_type": "date"
+            }
+          ]
+        },
+        {
+          "pid": "P1416",
+          "variable": "affiliation",
+          "value_type": "item",
+          "qual": [],
+          "ref": [
+            {
+              "pid": "P854",
+              "variable": "referenceUrl",
+              "value_type": "uri"
+            },
+            {
+              "pid": "P813",
+              "variable": "retrieved",
+              "value_type": "date"
+            }
+          ]
+        },
+        {
+          "pid": "P108",
+          "variable": "employer",
+          "value_type": "item",
+          "qual": [],
+          "ref": [
+            {
+              "pid": "P854",
+              "variable": "referenceUrl",
+              "value_type": "uri"
+            },
+            {
+              "pid": "P813",
+              "variable": "retrieved",
+              "value_type": "date"
+            }
+          ]
+        },
+        {
+          "pid": "P101",
+          "variable": "field",
+          "value_type": "item",
+          "qual": [],
+          "ref": [
+            {
+              "pid": "P854",
+              "variable": "referenceUrl",
+              "value_type": "uri"
+            },
+            {
+              "pid": "P813",
+              "variable": "retrieved",
+              "value_type": "date"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
