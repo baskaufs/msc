@@ -532,7 +532,7 @@ def all_scores_same(score_list):
 # Start of main script
 
 # Initial setup
-fixed_first_word = 'slate'
+fixed_first_word = 'stare'
 
 score_sum = 0
 word_count = 0
@@ -606,4 +606,4 @@ print(answer_frequencies)
 print()
 
 fieldnames = ['word', 'score']
-writeToFile('wordle_slate_remaining2_test_results.csv', fieldnames, word_scores)
+writeToFile('wordle_stare_remaining2_test_results.csv', fieldnames, word_scores)

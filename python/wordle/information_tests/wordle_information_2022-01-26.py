@@ -462,6 +462,7 @@ class Wordle_list():
             if self.print_lists:
                 print('Error. Was the guess string malformed? No screen applied.')
         
+        ''' Skip this to speed up testing. It's not currently used for anything.
         # Create list of words with unique letters in unknown positions
         unique_letter_words = []
         for word in self.wordlist:
@@ -474,6 +475,7 @@ class Wordle_list():
             if len(unique_letter_list) == len(letter_list):
                 unique_letter_words.append(word)
         self.unique = unique_letter_words
+        '''
         
         self.n = len(self.wordlist)
 
@@ -532,7 +534,7 @@ def all_scores_same(score_list):
 # Start of main script
 
 # Initial setup
-fixed_first_word = 'raise'
+fixed_first_word = 'alert'
 
 score_sum = 0
 word_count = 0
@@ -606,4 +608,4 @@ print(answer_frequencies)
 print()
 
 fieldnames = ['word', 'score']
-writeToFile('wordle_raise_information_test_results.csv', fieldnames, word_scores)
+writeToFile('wordle_alert_information_test_results.csv', fieldnames, word_scores)
