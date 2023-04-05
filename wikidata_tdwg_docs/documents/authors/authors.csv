@@ -1,245 +1,224 @@
-qid,label_en,author_uuid,author,author_series_ordinal,contributor_role,author_stated_as,author_ref1_hash,author_ref1_referenceUrl,author_ref1_retrieved_nodeId,author_ref1_retrieved_val,author_ref1_retrieved_prec
-Q111979579,,,Q40670042,1,lead author,Steve Baskauf,,http://rs.tdwg.org/sds/doc/specification/,,2022-05-12,
-Q111979579,,,Q55181105,2,author,Roger Hyam,,http://rs.tdwg.org/sds/doc/specification/,,2022-05-12,
-Q111979579,,,Q111976126,3,author,Stanley Blum,,http://rs.tdwg.org/sds/doc/specification/,,2022-05-12,
-Q111979579,,,Q56761685,4,author,Robert A. Morris,,http://rs.tdwg.org/sds/doc/specification/,,2022-05-12,
-Q111979579,,,Q54712725,5,author,Jonathan Rees,,http://rs.tdwg.org/sds/doc/specification/,,2022-05-12,
-Q111979579,,,Q111976106,6,author,Joel Sachs,,http://rs.tdwg.org/sds/doc/specification/,,2022-05-12,
-Q111979579,,,Q111976104,7,author,Greg Whitbread,,http://rs.tdwg.org/sds/doc/specification/,,2022-05-12,
-Q111979579,,,Q90829701,8,author,John Wieczorek,,http://rs.tdwg.org/sds/doc/specification/,,2022-05-12,
-Q111979579,,,Q47502209,,review manager,Dag Endresen,,http://rs.tdwg.org/sds/doc/specification/,,2022-05-12,
-Q111979580,,,Q40670042,1,lead author,Steve Baskauf,,http://rs.tdwg.org/vms/doc/specification/,,2022-05-12,
-Q111979580,,,Q90829701,2,author,John Wieczorek,,http://rs.tdwg.org/vms/doc/specification/,,2022-05-12,
-Q111979580,,,Q111976126,3,author,Stan Blum,,http://rs.tdwg.org/vms/doc/specification/,,2022-05-12,
-Q111979580,,,Q56761685,4,author,Robert A. Morris,,http://rs.tdwg.org/vms/doc/specification/,,2022-05-12,
-Q111979580,,,Q54712725,5,author,Jonathan Rees,,http://rs.tdwg.org/vms/doc/specification/,,2022-05-12,
-Q111979580,,,Q111976106,6,author,Joel Sachs,,http://rs.tdwg.org/vms/doc/specification/,,2022-05-12,
-Q111979580,,,Q111976104,7,author,Greg Whitbread,,http://rs.tdwg.org/vms/doc/specification/,,2022-05-12,
-Q111979580,,,Q47502209,,review manager,Dag Endresen,,http://rs.tdwg.org/vms/doc/specification/,,2022-05-12,
-Q111979582,,,Q56761685,1,lead author,Robert A. Morris,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q28913574,2,author,Gregor Hagedorn,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q111976094,3,author,Annette Olson,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q40670042,4,author,Steve Baskauf,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q56816057,5,author,Vijay Barve,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q111976111,6,author,Mihail Carausu,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q28913570,7,author,Vishwas Chavan,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q51883873,8,author,José Cuadra,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q111976097,9,author,Chris Freeland,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q111976117,10,author,Patrick Leary,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q96219542,11,author,Dimitry Mozzherin,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q81320451,12,author,Greg Riccardi,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q111976105,13,author,Ivan Teage,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q56746747,14,author,Dan Stowell,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q30513172,15,author,Edward Baker,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q21340682,16,author,Richard Pyle,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979582,,,Q40670042,,review manager,Steve Baskauf,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979583,,,Q56761685,1,lead author,Robert A. Morris,,http://rs.tdwg.org/ac/doc/structure/,,2022-05-12,
-Q111979583,,,Q56816057,2,author,Vijay Barve,,http://rs.tdwg.org/ac/doc/structure/,,2022-05-12,
-Q111979583,,,Q111976111,3,author,Mihail Carausu,,http://rs.tdwg.org/ac/doc/structure/,,2022-05-12,
-Q111979583,,,Q28913570,4,author,Vishwas Chavan,,http://rs.tdwg.org/ac/doc/structure/,,2022-05-12,
-Q111979583,,,Q51883873,5,author,José Cuadra,,http://rs.tdwg.org/ac/doc/structure/,,2022-05-12,
-Q111979583,,,Q111976097,6,author,Chris Freeland,,http://rs.tdwg.org/ac/doc/structure/,,2022-05-12,
-Q111979583,,,Q28913574,7,author,Gregor Hagedorn,,http://rs.tdwg.org/ac/doc/structure/,,2022-05-12,
-Q111979583,,,Q111976117,8,author,Patrick Leary,,http://rs.tdwg.org/ac/doc/structure/,,2022-05-12,
-Q111979583,,,Q96219542,9,author,Dimitry Mozzherin,,http://rs.tdwg.org/ac/doc/structure/,,2022-05-12,
-Q111979583,,,Q111976094,10,author,Annette Olson,,http://rs.tdwg.org/ac/doc/structure/,,2022-05-12,
-Q111979583,,,Q81320451,11,author,Greg Riccardi,,http://rs.tdwg.org/ac/doc/structure/,,2022-05-12,
-Q111979583,,,Q111976105,12,author,Ivan Teage,,http://rs.tdwg.org/ac/doc/structure/,,2022-05-12,
-Q111979582,,,Q40670042,13,author,Steve Baskauf,,http://rs.tdwg.org/ac/doc/termlist/,,2022-05-12,
-Q111979583,,,Q40670042,,review manager,Steve Baskauf,,http://rs.tdwg.org/ac/doc/structure/,,2022-05-12,
-Q111979584,,,Q56761685,1,lead author,Robert A. Morris,,http://rs.tdwg.org/ac/doc/introduction/,,2022-05-12,
-Q111979584,,,Q56816057,2,author,Vijay Barve,,http://rs.tdwg.org/ac/doc/introduction/,,2022-05-12,
-Q111979584,,,Q111976111,3,author,Mihail Carausu,,http://rs.tdwg.org/ac/doc/introduction/,,2022-05-12,
-Q111979584,,,Q28913570,4,author,Vishwas Chavan,,http://rs.tdwg.org/ac/doc/introduction/,,2022-05-12,
-Q111979584,,,Q51883873,5,author,José Cuadra,,http://rs.tdwg.org/ac/doc/introduction/,,2022-05-12,
-Q111979584,,,Q111976097,6,author,Chris Freeland,,http://rs.tdwg.org/ac/doc/introduction/,,2022-05-12,
-Q111979584,,,Q28913574,7,author,Gregor Hagedorn,,http://rs.tdwg.org/ac/doc/introduction/,,2022-05-12,
-Q111979584,,,Q111976117,8,author,Patrick Leary,,http://rs.tdwg.org/ac/doc/introduction/,,2022-05-12,
-Q111979584,,,Q96219542,9,author,Dimitry Mozzherin,,http://rs.tdwg.org/ac/doc/introduction/,,2022-05-12,
-Q111979584,,,Q111976094,10,author,Annette Olson,,http://rs.tdwg.org/ac/doc/introduction/,,2022-05-12,
-Q111979584,,,Q81320451,11,author,Greg Riccardi,,http://rs.tdwg.org/ac/doc/introduction/,,2022-05-12,
-Q111979584,,,Q111976105,12,author,Ivan Teage,,http://rs.tdwg.org/ac/doc/introduction/,,2022-05-12,
-Q111979584,,,Q40670042,,review manager,Steve Baskauf,,http://rs.tdwg.org/ac/doc/introduction/,,2022-05-12,
-Q111979586,,,Q56761685,1,lead author,Robert A. Morris,,http://rs.tdwg.org/ac/doc/guide/,,2022-05-12,
-Q111979586,,,,,,Vijay Barve,,,,,
-Q111979586,,,Q111976111,,author,Mihail Carausu,,http://rs.tdwg.org/ac/doc/guide/,,2022-05-12,
-Q111979586,,,Q28913570,,author,Vishwas Chavan,,http://rs.tdwg.org/ac/doc/guide/,,2022-05-12,
-,,,,,,José Cuadra,,,,,
-Q111979586,,,Q111976097,,author,Chris Freeland,,http://rs.tdwg.org/ac/doc/guide/,,2022-05-12,
-Q111979586,,,Q28913574,,author,Gregor Hagedorn,,http://rs.tdwg.org/ac/doc/guide/,,2022-05-12,
-,,,,,,Patrick Leary,,,,,
-Q111979586,,,Q96219542,,author,Dimitry Mozzherin,,http://rs.tdwg.org/ac/doc/guide/,,2022-05-12,
-Q111979586,,,Q111976094,,author,Annette Olson,,http://rs.tdwg.org/ac/doc/guide/,,2022-05-12,
-Q111979586,,,Q81320451,,author,Greg Riccardi,,http://rs.tdwg.org/ac/doc/guide/,,2022-05-12,
-,,,,,,Ivan Teage,,,,,
-Q111979587,,,Q40670042,1,lead author,Steven J Baskauf,,http://rs.tdwg.org/ac/doc/format/,,2022-05-12,
-Q111979587,,,Q111976110,2,contributor,Matthew Blissett,,http://rs.tdwg.org/ac/doc/format/,,2022-05-12,
-Q111979587,,,Q100599637,3,contributor,Douglas Boyer,,http://rs.tdwg.org/ac/doc/format/,,2022-05-12,
-Q111979589,,,Q40670042,,lead author,Steven J Baskauf,,http://rs.tdwg.org/ac/doc/subtype/,,2022-05-12,
-Q111979590,,,Q40670042,1,lead author,Steven J Baskauf,,http://rs.tdwg.org/ac/doc/variant/,,2022-05-12,
-Q111979590,,,Q30513172,2,contributor,Ed Baker,,http://rs.tdwg.org/ac/doc/variant/,,2022-05-12,
-Q111979590,,,Q56746747,3,contributor,Dan Stowell,,http://rs.tdwg.org/ac/doc/variant/,,2022-05-12,
-Q111979591,,,Q51883936,,lead author,Kevin Richards,,http://rs.tdwg.org/guid/doc/guidas/,,2022-05-12,
-Q111979591,,,Q99580292,,review manager,Ben Richardson,,http://rs.tdwg.org/guid/doc/guidas/,,2022-05-12,
-Q111979593,,,Q51883958,1,author,Ricardo Pereira,,http://rs.tdwg.org/guid/doc/lsidas/,,2022-05-12,
-Q111979593,,,Q51883936,2,author,Kevin Richards,,http://rs.tdwg.org/guid/doc/lsidas/,,2022-05-12,
-Q111979593,,,Q28913648,3,author,Donald Hobern,,http://rs.tdwg.org/guid/doc/lsidas/,,2022-05-12,
-Q111979593,,,Q55181105,4,author,Roger Hyam,,http://rs.tdwg.org/guid/doc/lsidas/,,2022-05-12,
-Q111979593,,,Q28913664,5,author,Lee Belbin,,http://rs.tdwg.org/guid/doc/lsidas/,,2022-05-12,
-Q111979593,,,Q111976126,6,author,Stanley Blum,,http://rs.tdwg.org/guid/doc/lsidas/,,2022-05-12,
-Q111979593,,,Q99580292,,review manager,Ben Richardson,,http://rs.tdwg.org/guid/doc/lsidas/,,2022-05-12,
-Q111979594,,,Q40670042,1,lead author,Steve Baskauf,,http://rs.tdwg.org/dwc/terms/guides/rdf/,,2022-05-12,
-Q111979594,,,Q90829701,2,author,John Wieczorek,,http://rs.tdwg.org/dwc/terms/guides/rdf/,,2022-05-12,
-Q111979594,,,Q48975647,3,author,John Deck ,,http://rs.tdwg.org/dwc/terms/guides/rdf/,,2022-05-12,
-Q111979594,,,Q45342779,4,author,Campbell Webb ,,http://rs.tdwg.org/dwc/terms/guides/rdf/,,2022-05-12,
-Q111979594,,,Q111976118,5,author,Paul J. Morris ,,http://rs.tdwg.org/dwc/terms/guides/rdf/,,2022-05-12,
-Q111979594,,,Q47502211,6,author,Mark Schildhauer ,,http://rs.tdwg.org/dwc/terms/guides/rdf/,,2022-05-12,
-Q111979596,,,Q59417973,1,lead author,Tim Robertson,,http://rs.tdwg.org/dwc/terms/guides/text/,,2022-05-12,
-Q111979596,,,Q53584980,2,author,Markus Döring,,http://rs.tdwg.org/dwc/terms/guides/text/,,2022-05-12,
-Q111979596,,,Q90829701,3,author,John Wieczorek,,http://rs.tdwg.org/dwc/terms/guides/text/,,2022-05-12,
-Q111979596,,,Q111976119,4,author,Renato De Giovanni,,http://rs.tdwg.org/dwc/terms/guides/text/,,2022-05-12,
-Q111979596,,,Q53584986,5,author,Dave Vieglais,,http://rs.tdwg.org/dwc/terms/guides/text/,,2022-05-12,
-Q111979596,,,Q40670042,6,author,Steve Baskauf,,,,,
-Q111979596,,,Q111976102,,review manager,Gail E. Kampmeier,,http://rs.tdwg.org/dwc/terms/guides/text/,,2022-05-12,
-Q111979597,,,Q90829701,1,lead author,John Wieczorek,,http://rs.tdwg.org/dwc/terms/guides/xml/,,2022-05-12,
-Q111979597,,,Q53584980,2,author,Markus Döring,,http://rs.tdwg.org/dwc/terms/guides/xml/,,2022-05-12,
-Q111979597,,,Q111976119,3,author,Renato De Giovanni,,http://rs.tdwg.org/dwc/terms/guides/xml/,,2022-05-12,
-Q111979597,,,Q59417973,4,author,Tim Robertson,,http://rs.tdwg.org/dwc/terms/guides/xml/,,2022-05-12,
-Q111979597,,,Q53584986,5,author,Dave Vieglais,,http://rs.tdwg.org/dwc/terms/guides/xml/,,2022-05-12,
-Q111979597,,,Q111976102,,review manager,Gail E. Kampmeier,,http://rs.tdwg.org/dwc/terms/guides/xml/,,2022-05-12,
-Q111979599,,,Q90829701,1,lead author,John Wieczorek,,http://rs.tdwg.org/dwc/terms/simple/,,2022-05-12,
-Q111979599,,,Q53584980,2,author,Markus Döring,,http://rs.tdwg.org/dwc/terms/simple/,,2022-05-12,
-Q111979599,,,Q111976119,3,author,Renato De Giovanni,,http://rs.tdwg.org/dwc/terms/simple/,,2022-05-12,
-Q111979599,,,Q59417973,4,author,Tim Robertson,,http://rs.tdwg.org/dwc/terms/simple/,,2022-05-12,
-Q111979599,,,Q53584986,5,author,Dave Vieglais,,http://rs.tdwg.org/dwc/terms/simple/,,2022-05-12,
-Q111979599,,,Q111976102,,review manager,Gail E. Kampmeier,,http://rs.tdwg.org/dwc/terms/simple/,,2022-05-12,
-Q111979600,,,Q90829701,1,lead author,John Wieczorek,,http://rs.tdwg.org/dwc/terms/namespace/,,2022-05-12,
-Q111979600,,,Q53584980,2,author,Markus Döring,,http://rs.tdwg.org/dwc/terms/namespace/,,2022-05-12,
-Q111979600,,,Q111976119,3,author,Renato De Giovanni,,http://rs.tdwg.org/dwc/terms/namespace/,,2022-05-12,
-Q111979600,,,Q59417973,4,author,Tim Robertson,,http://rs.tdwg.org/dwc/terms/namespace/,,2022-05-12,
-Q111979600,,,Q53584986,5,author,Dave Vieglais,,http://rs.tdwg.org/dwc/terms/namespace/,,2022-05-12,
-Q111979600,,,Q111976102,,review manager,Gail E. Kampmeier,,http://rs.tdwg.org/dwc/terms/namespace/,,2022-05-12,
-Q111979601,,,Q90829701,1,contributor,John Wieczorek,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q25802817,2,contributor,Peter Desmet,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q40670042,3,contributor,Steve Baskauf,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q59417973,4,contributor,Tim Robertson,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q53584980,5,contributor,Markus Döring,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q28913658,6,contributor,Quentin Groom,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q59820575,7,contributor,Stijn Van Hoey,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q53584983,8,contributor,David Bloom,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q56839813,9,contributor,Paula Zermoglio,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q55829951,10,contributor,Robert Guralnick,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q48975647,11,contributor,John Deck,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q111976102,12,contributor,Gail Kampmeier,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q53584986,13,contributor,Dave Vieglais,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q111976119,14,contributor,Renato De Giovanni,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q45342779,15,contributor,Campbell Webb,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q111976118,16,contributor,Paul J. Morris,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979601,,,Q47502211,17,contributor,Mark Schildhauer,,http://rs.tdwg.org/dwc/doc/list/,,2022-05-12,
-Q111979603,,,Q28913658,1,lead author,Quentin Groom,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979603,,,Q25802817,2,contributor,Peter Desmet,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979603,,,Q57561067,3,contributor,Lien Reyserhove,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979603,,,Q56296490,4,contributor,Tim Adriaens,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979603,,,Q52833318,5,contributor,Damiano Oldoni,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979603,,,Q56429678,6,contributor,Sonia Vanderhoeven,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979603,,,Q40670042,7,contributor,Steven J. Baskauf,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979603,,,Q79054055,8,contributor,Arthur Chapman,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979603,,,Q55323668,9,contributor,Melodie McGeoch,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979603,,,Q63240627,10,contributor,Ramona Walls,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979603,,,Q90829701,11,contributor,John Wieczorek,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979603,,,Q56355245,12,contributor,John R.U. Wilson,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979603,,,Q56839813,13,contributor,Paula F F Zermoglio,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979603,,,Q56798499,14,contributor,Annie Simpson,,http://rs.tdwg.org/dwc/doc/doe/,,2022-05-12,
-Q111979604,,,Q28913658,1,lead author,Quentin Groom,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979604,,,Q25802817,2,contributor,Peter Desmet,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979604,,,Q57561067,3,contributor,Lien Reyserhove,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979604,,,Q56296490,4,contributor,Tim Adriaens,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979604,,,Q52833318,5,contributor,Damiano Oldoni,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979604,,,Q56429678,6,contributor,Sonia Vanderhoeven,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979604,,,Q40670042,7,contributor,Steven J. Baskauf,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979604,,,Q79054055,8,contributor,Arthur Chapman,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979604,,,Q55323668,9,contributor,Melodie McGeoch,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979604,,,Q63240627,10,contributor,Ramona Walls,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979604,,,Q90829701,11,contributor,John Wieczorek,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979604,,,Q56355245,12,contributor,John R.U. Wilson,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979604,,,Q56839813,13,contributor,Paula F F Zermoglio,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979604,,,Q56798499,14,contributor,Annie Simpson,,http://rs.tdwg.org/dwc/doc/em/,,2022-05-12,
-Q111979606,,,Q28913658,1,lead author,Quentin Groom,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979606,,,Q25802817,2,contributor,Peter Desmet,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979606,,,Q57561067,3,contributor,Lien Reyserhove,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979606,,,Q56296490,4,contributor,Tim Adriaens,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979606,,,Q52833318,5,contributor,Damiano Oldoni,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979606,,,Q56429678,6,contributor,Sonia Vanderhoeven,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979606,,,Q40670042,7,contributor,Steven J. Baskauf,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979606,,,Q79054055,8,contributor,Arthur Chapman,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979606,,,Q55323668,9,contributor,Melodie McGeoch,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979606,,,Q63240627,10,contributor,Ramona Walls,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979606,,,Q90829701,11,contributor,John Wieczorek,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979606,,,Q56355245,12,contributor,John R.U. Wilson,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979606,,,Q56839813,13,contributor,Paula F F Zermoglio,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979606,,,Q56798499,14,contributor,Annie Simpson,,http://rs.tdwg.org/dwc/doc/pw/,,2022-05-12,
-Q111979607,,,Q90829701,1,lead author,John Wieczorek,,http://rs.tdwg.org/dwc/doc/chrono/,,2022-05-12,
-Q111979607,,,Q64886237,2,contributor,Laura Brenskelle,,http://rs.tdwg.org/dwc/doc/chrono/,,2022-05-12,
-Q111979607,,,Q55829951,3,contributor,Robert Guralnick,,http://rs.tdwg.org/dwc/doc/chrono/,,2022-05-12,
-Q111979607,,,Q59201801,4,contributor,Kitty Emery,,http://rs.tdwg.org/dwc/doc/chrono/,,2022-05-12,
-Q111979607,,,Q90255446,5,contributor,Michelle LeFebvre,,http://rs.tdwg.org/dwc/doc/chrono/,,2022-05-12,
-Q111979607,,,Q64597637,6,contributor,Neill Wallis,,http://rs.tdwg.org/dwc/doc/chrono/,,2022-05-12,
-Q111979607,,,Q40670042,7,contributor,Steve Baskauf,,http://rs.tdwg.org/dwc/doc/chrono/,,2022-05-12,
-Q111979607,,,Q111976108,8,contributor,Marie Elise Lecoq,,http://rs.tdwg.org/dwc/doc/chrono/,,2022-05-12,
-Q111979607,,,Q58165014,9,contributor,Eric Kansa,,http://rs.tdwg.org/dwc/doc/chrono/,,2022-05-12,
-Q111979607,,,Q57773887,10,contributor,Sarah Kansa,,http://rs.tdwg.org/dwc/doc/chrono/,,2022-05-12,
-Q111979607,,,Q91656635,11,contributor,Denné Reed,,http://rs.tdwg.org/dwc/doc/chrono/,,2022-05-12,
-Q111979608,,,Q111976119,1,lead author,Renato De Giovanni,,http://rs.tdwg.org/tapir/doc/specification/,,2022-05-12,
-Q111979608,,,Q51883987,2,lead author,Charles Copp,,http://rs.tdwg.org/tapir/doc/specification/,,2022-05-12,
-Q111979608,,,Q53584980,3,author,Markus Döring,,http://rs.tdwg.org/tapir/doc/specification/,,2022-05-12,
-Q111979608,,,Q28913581,4,author,Anton Güntsch,,http://rs.tdwg.org/tapir/doc/specification/,,2022-05-12,
-Q111979608,,,Q53584986,5,author,Dave Vieglais,,http://rs.tdwg.org/tapir/doc/specification/,,2022-05-12,
-Q111979608,,,Q28913648,6,author,Donald Hobern,,http://rs.tdwg.org/tapir/doc/specification/,,2022-05-12,
-Q111979608,,,Q51883962,7,author,Javier de la Torre,,http://rs.tdwg.org/tapir/doc/specification/,,2022-05-12,
-Q111979608,,,Q90829701,8,author,John Wieczorek,,http://rs.tdwg.org/tapir/doc/specification/,,2022-05-12,
-Q111979608,,,Q51883993,9,author,Robert Gales,,http://rs.tdwg.org/tapir/doc/specification/,,2022-05-12,
-Q111979608,,,Q55181105,10,author,Roger Hyam,,http://rs.tdwg.org/tapir/doc/specification/,,2022-05-12,
-Q111979608,,,Q111976126,11,author,Stanley Blum,,http://rs.tdwg.org/tapir/doc/specification/,,2022-05-12,
-Q111979608,,,Q51883997,12,author,Perry Steven,,http://rs.tdwg.org/tapir/doc/specification/,,2022-05-12,
-Q111979608,,,Q51883977,,review manager,Piers Higgs,,http://rs.tdwg.org/tapir/doc/specification/,,2022-05-12,
-Q111979668,,,Q111976119,,lead author,Renato De Giovanni,,http://www.tdwg.org/standards/449,,2022-05-12,
-Q111979611,,,Q111976119,,lead author,Renato De Giovanni,,http://www.tdwg.org/standards/449,,2022-05-12,
-Q111979612,,,Q51883987,1,lead author,Charles Copp,,http://rs.tdwg.org/tapir/doc/guide/,,2022-05-12,
-Q111979612,,,Q111976119,2,lead author,Renato De Giovanni,,http://rs.tdwg.org/tapir/doc/guide/,,2022-05-12,
-Q111979612,,,Q28913664,,reviewer,Lee Belbin,,http://rs.tdwg.org/tapir/doc/guide/,,2022-05-12,
-Q111979612,,,Q53584980,,reviewer,Markus Döring,,http://rs.tdwg.org/tapir/doc/guide/,,2022-05-12,
-Q111979614,,,Q111976119,,lead author,Renato De Giovanni,,http://www.tdwg.org/standards/449,,2022-05-12,
-Q111979615,,,Q111976113,1,author,Neil Thomson,,http://rs.tdwg.org/abcd/doc/primer/,,2022-05-12,
-Q111979615,,,Q53584980,2,author,Markus Döring,,http://rs.tdwg.org/abcd/doc/primer/,,2022-05-12,
-Q111979615,,,Q111976119,3,author,Renato De Giovanni,,http://rs.tdwg.org/abcd/doc/primer/,,2022-05-12,
-Q111979615,,,Q51883962,4,author,Javier de la Torre,,http://rs.tdwg.org/abcd/doc/primer/,,2022-05-12,
-Q111979615,,,Q54499411,5,author,Walter G. Berendsohn,,http://rs.tdwg.org/abcd/doc/primer/,,2022-05-12,
-Q111979615,,,Q63832109,6,author,Wouter Addink,,http://rs.tdwg.org/abcd/doc/primer/,,2022-05-12,
-Q111979615,,,Q99580181,7,author,William Ulate ,,http://rs.tdwg.org/abcd/doc/primer/,,2022-05-12,
-Q111979617,,,Q54499411,,lead author,Walter G. Berendsohn,,http://www.tdwg.org/standards/115,,2022-05-12,
-Q111979618,,,Q28913574,1,author,Gregor Hagedorn,,http://www.tdwg.org/standards/116,,2022-05-12,
-Q111979618,,,Q547084,2,author,Kevin R. Thiele,,http://www.tdwg.org/standards/116,,2022-05-12,
-Q111979618,,,Q56761685,3,author,Robert A. Morris,,http://www.tdwg.org/standards/116,,2022-05-12,
-Q111979618,,,Q111976115,4,author,P. Bryan Heidorn,,http://www.tdwg.org/standards/116,,2022-05-12,
-Q111979619,,,Q28913574,1,author,Gregor Hagedorn,,http://www.tdwg.org/standards/116,,2022-05-12,
-Q111979619,,,Q547084,2,author,Kevin R. Thiele,,http://www.tdwg.org/standards/116,,2022-05-12,
-Q111979619,,,Q56761685,3,author,Robert A. Morris,,http://www.tdwg.org/standards/116,,2022-05-12,
-Q111979621,,,Q55181105,,author,Roger Hyam,,http://rs.tdwg.org/tcs/doc/guide/,,2022-05-12,
-Q111979621,,,Q73585974,,editor,Jessie Kennedy,,http://rs.tdwg.org/tcs/doc/guide/,,2022-05-12,
-Q111979622,,,Q73585974,1,author,Jessie Kennedy,,http://www.tdwg.org/standards/117,,2022-05-12,
-Q111979622,,,Q55181105,2,author,Roger Hyam,,http://www.tdwg.org/standards/117,,2022-05-12,
-Q111979624,,,Q6012801,1,author,M. J. Dallwitz,,http://rs.tdwg.org/delta/doc/definition/,,2022-05-12,
-Q111979624,,,Q111976128,2,author,T. A. Paine,,http://rs.tdwg.org/delta/doc/definition/,,2022-05-12,
-Q111979625,,,Q111976121,1,author,Richard J. White,,http://rs.tdwg.org/xdf/doc/article/,,2022-05-12,
-Q111979625,,,Q21505095,2,author,Robert Allkin,,http://rs.tdwg.org/xdf/doc/article/,,2022-05-12,
-Q111979627,,,Q111976098,1,lead author,Diane Wyse Jackson,,http://rs.tdwg.org/itfbgpr/doc/specification/,,2022-05-12,
-Q111979627,,,Q111976098,,editor,Diane Wyse Jackson,,,,,
-Q111979627,,,Q51885215,,editor,Christopher Hobson,,http://rs.tdwg.org/itfbgpr/doc/specification/,,2022-05-12,
-Q111979627,,,Q21340328,,editor,Barry Conn,,http://rs.tdwg.org/itfbgpr/doc/specification/,,2022-05-12,
-Q111979627,,,Q111976122,,editor,Richard Piacentini,,http://rs.tdwg.org/itfbgpr/doc/specification/,,2022-05-12,
-Q111979627,,,Q55542739,,editor,Steve Waldren,,http://rs.tdwg.org/itfbgpr/doc/specification/,,2022-05-12,
-Q111979627,,,Q51892660,,editor,Chris Ward,,http://rs.tdwg.org/itfbgpr/doc/specification/,,2022-05-12,
-Q111979627,,,Q111976107,2,author,Ken Bailey,,http://rs.tdwg.org/itfbgpr/doc/specification/,,2022-05-12,
-Q111979627,,,Q11255062,3,author,Peter Wyse Jackson,,http://rs.tdwg.org/itfbgpr/doc/specification/,,2022-05-12,
-Q111979627,,,Q111976125,4,author,Simon Thornton Wood,,http://rs.tdwg.org/itfbgpr/doc/specification/,,2022-05-12,
-Q111979627,,,Q21339849,5,author,Kerry Walter,,http://rs.tdwg.org/itfbgpr/doc/specification/,,2022-05-12,
+qid,label_en,author_uuid,author,author_series_ordinal,author_stated_as,author_ref1_hash,author_ref1_referenceUrl,author_ref1_retrieved_nodeId,author_ref1_retrieved_val,author_ref1_retrieved_prec
+Q111979579,,613CAE93-5452-4B3F-8556-E7BD08DFAE4E,Q40670042,1,Steve Baskauf,be5865a9885d672e6df53e08a9a293d194fd1334,http://rs.tdwg.org/sds/doc/specification/,ad8fd2ad-e878-4711-a77f-f59136b02491,2022-05-12T00:00:00Z,11
+Q111979579,,8023A44B-7E5C-4402-B7DF-B427D008F0CD,Q55181105,2,Roger Hyam,be5865a9885d672e6df53e08a9a293d194fd1334,http://rs.tdwg.org/sds/doc/specification/,848d8c67-fba3-4ece-bb11-fe6644e43c9c,2022-05-12T00:00:00Z,11
+Q111979579,,8E056A01-CF48-4531-9341-85E1FD8B2A52,Q111976126,3,Stanley Blum,be5865a9885d672e6df53e08a9a293d194fd1334,http://rs.tdwg.org/sds/doc/specification/,b71e60a9-fbfc-428a-9d81-eb701a00b496,2022-05-12T00:00:00Z,11
+Q111979579,,25384D8C-A8DC-4DB4-8291-D95C1301380B,Q56761685,4,Robert A. Morris,be5865a9885d672e6df53e08a9a293d194fd1334,http://rs.tdwg.org/sds/doc/specification/,3c6a20a9-c54e-4075-9d7e-a955625a04f2,2022-05-12T00:00:00Z,11
+Q111979579,,01B4BA10-711C-4AD8-9E6E-371D8BFE078E,Q54712725,5,Jonathan Rees,be5865a9885d672e6df53e08a9a293d194fd1334,http://rs.tdwg.org/sds/doc/specification/,79c772c8-b773-4b51-9fd0-c0706116b539,2022-05-12T00:00:00Z,11
+Q111979579,,D2230E07-6A28-4E54-A9A2-AEF20EF764A2,Q111976106,6,Joel Sachs,be5865a9885d672e6df53e08a9a293d194fd1334,http://rs.tdwg.org/sds/doc/specification/,2622ebaf-baec-4c45-851f-671198927aae,2022-05-12T00:00:00Z,11
+Q111979579,,DCAC8686-7A4C-43D5-9DDA-0BA4DF7F89C9,Q111976104,7,Greg Whitbread,be5865a9885d672e6df53e08a9a293d194fd1334,http://rs.tdwg.org/sds/doc/specification/,b2844a22-5537-4122-b73e-4d907a9dc423,2022-05-12T00:00:00Z,11
+Q111979579,,3AFB7AE7-5657-447C-B0EA-8A2C2BEEBFE2,Q90829701,8,John Wieczorek,be5865a9885d672e6df53e08a9a293d194fd1334,http://rs.tdwg.org/sds/doc/specification/,24fd5e18-6ee4-417a-9aff-bf6aecfbe043,2022-05-12T00:00:00Z,11
+Q111979580,,B53BF68C-9FE3-47F5-BD3F-1B4130419D16,Q40670042,1,Steve Baskauf,da5d7bf45a252a951460dbf7db32b0567cc9f9bf,http://rs.tdwg.org/vms/doc/specification/,5dd2f475-7e87-49d2-a95c-146bb8ba0d40,2022-05-12T00:00:00Z,11
+Q111979580,,CCF24C5E-268D-45E6-BA01-D886AA73856C,Q90829701,2,John Wieczorek,da5d7bf45a252a951460dbf7db32b0567cc9f9bf,http://rs.tdwg.org/vms/doc/specification/,ecb1961e-3931-4d3d-ae97-5561159fdda9,2022-05-12T00:00:00Z,11
+Q111979580,,177B8EDC-CF1A-44E8-B938-353FE62D55F9,Q111976126,3,Stan Blum,da5d7bf45a252a951460dbf7db32b0567cc9f9bf,http://rs.tdwg.org/vms/doc/specification/,7126e721-f38c-4f1d-9a35-a09f40dac0e7,2022-05-12T00:00:00Z,11
+Q111979580,,EC1BA294-CE42-4AC2-B1E6-4B91107FD476,Q56761685,4,Robert A. Morris,da5d7bf45a252a951460dbf7db32b0567cc9f9bf,http://rs.tdwg.org/vms/doc/specification/,20b91171-1f94-4e2c-8c3a-afaf1f2e107d,2022-05-12T00:00:00Z,11
+Q111979580,,121DFD01-B3E1-4D62-B59A-EF5B97AC7DE9,Q54712725,5,Jonathan Rees,da5d7bf45a252a951460dbf7db32b0567cc9f9bf,http://rs.tdwg.org/vms/doc/specification/,d30c8776-1520-4949-9e6e-446383ef8052,2022-05-12T00:00:00Z,11
+Q111979580,,3202A5E7-F87A-48D9-8A6C-72382BBD3EDE,Q111976106,6,Joel Sachs,da5d7bf45a252a951460dbf7db32b0567cc9f9bf,http://rs.tdwg.org/vms/doc/specification/,d9e06056-3832-4619-9357-18e1bb6c8547,2022-05-12T00:00:00Z,11
+Q111979580,,32D4B569-ED1F-4888-9713-9FCC224098EF,Q111976104,7,Greg Whitbread,da5d7bf45a252a951460dbf7db32b0567cc9f9bf,http://rs.tdwg.org/vms/doc/specification/,c1d70990-62c1-44c7-8eef-777019f817f0,2022-05-12T00:00:00Z,11
+Q111979582,,D32EDDDA-B4FC-4DE6-9273-8134431F4CD3,Q56761685,1,Robert A. Morris,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,16283153-e532-4bb3-9698-6c82036fd71a,2022-05-12T00:00:00Z,11
+Q111979582,,86DEEFE5-DBD4-48CB-8178-6A7E4C992A6E,Q28913574,2,Gregor Hagedorn,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,09ac570b-5050-4537-8bd6-81fbfcaa61a3,2022-05-12T00:00:00Z,11
+Q111979582,,0076CE57-9EBE-4C28-9921-F98D6C94CC9D,Q111976094,3,Annette Olson,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,99566351-c46e-42d5-b5af-143c89bb9643,2022-05-12T00:00:00Z,11
+Q111979582,,A38B07ED-5BC7-4D54-90B1-F38672EB967D,Q40670042,4,Steve Baskauf,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,926b6035-87bf-4d3b-9026-cc4a14bfa9fd,2022-05-12T00:00:00Z,11
+Q111979582,,5D264E3A-2E0E-4802-A013-C101DEDDF526,Q56816057,5,Vijay Barve,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,9b1bd196-a101-40c7-8268-1089fcb14d37,2022-05-12T00:00:00Z,11
+Q111979582,,6B2CBCD3-D4E6-4FED-A453-2C68E90160F7,Q111976111,6,Mihail Carausu,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,4897019f-594f-4b9c-9926-2298ed1a0aac,2022-05-12T00:00:00Z,11
+Q111979582,,4685C3DB-0EE3-47FB-819C-7BB040B77FBE,Q28913570,7,Vishwas Chavan,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,bfa606b9-5744-4d7a-a7ea-8b6e48288de5,2022-05-12T00:00:00Z,11
+Q111979582,,923829C2-DC66-49BD-A523-21041F4D9649,Q51883873,8,José Cuadra,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,04044adf-2100-4ef0-9b82-901990bd9f8e,2022-05-12T00:00:00Z,11
+Q111979582,,45EF9540-FB61-40D3-BE61-04A1D290B247,Q111976097,9,Chris Freeland,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,c784f668-e0ae-4eb7-a8a5-8638760b30f0,2022-05-12T00:00:00Z,11
+Q111979582,,88B33365-66E6-4057-B8B2-D22C90673E18,Q111976117,10,Patrick Leary,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,403adabb-f54b-4489-9e72-b44babd17606,2022-05-12T00:00:00Z,11
+Q111979582,,43901AEF-82B2-4ED6-9B91-AFA45161CCDE,Q96219542,11,Dimitry Mozzherin,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,9315619e-1750-4824-8b01-51e488fef045,2022-05-12T00:00:00Z,11
+Q111979582,,6A7B757B-EC82-4F6C-9758-0427769FCE3D,Q81320451,12,Greg Riccardi,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,3a0ba94e-83fb-44ca-8d5f-2f8b2c2e0c51,2022-05-12T00:00:00Z,11
+Q111979582,,23A75093-D367-4653-AE77-001A72376B57,Q111976105,13,Ivan Teage,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,85659eb0-33f6-425a-9e34-37acd2bcf39d,2022-05-12T00:00:00Z,11
+Q111979582,,6E384ACA-EA9D-458A-AC37-D5F009B199AB,Q56746747,14,Dan Stowell,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,cb968a1a-7ea6-4679-ab36-791ef67faa27,2022-05-12T00:00:00Z,11
+Q111979582,,68E840CF-CEB5-4FE6-950B-95A122A4DA17,Q30513172,15,Edward Baker,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,71854ec7-a505-4857-a642-4bb9ebd87fa7,2022-05-12T00:00:00Z,11
+Q111979582,,6708F349-AE83-4710-83FD-490AEC2A446B,Q21340682,16,Richard Pyle,a9b904ff94bc5154562775a5b26a092be0a738a7,http://rs.tdwg.org/ac/doc/termlist/,a9c8279e-2e35-4d2a-b413-d0ed8368fe25,2022-05-12T00:00:00Z,11
+Q111979583,,D3231507-0375-4907-B473-C69CB164F0E5,Q56761685,1,Robert A. Morris,54afb0810df708b9b3c2a25b36f88b5b1204f759,http://rs.tdwg.org/ac/doc/structure/,343c94ba-b54d-4cf3-a6f6-14df34b9db1e,2022-05-12T00:00:00Z,11
+Q111979583,,FD34863B-104E-4FD7-BC4A-C8EE04F87AB9,Q56816057,2,Vijay Barve,54afb0810df708b9b3c2a25b36f88b5b1204f759,http://rs.tdwg.org/ac/doc/structure/,304a9461-bb24-4ef6-99c9-8fd7258f9a0b,2022-05-12T00:00:00Z,11
+Q111979583,,2AADB026-DA09-4EA3-A47A-50ECBE03106A,Q111976111,3,Mihail Carausu,54afb0810df708b9b3c2a25b36f88b5b1204f759,http://rs.tdwg.org/ac/doc/structure/,73c6fdd0-fd1a-471b-b073-56612ce5d7b3,2022-05-12T00:00:00Z,11
+Q111979583,,E840B20E-2D07-4632-A51A-74A4329CF092,Q28913570,4,Vishwas Chavan,54afb0810df708b9b3c2a25b36f88b5b1204f759,http://rs.tdwg.org/ac/doc/structure/,df534a49-8daf-4f66-87e8-cfcd9353c834,2022-05-12T00:00:00Z,11
+Q111979583,,89318652-50BC-4A90-BE8F-A22B88BD4EC2,Q51883873,5,José Cuadra,54afb0810df708b9b3c2a25b36f88b5b1204f759,http://rs.tdwg.org/ac/doc/structure/,aacba1b9-3ea9-4687-a7c6-edac74ef143e,2022-05-12T00:00:00Z,11
+Q111979583,,2044BF21-DFB9-4064-B54D-7F2FEA0BA6C6,Q111976097,6,Chris Freeland,54afb0810df708b9b3c2a25b36f88b5b1204f759,http://rs.tdwg.org/ac/doc/structure/,7354ac5b-30ee-4e1e-830e-379cc95e3171,2022-05-12T00:00:00Z,11
+Q111979583,,F80DF8CF-95E9-4D83-B903-C6677B6C8F5E,Q28913574,7,Gregor Hagedorn,54afb0810df708b9b3c2a25b36f88b5b1204f759,http://rs.tdwg.org/ac/doc/structure/,9904f4ba-cd7e-4704-a610-d4d42d4514de,2022-05-12T00:00:00Z,11
+Q111979583,,9B1B4AEB-20B3-438D-B7A6-2488B0A439B8,Q111976117,8,Patrick Leary,54afb0810df708b9b3c2a25b36f88b5b1204f759,http://rs.tdwg.org/ac/doc/structure/,d0552765-b5e1-4336-a7a4-e27bb76c8114,2022-05-12T00:00:00Z,11
+Q111979583,,E9D3DCEA-79B8-49DE-BCC5-A5072563AA30,Q96219542,9,Dimitry Mozzherin,54afb0810df708b9b3c2a25b36f88b5b1204f759,http://rs.tdwg.org/ac/doc/structure/,d989915f-32de-48dd-a359-0bd14761ca90,2022-05-12T00:00:00Z,11
+Q111979583,,6EB8BE46-0B9F-4DFA-AC23-577EB80ABE5B,Q111976094,10,Annette Olson,54afb0810df708b9b3c2a25b36f88b5b1204f759,http://rs.tdwg.org/ac/doc/structure/,362b3b6e-ebdf-4c18-aca7-a2b31a05563d,2022-05-12T00:00:00Z,11
+Q111979583,,988D5A48-D3A8-41C2-9E7B-DCD191656906,Q81320451,11,Greg Riccardi,54afb0810df708b9b3c2a25b36f88b5b1204f759,http://rs.tdwg.org/ac/doc/structure/,93a571a3-71ab-4efb-b392-ac241e27a2a0,2022-05-12T00:00:00Z,11
+Q111979583,,E9AE9CF9-5A7D-4403-A127-A2D5DBCBF549,Q111976105,12,Ivan Teage,54afb0810df708b9b3c2a25b36f88b5b1204f759,http://rs.tdwg.org/ac/doc/structure/,f0dd1824-72c5-4542-838b-c6e8502895e5,2022-05-12T00:00:00Z,11
+Q111979583,,3B050A75-7ABB-4124-9428-0F6E9AE35E54,Q40670042,13,Steve Baskauf,54afb0810df708b9b3c2a25b36f88b5b1204f759,http://rs.tdwg.org/ac/doc/structure/,33e2de2a-f30d-40ca-8194-c4c8e2deabc2,2022-05-12T00:00:00Z,11
+Q111979584,,1E35C192-CBC1-4550-848B-394DFF2DD394,Q56761685,1,Robert A. Morris,d1dc511708b5de545278a7349974ca49e43b41fb,http://rs.tdwg.org/ac/doc/introduction/,3d2ec74d-863d-4924-a4e5-fb203a6a9cd1,2022-05-12T00:00:00Z,11
+Q111979584,,FD2E5A99-8489-4F80-A136-1F2E142571BE,Q56816057,2,Vijay Barve,d1dc511708b5de545278a7349974ca49e43b41fb,http://rs.tdwg.org/ac/doc/introduction/,8aa34417-6aae-4fe8-afc5-f75d6c02bb84,2022-05-12T00:00:00Z,11
+Q111979584,,B8FF7B45-9DED-4AAC-BE37-5C27807F8BED,Q111976111,3,Mihail Carausu,d1dc511708b5de545278a7349974ca49e43b41fb,http://rs.tdwg.org/ac/doc/introduction/,790bf3ca-a3bd-4f9c-aadd-6e542cde9dd4,2022-05-12T00:00:00Z,11
+Q111979584,,28CB67D2-B347-47BD-A745-161F34BE6264,Q28913570,4,Vishwas Chavan,d1dc511708b5de545278a7349974ca49e43b41fb,http://rs.tdwg.org/ac/doc/introduction/,fdd3ba3b-0c42-4f7a-8597-caea8bf3994b,2022-05-12T00:00:00Z,11
+Q111979584,,AC844D55-7D52-43CF-A28B-2F35B79E5184,Q51883873,5,José Cuadra,d1dc511708b5de545278a7349974ca49e43b41fb,http://rs.tdwg.org/ac/doc/introduction/,4e4263b3-c0f7-450d-93c8-76defa955096,2022-05-12T00:00:00Z,11
+Q111979584,,118078B6-9F21-474B-A27B-ADDAB33BCBD0,Q111976097,6,Chris Freeland,d1dc511708b5de545278a7349974ca49e43b41fb,http://rs.tdwg.org/ac/doc/introduction/,c8d5627d-03af-49b2-945a-b9d43957fea3,2022-05-12T00:00:00Z,11
+Q111979584,,F0416216-6051-4BD0-A444-75D6FFFD1BE4,Q28913574,7,Gregor Hagedorn,d1dc511708b5de545278a7349974ca49e43b41fb,http://rs.tdwg.org/ac/doc/introduction/,ca5bd0e4-1bc6-4017-b5c7-fbcb06a562e2,2022-05-12T00:00:00Z,11
+Q111979584,,19D295EB-86E2-45A9-807F-9A09475260AE,Q111976117,8,Patrick Leary,d1dc511708b5de545278a7349974ca49e43b41fb,http://rs.tdwg.org/ac/doc/introduction/,d7834836-414b-4b89-8da8-e46c5d3e414a,2022-05-12T00:00:00Z,11
+Q111979584,,8D873790-949C-4551-93CB-C498C85811E5,Q96219542,9,Dimitry Mozzherin,d1dc511708b5de545278a7349974ca49e43b41fb,http://rs.tdwg.org/ac/doc/introduction/,14cfcb74-b21a-4e3d-8328-cb63a4533d45,2022-05-12T00:00:00Z,11
+Q111979584,,75E282B0-0084-4834-97B5-76F26B756D1C,Q111976094,10,Annette Olson,d1dc511708b5de545278a7349974ca49e43b41fb,http://rs.tdwg.org/ac/doc/introduction/,e55be7d9-9d23-4be3-9e13-df86b58ce44f,2022-05-12T00:00:00Z,11
+Q111979584,,37121BB2-D3C7-4D20-A4CC-59212EC00782,Q81320451,11,Greg Riccardi,d1dc511708b5de545278a7349974ca49e43b41fb,http://rs.tdwg.org/ac/doc/introduction/,4e08b4f9-e41e-45b0-b8f0-9304e026b125,2022-05-12T00:00:00Z,11
+Q111979584,,A2FFE9E8-BADB-47E9-8BE3-89E2E2DF85CA,Q111976105,12,Ivan Teage,d1dc511708b5de545278a7349974ca49e43b41fb,http://rs.tdwg.org/ac/doc/introduction/,a0595928-fa80-40a7-9847-a22aca2192f2,2022-05-12T00:00:00Z,11
+Q111979586,,C924F88D-51E8-4292-B019-0895EA284916,Q56761685,1,Robert A. Morris,1f1fb26232695c5f1f04efcc38efb53fd75532aa,http://rs.tdwg.org/ac/doc/guide/,cfee9fb6-d3b6-404e-a27c-6efb6a7c4970,2022-05-12T00:00:00Z,11
+Q111979586,,E288EB25-8356-4124-8222-EA841AE7D6FC,Q56816057,2,Vijay Barve,1f1fb26232695c5f1f04efcc38efb53fd75532aa,http://rs.tdwg.org/ac/doc/guide/,f8cd36e6-43ec-46be-bb1b-9a5550c1e76c,2022-05-12T00:00:00Z,11
+Q111979586,,C7A706B6-4EEE-4992-9B96-D6E6086CCE54,Q111976111,3,Mihail Carausu,1f1fb26232695c5f1f04efcc38efb53fd75532aa,http://rs.tdwg.org/ac/doc/guide/,7ea71907-4e52-411d-9de5-e6d341ff053e,2022-05-12T00:00:00Z,11
+Q111979586,,68E706C9-E7DF-4512-863C-E5D7B95D60E1,Q28913570,4,Vishwas Chavan,1f1fb26232695c5f1f04efcc38efb53fd75532aa,http://rs.tdwg.org/ac/doc/guide/,76a8026d-b9f5-4083-b8ac-b0bb88bbf9b5,2022-05-12T00:00:00Z,11
+Q111979586,,BBCA5B0B-D599-4DC0-A529-757A94819AA0,Q51883873,5,José Cuadra,1f1fb26232695c5f1f04efcc38efb53fd75532aa,http://rs.tdwg.org/ac/doc/guide/,b05ab295-2034-4b9f-a925-b81805676843,2022-05-12T00:00:00Z,11
+Q111979586,,B442239B-04EB-41C1-9259-4C92E2C56DCB,Q111976097,6,Chris Freeland,1f1fb26232695c5f1f04efcc38efb53fd75532aa,http://rs.tdwg.org/ac/doc/guide/,b9835818-c03c-4a56-b762-cd82eb71e063,2022-05-12T00:00:00Z,11
+Q111979586,,6B09627A-7940-46F0-A829-97B0F532A413,Q28913574,7,Gregor Hagedorn,1f1fb26232695c5f1f04efcc38efb53fd75532aa,http://rs.tdwg.org/ac/doc/guide/,2206c8fa-14e0-4da8-8aa3-3143a7dee021,2022-05-12T00:00:00Z,11
+Q111979586,,C73F6287-900E-4E99-B824-362D99391BAB,Q111976117,8,Patrick Leary,1f1fb26232695c5f1f04efcc38efb53fd75532aa,http://rs.tdwg.org/ac/doc/guide/,d557c7ce-b7c9-448f-a923-daaa7515156a,2022-05-12T00:00:00Z,11
+Q111979586,,E2E45246-F97F-4C33-8194-DD69F885852E,Q96219542,8,Dimitry Mozzherin,1f1fb26232695c5f1f04efcc38efb53fd75532aa,http://rs.tdwg.org/ac/doc/guide/,4bc5f267-b64b-4ea8-a31d-bc503d2fb3b0,2022-05-12T00:00:00Z,11
+Q111979586,,9E259530-A2F7-48A0-91F6-5CA306F6F7DD,Q111976094,10,Annette Olson,1f1fb26232695c5f1f04efcc38efb53fd75532aa,http://rs.tdwg.org/ac/doc/guide/,0f820f52-35ea-4a90-bcce-f7a406bf21a8,2022-05-12T00:00:00Z,11
+Q111979586,,76164EC8-398D-4801-9768-3AA0554ED193,Q81320451,11,Greg Riccardi,1f1fb26232695c5f1f04efcc38efb53fd75532aa,http://rs.tdwg.org/ac/doc/guide/,7b82e7d6-ca54-46c5-8498-aa12a466a218,2022-05-12T00:00:00Z,11
+Q111979586,,BE05AA4B-5458-4483-8580-3EB5CAF0D2A9,Q111976105,12,Ivan Teage,1f1fb26232695c5f1f04efcc38efb53fd75532aa,http://rs.tdwg.org/ac/doc/guide/,c4525785-4625-4c5d-8bdc-2c80beea5caa,2022-05-12T00:00:00Z,11
+Q111979587,,66640633-A0B2-43CA-8737-3E835A65E458,Q40670042,1,Steven J Baskauf,999ba258b63f465f2ca0c24a1a40f367b200db27,http://rs.tdwg.org/ac/doc/format/,9d94912c-5716-462e-8e3a-e5864c1e31b3,2022-05-12T00:00:00Z,11
+Q111979587,,788211CB-8C2D-48AB-BAB0-A34F5AF86892,Q111976110,2,Matthew Blissett,999ba258b63f465f2ca0c24a1a40f367b200db27,http://rs.tdwg.org/ac/doc/format/,f6aca0df-8d00-4adc-92f0-be5782a054cc,2022-05-12T00:00:00Z,11
+Q111979587,,E8FD3718-CB81-40DC-BE4C-72F278F5EDCB,Q100599637,3,Douglas Boyer,999ba258b63f465f2ca0c24a1a40f367b200db27,http://rs.tdwg.org/ac/doc/format/,a6e8cc11-68fe-432e-8f09-76c24b07389f,2022-05-12T00:00:00Z,11
+Q111979589,,C532C3F2-20C6-4004-A1CB-67A2680909F6,Q40670042,,Steven J Baskauf,d31d06a9ed55d2cfd72e0ce067247498e8db01a0,http://rs.tdwg.org/ac/doc/subtype/,a6dcf03e-3d2e-4e94-b57a-a8a010e46350,2022-05-12T00:00:00Z,11
+Q111979590,,360B38DB-7B24-4F2D-9A41-2B3E08E76CE2,Q40670042,1,Steven J Baskauf,6a99b8d3b055f631d7c97b2e6bdf46cfd9754af0,http://rs.tdwg.org/ac/doc/variant/,c2966c76-37b2-4df7-9cea-e7ff6abf9f8e,2022-05-12T00:00:00Z,11
+Q111979590,,42EE2308-5320-4FC3-BE32-0B3AA95FFB2F,Q30513172,2,Ed Baker,6a99b8d3b055f631d7c97b2e6bdf46cfd9754af0,http://rs.tdwg.org/ac/doc/variant/,a2ccc2c2-b18c-482b-929d-16a5d5ec02fe,2022-05-12T00:00:00Z,11
+Q111979590,,5ACA0186-7337-4946-953B-4E8EB1BAF70D,Q56746747,3,Dan Stowell,6a99b8d3b055f631d7c97b2e6bdf46cfd9754af0,http://rs.tdwg.org/ac/doc/variant/,239a0ab9-d5bb-434e-ab6e-d4cfcb7eb6b9,2022-05-12T00:00:00Z,11
+Q111979591,,8E806A6E-4F7B-4E95-9474-AC5D4F1F95B3,Q51883936,,Kevin Richards,a48976a1677fa63ef636a3a301cb8513623c84b7,http://rs.tdwg.org/guid/doc/guidas/,f70c7245-4f46-4122-a88c-3d1a19204e69,2022-05-12T00:00:00Z,11
+Q111979593,,5D984E0A-F702-4E39-B9B5-A15AC4EBE13A,Q51883958,1,Ricardo Pereira,c8c3fd4e1318abe48cddf664919e52e136be7a3e,http://rs.tdwg.org/guid/doc/lsidas/,f0b42e39-734f-4ff7-92b6-9c2eade9dfe8,2022-05-12T00:00:00Z,11
+Q111979593,,2F77B9F8-9FE8-41AB-A299-027E5DD299F0,Q51883936,2,Kevin Richards,c8c3fd4e1318abe48cddf664919e52e136be7a3e,http://rs.tdwg.org/guid/doc/lsidas/,1da7cb45-eaf7-4577-9926-a25e1fc13d5f,2022-05-12T00:00:00Z,11
+Q111979593,,733CB4C2-C70D-49B1-9157-42DBE5D98FD7,Q28913648,3,Donald Hobern,c8c3fd4e1318abe48cddf664919e52e136be7a3e,http://rs.tdwg.org/guid/doc/lsidas/,b4aaf8a3-c8ec-48df-8473-7150bc31b522,2022-05-12T00:00:00Z,11
+Q111979593,,CEBC920E-C70D-481B-A2D7-B94A613A234C,Q55181105,4,Roger Hyam,c8c3fd4e1318abe48cddf664919e52e136be7a3e,http://rs.tdwg.org/guid/doc/lsidas/,078e9ed7-660d-4395-8a79-487e6dc05538,2022-05-12T00:00:00Z,11
+Q111979593,,B1E572F0-0D37-4810-A23D-4F45F2D9463C,Q28913664,5,Lee Belbin,c8c3fd4e1318abe48cddf664919e52e136be7a3e,http://rs.tdwg.org/guid/doc/lsidas/,f5b03450-0b7c-4288-bcec-f184d7b65169,2022-05-12T00:00:00Z,11
+Q111979593,,90823090-E18C-40A1-AF64-264B09CF6627,Q111976126,6,Stanley Blum,c8c3fd4e1318abe48cddf664919e52e136be7a3e,http://rs.tdwg.org/guid/doc/lsidas/,fd2e7a42-5272-434b-87b9-6b7eac612637,2022-05-12T00:00:00Z,11
+Q111979594,,551E0116-E130-4D39-BB46-83F08BE4E09C,Q40670042,1,Steve Baskauf,c11e88a81fe3f0ff0cb7db616a5d8e6cfefe3aeb,http://rs.tdwg.org/dwc/terms/guides/rdf/,f2f7f853-d335-4aec-9b70-b5418b7a6651,2022-05-12T00:00:00Z,11
+Q111979594,,652D433B-E48F-483B-A5ED-C152E5F0ED4B,Q90829701,2,John Wieczorek,c11e88a81fe3f0ff0cb7db616a5d8e6cfefe3aeb,http://rs.tdwg.org/dwc/terms/guides/rdf/,f575e82e-5106-46f1-ae84-aa5776da2ad9,2022-05-12T00:00:00Z,11
+Q111979594,,6F4BAFB3-342B-45CC-B048-8DF90CF71775,Q48975647,3,John Deck,c11e88a81fe3f0ff0cb7db616a5d8e6cfefe3aeb,http://rs.tdwg.org/dwc/terms/guides/rdf/,6b53ad73-16e7-4704-a964-c5c11db5e210,2022-05-12T00:00:00Z,11
+Q111979594,,ECB3C5D6-CD57-46B1-AA0C-6C36E94685AD,Q45342779,4,Campbell Webb,c11e88a81fe3f0ff0cb7db616a5d8e6cfefe3aeb,http://rs.tdwg.org/dwc/terms/guides/rdf/,459c2057-5b15-4688-88cb-953c6da060bd,2022-05-12T00:00:00Z,11
+Q111979594,,AEFE0303-06B0-40EE-9C67-6E01E5981C02,Q111976118,5,Paul J. Morris,c11e88a81fe3f0ff0cb7db616a5d8e6cfefe3aeb,http://rs.tdwg.org/dwc/terms/guides/rdf/,bc4a5f41-5347-48dd-93f1-adb77bd721e4,2022-05-12T00:00:00Z,11
+Q111979594,,1CF27465-643E-4AD4-A19A-D6EC1AD6F677,Q47502211,6,Mark Schildhauer,c11e88a81fe3f0ff0cb7db616a5d8e6cfefe3aeb,http://rs.tdwg.org/dwc/terms/guides/rdf/,1cad2ce4-42ab-490a-a51b-7b95f02e4322,2022-05-12T00:00:00Z,11
+Q111979596,,A7A2BCA1-12ED-4622-965F-AB10B4FCAE14,Q59417973,1,Tim Robertson,7d25fcf76cdc4d6e4d4ae71f985c46c3a9bdca86,http://rs.tdwg.org/dwc/terms/guides/text/,b8b24f62-ea40-4ce4-bbaf-28641ed15268,2022-05-12T00:00:00Z,11
+Q111979596,,418177E4-ADD9-487B-8FBE-2963AC464DF2,Q53584980,2,Markus Döring,7d25fcf76cdc4d6e4d4ae71f985c46c3a9bdca86,http://rs.tdwg.org/dwc/terms/guides/text/,dc8e098a-3039-44d3-b755-4243d43a0a6a,2022-05-12T00:00:00Z,11
+Q111979596,,A770300E-456D-48B2-95E3-6784F034C865,Q90829701,3,John Wieczorek,7d25fcf76cdc4d6e4d4ae71f985c46c3a9bdca86,http://rs.tdwg.org/dwc/terms/guides/text/,136d68c8-089b-4b43-bb59-9f8037991110,2022-05-12T00:00:00Z,11
+Q111979596,,7391AB76-0353-4B79-ABB2-BDFF34388874,Q111976119,4,Renato De Giovanni,7d25fcf76cdc4d6e4d4ae71f985c46c3a9bdca86,http://rs.tdwg.org/dwc/terms/guides/text/,f2d299e2-be5d-4c62-8121-fcbed8b3ef98,2022-05-12T00:00:00Z,11
+Q111979596,,971899D8-67F3-4B70-8B4B-6100AAC07817,Q53584986,5,Dave Vieglais,7d25fcf76cdc4d6e4d4ae71f985c46c3a9bdca86,http://rs.tdwg.org/dwc/terms/guides/text/,8903e321-3c91-4f5a-a78e-703d6d5756dd,2022-05-12T00:00:00Z,11
+Q111979596,,E5B13640-508E-481A-8BF0-FA9358ACFBFC,Q40670042,6,Steve Baskauf,7d25fcf76cdc4d6e4d4ae71f985c46c3a9bdca86,http://rs.tdwg.org/dwc/terms/guides/text/,9cd78afe-6813-477f-8f34-97f6ae9ff733,2022-05-12T00:00:00Z,11
+Q111979597,,29929827-8EE9-438D-9A1A-D0E62DA7BCB1,Q90829701,1,John Wieczorek,d1249a04debdf8f7f9d3d2c5e98f79838803ea03,http://rs.tdwg.org/dwc/terms/guides/xml/,d092dfcf-bfd7-4ff7-acea-8dc0e8b9279c,2022-05-12T00:00:00Z,11
+Q111979597,,628BBF6D-AB33-4DD4-B291-45E616D1D975,Q53584980,2,Markus Döring,d1249a04debdf8f7f9d3d2c5e98f79838803ea03,http://rs.tdwg.org/dwc/terms/guides/xml/,4eb8112c-8f18-405b-ac51-e209f7aa8aca,2022-05-12T00:00:00Z,11
+Q111979597,,6D4D74D4-8CD8-4397-BE05-766456ECE9DD,Q111976119,3,Renato De Giovanni,d1249a04debdf8f7f9d3d2c5e98f79838803ea03,http://rs.tdwg.org/dwc/terms/guides/xml/,6a6e0789-2c9a-42f4-9278-067250166d30,2022-05-12T00:00:00Z,11
+Q111979597,,B8B21050-CF42-482E-98AD-659D3FBA1585,Q59417973,4,Tim Robertson,d1249a04debdf8f7f9d3d2c5e98f79838803ea03,http://rs.tdwg.org/dwc/terms/guides/xml/,9b8d77b6-1b17-447d-bec3-a5c6b5ab2882,2022-05-12T00:00:00Z,11
+Q111979597,,E7D7B5D1-6F16-44FF-9782-4A6C9F650C0F,Q53584986,5,Dave Vieglais,d1249a04debdf8f7f9d3d2c5e98f79838803ea03,http://rs.tdwg.org/dwc/terms/guides/xml/,72639eb9-3269-4e7a-ac9d-ac9db86616e8,2022-05-12T00:00:00Z,11
+Q111979599,,30586D2F-39A5-4F0F-AA5E-85D1AEBC8642,Q90829701,1,John Wieczorek,d57c73f479fc8ff3ae69e19b942b56b426bf067c,http://rs.tdwg.org/dwc/terms/simple/,b0322421-5ecc-4ece-b109-d02ca5783f43,2022-05-12T00:00:00Z,11
+Q111979599,,209A6E0C-2704-4C5D-8FAD-E51DFB6C8297,Q53584980,2,Markus Döring,d57c73f479fc8ff3ae69e19b942b56b426bf067c,http://rs.tdwg.org/dwc/terms/simple/,8897b2cb-6bfa-42b5-b826-bd14e2ed36da,2022-05-12T00:00:00Z,11
+Q111979599,,D6D483D4-8288-4C6B-BAD8-3A4D4D3F0DC2,Q111976119,3,Renato De Giovanni,d57c73f479fc8ff3ae69e19b942b56b426bf067c,http://rs.tdwg.org/dwc/terms/simple/,0e275f35-1072-4c1c-a4c1-3230f8a7065b,2022-05-12T00:00:00Z,11
+Q111979599,,594A9465-A1A3-4687-ADB9-93430C4205A1,Q59417973,4,Tim Robertson,d57c73f479fc8ff3ae69e19b942b56b426bf067c,http://rs.tdwg.org/dwc/terms/simple/,08b037b8-d075-495b-9526-89144e4a32f3,2022-05-12T00:00:00Z,11
+Q111979599,,66FA15C5-7B9C-4A3F-AD52-3053921A07B2,Q53584986,5,Dave Vieglais,d57c73f479fc8ff3ae69e19b942b56b426bf067c,http://rs.tdwg.org/dwc/terms/simple/,e7e8fa31-87d7-47f1-bbaa-aff102693f37,2022-05-12T00:00:00Z,11
+Q111979600,,3A6AE547-D0D4-4F9C-AE0B-F0A4C7810917,Q90829701,1,John Wieczorek,1e8e0073490bd79a861f45e3855129d170e5a19c,http://rs.tdwg.org/dwc/terms/namespace/,24d85876-70ba-40dc-be94-d640f90da6b8,2022-05-12T00:00:00Z,11
+Q111979600,,1424F021-1E6F-4AAC-A071-41ECF8C8267A,Q53584980,2,Markus Döring,1e8e0073490bd79a861f45e3855129d170e5a19c,http://rs.tdwg.org/dwc/terms/namespace/,260ee4cf-92d5-4835-a027-625a2cdc9618,2022-05-12T00:00:00Z,11
+Q111979600,,4908ECE4-EB88-4B48-BC1E-0DBBAC9F0C4F,Q111976119,3,Renato De Giovanni,1e8e0073490bd79a861f45e3855129d170e5a19c,http://rs.tdwg.org/dwc/terms/namespace/,9af9d979-2402-4d5c-ae98-50ff53556377,2022-05-12T00:00:00Z,11
+Q111979600,,9493147A-DCB8-49EA-B2C9-27683120C17E,Q59417973,4,Tim Robertson,1e8e0073490bd79a861f45e3855129d170e5a19c,http://rs.tdwg.org/dwc/terms/namespace/,6a4d5a56-a365-47eb-a31f-d2fe172093c2,2022-05-12T00:00:00Z,11
+Q111979600,,AA1D7AB1-9CA7-41FC-B6FB-FB492A4B26A0,Q53584986,5,Dave Vieglais,1e8e0073490bd79a861f45e3855129d170e5a19c,http://rs.tdwg.org/dwc/terms/namespace/,10b99979-bf21-44ec-be53-17bd40f512b7,2022-05-12T00:00:00Z,11
+Q111979601,,7C72AC26-FB75-4274-AC89-B7197468044A,Q90829701,1,John Wieczorek,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,edfc1583-f0a2-40aa-8877-543e7beb3c40,2022-05-12T00:00:00Z,11
+Q111979601,,70BEB4BC-77E9-4E3E-B62D-986C6F4A3D70,Q25802817,2,Peter Desmet,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,654e0f84-8a26-418e-b6f8-028f169f78d8,2022-05-12T00:00:00Z,11
+Q111979601,,03552936-9055-4784-8EDF-361F8C4A33AD,Q40670042,3,Steve Baskauf,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,79e92d03-96ef-4753-99b3-d9c891851ef5,2022-05-12T00:00:00Z,11
+Q111979601,,E50D0F17-4C21-4029-8302-954F1100514E,Q59417973,4,Tim Robertson,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,ee9996ad-bca2-4430-9fd7-47c86264524a,2022-05-12T00:00:00Z,11
+Q111979601,,A22974F2-566C-4621-AE27-26E8256CD408,Q53584980,5,Markus Döring,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,88296369-5777-4c4e-8f3b-e2c1d5a30b77,2022-05-12T00:00:00Z,11
+Q111979601,,7E7D0E9B-31FD-4C4D-8882-F942FA26393A,Q28913658,6,Quentin Groom,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,3aae07d9-de76-4b00-91ee-aec9b956d364,2022-05-12T00:00:00Z,11
+Q111979601,,821D0304-4727-4AD4-B9E0-982324AD7751,Q59820575,7,Stijn Van Hoey,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,b041feed-e9fe-4cab-aab5-5305756739a6,2022-05-12T00:00:00Z,11
+Q111979601,,1035EB09-8CE1-44BB-BCEE-CE211A8635B5,Q53584983,8,David Bloom,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,6ce343b1-8285-4821-b495-a0ce014efceb,2022-05-12T00:00:00Z,11
+Q111979601,,7F60DFFB-A5C9-4056-BA05-F2E877AE8901,Q56839813,9,Paula Zermoglio,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,7d4a7d75-a01b-4b81-bd2c-e37e7adf28a2,2022-05-12T00:00:00Z,11
+Q111979601,,5123DD46-D1FD-4060-B02D-56E177A5CE9A,Q55829951,10,Robert Guralnick,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,57e21239-3453-4aa3-8510-3f7eda2ca85d,2022-05-12T00:00:00Z,11
+Q111979601,,741325E8-5F57-4366-8C94-3050CBE711AE,Q48975647,11,John Deck,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,9f2e8502-3099-4fd0-8f52-7c776eb48001,2022-05-12T00:00:00Z,11
+Q111979601,,55F6BAE0-58E1-46E1-98FC-547AE847615D,Q111976102,12,Gail Kampmeier,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,670d2315-2d14-4372-ae19-b48f1593337e,2022-05-12T00:00:00Z,11
+Q111979601,,93DC3E66-EDC2-47EC-BBEF-B125148591E7,Q53584986,13,Dave Vieglais,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,0d98e8df-6c94-4f94-8e1f-d9f2066bb015,2022-05-12T00:00:00Z,11
+Q111979601,,6665D02F-CB8C-4924-87EE-1398A4EE510F,Q111976119,14,Renato De Giovanni,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,9cc30343-c603-482b-9388-a20f0644ead4,2022-05-12T00:00:00Z,11
+Q111979601,,421352FF-9E35-4648-93B7-9DDEFB8829EB,Q45342779,15,Campbell Webb,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,b9718ec1-50c0-4ce4-8509-301b5cd02ca7,2022-05-12T00:00:00Z,11
+Q111979601,,C8755F59-0CD5-4653-96D0-DDE28F241FEB,Q111976118,16,Paul J. Morris,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,f378dca4-ec51-4bae-b168-8fe2dc3fb442,2022-05-12T00:00:00Z,11
+Q111979601,,BF196E51-7781-43C7-AFEC-E68BF7D0E817,Q47502211,17,Mark Schildhauer,9df72696d4608219f7bcacecfdb659f0b958cca8,http://rs.tdwg.org/dwc/doc/list/,73ca8ad8-8ef2-4b9e-84e8-3a29283d8529,2022-05-12T00:00:00Z,11
+Q111979603,,7A06A1C1-D3AB-46C7-BEA0-EBF519C7DD42,Q28913658,1,Quentin Groom,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,48c65acd-6495-49d1-998d-f02b4b9c09d6,2022-05-12T00:00:00Z,11
+Q111979603,,61EC974C-E77E-40AA-B487-9637E3C1BE63,Q25802817,2,Peter Desmet,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,339e9305-b18e-41cc-a18d-29392c633bd2,2022-05-12T00:00:00Z,11
+Q111979603,,50D12FEF-C977-4A18-8842-BE2B9F3EA7FE,Q57561067,3,Lien Reyserhove,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,bc923732-65a0-43c0-b8a1-cbd1e5835688,2022-05-12T00:00:00Z,11
+Q111979603,,DF71EB3F-79E9-4FB0-AC64-E9A939A63167,Q56296490,4,Tim Adriaens,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,17a813d5-4d42-4f2c-8118-b70ece8ccf4b,2022-05-12T00:00:00Z,11
+Q111979603,,E5B44E4B-E08E-4DA7-9699-79CBCE225455,Q52833318,5,Damiano Oldoni,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,7397591f-cbbf-46a5-b4e5-34bb0bdd8676,2022-05-12T00:00:00Z,11
+Q111979603,,C47FECEC-CD66-4160-9BB3-72A45BDA72EA,Q56429678,6,Sonia Vanderhoeven,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,99f31c8d-5f32-4824-be44-a01865716333,2022-05-12T00:00:00Z,11
+Q111979603,,8456AF8F-0694-4CEB-836E-72D24981F710,Q40670042,7,Steven J. Baskauf,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,8fef5629-b918-4332-a90d-7d5b1302950a,2022-05-12T00:00:00Z,11
+Q111979603,,C6E4980A-C165-40DD-B5FA-AD2721C89AD3,Q79054055,8,Arthur Chapman,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,9ddd9a51-e96b-419d-8716-22145eb70fc6,2022-05-12T00:00:00Z,11
+Q111979603,,050E00E5-2DEF-4F32-B063-0E4B8F52C19F,Q55323668,9,Melodie McGeoch,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,85148d4e-039c-4948-a0d4-938b19fcf019,2022-05-12T00:00:00Z,11
+Q111979603,,0CF48D93-71F7-4C5E-A60F-E407ACD47E03,Q63240627,10,Ramona Walls,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,58147c9b-a1b7-4a78-b0fc-674a2d72433b,2022-05-12T00:00:00Z,11
+Q111979603,,AF42E7BB-B8B1-4E85-A443-E230F0FDA766,Q90829701,11,John Wieczorek,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,1ba203e3-16da-4fe4-a1a7-6b51cd7d8b43,2022-05-12T00:00:00Z,11
+Q111979603,,815CB32D-3AA9-4723-AA6D-A879B681962E,Q56355245,12,John R.U. Wilson,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,f823c63f-6952-4c20-9325-e7157005f214,2022-05-12T00:00:00Z,11
+Q111979603,,C2F6BA5D-FFB2-4E9B-9036-78CA7356EA57,Q56839813,13,Paula F F Zermoglio,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,c69c5a6f-424a-4e8f-a62d-72159dd6fb8e,2022-05-12T00:00:00Z,11
+Q111979603,,6F14FD31-616F-4398-BC76-6DA9006EAE5D,Q56798499,14,Annie Simpson,ff0331e622d32bb927bbbc997162bc713f25cd70,http://rs.tdwg.org/dwc/doc/doe/,0e5a14b9-ba6a-4442-8ae4-2becc97ee2bb,2022-05-12T00:00:00Z,11
+Q111979604,,5F3A0A0F-A67F-49C0-9FA0-9F2D7616FA3B,Q28913658,1,Quentin Groom,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,2a78b3c7-4d2a-4f8f-ba7a-e1230cad7b53,2022-05-12T00:00:00Z,11
+Q111979604,,D95DA6C9-7ACE-4D7E-B842-13B6E498A5EE,Q25802817,2,Peter Desmet,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,18219ddf-6a00-4ca0-b1c7-b81895f4bf0e,2022-05-12T00:00:00Z,11
+Q111979604,,C5EE4760-BFB4-4846-A8F2-81853956FEAD,Q57561067,3,Lien Reyserhove,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,3958f1c5-645f-4796-9deb-c188d1507bea,2022-05-12T00:00:00Z,11
+Q111979604,,ABEA6094-6446-4899-A36B-62766094E4A1,Q56296490,4,Tim Adriaens,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,6b74fa00-3e40-4e96-b631-594d9597381e,2022-05-12T00:00:00Z,11
+Q111979604,,933BCC7A-5C41-41B1-B640-BEA10AC04D36,Q52833318,5,Damiano Oldoni,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,4e721c56-6314-4ccd-bb0a-09338c656572,2022-05-12T00:00:00Z,11
+Q111979604,,3F19E4B7-37F4-4A6B-9EC0-E2DD32338DC1,Q56429678,6,Sonia Vanderhoeven,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,722120fb-d1ba-4306-8b8c-32d5051102e9,2022-05-12T00:00:00Z,11
+Q111979604,,221FADE5-7BDF-48DF-8432-494DEAA3F570,Q40670042,7,Steven J. Baskauf,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,f6f88ac3-199c-473b-abf0-ef3cb77cf241,2022-05-12T00:00:00Z,11
+Q111979604,,FCC4CBB7-9534-4722-936E-6F4D497F17BD,Q79054055,8,Arthur Chapman,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,d5abcc81-ef42-4eb9-b840-4c5e8f44d9a8,2022-05-12T00:00:00Z,11
+Q111979604,,DD934035-FBED-4556-9F5A-463B00877D4E,Q55323668,9,Melodie McGeoch,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,4bb118c7-c7fe-4940-be4c-0c98c1fffed3,2022-05-12T00:00:00Z,11
+Q111979604,,63551435-6F10-4C0F-8DC1-05926CDF0552,Q63240627,10,Ramona Walls,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,b160bdef-0d86-4e27-943b-51904cd5cf55,2022-05-12T00:00:00Z,11
+Q111979604,,394A118C-B2C8-433E-9FC8-AD9650D637F7,Q90829701,11,John Wieczorek,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,de0ea050-6a66-4ddd-9a16-da2db4a4fd88,2022-05-12T00:00:00Z,11
+Q111979604,,DA270E43-A98A-4889-820C-C897CF11D67D,Q56355245,12,John R.U. Wilson,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,52bf2213-d01f-43ce-96c8-c14e794310d4,2022-05-12T00:00:00Z,11
+Q111979604,,A76E85CE-B9AE-40E8-AFDF-A7BEBF262ACD,Q56839813,13,Paula F F Zermoglio,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,43e0033b-b5c9-42d6-9235-75bc4abe430b,2022-05-12T00:00:00Z,11
+Q111979604,,AFC7D998-D0BD-4B93-8FF4-2600956727C7,Q56798499,14,Annie Simpson,42602514333e30d7b04496779916790379971da0,http://rs.tdwg.org/dwc/doc/em/,c5c734a4-95d5-4144-8843-342ce34474b4,2022-05-12T00:00:00Z,11
+Q111979606,,C5BCD0C0-C8EE-4BD9-9414-5747E49DE6AF,Q28913658,1,Quentin Groom,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,a6ca3f93-7c72-43e1-9d8d-efdf0e6783c6,2022-05-12T00:00:00Z,11
+Q111979606,,BEA3FB73-0761-4568-9EFA-DE6A65FFE2FE,Q25802817,2,Peter Desmet,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,e3ab0213-d90e-4c7a-bfb5-33081a879042,2022-05-12T00:00:00Z,11
+Q111979606,,610B89E3-2F1D-4751-9269-B6CEDC753C68,Q57561067,3,Lien Reyserhove,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,54416df3-ea11-4ad0-a89c-c2e320b5f7df,2022-05-12T00:00:00Z,11
+Q111979606,,63F50512-CEDB-4078-979F-7511625D1B1C,Q56296490,4,Tim Adriaens,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,eec42928-0af9-4052-8001-634c7e86bdce,2022-05-12T00:00:00Z,11
+Q111979606,,4F571888-EB06-43AC-9513-591DC28481E5,Q52833318,5,Damiano Oldoni,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,4928e794-5440-4f81-86d3-0eb3fab215fa,2022-05-12T00:00:00Z,11
+Q111979606,,23E9C5DF-875B-46E3-ABE5-7243922BE9B7,Q56429678,6,Sonia Vanderhoeven,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,5e0af29b-39aa-4acb-9825-a7b4a697d406,2022-05-12T00:00:00Z,11
+Q111979606,,C39EBFB7-DB65-41AF-9DC8-D939ADCBED58,Q40670042,7,Steven J. Baskauf,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,cf3adca0-54e8-4f23-9cbd-940bc57bc7f1,2022-05-12T00:00:00Z,11
+Q111979606,,43783D21-5357-4A9D-9BAC-3B01216E8190,Q79054055,8,Arthur Chapman,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,a7c06132-cd13-4d12-957c-27737005857e,2022-05-12T00:00:00Z,11
+Q111979606,,0A8C2896-D831-430B-A253-544342AD5645,Q55323668,9,Melodie McGeoch,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,a6685231-3d93-43be-a895-11a1eeb36b5a,2022-05-12T00:00:00Z,11
+Q111979606,,3204D9DA-6E9C-4273-9C40-5FFF78EAC127,Q63240627,10,Ramona Walls,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,f3b1a7ba-5155-4fa2-9ce7-15fc5038f0ec,2022-05-12T00:00:00Z,11
+Q111979606,,DDBE4649-0E81-4B06-B3CC-97223005605B,Q90829701,11,John Wieczorek,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,99e7bc08-dea7-4597-9e73-d5d62e13c56a,2022-05-12T00:00:00Z,11
+Q111979606,,365B2196-2CF9-43D5-A459-2400F564D889,Q56355245,12,John R.U. Wilson,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,a2a3f9b9-24a7-441e-b16f-a809c2e102c5,2022-05-12T00:00:00Z,11
+Q111979606,,6962FE54-3677-4D02-9460-61EBFB5E8480,Q56839813,13,Paula F F Zermoglio,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,51618430-cc2c-4b4f-a0cb-82f81b5f153c,2022-05-12T00:00:00Z,11
+Q111979606,,09E22562-E379-40C1-B2C8-480255B4EDE9,Q56798499,14,Annie Simpson,60998be1ad9eae92fed0516159c37aaddd4de2a0,http://rs.tdwg.org/dwc/doc/pw/,c65f5f47-f436-4e34-a91c-4f44087759b1,2022-05-12T00:00:00Z,11
+Q111979607,,376768D2-988C-4CD6-8998-83A8AC518BAA,Q90829701,1,John Wieczorek,b44db73ffe4d21714fb1bb6692cc65c4cd329d70,http://rs.tdwg.org/dwc/doc/chrono/,be442c82-cfcf-40cc-a476-8323ff54b409,2022-05-12T00:00:00Z,11
+Q111979607,,BB87D666-D6C1-4B85-85A1-7AC2CE75B221,Q64886237,2,Laura Brenskelle,b44db73ffe4d21714fb1bb6692cc65c4cd329d70,http://rs.tdwg.org/dwc/doc/chrono/,3b84c4ad-3509-4596-84c8-e4e5be2baf86,2022-05-12T00:00:00Z,11
+Q111979607,,075C3D95-8DF0-440B-920B-8848AEFB749E,Q55829951,3,Robert Guralnick,b44db73ffe4d21714fb1bb6692cc65c4cd329d70,http://rs.tdwg.org/dwc/doc/chrono/,ae11001e-cdf8-4acd-8ec9-4ca85353bd34,2022-05-12T00:00:00Z,11
+Q111979607,,EF3890B8-814A-464E-8EF8-9E45589E21FA,Q59201801,4,Kitty Emery,b44db73ffe4d21714fb1bb6692cc65c4cd329d70,http://rs.tdwg.org/dwc/doc/chrono/,8cfb84c8-60ba-4616-aa00-38e3335a3d73,2022-05-12T00:00:00Z,11
+Q111979607,,C907D99F-E6C0-4DA2-A9CB-C85926DF2AA5,Q90255446,5,Michelle LeFebvre,b44db73ffe4d21714fb1bb6692cc65c4cd329d70,http://rs.tdwg.org/dwc/doc/chrono/,5fe13aff-a7f1-4d47-914a-f90063755f43,2022-05-12T00:00:00Z,11
+Q111979607,,3142671A-6120-4E71-855A-D84BE03CAD3B,Q64597637,6,Neill Wallis,b44db73ffe4d21714fb1bb6692cc65c4cd329d70,http://rs.tdwg.org/dwc/doc/chrono/,b558e1ee-4843-4c1d-85c0-a128717545c0,2022-05-12T00:00:00Z,11
+Q111979607,,4EFE8D2B-8B7E-48A2-8B5E-ACA39E8B4B06,Q40670042,7,Steve Baskauf,b44db73ffe4d21714fb1bb6692cc65c4cd329d70,http://rs.tdwg.org/dwc/doc/chrono/,f8050eea-f5e7-4e98-8da5-8ff4bb572a48,2022-05-12T00:00:00Z,11
+Q111979607,,D2F0D51B-A63A-4EF9-BA62-6C7BCA2C9784,Q111976108,8,Marie Elise Lecoq,b44db73ffe4d21714fb1bb6692cc65c4cd329d70,http://rs.tdwg.org/dwc/doc/chrono/,dc086fe6-79e3-4a61-95aa-accafc7095c8,2022-05-12T00:00:00Z,11
+Q111979607,,2F765148-464B-43B9-9ECC-9D1C319C0E9E,Q58165014,9,Eric Kansa,b44db73ffe4d21714fb1bb6692cc65c4cd329d70,http://rs.tdwg.org/dwc/doc/chrono/,bdf5f295-a46c-4655-9fd7-18ae4477442f,2022-05-12T00:00:00Z,11
+Q111979607,,327648C5-8FF5-443E-94C8-A70B2F035FE4,Q57773887,10,Sarah Kansa,b44db73ffe4d21714fb1bb6692cc65c4cd329d70,http://rs.tdwg.org/dwc/doc/chrono/,eb2310cd-945e-4024-ba42-675eeee5d3eb,2022-05-12T00:00:00Z,11
+Q111979607,,CF704B81-0E72-4920-95F2-DD736877B8DE,Q91656635,11,Denné Reed,b44db73ffe4d21714fb1bb6692cc65c4cd329d70,http://rs.tdwg.org/dwc/doc/chrono/,3b0273c3-b0ff-424c-840c-fa78256f916d,2022-05-12T00:00:00Z,11
+Q111979608,,CCE2245B-6B9F-444F-BABC-2ADB0979128F,Q111976119,1,Renato De Giovanni,f00f72909cd8a8643df09647e6569996f28c4b8e,http://rs.tdwg.org/tapir/doc/specification/,116cc508-c624-4b4f-a4d7-005c3201adb0,2022-05-12T00:00:00Z,11
+Q111979608,,4AC1652B-E21C-440A-B37F-042A4F3D8D89,Q51883987,2,Charles Copp,f00f72909cd8a8643df09647e6569996f28c4b8e,http://rs.tdwg.org/tapir/doc/specification/,ec5119a3-afb0-40de-a5a3-8985a5a49b1d,2022-05-12T00:00:00Z,11
+Q111979608,,DCFF1C23-7127-4AC1-A04D-147AB620D4D5,Q53584980,3,Markus Döring,f00f72909cd8a8643df09647e6569996f28c4b8e,http://rs.tdwg.org/tapir/doc/specification/,42cce8d1-c21e-4271-afb8-aa19c0785f63,2022-05-12T00:00:00Z,11
+Q111979608,,1DC4039D-325C-4899-80A6-E8BBF8330669,Q28913581,4,Anton Güntsch,f00f72909cd8a8643df09647e6569996f28c4b8e,http://rs.tdwg.org/tapir/doc/specification/,3d7859b0-ace3-45d2-b724-40591ab44419,2022-05-12T00:00:00Z,11
+Q111979608,,859E562B-2ABA-487F-90F6-8C0706298BF5,Q53584986,5,Dave Vieglais,f00f72909cd8a8643df09647e6569996f28c4b8e,http://rs.tdwg.org/tapir/doc/specification/,d2a4805b-3449-4458-8cb6-5f1581d5b45f,2022-05-12T00:00:00Z,11
+Q111979608,,6D8C45E2-92CD-4C12-BC7C-4E7F4B084589,Q28913648,6,Donald Hobern,f00f72909cd8a8643df09647e6569996f28c4b8e,http://rs.tdwg.org/tapir/doc/specification/,5f4a8149-083d-4cd8-b90e-237d70cbd77a,2022-05-12T00:00:00Z,11
+Q111979608,,EBDB24DA-DADF-4A7A-80F1-C4791CFE5D8E,Q51883962,7,Javier de la Torre,f00f72909cd8a8643df09647e6569996f28c4b8e,http://rs.tdwg.org/tapir/doc/specification/,8aa65162-7d2a-44f5-aa16-6b943a554242,2022-05-12T00:00:00Z,11
+Q111979608,,C2D14E70-DFC5-4272-9831-77E49B64AB51,Q90829701,8,John Wieczorek,f00f72909cd8a8643df09647e6569996f28c4b8e,http://rs.tdwg.org/tapir/doc/specification/,bf9fb6f4-0448-4c10-bcab-cdeacd5b3e3a,2022-05-12T00:00:00Z,11
+Q111979608,,BB73FB3D-037E-4AA5-A15B-0596A3FFA8E2,Q51883993,9,Robert Gales,f00f72909cd8a8643df09647e6569996f28c4b8e,http://rs.tdwg.org/tapir/doc/specification/,e57fedcb-c447-4f14-8760-2f9ded805a6d,2022-05-12T00:00:00Z,11
+Q111979608,,3567EE90-E8C3-4322-898F-5329AB06C80D,Q55181105,10,Roger Hyam,f00f72909cd8a8643df09647e6569996f28c4b8e,http://rs.tdwg.org/tapir/doc/specification/,4b86eda8-560a-4b3f-b55c-f39b6977fc96,2022-05-12T00:00:00Z,11
+Q111979608,,5652EA15-DCE6-4190-B7FD-7A934879CF2D,Q111976126,11,Stanley Blum,f00f72909cd8a8643df09647e6569996f28c4b8e,http://rs.tdwg.org/tapir/doc/specification/,8d93ea33-94cd-4cd3-ba98-8532255eeea4,2022-05-12T00:00:00Z,11
+Q111979608,,0450E8C0-38AB-4BD2-89DA-63C4103043FE,Q51883997,12,Perry Steven,f00f72909cd8a8643df09647e6569996f28c4b8e,http://rs.tdwg.org/tapir/doc/specification/,696317d4-004a-4367-bddb-9fc1532a2318,2022-05-12T00:00:00Z,11
+Q111979611,,00947251-616C-496A-968A-AD07F3E5712A,Q111976119,,Renato De Giovanni,195eac5089d96839899cecfc6095e6cc8f88866b,http://www.tdwg.org/standards/449,23376ea2-c002-4921-969f-0cf4743c9e3a,2022-05-12T00:00:00Z,11
+Q111979612,,19E52EF1-8122-49D0-8304-0387D68F853C,Q51883987,1,Charles Copp,a1ede0d0150c66655a90b157e4227d553359e22c,http://rs.tdwg.org/tapir/doc/guide/,82f6b39a-be5c-410e-8dfb-ba5e5e1b8ee9,2022-05-12T00:00:00Z,11
+Q111979612,,29FDF642-D7C6-493B-A2D4-0F548325E9AE,Q111976119,2,Renato De Giovanni,a1ede0d0150c66655a90b157e4227d553359e22c,http://rs.tdwg.org/tapir/doc/guide/,f720da7d-6dc7-4d09-9fb7-86426f227fc3,2022-05-12T00:00:00Z,11
+Q111979614,,6FBDAD54-853F-4DAB-B6BA-5EF56BE41B72,Q111976119,,Renato De Giovanni,195eac5089d96839899cecfc6095e6cc8f88866b,http://www.tdwg.org/standards/449,9156e585-2402-4e1b-832a-7aba7a15e3b4,2022-05-12T00:00:00Z,11
+Q111979615,,59D84327-9F1D-44F5-AE1A-3352D595EB81,Q111976113,1,Neil Thomson,3b2819afb9d6dfcc34109da69299171340257fcf,http://rs.tdwg.org/abcd/doc/primer/,676fae03-8552-4e34-8d10-a9f61fd40ef1,2022-05-12T00:00:00Z,11
+Q111979615,,A109016E-74F1-47A3-A6DC-3596C1FAF026,Q53584980,2,Markus Döring,3b2819afb9d6dfcc34109da69299171340257fcf,http://rs.tdwg.org/abcd/doc/primer/,9bfae695-ae2c-43b6-aa4a-af1449331e76,2022-05-12T00:00:00Z,11
+Q111979615,,E7AB970B-8AAB-42F0-AA84-20E86AE08992,Q111976119,3,Renato De Giovanni,3b2819afb9d6dfcc34109da69299171340257fcf,http://rs.tdwg.org/abcd/doc/primer/,d9164c1f-eacf-4759-8297-4de757f8538c,2022-05-12T00:00:00Z,11
+Q111979615,,FCAEA319-77C8-4B49-9DF0-17B874B63DBE,Q51883962,4,Javier de la Torre,3b2819afb9d6dfcc34109da69299171340257fcf,http://rs.tdwg.org/abcd/doc/primer/,65332bdb-9c8f-435d-9db1-3948d5a7d3e2,2022-05-12T00:00:00Z,11
+Q111979615,,2C18C278-C18B-40C7-8767-99592C573787,Q54499411,5,Walter G. Berendsohn,3b2819afb9d6dfcc34109da69299171340257fcf,http://rs.tdwg.org/abcd/doc/primer/,1f2fc266-7acd-4a93-9482-b61c35b3b770,2022-05-12T00:00:00Z,11
+Q111979615,,F5ADD84A-D851-4C5E-82E3-BD3D19A8B3CE,Q63832109,6,Wouter Addink,3b2819afb9d6dfcc34109da69299171340257fcf,http://rs.tdwg.org/abcd/doc/primer/,7f2eeb8a-d6d2-4502-b94c-f05bcc92fd23,2022-05-12T00:00:00Z,11
+Q111979615,,9515C3E2-661F-4FBE-9BF3-4460804D37C8,Q99580181,7,William Ulate,3b2819afb9d6dfcc34109da69299171340257fcf,http://rs.tdwg.org/abcd/doc/primer/,ed1b8c3f-9a78-4ee0-87a0-9b1c1e22da2e,2022-05-12T00:00:00Z,11
+Q111979617,,AC3D58E9-20C5-4862-A051-AD145572D88F,Q54499411,,Walter G. Berendsohn,83756031801574f2e9937061a0cd1af7ffdaa66a,http://www.tdwg.org/standards/115,13c57062-2f19-41d0-bbaa-96a1d2904d38,2022-05-12T00:00:00Z,11
+Q111979618,,0303B3C3-783A-46DC-AFB3-E4EA2A9BD172,Q28913574,1,Gregor Hagedorn,bb7bc2e038f47c43a5befd48d0ed7bfa7de9fb43,http://www.tdwg.org/standards/116,7f02ebf8-2ed9-4f09-853c-450f1878f950,2022-05-12T00:00:00Z,11
+Q111979618,,1C7565F1-7EA5-4EDD-82FC-84761F735A76,Q547084,2,Kevin R. Thiele,bb7bc2e038f47c43a5befd48d0ed7bfa7de9fb43,http://www.tdwg.org/standards/116,e14e6792-8fe9-4e69-b742-df2ee1d6a884,2022-05-12T00:00:00Z,11
+Q111979618,,416A1577-5F94-4991-975F-D804D5E843D0,Q56761685,3,Robert A. Morris,bb7bc2e038f47c43a5befd48d0ed7bfa7de9fb43,http://www.tdwg.org/standards/116,08501acd-050c-4b4c-a379-86917f44c3fd,2022-05-12T00:00:00Z,11
+Q111979618,,AF69C6C5-E008-4238-8F63-233FDB175A52,Q111976115,4,P. Bryan Heidorn,bb7bc2e038f47c43a5befd48d0ed7bfa7de9fb43,http://www.tdwg.org/standards/116,fc2cc00a-0324-4625-8ea2-3b380fd0c3f5,2022-05-12T00:00:00Z,11
+Q111979619,,D4BCE2E8-A2CD-4E0E-9800-7DA87AEEC178,Q28913574,1,Gregor Hagedorn,bb7bc2e038f47c43a5befd48d0ed7bfa7de9fb43,http://www.tdwg.org/standards/116,27eb0816-d243-4301-a9db-a527fde687f5,2022-05-12T00:00:00Z,11
+Q111979619,,FB102138-C2C5-4348-9143-6F9973D326D6,Q547084,2,Kevin R. Thiele,bb7bc2e038f47c43a5befd48d0ed7bfa7de9fb43,http://www.tdwg.org/standards/116,bc437863-7caa-4d35-882c-9bb3eba19b58,2022-05-12T00:00:00Z,11
+Q111979619,,BCA85988-7AE0-4405-941F-E8BA7200979B,Q56761685,3,Robert A. Morris,bb7bc2e038f47c43a5befd48d0ed7bfa7de9fb43,http://www.tdwg.org/standards/116,15eaf618-3677-4fa8-89cb-a7943dcaf10f,2022-05-12T00:00:00Z,11
+Q111979621,,8184A2D8-695D-45BA-BB82-40F9D049283A,Q55181105,,Roger Hyam,5b4869e369ca2c26236fcdf0e484ac6b778b2d43,http://rs.tdwg.org/tcs/doc/guide/,338fe1a7-561e-41d1-821b-08f21ef6429c,2022-05-12T00:00:00Z,11
+Q111979622,,FB4D090C-9E6C-40A2-B130-90B68A8E25E7,Q73585974,1,Jessie Kennedy,35581d09d2713411f137323fcfde6036d49e830c,http://www.tdwg.org/standards/117,23563551-6ac1-4552-ac9c-904d8f8104d4,2022-05-12T00:00:00Z,11
+Q111979622,,A1BEB389-527F-40EE-906D-9A1FCD2106AA,Q55181105,2,Roger Hyam,35581d09d2713411f137323fcfde6036d49e830c,http://www.tdwg.org/standards/117,e224c48e-dc51-4083-b059-184d3a02a78e,2022-05-12T00:00:00Z,11
+Q111979624,,AF3BA37D-D054-41E9-B05C-B3FE9A515073,Q6012801,1,M. J. Dallwitz,bfa2dd37dff4f8fc51186f856b1de45df68dff64,http://rs.tdwg.org/delta/doc/definition/,5741b3c9-18ba-4967-9ca1-2d6e6aa46507,2022-05-12T00:00:00Z,11
+Q111979624,,90FAF360-F4C1-4E10-8E6F-685317265F05,Q111976128,2,T. A. Paine,bfa2dd37dff4f8fc51186f856b1de45df68dff64,http://rs.tdwg.org/delta/doc/definition/,6d8131a2-e48f-42f1-9607-ebbe9f91f662,2022-05-12T00:00:00Z,11
+Q111979625,,4135ED0F-0F53-4749-BE0C-4675F94DE8A0,Q111976121,1,Richard J. White,b461bb7e74e91c9f50b6c23f4359de438e007fee,http://rs.tdwg.org/xdf/doc/article/,2eceaaa8-6ea4-4020-9e03-c4ded2a8c740,2022-05-12T00:00:00Z,11
+Q111979625,,4C498CAF-B0F9-4924-8A18-6B8B3CCB3A96,Q21505095,2,Robert Allkin,b461bb7e74e91c9f50b6c23f4359de438e007fee,http://rs.tdwg.org/xdf/doc/article/,8f306f8a-6ce3-43e0-9cd1-228d3a7a8522,2022-05-12T00:00:00Z,11
+Q111979627,,21AEA6A7-C8DD-423E-8C27-8FC6CD8F58AC,Q111976098,1,Diane Wyse Jackson,0a3ddf7600a1c23e49da713b0f96c96d2348f897,http://rs.tdwg.org/itfbgpr/doc/specification/,b29aa833-e23d-45c1-b0db-bd6d6a8ebc6a,2022-05-12T00:00:00Z,11
+Q111979627,,D9457AB9-12FD-4837-81EE-C7F41EE1FE90,Q111976107,2,Ken Bailey,0a3ddf7600a1c23e49da713b0f96c96d2348f897,http://rs.tdwg.org/itfbgpr/doc/specification/,58b5cc4d-ab8e-4c17-a45d-b0f886c2d6b1,2022-05-12T00:00:00Z,11
+Q111979627,,D6E3C709-C319-4DA0-863B-15DAC6E9FD78,Q11255062,3,Peter Wyse Jackson,0a3ddf7600a1c23e49da713b0f96c96d2348f897,http://rs.tdwg.org/itfbgpr/doc/specification/,e0a0fbf6-713d-41be-a0d7-3cb09dda65ef,2022-05-12T00:00:00Z,11
+Q111979627,,361914E2-1E6C-4DA3-B2C3-E729BDF32A05,Q111976125,4,Simon Thornton Wood,0a3ddf7600a1c23e49da713b0f96c96d2348f897,http://rs.tdwg.org/itfbgpr/doc/specification/,2441a0d5-b272-4ae4-bfe7-a54e69d1dee6,2022-05-12T00:00:00Z,11
+Q111979627,,791AD616-91C0-4033-BF4A-176FADC661A6,Q21339849,5,Kerry Walter,0a3ddf7600a1c23e49da713b0f96c96d2348f897,http://rs.tdwg.org/itfbgpr/doc/specification/,028b02cd-82c2-489d-accb-364a025a7914,2022-05-12T00:00:00Z,11
+Q111979668,,2C042E9A-1D57-4620-B039-A0AD7AFF45AF,Q111976119,,Renato De Giovanni,195eac5089d96839899cecfc6095e6cc8f88866b,http://www.tdwg.org/standards/449,a6465ecf-cada-41bd-a866-523b22a64b71,2022-05-12T00:00:00Z,11
