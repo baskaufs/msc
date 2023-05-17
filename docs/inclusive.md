@@ -60,7 +60,7 @@ If `eco:isLeastSpecificTargetCategoryQuantityInclusive` is `true` for event_01, 
 
 If `eco:isLeastSpecificTargetCategoryQuantityInclusive` is `false` for event_01, then the total number of individuals of taxon_01 for the event is 7 (the least specific taxon record - the one with no more specific scopes - does not include all individuals of the taxon, rather, it is a separate category that must also be added to get the total). This means there was 1 adult, 2 juveniles and 4 individuals of taxon_01 whose life stage was not recorded.
 
-Table 1. Organism quantities in occurrence records
+**Table 1. Organism quantities in occurrence records**
 
 | occurrenceID | eventID | taxonID | lifeStage | organismQuantity | organismQuantityType |
 | ------------ | ------- | ------- | --------- | ---------------- | -------------------- |
@@ -76,7 +76,7 @@ If `eco:isLeastSpecificTargetCategoryQuantityInclusive` is `true` for event_01, 
 
 If `eco:isLeastSpecificTargetCategoryQuantityInclusive` is `false` for event_01, then the total number of individuals of for the species *H. rustica* for the event is 6 (the least specific taxon record does not include all individuals of the taxon). This means there were 2 *H. r. rustica*, 1 *H. r. gutturalis*, and 3 other *H. rustica* detected that were not identified to subspecies. 
 
-Table 2. Organism quantities in event records
+**Table 2. Organism quantities in event records**
 
 | eventID | scientificName | organismQuantity | organismQuantityType |
 | ------- | -------------- | ---------------- | -------------------- |
