@@ -16,6 +16,13 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # ------------
+# Global Variables
+# ------------
+
+retry_sleep = 0.1
+collection_time_interval = 1
+
+# ------------
 # Functions
 # ------------
 
@@ -34,15 +41,18 @@ class grove_fingerclip_heart_sensor:
 		return bus.read_i2c_block_data(self.address, 1,1)
 
 pulse= grove_fingerclip_heart_sensor()
-#while True:
-def hr_value():
-    try:
-        hr_value = pulse.pulse_read()
-    except IOError:
-        print("Error")
-        hr_value = "Error"
-    #time.sleep(.5)
-    # When it fails, wait longer?  Test how often it fails. 
+
+def hr_value(interval_start_time):
+    # Continue trying to take a reading unless it's past the interval length.
+    while datetime.datetime.now().total_seconds() - interval_start_time.total_seconds() < collection_time_interval:
+        try:
+            hr_value = pulse.pulse_read()
+        except:
+            retry += 1
+            # If the reading fails beyond the interval length, the return value will be 'Failed'.
+            # Otherwise, the hr_value will get replaced by a successful reading. 
+            hr_value = 'Failed'
+            time.sleep(retry_sleep)
     return hr_value
 
 # GSR Setup
@@ -59,12 +69,20 @@ class GroveGSRSensor:
 
 Grove = GroveGSRSensor
 
-def gsr_value():
+def gsr_value(interval_start_time):
     sensor = GroveGSRSensor(int(0))
-           
-    #print('GSR value: {0}'.format(sensor.GSR))
-    return int(sensor.GSR)
-    #time.sleep(.5)
+    # Continue trying to take a reading unless it's past the interval length.
+    while datetime.datetime.now().total_seconds() - interval_start_time.total_seconds() < collection_time_interval:
+        try:           
+            #print('GSR value: {0}'.format(sensor.GSR))
+            gsr_value = int(sensor.GSR)
+        except:
+            retry += 1
+            # If the reading fails beyond the interval length, the return value will be 'Failed'.
+            # Otherwise, the hr_value will get replaced by a successful reading. 
+            gsr_value = 'Failed'
+            time.sleep(retry_sleep)
+    return gsr_value
 
 def collect_data_button_click(): # Run button
     
@@ -94,7 +112,8 @@ def collect_data_button_click(): # Run button
         elapsed_time = (datetime.datetime.now() - current_time).total_seconds() * 1000
         elapsed_time_ms = int(round(elapsed_time, 0))
         
-        datapoint_dict = {'Time': [datetime.datetime.now()], 'GSR': gsr_value(), 'Heart Rate': hr_value(), 'Elapsed Time': elapsed_time_ms,
+        interval_start_time = datetime.datetime.now() # Start time for the measurement interval
+        datapoint_dict = {'Time': [datetime.datetime.now()], 'GSR': gsr_value(interval_start_time), 'Heart Rate': hr_value(interval_start_time), 'Elapsed Time': elapsed_time_ms,
                               'Subject': subj, 'Session': session}
         updateLog(str(datapoint_dict))
         
@@ -105,7 +124,11 @@ def collect_data_button_click(): # Run button
         #return data
         # Save the file
         data.to_csv(file_path, index=False)
-        time.sleep(.5)
+
+        # Sleep for however much time there is left in the measurement interval
+        time_remaining_in_interval = collection_time_interval - (datetime.datetime.now() - interval_start_time).total_seconds()
+        if time_remaining_in_interval > 0:
+            time.sleep(time_remaining_in_interval)
 
 def updateLog(message):
 	edit_space.insert(END, message + '\n')
